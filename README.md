@@ -1,26 +1,95 @@
 # Loop Exercises
 
 1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
-2. Write a `while` loop and a `for` loop that takes the variable "num", and iterates over all numbers from 0 to "num". 
+
+let i = 20
+while (i > 10){
+console.log(i)
+i--
+}
+
+for (let i = 20; i > 10; i--){
+  console.log (i)
+}
+
+2. Write a `while` loop and a `for` loop that takes the variable "num", and iterates over all numbers from 0 to "num".
 For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
-3. Write a `while` loop and a `for` loop that takes the variable "num" and iterates over all numbers from 0 to "num". 
+
+let i= 15
+while (i >= 10){
+if (i % 2 == 0){
+  console.log(" is even")
+} else if(i % 2 == 1){
+  console.log( " is odd")
+}
+console.log(i);
+i--
+}
+
+
+for (let i = 15; i>=10; i--){
+  console.log(i);
+  if(i % 2 == 0){
+console.log(" is even");
+  }else if(i % 2 == 1){
+    console.log(" is odd");
+  }
+}
+
+3. Write a `while` loop and a `for` loop that takes the variable "num" and iterates over all numbers from 0 to "num".
 For each iteration of the loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
 
-_Bonus_ think of another way to solve it. 
+let i= 15
+while (i >= 10){
+console.log(i*9);
+i--
+}
+
+for (let i = 15; i>=10; i--){
+  console.log(i*9)
+}
+
+
+
+
+_Bonus_ think of another way to solve it.
   <details>
     <summary>
       Hint
     </summary>
     Find the final number and increment the loop by 9.
   </details>
-  
+
 4. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
 
+for (let i = 1; i<100; i++){
+  console.log(i)
+if (i % 3 == 0){
+  console.log ("fizz")
+}else if (i % 5 == 0){
+  console.log("buzz")
+}else{
+  console.log(i)
+}
+}
 
 5. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
+for (let i = 1; i<100; i++){
+  console.log(i)
+if (i % 3 == 0 && i % 5 == 0){
+  console.log("fizzbuzz")
+}
+if (i % 3 == 0){
+  console.log ("fizz")
+}else if (i % 5 == 0){
+  console.log("buzz")
+}else{
+  console.log(i)
+}
+}
 
-Bonus: 
+Bonus:
 
 1. Write a program that would log the lyrics of the song 99 Bottles of Beer. This is the first verse of the song:
 
@@ -54,7 +123,9 @@ Take one down, pass it around,
 
 No more bottle of beer on the wall.
 
-
+for (let i = 99; i>=0; i--){
+  console.log(i + " bottles of beer on the wall, " + i + " bottles of beer." + " Take one down, pass it around, " + i + " bottles of beer on the wall." )
+}
 
 2. Use the assignGrade function (given below). Write a function that logs each number from 60 - 100 along with its corresponding letter score.
 Exp For each number from 81 to 90, log B, like so:
