@@ -1,0 +1,88 @@
+//1. Descending, between "num" and 1.
+
+//while loop:
+let num = 10;
+while(num > 0) {
+  console.log(num)
+ num--
+};
+//for loop:
+for (let i = 10; i >= 1; i--){
+  console.log(i)
+};
+
+//2.Even or odd numbers
+
+//while loop:
+let num = 1;
+while(num <= 10) {
+ if(num % 2 === 0) {
+   console.log(num + " is even number.")
+ } else {
+    console.log(num + " is odd.")
+ }
+ num++
+};
+
+//for loop:
+for (let i = 1; i <= 10; i++){
+  if (i % 2 === 0){
+    console.log(i + ' is even')
+  } else {
+    console.log(i + ' is odd')
+  }
+};
+
+//3. Iterates over all numbers
+
+//while loop:
+let num = 1
+while (num <= 10) {
+  console.log(num + " * 9 = " + num * 9);
+  num += 1
+};
+
+//for loop:
+for (let i = 1; i <= 10; i++){
+  console.log(i + " * 9 = " + i * 9);
+};
+
+//4. and 5.  Fizz & Buzz
+
+//while loop:
+let num = 1;
+	while (num <=100){
+	  if (num%3 && num%5 == 0){
+			console.log( + num + " FizzBuzz");
+		}
+		else if (num%3 == 0){
+		  console.log( num + " Fizz")
+		}
+		else if (num%5 == 0){
+			console.log( num + " Buzz");
+		}
+		else {
+			console.log( num) ;
+		}
+		num++;
+  };
+
+//for loop:
+for (let i = 1; i <= 100; i++){
+  if (i%3 && i%5 == 0){
+		console.log(i + " FizzBuzz");
+	}
+	else if (i%3 == 0){
+	  console.log(i + " Fizz");
+	}
+	else if (i%5 == 0){
+		console.log(i + " Buzz");
+	}
+	else {
+		console.log(i);
+	}
+};
+
+//Bonus:
+
+// 1. lyrics of the song 99 Bottles of Beer.
