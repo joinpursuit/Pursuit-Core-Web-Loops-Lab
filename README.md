@@ -105,6 +105,17 @@ Take one down, pass it around,
 
 No more bottle of beer on the wall.
 
+``` js
+for (let startNum = 99; startNum >0; startNum--) { 
+  if (startNum === 2) {
+    console.log(startNum+" bottles of beer on the wall, "+startNum+" bottles of beer. Take one down, pass it around, "+(startNum-1)+" bottle of beer on the wall.")
+  } else if (startNum === 1) {
+    console.log(startNum+" bottle of beer on the wall, "+startNum+" bottle of beer. Take one down, pass it around, No more bottle of beer on the wall.")  
+  } else {
+  console.log(startNum+" bottles of beer on the wall, "+startNum+" bottles of beer. Take one down, pass it around, "+(startNum-1)+" bottles of beer on the wall.")
+}
+}
+```
 
 
 2. Use the assignGrade function (given below). Write a function that logs each number from 60 - 100 along with its corresponding letter score.
