@@ -56,11 +56,16 @@ for (let i = 1; i <= 100; i++) {
 // Bonus 1
 let bottlesOfBeer = 99;
 for (let i = 99; i > 0; i--) {
-  if (i > 1) {
+  if (i > 2) {
     console.log(i + " bottles of beer on the wall,");
     console.log(i + " bottles of beer.");
     console.log("Take one down, pass it around,");
     console.log(i - 1 + " bottles of beer on the wall.");
+  } else if (i === 2) {
+    console.log(i + " bottles of beer on the wall,");
+    console.log(i + " bottles of beer.");
+    console.log("Take one down, pass it around,");
+    console.log(i - 1 + " bottle of beer on the wall.");
   } else if (i === 1) {
     console.log(i + " bottle of beer on the wall,");
     console.log(i + " bottle of beer.");
