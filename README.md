@@ -89,7 +89,7 @@ for (let i = 0; i <= 100; i++){
 }
 ```
 
-Bonus: 
+Bonus:
 
 1. Write a program that would log the lyrics of the song 99 Bottles of Beer. This is the first verse of the song:
 
@@ -122,6 +122,20 @@ When the number of bottles is 1, the verse is:
 Take one down, pass it around,
 
 No more bottle of beer on the wall.
+```
+let bottle = ' bottles of beer on the wall, '
+let bottle2 = ' bottles of beer. '
+let take = 'Take one down, pass it around, '
+for (let beer = 99; beer >= 1; beer --){
+  if (beer === 1 ){
+    console.log('\n' + beer + ' bottle of beer on the wall, ' + beer + ' bottle of beer. ' + '\n' + '\n' + take + '\n' + '\n' + 'no more bottles of beer on the wall')
+  } else if (beer === 2){
+    console.log('\n' + beer + bottle + beer + bottle2 + '\n' + '\n' + take + (beer - 1) + ' bottle of beer on the wall.')
+  } else {
+    console.log('\n' + beer + bottle + beer + bottle2 + '\n' + '\n' + take + (beer -1) + bottle.slice(0,28)+'.')
+  }
+}
+```
 
 
 
@@ -149,4 +163,18 @@ function assignGrade(score) {
         return 'F';
     };
 };
+```
+```
+for (let assignGrade = 100; assignGrade >= 0; assignGrade --)
+if (assignGrade > 90){
+  console.log(assignGrade + ' - A')
+} else if (assignGrade > 80){
+  console.log(assignGrade + ' - B')
+} else if (assignGrade > 70){
+  console.log(assignGrade + ' - C')
+} else if (assignGrade > 64){
+  console.log(assignGrade + ' - D')
+} else {
+  console.log(assignGrade + ' - F')
+}
 ```
