@@ -141,13 +141,13 @@ while (num >=1){
     word2 = "bottles"
     console.log(song1)
     // result += song1
-  }else if(num<3 && num>=2){
+  }else if(num===2){
     // num = 2
     word1 = "bottles"
     word2 = "bottle"
     console.log(song1)
     // result += song2
-  }else if(num<2 && num>=1){
+  }else if(num===1){
     // num = 1
     num2 = "No more"
     word1 = "bottle"
@@ -158,3 +158,20 @@ while (num >=1){
 num-=1
 
 }
+
+
+// //2. assignGrade
+//
+// for(score = 100; score >=60; score--) {
+//     if (score >= 61 && score <=70) {
+//         console.log(score + ' - D');
+//     } else if (score >= 71 && score <= 80) {
+//         console.log(score + ' - C');
+//     } else if (score >= 81 && score <= 90) {
+//         console.log(score + ' - B');
+//     } else if (score >= 91 && score <= 100) {
+//         console.log(score + ' - A');
+//     }else{
+//         console.log(score + ' - F');
+//     };
+// };
