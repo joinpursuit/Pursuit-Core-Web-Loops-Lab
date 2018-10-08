@@ -166,11 +166,11 @@ function assignGrade(score) {
 ```
 ```
 for (let assignGrade = 100; assignGrade >= 0; assignGrade --)
-if (assignGrade > 90){
+if (assignGrade > 89){
   console.log(assignGrade + ' - A')
-} else if (assignGrade > 80){
+} else if (assignGrade > 79){
   console.log(assignGrade + ' - B')
-} else if (assignGrade > 70){
+} else if (assignGrade > 69){
   console.log(assignGrade + ' - C')
 } else if (assignGrade > 64){
   console.log(assignGrade + ' - D')
