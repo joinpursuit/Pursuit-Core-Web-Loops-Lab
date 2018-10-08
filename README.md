@@ -2,8 +2,8 @@
 
 1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
 
-let num = 10
-for (num; num > 0; num--)
+
+for (let num = 10; num >= 0; num--)
 console.log(num);
 
 num = 10
@@ -17,17 +17,7 @@ while (num > 0) {
 2. Write a `while` loop and a `for` loop that takes the variable "num", and iterates over all numbers from 0 to "num".
 For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 
-let num = 5
-let i = 0
-while(i < num || i == num) {
-  if (i % 2 == 0){
-    console.log(i + " is even")
-  } else {
-    console.log(i + " is odd")
-  }
-  i++
 
-}
 
 let num = 10
 for (let i =0; i <=num; i++){
@@ -56,7 +46,7 @@ while(i <= num){
 let num = 5
 
 for (let i = 0; i <= num; i++){
-  console.log(i + " * 9 =" + i * 9)
+  console.log(i + " * 9 = " + i * 9)
 }
 
 
@@ -152,6 +142,13 @@ Take one down, pass it around,
 No more bottle of beer on the wall.
 
 
+
+let song = 2;
+let last = 1;
+for (let i = 100; i >= song; i--){
+  console.log(i + " bottles of beer on the wall,\n " + i + " bottles of beer.\n take one down, pass it around, " )
+}
+console.log(last +  " bottles of beer on the wall,\n" + last + " bottle of beer.\n take one down, pass it around, \n no more bottle of beer on the wall.");
 
 
 
