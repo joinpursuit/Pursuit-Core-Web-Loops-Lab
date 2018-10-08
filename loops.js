@@ -110,32 +110,51 @@
 // 1. 99 Bottles
 
 
-let num = 99
-let num2 = num - 1
-let word1 = "bottle"
-let word2 = "bottle"
-let song = num + " " + word1 + " " + " of beer on the wall, " + num + " "+ word1 + " of beer. Take one down, pass it around, " + num2 + " " + word2 + " of beer on the wall."
+// let num = 99
+// let num2 = num - 1
+// let word1 = "bottle"
+// let word2 = "bottle"
+// let song = num + " " + word1 + " " + " of beer on the wall, " + num + " "+ word1 + " of beer. Take one down, pass it around, " + num2 + " " + word2 + " of beer on the wall."
 
-while (num>=1){
-  // if(num=2){
-  //   word1 = "bottles"
-  //   word2 = "bottle"
-  //   console.log(song);
-  // }else if(num=1){
-  //   num2 = "No more"
-  //   word1 = "bottle"
-  //   word2 = "bottle"
-  //   console.log(song);
-  // }else{
-      // word1= "bottles"
-      // word2 = "bottles"
-      console.log(song)
-  // }
+// let num = 99;
+// let num2 += num - 1
+// let num3 = "No more"
+
+// let song1 = num + " " + word1 + " " + " of beer on the wall, " + num + " "+ word1 + " of beer. Take one down, pass it around, " + num2 + " " + word1 + " of beer on the wall."
+// let song2 = num + " " + word1 + " " + " of beer on the wall, " + num + " "+ word1 + " of beer. Take one down, pass it around, " + num2 + " " + word2 + " of beer on the wall."
+// let song3 = num + " " + word2 + " " + " of beer on the wall, " + num + " "+ word2 + " of beer. Take one down, pass it around, " + num3 + " " + word2 + " of beer on the wall."
+
+
+// FINAL ANSWER:
+  let num = 99
+
+  let word1 = "bottles"
+  let word2 = "bottles"
+
+while (num >=1){
+  let num2 = num - 1
+  let song1 = num + " " + word1 + " " + " of beer on the wall, " + num + " "+ word1 + " of beer. Take one down, pass it around, " + num2 + " " + word2 + " of beer on the wall."
+
+
+  if (num<=99 && num>=3){
+    word1 = "bottles"
+    word2 = "bottles"
+    console.log(song1)
+    // result += song1
+  }else if(num<3 && num>=2){
+    // num = 2
+    word1 = "bottles"
+    word2 = "bottle"
+    console.log(song1)
+    // result += song2
+  }else if(num<2 && num>=1){
+    // num = 1
+    num2 = "No more"
+    word1 = "bottle"
+    word2 = "bottle"
+    console.log(song1);
+  }
+
 num-=1
-}
 
-// let num = 0
-// while (num <=100){
-//     console.log(num);
-//   num+=9
-// }
+}
