@@ -130,33 +130,30 @@
 
   let word1 = "bottles"
   let word2 = "bottles"
-
+  let song
 while (num >=1){
   let num2 = num - 1
-  let song1 = num + " " + word1 + " " + " of beer on the wall, " + num + " "+ word1 + " of beer. Take one down, pass it around, " + num2 + " " + word2 + " of beer on the wall."
-
 
   if (num<=99 && num>=3){
-    word1 = "bottles"
-    word2 = "bottles"
-    console.log(song1)
-    // result += song1
+    word1 = "bottles";
+    word2 = "bottles";
+    // console.log(song)
   }else if(num===2){
-    // num = 2
-    word1 = "bottles"
-    word2 = "bottle"
-    console.log(song1)
-    // result += song2
+    word1 = "bottles";
+    word2 = "bottle";
+    // console.log(song)
   }else if(num===1){
-    // num = 1
-    num2 = "No more"
-    word1 = "bottle"
-    word2 = "bottle"
-    console.log(song1);
+    num2 = "No more";
+    word1 = "bottle";
+    word2 = "bottle";
+    // console.log(song);
   }
 
-num-=1
+  song = num + " " + word1 + " " + " of beer on the wall, " + num + " "+ word1 + " of beer. Take one down, pass it around, " + num2 + " " + word2 + " of beer on the wall."
 
+  console.log(song);
+
+num-=1
 }
 
 
