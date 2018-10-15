@@ -4,9 +4,9 @@
 
 // while loop
 let num = 17
-while (num >= 2) {
+while (num >= 1) {
  console.log(num)
- num -= 2
+ num -= 1
 }
 
 //for loop
