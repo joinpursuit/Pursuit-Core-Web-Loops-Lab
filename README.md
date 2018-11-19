@@ -76,7 +76,6 @@ for (let i=1; i < 101; i++){
 }
 
 Bonus:
-//no
 
 1. Write a program that would log the lyrics of the song 99 Bottles of Beer. This is the first verse of the song:
 
@@ -114,6 +113,27 @@ No more bottle of beer on the wall.
 
 2. Use the assignGrade function (given below). Write a function that logs each number from 60 - 100 along with its corresponding letter score.
 Exp For each number from 81 to 90, log B, like so:
+
+function assignGrade (num) {
+  while (num <70){
+    console.log(`${num} - D`)
+    num++
+  }
+  while (num <80){
+    console.log(`${num} - C`)
+    num++
+  }
+  while (num < 90){
+    console.log(`${num} - B`)
+    num++
+  }
+  while (num < 101){
+    console.log(`${num} - A`)
+    num++
+  }
+}
+
+assignGrade(60)
 
 ```js
 81 - B
