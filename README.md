@@ -16,24 +16,38 @@ ___
 
 1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
 
-2. Write a `while` loop and a `for` loop that takes the variable "num", and iterates over all numbers from 0 to "num". 
+2. Write a `while` loop and a `for` loop that takes the variable "max", and iterates over all numbers from 0 to "max".
 For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 
-3. Write a `while` loop and a `for` loop that takes the variable "num" and iterates over all numbers from 0 to "num". 
-For each iteration of the loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
-  _Bonus_ think of another way to solve it. 
+3. Write a `while` loop and a `for` loop that takes the variable "x" and iterates over all numbers from 0 to "x".
+For each iteration of the loop, it will multiply the number of "x" by 9 and log the result (e.g. "2 * 9 = 18").
+  _Bonus_ think of another way to solve it.
     <details>
       <summary>
         Hint
       </summary>
       Find the final number and increment the loop by 9.
     </details>
-  
-4. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
 
-5. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
+4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
-### Bonus: 
+5. Without running/executing your code, how many times will the loop below run? Explain why.
+
+```js
+let i = 5;
+
+while (i > 3) {
+    i += 1
+}
+
+// Your explanation here
+```
+
+6. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
+
+7. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
+
+### Bonus:
 
 1. Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
 
@@ -94,11 +108,48 @@ function assignGrade(score) {
 <summary>
   <b>Hint</b>
 </summary>
-  Explore this: 
+  Explore this:
 
   ```js
   let grade = assignGrade(80)
   console.log(grade)
   ```
   What is happening here? Can you explain it?
+</details>
+
+___
+
+3. Given an integer N draw a square of N x N asterisks. Look at the examples.
+
+Example 1:
+Input: `let N = 2`
+
+Output:
+```js
+**
+**
+```
+
+Example 2:
+Input: `let N = 3`
+
+Output:
+```js
+***
+***
+***
+```
+
+<details>
+  <summary>
+    Hint 1
+  </summary>
+  Try printing/logging a single line of * first.
+</details>
+
+<details>
+  <summary>
+    Hint 2
+  </summary>
+  You will need 2 loops for this.
 </details>
