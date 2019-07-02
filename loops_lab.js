@@ -126,6 +126,8 @@ for (num = 99; num > 0; num--) {
   }
 }
 
+//2. Use the `assignGrade` function (given below). Write a function that logs each number from 60 - 100 along with its corresponding letter score.
+//Exp For each number from 81 to 90, log B, like so:
 console.log('###BONUS 2.--------------');
 
 function assignGrade(score) {
@@ -147,5 +149,25 @@ function assignGrade(score) {
 //how it's programed. So if I enter 80 into the assignGrade function I will
 // get B because I declared in my function that any number entered
 //thats over 79 and below 90 will return a B grade.
-let grade = assignGrade(100);
-console.log(grade);
+for (num = 1; num <= 100; num++) {
+  let grade = assignGrade(num);
+  console.log('If you scored ' + num + ' you get ' + grade);
+}
+
+//3. Given an integer N draw a square of N x N asterisks. Look at the examples.
+console.log('###BONUS 3.--------------');
+
+let N = 3;
+let asterisks = '*';
+let numB3 = 1;
+
+while (numB3 < N) {
+  asterisks += '*';
+  numB3++;
+}
+
+console.log(asterisks);
+
+for (num = 1; num < N; num++) {
+  console.log(asterisks);
+}
