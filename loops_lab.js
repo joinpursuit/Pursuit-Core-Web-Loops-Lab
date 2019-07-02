@@ -9,11 +9,13 @@ for (num >= 2; num-= 1;) {
   console.log(num);
 }
 
-// 2. Write a `while` loop and a `for` loop that takes the variable "num", and iterates over all numbers from 0 to "num".
+// 2. Write a `while` loop and a `for` loop that takes the variable "max", and iterates over all numbers from 0 to "max".
 // For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 //
-// 3. Write a `while` loop and a `for` loop that takes the variable "num" and iterates over all numbers from 0 to "num".
-// For each iteration of the loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
+
+
+// 3. Write a `while` loop and a `for` loop that takes the variable "x" and iterates over all numbers from 0 to "x".
+// For each iteration of the loop, it will multiply the number of "x" by 9 and log the result (e.g. "2 * 9 = 18").
 //   _Bonus_ think of another way to solve it.
 //     <details>
 //       <summary>
