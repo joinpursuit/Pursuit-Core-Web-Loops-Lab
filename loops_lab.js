@@ -1,5 +1,14 @@
 // 1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
-//
+let num = 24;
+
+while (num-- && num >= 2) {
+  console.log(num);
+}
+
+for (num >= 2; num-= 1;) {
+  console.log(num);
+}
+
 // 2. Write a `while` loop and a `for` loop that takes the variable "num", and iterates over all numbers from 0 to "num".
 // For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 //
