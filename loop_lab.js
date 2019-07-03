@@ -78,6 +78,16 @@ for (let i = 0; i <= x; i++) {
   console.log(i * 9);
 }
 
+j = 0;
+while (j <= x * 9) {
+  console.log(j);
+  j += 9;
+}
+
+for (let i = 0; i <= x * 9; i += 9) {
+  console.log(i);
+}
+
 // 4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
 for (let i = 1; i <= 100; i++) {
