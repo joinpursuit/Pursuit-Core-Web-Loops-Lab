@@ -294,10 +294,6 @@ for (i = 60; i <= 100; i++) {
 
 let n = 5;
 let str = '';
-for (let i = n; i > 0; i--) {
-  str += '*';
-}
-
-for (i = n; i > 0; i--) {
-  console.log(str);
+for (let i = 2 * n; i > 0; i--) {
+  i > n ? str += '*' : console.log(str);
 }
