@@ -60,11 +60,17 @@
 
 
 // //4.
-// for (let ehh = 5; ehh <= 100; ehh+= 5) {
+// for (let ehh = 5; ehh <= 100; ehh += 5) {
 //   if (ehh % 2 === 0) {
 //     }else {
 //       console.log(ehh);
 //   }
+// }
+
+
+//DIFFERENT WAY TO SOLVE
+//for (let ehh = 5; ehh <= 100; ehh += 10) {
+//   console.log(ehh)
 // }
 
 ////5.
@@ -120,7 +126,29 @@
 //         return 'F';
 //     };
 // };
-// let grade = assignGrade(80)
-// for (let assignGrade = 100; assignGrade <= 60; assignGrade--){
-// console.log(grade)
+//
+// for (let i = 100; i >= 60; i--){
+//   let grade = assignGrade(i)
+//   console.log(i + ' - ' + grade)
+// }
+
+
+
+
+
+
+// //3. Did not completely understand this question
+// let n = 3;
+// let str = '';
+// for (let i = 0; i < n; i++) {
+//   str += '*' //string concatenating...when you start with an empty string then add a value
+// }
+//
+// for (let j = 0; j <n; j++) {
+//   console.log(str)
+// }
+//
+// for (let j = 0; j <n; j++) {
+//   console.log(str)
+//   str += '*'
 // }
