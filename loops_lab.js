@@ -50,8 +50,23 @@
 // }
 //
 // // Your explanation here
-//
-// 6. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
-//
+//It will run an infinite number of times as there's no max limit given for the loop. i equals 5, which is already greater than 3, and will
+//continue to run over all the possible numbers greater than 3.
+
+// 6. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions.
+// For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
+let fizzy = 1;
+while (fizzy <= 100) {
+  if (fizzy % 3 === 0) {
+    console.log("Fizz");
+  } else if (fizzy % 5 === 00 && fizzy % 3 != 0) {
+    console.log("Buzz");
+  } else {
+    console.log(fizzy);
+  }
+  fizzy ++;
+}
+
+
 // 7. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 //
