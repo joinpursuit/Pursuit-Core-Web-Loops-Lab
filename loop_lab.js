@@ -167,9 +167,8 @@ for (let i = 1; i <= 100; i++) {
 for (var i = 99; i >= 0; i--) {
   console.log(sp(i) + ' of beer on the wall, ' + sp(i) + ' of beer.');
   i > 0 ?
-    console.log('Take one down, pass it around, ' + sp(i - 1) + ' of beer on the wall.') :
+    console.log('Take one down, pass it around, ' + sp(i - 1) + ' of beer on the wall.\n') :
     console.log('Go to the store and buy some more, 99 bottles of beer on the wall.');
-  console.log('');
 }
 
 function sp(i) {
