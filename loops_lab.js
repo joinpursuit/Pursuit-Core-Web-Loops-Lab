@@ -173,7 +173,7 @@ console.log("Functions are a set block of code that run checks on the input its 
 "get B because I declared in my function that any number entered " +
 "thats over 79 and below 90 will return a B grade.");
 
-for (num = 1; num <= 100; num++) {
+for (num = 60; num <= 100; num++) {
   let grade = assignGrade(num);
   console.log('If you scored ' + num + ' you get ' + grade);
 }
