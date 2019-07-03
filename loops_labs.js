@@ -30,10 +30,10 @@ while (whileMax <= max) {
   whileMax % 2 === 0
     ? console.log(whileMax + " is even") // evals to EVEN
     : console.log(whileMax + " is odd") // evals to ODD
-  whileMax ++;
+  whileMax++;
 }
 console.log("** FOR loop **");
-for (let forMax = 0; forMax <= max; forMax ++) {
+for (let forMax = 0; forMax <= max; forMax++) {
   forMax % 2 === 0
     ? console.log(forMax + " is even") // evals to EVEN
     : console.log(forMax + " is odd") // evals to odd
@@ -52,7 +52,7 @@ if (x > 0) { // FOR POSITIVE INPUTS
   let happyWhile = 0;
   while (happyWhile <= x) {
     console.log(happyWhile + " * 9 = " + (happyWhile * 9));
-    happyWhile ++;
+    happyWhile++;
   }
   console.log("** FOR loop **");
   for (let happyFor = 0; happyFor <= x; happyFor = happyFor + 1) {
@@ -63,10 +63,10 @@ if (x > 0) { // FOR POSITIVE INPUTS
   let sadWhile = 0;
   while (sadWhile >= x) {
     console.log(sadWhile + " * 9 = " + (sadWhile * 9));
-    sadWhile --;
+    sadWhile--;
   }
   console.log("** FOR loop **");
-  for (let sadFor = 0; sadFor >= x; sadFor --) {
+  for (let sadFor = 0; sadFor >= x; sadFor--) {
     console.log(sadFor + " * 9 = " + (sadFor * 9));
   }
 }
@@ -129,7 +129,7 @@ while (counterSix <= 100) {
   } else {
     console.log(counterSix);
   }
-  counterSix ++;
+  counterSix++;
 }
 console.log("");
 
@@ -148,7 +148,7 @@ while (counterSeven <= 100) {
   } else {
     console.log(counterSeven);
   }
-  counterSeven ++;
+  counterSeven++;
 }
 console.log("");
 
@@ -167,14 +167,14 @@ while (numBottles >= 1) {
     console.log(numBottles + " bottles of beer on the wall, " + numBottles + " bottles of beer.");
     console.log("Take one down, pass it around, " + (numBottles - 1) + " bottles of beer on the wall.");
   }
-  numBottles --;
+  numBottles--;
 }
 //
 console.log("");
 
 
 console.log("2. Use the `assignGrade` function (given below). Write a function that logs each number from 60 - 100 along with its corresponding letter score.");
-for (let numGrade = 60; numGrade <= 100; numGrade ++) {
+for (let numGrade = 60; numGrade <= 100; numGrade++) {
   let letterGrade = assignGrade(numGrade);
   console.log(numGrade + " - " + letterGrade);
 }
@@ -202,18 +202,22 @@ console.log("3. Given an integer N draw a square of N x N asterisks. Look at the
 //
 let side = 9; // USER INPUT HERE
 //
-let starLine = "";
-let vertCursor = 0;
-while (vertCursor <= side) {
-  starLine = "";
-  for (let zontalCursor = 0; zontalCursor <= side; zontalCursor ++) {
-    if (vertCursor === 0) {
-      // empty intentionally
-    } else if (zontalCursor === side) {
-      console.log(starLine);
-    } else {
-      starLine += "*";
+if (side < 0) {
+  console.log("The input cannot be negative. Please re-enter a number.");
+} else {
+  let starLine = "";
+  let vertCursor = 0;
+  while (vertCursor <= side) {
+    starLine = "";
+    for (let zontalCursor = 0; zontalCursor <= side; zontalCursor++) {
+      if (vertCursor === 0) {
+        // empty intentionally
+      } else if (zontalCursor === side) {
+        console.log(starLine);
+      } else {
+        starLine += "*";
+      }
     }
+    vertCursor++;
   }
-  vertCursor ++;
 }
