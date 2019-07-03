@@ -91,11 +91,7 @@ for (let i = 0; i <= x * 9; i += 9) {
 // 4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
 for (let i = 1; i <= 100; i++) {
-  if (i % 5 === 0) {
-    if (i % 2 === 1) {
-      console.log(i);
-    }
-  }
+  i % 5 === 0 && i % 2 === 1 ? console.log(i) : null;
 }
 
 // 5. Without running/executing your code, how many times will the loop below run? Explain why.
@@ -236,14 +232,9 @@ function sp(i) {
 //   What is happening here? Can you explain it?
 
 //EXPLANATION OF ^^^^
-
-// // let grade = assignGrade(80);
-// // console.log(grade);
-//
-// for (i = 60; i <= 100; i++) {
-//   grade = assignGrade(i);
-//   console.log(i + ' - ' + grade);
-// }
+// the function assignGrade() is being called when the input is 80
+// Which would return C therfore console.log('C')
+// resulting in the .js displaying a C
 
 // </details>
 
