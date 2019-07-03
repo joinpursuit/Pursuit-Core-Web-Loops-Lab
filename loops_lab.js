@@ -11,8 +11,8 @@
 
 // 2. Write a `while` loop and a `for` loop that takes the variable "max", and iterates over all numbers from 0 to "max".
 // For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
-let max = 32;
-
+// let max = 32;
+//
 // for (let max = 0; max <= 32;) {
 //   if (max % 2 === 0) {
 //     console.log(max + " is even.");
@@ -21,8 +21,6 @@ let max = 32;
 //   }
 //   max ++;
 // }
-
-
 
 // 3. Write a `while` loop and a `for` loop that takes the variable "x" and iterates over all numbers from 0 to "x".
 // For each iteration of the loop, it will multiply the number of "x" by 9 and log the result (e.g. "2 * 9 = 18").
@@ -35,6 +33,13 @@ let max = 32;
 //     </details>
 //
 // 4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, exclusive.
+// let myNumber = 1;
+// while (myNumber < 100) {
+//   if (myNumber % 5 === 0 && myNumber > 5 && myNumber % 2 != 0) {
+//     console.log(myNumber);
+//   }
+//   myNumber ++;
+// }
 
 // 5. Without running/executing your code, how many times will the loop below run? Explain why.
 //
