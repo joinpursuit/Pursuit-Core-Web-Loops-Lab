@@ -266,7 +266,6 @@ for(let i = 1; i <= bv3; i++) {
 
       star += "* ";
       temp++;
-      //console.log(asteriks);
     }
     console.log(star);
 }
