@@ -1,13 +1,13 @@
 // 1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
 // let num = 24;
-//
-// while (num-- && num >= 2) {
-//   console.log(num);
-// }
-//
-// for (num >= 2; num-= 1;) {
-//   console.log(num);
-// }
+
+while (num-- && num >= 2) {
+  console.log(num);
+}
+
+for (num >= 2; num-= 1;) {
+  console.log(num);
+}
 
 // 2. Write a `while` loop and a `for` loop that takes the variable "max", and iterates over all numbers from 0 to "max".
 // For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
@@ -43,13 +43,13 @@ for (let max = 0; max <= 32;) {
 //
 
 // 4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, exclusive.
-// let myNumber = 1;
-// while (myNumber < 100) {
-//   if (myNumber % 5 === 0 && myNumber > 5 && myNumber % 2 != 0) {
-//     console.log(myNumber);
-//   }
-//   myNumber ++;
-// }
+let myNumber = 1;
+while (myNumber < 100) {
+  if (myNumber % 5 === 0 && myNumber > 5 && myNumber % 2 != 0) {
+    console.log(myNumber);
+  }
+  myNumber ++;
+}
 
 // 5. Without running/executing your code, how many times will the loop below run? Explain why.
 //
@@ -65,33 +65,33 @@ for (let max = 0; max <= 32;) {
 
 // 6. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions.
 // For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
-// let fizzy = 1;
-// while (fizzy <= 100) {
-//   if (fizzy % 3 === 0) {
-//     console.log("Fizz");
-//   } else if (fizzy % 5 === 0 && fizzy % 3 != 0) {
-//     console.log("Buzz");
-//   } else {
-//     console.log(fizzy);
-//   }
-//   fizzy ++;
-// }
+let fizzy = 1;
+while (fizzy <= 100) {
+  if (fizzy % 3 === 0) {
+    console.log("Fizz");
+  } else if (fizzy % 5 === 0 && fizzy % 3 != 0) {
+    console.log("Buzz");
+  } else {
+    console.log(fizzy);
+  }
+  fizzy ++;
+}
 
 
 // 7. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5
 // (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
-// while (fizzy <= 100) {
-//   if (fizzy % 3 === 0 && fizzy % 5 != 0) {
-//     console.log("Fizz");
-//   } else if (fizzy % 5 === 0 && fizzy % 3 != 0) {
-//     console.log("Buzz");
-//   } else if (fizzy % 5 === 0 && fizzy % 3 === 0) {
-//     console.log("FizzBuzz");
-//   } else {
-//     console.log(fizzy);
-//   }
-//   fizzy ++;
-// }
+while (fizzy <= 100) {
+  if (fizzy % 3 === 0 && fizzy % 5 != 0) {
+    console.log("Fizz");
+  } else if (fizzy % 5 === 0 && fizzy % 3 != 0) {
+    console.log("Buzz");
+  } else if (fizzy % 5 === 0 && fizzy % 3 === 0) {
+    console.log("FizzBuzz");
+  } else {
+    console.log(fizzy);
+  }
+  fizzy ++;
+}
 
 // Bonuses:
 // 1. Write a program that would log the lyrics of the song 99 Bottles of Beer. This is the first verse of the song:
