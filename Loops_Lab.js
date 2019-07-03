@@ -3,7 +3,7 @@
 //
 let num = 20; // will display 19 to 2
 
-// started with for first to don't have to reaffect num again
+// started with the for loop first to don't have to reaffect num again
 for (let i = num - 1; i > 1; i--){
   console.log(i);
 }
@@ -134,7 +134,7 @@ console.log("----------------------------------------- \n");
 // 1 bottle of beer on the wall, 1 bottle of beer.
 // Take one down, pass it around, No more bottle of beer on the wall.
 //
-let lyricsNum = 5;
+let lyricsNum = 5; // did it for just 5 for an easier display
 
 for (i = lyricsNum; i >= 1; i--){
   switch (i){
@@ -178,8 +178,8 @@ function assignGrade(score) {
         return 'D';
     } else {
         return 'F';
-    };
-};
+    }
+}
 //  Hint
 
 for (let i = 60; i <= 100; i++){
@@ -189,10 +189,11 @@ console.log("----------------------------------------- \n");
 
 // Bonus3:
 // Given an integer N draw a square of N x N asterisks.
-let N = 4;
+let N = 5;
 let ast = "";
+
 for (let i = 1; i <= N; i++){
-  ast += "* "
+  ast += "* ";
 }
   for (let j = 1; j <= N; j++){
       console.log(ast);
