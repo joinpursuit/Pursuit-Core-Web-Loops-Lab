@@ -16,12 +16,12 @@ ___
 
 1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
 
-2. Write a `while` loop and a `for` loop that takes the variable "max", and iterates over all numbers from 0 to "max". 
+2. Write a `while` loop and a `for` loop that takes the variable "max", and iterates over all numbers from 0 to "max".
 For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 
-3. Write a `while` loop and a `for` loop that takes the variable "x" and iterates over all numbers from 0 to "x". 
+3. Write a `while` loop and a `for` loop that takes the variable "x" and iterates over all numbers from 0 to "x".
 For each iteration of the loop, it will multiply the number of "x" by 9 and log the result (e.g. "2 * 9 = 18").
-  _Bonus_ think of another way to solve it. 
+  _Bonus_ think of another way to solve it.
     <details>
       <summary>
         Hint
@@ -34,7 +34,7 @@ For each iteration of the loop, it will multiply the number of "x" by 9 and log 
 5. Without running/executing your code, how many times will the loop below run? Explain why.
 
 ```js
-let i = 5;
+let i = 5;      
 
 while (i > 3) {
     i += 1
@@ -47,14 +47,14 @@ while (i > 3) {
 
 7. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
-### Bonus: 
+### Bonus:
 
-1. Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
+  1. Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
 
-  ```
-  99 bottles of beer on the wall, 99 bottles of beer.
-  Take one down, pass it around, 98 bottles of beer on the wall.
-  ```
+    ```
+    99 bottles of beer on the wall, 99 bottles of beer.
+    Take one down, pass it around, 98 bottles of beer on the wall.
+    ```
 
   This verse is repeated, each time with one less bottle, until the number of bottles is 0. When the number of bottles is 2, the verse is:
 
@@ -108,7 +108,7 @@ function assignGrade(score) {
 <summary>
   <b>Hint</b>
 </summary>
-  Explore this: 
+  Explore this:
 
   ```js
   let grade = assignGrade(80)
@@ -142,7 +142,7 @@ Output:
 
 <details>
   <summary>
-    Hint 1 
+    Hint 1
   </summary>
   Try printing/logging a single line of * first.
 </details>
