@@ -1,26 +1,27 @@
-# Loop Exercises
+Write a while loop and a for loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
 
-1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
-2. Write a `while` loop and a `for` loop that takes the variable "num", and iterates over all numbers from 0 to "num". 
-For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
-3. Write a `while` loop and a `for` loop that takes the variable "num" and iterates over all numbers from 0 to "num". 
-For each iteration of the loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
+Write a while loop and a for loop that takes the variable "max", and iterates over all numbers from 0 to "max". For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 
-_Bonus_ think of another way to solve it. 
-  <details>
-    <summary>
-      Hint
-    </summary>
-    Find the final number and increment the loop by 9.
-  </details>
-  
-4. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
+Write a while loop and a for loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result (e.g. "2 * 9 = 18"). Bonus think of another way to solve it.
+
+ Hint
+Write code that prints/logs all the numbers that end in a 5 from 1 to 100, exclusive.
+
+Without running/executing your code, how many times will the loop below run? Explain why.
+
+let i = 5;
+
+while (i > 3) {
+    i += 1
+}
+
+// Your explanation here
+Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
+
+Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
 
-5. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
-
-
-Bonus: 
+Bonus:
 
 1. Write a program that would log the lyrics of the song 99 Bottles of Beer. This is the first verse of the song:
 
