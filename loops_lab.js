@@ -181,7 +181,7 @@ for (num = 1; num <= 100; num++) {
 //3. Given an integer N draw a square of N x N asterisks. Look at the examples.
 console.log('###BONUS 3.--------------');
 
-let N = 4;
+let N = 3;
 let asterisks = '*';
 let numB3 = 1;
 
@@ -190,8 +190,6 @@ while (numB3 < N) {
   numB3++;
 }
 
-console.log(asterisks);
-
-for (num = 1; num < N; num++) {
+for (num = 1; num <= N; num++) {
   console.log(asterisks);
 }
