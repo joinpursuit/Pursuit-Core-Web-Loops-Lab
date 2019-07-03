@@ -1,3 +1,6 @@
+// JOSEPH P. PASAOA
+//
+
 console.log('1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.');
 //
 let num = 11; // USER INPUT HERE (for BOTH)
@@ -150,24 +153,24 @@ while (counterSeven <= 100) {
 console.log("");
 
 
-// console.log("BONUS 1. Write a program that would log the lyrics of the song 99 Bottles of Beer.");
-// //
-// let numBottles = 99;
-// while (numBottles >= 1) {
-//   if (numBottles === 1) {
-//     console.log("1 bottle of beer on the wall, 1 bottle of beer.");
-//     console.log("Take one down, pass it around, No more bottles of beer on the wall.");
-//   } else if (numBottles === 2) {
-//     console.log("2 bottles of beer on the wall, 2 bottles of beer.");
-//     console.log("Take one down, pass it around, 1 bottle of beer on the wall.");
-//   } else {
-//     console.log(numBottles + " bottles of beer on the wall, " + numBottles + " bottles of beer.");
-//     console.log("Take one down, pass it around, " + (numBottles - 1) + " bottles of beer on the wall.");
-//   }
-//   numBottles --;
-// }
-// //
-// console.log("");
+console.log("BONUS 1. Write a program that would log the lyrics of the song 99 Bottles of Beer.");
+//
+let numBottles = 99;
+while (numBottles >= 1) {
+  if (numBottles === 1) {
+    console.log("1 bottle of beer on the wall, 1 bottle of beer.");
+    console.log("Take one down, pass it around, No more bottles of beer on the wall.");
+  } else if (numBottles === 2) {
+    console.log("2 bottles of beer on the wall, 2 bottles of beer.");
+    console.log("Take one down, pass it around, 1 bottle of beer on the wall.");
+  } else {
+    console.log(numBottles + " bottles of beer on the wall, " + numBottles + " bottles of beer.");
+    console.log("Take one down, pass it around, " + (numBottles - 1) + " bottles of beer on the wall.");
+  }
+  numBottles --;
+}
+//
+console.log("");
 
 
 console.log("2. Use the `assignGrade` function (given below). Write a function that logs each number from 60 - 100 along with its corresponding letter score.");
