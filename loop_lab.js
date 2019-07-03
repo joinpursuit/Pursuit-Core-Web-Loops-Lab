@@ -168,18 +168,27 @@ for (let i = 1; i <= 100; i++) {
 //   1 bottle of beer on the wall, 1 bottle of beer.
 //   Take one down, pass it around, No more bottle of beer on the wall.
 //   ```
-for (var i = 99; i > 2; i--) {
-  console.log(i + ' bottles of beer on the wall, ' + i + ' bottles of beer.');
-  console.log('Take one down, pass it around, ' + (i - 1) + ' bottles of beer on the wall.');
+for (var i = 99; i >= 0; i--) {
+  console.log(sp(i) + ' of beer on the wall, ' + sp(i) + ' of beer.');
+  i > 0 ?
+    console.log('Take one down, pass it around, ' + sp(i - 1) + ' of beer on the wall.') :
+    console.log('Go to the store and buy some more, 99 bottles of beer on the wall.');
+  console.log('');
 }
 
-console.log(i + ' bottles of beer on the wall, ' + i + ' bottles of beer.');
-console.log('Take one down, pass it around, ' + (i - 1) + ' bottle of beer on the wall.');
-i--;
-console.log(i + ' bottle of beer on the wall, ' + i + ' bottle of beer.');
-console.log('Take one down, pass it around, no more bottles of beer on the wall.');
-console.log('No more bottles of beer on the wall, no more bottles of beer.');
-console.log('Go to the store and buy some more, 99 bottles of beer on the wall.');
+function sp(i) {
+  switch (i) {
+    case 0:
+      j = 'No more bottles';
+      break;
+    case 1:
+      j = '1 bottle';
+      break;
+    default:
+      j = i + ' bottles';
+  }
+  return j;
+}
 
 // ___
 //
