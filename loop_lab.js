@@ -66,7 +66,18 @@ for (let max = 10; max > 0; max--) {
 //       </summary>
 //       Find the final number and increment the loop by 9.
 //     </details>
-//
+
+let x = 10;
+
+while (x >= 0) {
+  console.log(x * 9);
+  x--;
+}
+
+for (let x = 10; x >= 0; x--) {
+  console.log(x * 9);
+}
+
 // 4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
 for (let i = 1; i <= 100; i++) {
