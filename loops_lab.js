@@ -46,12 +46,12 @@ for (div = 0; div <= 33; div += 1) {
 
 //
 let str2 = '';
-for (let beer = 10; beer < 20; beer += 1) {
+for (let beer = 99; beer > 1; beer -= 1) {
   if (beer % 2 === 0) {
-    str2 += beer + 'bottles of beer on the wall ';
+    str2 += beer + 'bottle of beer on the wall ';
     console.log(str2);
   } else {
-    str2 += beer + 'bottle of beer on the wall';
+    str2 += beer + 'bottles of beer on the wall';
     console.log(str2);
   }
 }
