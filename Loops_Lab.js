@@ -198,3 +198,13 @@ for (let i = 1; i <= N; i++){
   for (let j = 1; j <= N; j++){
       console.log(ast);
 }
+
+
+// Bonus4:
+// Multiplication table with only two loops
+for (let i = 1; i <= 10; i++){
+  console.log(i, "Multiplication table \n");
+  for (let j = 1; j <= 10; j++){
+    console.log(i, " x ", j, " = ", i*j);
+  }
+}
