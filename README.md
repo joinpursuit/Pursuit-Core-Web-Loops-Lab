@@ -1,4 +1,4 @@
-# Loops Lab
+m # Loops Lab
 
 To complete this lab, do the following:
 
@@ -16,12 +16,12 @@ ___
 
 1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
 
-2. Write a `while` loop and a `for` loop that takes the variable "num", and iterates over all numbers from 0 to "num". 
+2. Write a `while` loop and a `for` loop that takes the variable "num", and iterates over all numbers from 0 to "num".
 For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 
-3. Write a `while` loop and a `for` loop that takes the variable "num" and iterates over all numbers from 0 to "num". 
+3. Write a `while` loop and a `for` loop that takes the variable "num" and iterates over all numbers from 0 to "num".
 For each iteration of the loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
-  _Bonus_ think of another way to solve it. 
+  _Bonus_ think of another way to solve it.
     <details>
       <summary>
         Hint
@@ -47,7 +47,7 @@ while (i > 3) {
 
 7. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
-### Bonus: 
+### Bonus:
 
 1. Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
 
@@ -108,7 +108,7 @@ function assignGrade(score) {
 <summary>
   <b>Hint</b>
 </summary>
-  Explore this: 
+  Explore this:
 
   ```js
   let grade = assignGrade(80)
@@ -142,7 +142,7 @@ Output:
 
 <details>
   <summary>
-    Hint 1 
+    Hint 1
   </summary>
   Try printing/logging a single line of * first.
 </details>
