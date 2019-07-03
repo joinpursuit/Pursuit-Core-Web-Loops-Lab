@@ -80,8 +80,31 @@ for (num = 0; num <= 110; num++) {
   }
 }
 
-//4. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
-console.log('4.--------------');
+//4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
+console.log('Newly added Question 4.--------------');
+for (num = 1; num < 100; num++) {
+  if (num % 5 === 0 && num % 10 !== 0) {
+    console.log(num);
+  }
+}
+
+//5. Without running/executing your code, how many times will the loop below run? Explain why.
+console.log('Newly added Question 5.--------------');
+
+/*
+let i = 5;
+
+while (i > 3) {
+    i += 1
+}
+*/
+console.log('This code will run an infinite amount of time because ' +
+'the variable i will always be greater then 3 since it starts ' +
+'at 5 and goes up 1 everytime the loop runs. The loop will ' +
+'always be true and never become false.');
+
+//6. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
+console.log('6.--------------');
 
 for (num = 1; num <= 100; num++) {
   if (num % 3 === 0) {
@@ -93,8 +116,8 @@ for (num = 1; num <= 100; num++) {
   }
 }
 
-//5. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
-console.log('5.--------------');
+//7. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
+console.log('7.--------------');
 
 for (num = 1; num <= 100; num++) {
   if (num % 3 === 0 && num % 5 === 0) {
@@ -144,11 +167,12 @@ function assignGrade(score) {
   };
 };
 
-//Functions are a set block of code that run checks on the input its given.
-//Once you enter some info into a function it will return data depending on
-//how it's programed. So if I enter 80 into the assignGrade function I will
-// get B because I declared in my function that any number entered
-//thats over 79 and below 90 will return a B grade.
+console.log("Functions are a set block of code that run checks on the input its given. " +
+"Once you enter some info into a function it will return data depending on " +
+"how it's programed. So if I enter 80 into the assignGrade function I will " +
+"get B because I declared in my function that any number entered " +
+"thats over 79 and below 90 will return a B grade.");
+
 for (num = 1; num <= 100; num++) {
   let grade = assignGrade(num);
   console.log('If you scored ' + num + ' you get ' + grade);
@@ -157,7 +181,7 @@ for (num = 1; num <= 100; num++) {
 //3. Given an integer N draw a square of N x N asterisks. Look at the examples.
 console.log('###BONUS 3.--------------');
 
-let N = 3;
+let N = 4;
 let asterisks = '*';
 let numB3 = 1;
 
