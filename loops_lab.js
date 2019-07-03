@@ -165,3 +165,23 @@ function assignGrade(score) {
 for(i = 60; i <= 100; i++){
   console.log(i + " - " + assignGrade(i));
 }
+//Given an integer N draw a square of N x N asterisks. Look at the examples.
+
+let n = 4;
+let string = " "
+for(i = 0; i < n; i++){
+
+
+    string += "*"
+}
+for(j =0; j < n; j++){
+
+
+  console.log(string)}
+
+
+for(i = 1;i<=10;i++){
+  for(j = 1; j <= 10;j++){
+    console.log(i + " * " + j + " = " + (i * j))
+  }
+}
