@@ -68,14 +68,14 @@ for (let max = 10; max > 0; max--) {
 //     </details>
 
 let x = 10;
-
-while (x >= 0) {
-  console.log(x * 9);
-  x--;
+let j = 0;
+while (j <= x) {
+  console.log(j * 9);
+  j++;
 }
 
-for (let x = 10; x >= 0; x--) {
-  console.log(x * 9);
+for (let i = 0; i <= x; i++) {
+  console.log(i * 9);
 }
 
 // 4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
