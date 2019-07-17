@@ -30,7 +30,7 @@
 //
 // // 2a (Not complete)
 
-// for (let max = 20); max >= 0; max --) {
+// for let max = 20; max >= 0; max --) {
 //   console.log (num + "even")
 
 //Number 3:
