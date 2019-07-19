@@ -1,4 +1,7 @@
 // JOSEPH P. PASAOA
+//
+
+
 
 console.log("Using only two loops max, log a multiplication table 1 - 10 multiplying each up to 12.");
 console.log("");
@@ -12,3 +15,4 @@ while (vertFactor <= 10) {
   console.log("");
   vertFactor++;
 }
+//
