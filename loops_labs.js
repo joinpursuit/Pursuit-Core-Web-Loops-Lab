@@ -221,3 +221,15 @@ if (side < 0) {
     vertCursor++;
   }
 }
+console.log("")
+
+
+/* BETTER ANSWER */
+let n = 3;
+let string = '';
+for (let i = 0; i < n; i++) {
+  string += '*';
+}
+for (let j = 0; j < n; j++) {
+  console.log(string);
+}
