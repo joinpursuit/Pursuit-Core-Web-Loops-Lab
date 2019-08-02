@@ -41,6 +41,7 @@ for (let max = 0; max <= 32;) {
   max ++;
 }
 
+console.log("____q3____");
 // 3. Write a `while` loop and a `for` loop that takes the variable "x" and iterates over all numbers from 0 to "x".
 // For each iteration of the loop, it will multiply the number of "x" by 9 and log the result (e.g. "2 * 9 = 18").
 //   _Bonus_ think of another way to solve it.
@@ -51,7 +52,7 @@ for (let max = 0; max <= 32;) {
 //       Find the final number and increment the loop by 9.
 //     </details>
 //
-
+console.log("___q4____");
 // 4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, exclusive.
 let myNumber = 1;
 while (myNumber < 100) {
@@ -61,6 +62,7 @@ while (myNumber < 100) {
   myNumber ++;
 }
 
+console.log("___q5___");
 // 5. Without running/executing your code, how many times will the loop below run? Explain why.
 //
 // let i = 5;
@@ -69,10 +71,10 @@ while (myNumber < 100) {
 //     i += 1
 // }
 //
-// // Your explanation here
-//It will run an infinite number of times as there's no max limit given for the loop. i equals 5, which is already greater than 3, and will
-//continue to run over all the possible numbers greater than 3.
-
+// Your explanation here
+console.log("It will run an infinite number of times as there's no max limit given for the loop.");
+console.log("i equals 5, which is already greater than 3, and will continue to run over all the possible numbers greater than 3.");
+console.log("___q6 and q7___");
 // 6. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions.
 // For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
 let fizzy = 1;
@@ -86,8 +88,7 @@ while (fizzy <= 100) {
   }
   fizzy ++;
 }
-
-
+//
 // 7. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5
 // (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 while (fizzy <= 100) {
