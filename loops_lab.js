@@ -1,27 +1,37 @@
-// 1. Write a `while` loop and a `for` loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
-// let num = 24;
+// 1. Write a `while` loop and a `for` loop that takes the variable "num" and
+// logs all the numbers, descending, between "num" and 1.
+console.log("___q1____");
+let num = 24;
 
-while (num-- && num >= 2) {
+while (num >= 2) {
   console.log(num);
+  num--;
 }
 
 for (num >= 2; num-= 1;) {
   console.log(num);
 }
 
-// 2. Write a `while` loop and a `for` loop that takes the variable "max", and iterates over all numbers from 0 to "max".
-// For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
+console.log("____q2.while___");
+// 2. Write a `while` loop and a `for` loop that takes the variable "max", and
+// iterates over all numbers from 0 to "max".
+// For each iteration, it will check if the current number is even or odd, and
+// log that to the screen (e.g. "2 is even")
 let max = 32;
+let myVal = 0;
 
-// while (max <= 33) {
-//   if (max % 2 === 0) {
-//     console.log(max + " is even.");
-//   } else {
-//     console.log(max + " is odd.");
-//   }
-//   max++;
-// }
+while (myVal <= max) {
+  if (myVal % 2 === 0) {
+    console.log(`${myVal} is even.`);
+    myVal += 1;
+  } else {
+    console.log(`${myVal} is odd.`);
+    myVal += 1;
+  }
+}
 
+console.log("____q2.for____");
+//
 for (let max = 0; max <= 32;) {
   if (max % 2 === 0) {
     console.log(max + " is even.");
