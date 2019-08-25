@@ -52,6 +52,24 @@ console.log("____q3____");
 //       Find the final number and increment the loop by 9.
 //     </details>
 //
+console.log("____3 while____");
+//
+let x = 10;
+let newNum = 0;
+while (newNum <= x) {
+  let product = (newNum * x);
+  console.log(`${newNum} * ${x} = ${product}.`);
+  newNum++;
+}
+//
+console.log("____3 for____");
+//
+for (let myNum = 0; myNum <= x; myNum++) {
+  let timesAmount = (myNum * x);
+  console.log(`${myNum} * ${x} = ${timesAmount}.`);
+}
+
+//
 console.log("___q4____");
 // 4. Write code that prints/logs all the numbers that end in a 5 from 1 to 100, exclusive.
 let myNumber = 1;
