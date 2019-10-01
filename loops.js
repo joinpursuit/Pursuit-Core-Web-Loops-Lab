@@ -214,6 +214,11 @@
 // **
 // ```
 
+// for (let N = 2; N <= 4; N +=2) {
+//     if (N * 2){
+//         console.log('**')
+//     }
+// }
 // Example 2:
 // Input: `let N = 3`
 
@@ -257,20 +262,25 @@
 //    // console.log("Outside *\n")
 //    a +=a
 // }
+// for (let N = 3; N <= 9; N +=3) {
+//     if (N * 3){
+//         console.log('***')
+//     }
+// }
 
 // ## Problem Ten
 
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 // Find the sum of all the multiples of 3 or 5 below 1000.
-let all =0;
+// let all =0;
 
 
-for(let num2 = 1; num2 <= 1000; num2 +=1){
-    if(num2 % 3 === 0 || num2 % 5=== 0){
-        console.log(num2)
-        all +=num2;
-    }
+// for(let num2 = 1; num2 <= 1000; num2 +=1){
+//     if(num2 % 3 === 0 || num2 % 5=== 0){
+//         console.log(num2)
+//         all +=num2;
+//     }
     
-}
-console.log("The sum is "+all)
+// }
+// console.log("The sum is "+all)
