@@ -274,8 +274,8 @@ for (let N = 2; N <= 4; N +=2) {
 // // let all =0;
 
 
-// for(let num2 = 1; num2 = 1000; num2 +=1){
-//     if(num2 % 3 === 0 || num2 % 5=== 0){
+// for(let num2 = 1; num2 < 1000; num2 +=1){
+//     if(num2 % 3 === 0 && num2 % 5=== 0){
 //         console.log(num2)
 //         all +=num2;
 //     }
