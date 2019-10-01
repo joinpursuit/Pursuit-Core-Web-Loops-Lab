@@ -107,11 +107,17 @@
 
 
 // Write a `while` loop and a `for` loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result (e.g. "2 * 9 = 18").
-
+// Already Completed above!
 
 // ## Problem Four
 
 // Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
+
+for(let num = 1; num <= 100; num +=1){
+    if(num % 2 !== 0 && num % 5 === 0){
+        console.log(num)
+    }
+}
 
 // ## Problem Five
 
