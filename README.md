@@ -17,9 +17,18 @@ ___
 ## Problem One 
 
 a. Write a `while` loop that takes the variable `num` and logs all the numbers, descending, between "num" and 1
-
+let num = 12
+while(num >= 1) {
+  console.log(num)
+  num -= 1
+}
 b. Write a `for` loop that takes the variable `num` and logs all the numbers, descending, between "num" and 1
-
+for(i = 0; i <= 7; i++)
+if(i % 2 === 0){
+  console.log(i + "is even")
+} else {
+  console.log(i + "is odd")
+}
 Example:
 
 ```js
