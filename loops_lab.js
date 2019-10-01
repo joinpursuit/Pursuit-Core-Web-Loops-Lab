@@ -6,14 +6,23 @@
 //     num--
 // }
 // b. Write a `for` loop that takes the variable `num` and logs all the numbers, descending, between "num" and 1
-for (let i = 10; i >=1; i--){
-    console.log(i)
-}
+// for (let i = 10; i >=1; i--){
+//     console.log(i)
+// }
 
 // ## Problem Two
 // a. Write a `while` loop that takes the variable "max", and iterates over all numbers from 0 to "max". 
 // For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
-
+let max = 100
+let num = 0
+while (num <= max){
+    if (num % 2 === 0){
+        console.log(num + " is even.")
+    }else {
+        console.log(num + " is odd")
+    }
+    num++
+}
 // b. Use a `for` loop instead
 
 
