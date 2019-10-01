@@ -55,10 +55,30 @@
 // }
 
 // ***** B. *****
-for (let maxB = 25; maxB >= 0; maxB--) {
-    if (maxB % 2 === 0) {
-        console.log(maxB + " is even")
-    } else {
-        console.log(maxB + " is odd")
-    }
+// for (let maxB = 25; maxB >= 0; maxB--) {
+//     if (maxB % 2 === 0) {
+//         console.log(maxB + " is even")
+//     } else {
+//         console.log(maxB + " is odd")
+//     }
+// }
+
+// ## Problem Three
+
+// a. Write a `while` loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result 
+
+// b. Use a `for` loop instead.
+
+// Example:
+
+// ```js
+// let x = 5
+let x = 5
+while (x > 0){
+    console.log(x * 9)
+    x--
+}
+// ***** B. *****
+for (let x1 = 3; x1 > 0; x1-- ){
+    console.log (x1*9)
 }
