@@ -43,15 +43,22 @@
 // let max = 3
 
 // **** A. ****
-let max = 100;
+// let max = 100;
 
-while (max <= 100 && max >= 0) {
-    if (max % 2 === 0) {
-        console.log(max + " is even");
-    } else {
-        console.log(max + " is odd");
-    }
-    max--;
-}
+// while (max <= 100 && max >= 0) {
+//     if (max % 2 === 0) {
+//         console.log(max + " is even");
+//     } else {
+//         console.log(max + " is odd");
+//     }
+//     max--;
+// }
 
 // ***** B. *****
+for (let maxB = 25; maxB >= 0; maxB--) {
+    if (maxB % 2 === 0) {
+        console.log(maxB + " is even")
+    } else {
+        console.log(maxB + " is odd")
+    }
+}
