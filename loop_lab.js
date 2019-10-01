@@ -37,8 +37,24 @@ for (let num1 = 23; num1 >= 0; num1 -= 1) {
 // a. Write a `while` loop that takes the variable "max", and iterates over all numbers from 0 to "max". 
 // For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 
+let max = 0
+while (max <= 18) {
+    if (max % 2 === 0) {
+        console.log(max + " is even");
+    } else {
+        console.log(max + " is odd");
+    }
+    max +=1
+}
 // b. Use a `for` loop instead
 
+for (max = 0; max <= 18; max += 1) {
+    if (max % 2 === 0) {
+        console.log(max + " is even");
+     } else {
+        console.log(max + " is odd")
+}
+    }
 // Example: 
 
 // ```js
