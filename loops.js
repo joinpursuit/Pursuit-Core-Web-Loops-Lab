@@ -113,11 +113,11 @@
 
 // Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
-for(let num = 1; num <= 100; num +=1){
-    if(num % 2 !== 0 && num % 5 === 0){
-        console.log(num)
-    }
-}
+// for(let num = 1; num <= 100; num +=1){
+//     if(num % 2 !== 0 && num % 5 === 0){
+//         console.log(num)
+//     }
+// }
 
 // ## Problem Five
 
@@ -133,13 +133,37 @@ for(let num = 1; num <= 100; num +=1){
 // // Your explanation here
 // ```
 
+//** This will return a infiniti loop because the conditional will always be true **//
+
 // ## Problem Six
 
 // Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
 
+// for(let num1 = 1; num1 <= 100; num1 +=1){
+//     if(num1 % 3 === 0 ){
+//         console.log("Fizz")
+//     } else if(num1 % 5 === 0 ){
+//         console.log("Buzz")
+//     } else {
+//         console.log(num1)
+//     }
+// }
+
 // ## Problem Seven
 
 // Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
+
+// for(let num2 = 1; num2 <= 100; num2 +=1){
+//     if(num2 % 3 === 0 && num2 % 5=== 0){
+//         console.log("FizzBuzz")
+//     } else if (num2 % 3 === 0){
+//         console.log("Fizz")
+//     }else if(num2 % 5 === 0 ){
+//         console.log("Buzz")
+//     } else {
+//         console.log(num2)
+//     }
+// }
 
 // ## Problem Eight
 
@@ -165,6 +189,17 @@ for(let num = 1; num <= 100; num +=1){
 //   1 bottle of beer on the wall, 1 bottle of beer.
 //   Take one down, pass it around, No more bottle of beer on the wall.
 //   ```
+
+// for(let num3 = 100; num3 >= 1; num3 -=1){
+   
+//    if(num3 ===1){
+//     console.log(num3 + " bottles of beer on the wall, "+num3+" bottles of beer.")
+//     console.log("Take one down, pass it around,no more bottle of beer on the wall.\n");
+//    } else {
+//     console.log(num3 + " bottles of beer on the wall, "+num3+" bottles of beer.")
+//     console.log("Take one down, pass it around,"+(num3 - 1)+" bottle of beer on the wall.\n");
+//    }
+// }
 
 // ## Problem Nine
 
@@ -203,8 +238,39 @@ for(let num = 1; num <= 100; num +=1){
 //   You will need 2 loops for this.
 // </details>
 
+// let num = 3
+// let a = "*"
+
+// for(i = 1; i<=num; i ++) {
+//    console.log("rows "+i)
+//     for (j = 0; j < num; j++){
+//        // console.log("This is Start")
+//         // if(j >= i){
+//         //     a += a
+//            console.log(a);
+//         // }
+//     //     if(j = i){
+//     //   console.log(a);
+//     //     }
+//   //  a +=a;
+//     }
+//    // console.log("Outside *\n")
+//    a +=a
+// }
+
 // ## Problem Ten
 
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 // Find the sum of all the multiples of 3 or 5 below 1000.
+let all =0;
+
+
+for(let num2 = 1; num2 <= 1000; num2 +=1){
+    if(num2 % 3 === 0 || num2 % 5=== 0){
+        console.log(num2)
+        all +=num2;
+    }
+    
+}
+console.log("The sum is "+all)
