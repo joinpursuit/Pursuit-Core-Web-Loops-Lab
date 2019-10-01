@@ -43,7 +43,7 @@ for (let num = 20; num >= 1; num -=1) {
 // */
 // ```
 
-// ## Problem Two
+// ## Problem Two Nilber
 
 // a. Write a `while` loop that takes the variable "max", and iterates over all numbers from 0 to "max". 
 // For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
@@ -66,7 +66,7 @@ for (let num = 20; num >= 1; num -=1) {
 
 // ```
 
-// ## Problem Three
+// ## Problem Three Patrick
 
 // a. Write a `while` loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result 
 
@@ -93,11 +93,11 @@ for (let num = 20; num >= 1; num -=1) {
 // Write a `while` loop and a `for` loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result (e.g. "2 * 9 = 18").
 
 
-// ## Problem Four
+// ## Problem Four Nilber
 
 // Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
-// ## Problem Five
+// ## Problem Five Patrick
 
 // Without running/executing your code, how many times will the loop below run? Explain why.
 
@@ -111,15 +111,15 @@ for (let num = 20; num >= 1; num -=1) {
 // // Your explanation here
 // ```
 
-// ## Problem Six
+// ## Problem Six Nilber
 
 // Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
 
-// ## Problem Seven
+// ## Problem Seven Patrick
 
 // Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
-// ## Problem Eight
+// ## Problem Eight Nilber & Patrick
 
 // Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
 
