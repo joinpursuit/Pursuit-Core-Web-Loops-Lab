@@ -40,17 +40,26 @@
 // a. Write a `while` loop that takes the variable "max", and iterates over all numbers from 0 to "max". 
 // For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 
-let max = 0;
-while ( max <= 10) {
-    if (max % 2 === 0){
-        console.log(max + " is even.");
-    } else {
-        console.log(max + " is odd.")
-    }
-    max += 1;
-}
+// let max = 0;
+// while ( max <= 10) {
+//     if (max % 2 === 0){
+//         console.log(max + " is even.");
+//     } else {
+//         console.log(max + " is odd.")
+//     }
+//     max += 1;
+// }`
 
 // b. Use a `for` loop instead
+
+
+// for (max = 0; max <= 10; max += 1){
+// if (max % 2 === 0){
+//     console.log(max + " is even.");
+// } else {
+//     console.log(max + " is odd.")
+// }
+// }
 
 // Example: 
 
@@ -72,7 +81,23 @@ while ( max <= 10) {
 
 // a. Write a `while` loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result 
 
+
+// let x = 0;
+// while ( x <= 10){
+//     console.log( x + " * 9 = " + x * 9 );
+//     x ++;
+// }
+
+
+
 // b. Use a `for` loop instead.
+
+
+// for (let x = 0; x <= 10; x ++) {
+//     console.log( x + " * 9 = " + x * 9 )
+// }
+
+
 
 // Example:
 
@@ -99,6 +124,13 @@ while ( max <= 10) {
 
 // Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
+// let x = 5
+// while ( x <= 100) {
+//     console.log(x)
+// x += 10;
+// }
+
+
 // ## Problem Five
 
 // Without running/executing your code, how many times will the loop below run? Explain why.
@@ -111,11 +143,25 @@ while ( max <= 10) {
 // }
 
 // // Your explanation here
+//nothing would print, there is no console.log. there is no ; at the end to stop the loop either
+
 // ```
 
 // ## Problem Six
 
 // Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
+
+// let x = 0
+//     while (x <= 100) {
+//         if (x % 3 == 0){
+//             console.log("fizz")
+//         }
+//         else if (x % 5 == 0){
+//             console.log("buzz")
+//         } else {
+//             console.log(x)
+//         } x += 1;
+//     }
 
 // ## Problem Seven
 
