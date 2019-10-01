@@ -2,7 +2,11 @@
 // a. Write a `while` loop that takes the variable `num` and logs all the numbers, descending, between "num" and 1
 
 // b. Write a `for` loop that takes the variable `num` and logs all the numbers, descending, between "num" and 1
-
+let num = 10
+while (num >=1) {
+    console.log(num)
+    num--
+}
 
 // ## Problem Two
 // a. Write a `while` loop that takes the variable "max", and iterates over all numbers from 0 to "max". 
