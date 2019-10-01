@@ -93,8 +93,15 @@ for (z; z <= 100; z++) {
 
 let bottles = 99
 for (bottles; bottles >= 0; bottles--) {
-    if (bottles > 1) {
-        console.log(bottles + " bottles of beer on the wall, " + bottles + " bottles of beer.
-        Take one down, pass it around, " + (bottles-1) +  " bottles of beer on the wall.")
-    }
+    if (bottles > 2) {
+        console.log(bottles + " bottles of beer on the wall, " + bottles + 
+        " bottles of beer. Take one down, pass it around, " + (bottles-1) +  " bottles of beer on the wall.")
+    }if (bottles === 2) {
+        console.log("2 bottles of beer on the wall, " +
+        "2 bottles of beer. Take one down, pass it around, 1 bottle of beer on the wall.")
+    } if (bottles === 1) {
+        console.log("1 bottle of beer on the wall, " +
+        "1 bottle of beer. Take one down, pass it around, No more bottle of beer on the wall.")
 }
+}
+
