@@ -19,6 +19,11 @@ The number is 1
 
 // b. Write a `for` loop that takes the variable `num` and logs all the numbers, descending, between "num" and 1
 
+for (let num = 20; num >= 1; num -=1) {
+  console.log(num);
+}
+
+
 // Example:
 
 // ```js
