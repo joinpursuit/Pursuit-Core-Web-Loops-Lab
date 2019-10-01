@@ -4,9 +4,9 @@
 
 let num = 15; // for #1 & #2, I wanted to combine both while and for loops, and not do them seperate. was not sure which way you wanted, but I did it.
 while ( num >= 1){
-  for ( num == 15; num > 1; num--){
-  console.log(num)
-}
+  //for ( num == 15; num > 1; num--){
+  //console.log(num)
+
 console.log(num);
   num--;
 
@@ -18,21 +18,27 @@ For each iteration, it will check if the current number is even or odd, and log 
 */
 console.log("----------------");
 let num2 = 0;
-while ( num2 <= 10){
-  for ( num2 == 0; num2 % 2 ===0; num2++){
-  console.log(num2 + " Even")
+while (num2 <= 10){
+ 
+  if(num2 % 2 === 0){
+    console.log(num2 +" is even");
+    
   }
-if (num2 % 2 ===1){
-  console.log(num2 +" Odd");
+  else{
+    console.log(num2 +" is odd");
+    }
+    num2++;
 }
 
-
-// for (num2 == 0; num2 % 2 ===1; num2++){
-// console.log(num2 + " Odd");
-// }
-//console.log(num2);
-  num2++;
-
+for(let i = 0; i <= 15; i++){
+  if(i % 2 === 0){
+    console.log(i + " is even");
+    }
+    else {
+      console.log(i + " is odd");
+      
+    }
+  
 }
 
 
