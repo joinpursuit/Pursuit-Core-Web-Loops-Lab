@@ -27,7 +27,7 @@ while (x <= max) {
     } x ++;
 }
 
-b. Use a `for` loop instead
+//b. Use a `for` loop instead
 
 for (x; x <= max; x ++) {
     if (x % 2 === 0) {
@@ -35,4 +35,18 @@ for (x; x <= max; x ++) {
     } else {
         console.log(x + " this is odd")
     }
+}
+
+//a. Write a `while` loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result 
+let x1 = 8
+let y = 0
+
+while (y <= x1) {
+    console.log(y * 9);
+    y ++
+}
+
+//b
+for (y; y <=x1; y++) {
+    console.log(y * 9)
 }
