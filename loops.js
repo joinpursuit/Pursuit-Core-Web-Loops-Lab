@@ -1,8 +1,8 @@
-let num = 50
-while (num >=1){
-    console.log(num)
-    num-=1
-}
+// let num = 50
+// while (num >=1){
+//     console.log(num)
+//     num-=1
+// }
 
 // b)
 // for (num1 = 50; num1 >=1; num1-=1){
@@ -32,3 +32,43 @@ while (num >=1){
 
 // let x =  1
 // while ()
+
+// 
+// let x = 0
+// while (x<=100){
+//     console.log(x + " " + "*" + " " + "9" + " " + "=" + " " + x*9)
+//      x ++
+// }
+
+// for (x = 1; x <= 100; x ++){
+//     console.log(x + " " + "*" + " " + "9" + " " + "=" + " " + x*9)
+// }
+
+// rules of numbers ending in 5
+// let i = 5
+// while (i<=100){
+//     console.log(i)
+//     i+=10
+//     }
+
+// let i = 5
+
+// while (i > 3) {
+//     i += 1
+// }
+
+let x = 1
+while (x <= 100){
+    if (x % 3 === 0 ){
+        console.log("fizz")
+        x ++
+    }else {
+         console.log(x)
+         x ++
+     }
+        
+    if (x % 5 === 0){
+        console.log("buzz")
+        x ++
+    }
+}
