@@ -39,15 +39,28 @@ let max2 = 10
 
 for (let counter2 = 0;counter2 <= max; counter2 += 1){
 
-    if (counter2%2 === 0){
+    if (counter2 % 2 === 0){
         console.log(counter2 + " is even")
         } else[
             console.log(counter2 + " is odd")
         ]
 }
 
+//a. Write a `while` loop that takes the variable "x" and iterates over all numbers 
+//from 0 to "x". For each iteration of the loop, it will multiply the number of "x" 
+//by 9 and log the result 
 
+let y = 0;
+let x = 9;
 
+while (y <= x) {
+
+    console.log(y + " * 9 =" + y * 9)
+
+    y += 1
+}
+
+//b. Use a `for` loop instead.
 
 
 
