@@ -179,11 +179,20 @@ function assignGrade(score) {
 console.log(assignGrade(91))
 
 //question 10
-let str = "*";
+let int = 3
+let str = "*"
 
-for(let i = str; i <= ""; i++){
-  str+=i;
-  console.log(str);
+  for(i = ""; i<= 3;i++){
+    console.log(str);
+      
+for(j = ""; j <= 3; j++){
+   i+=str;
+  console.log(i)
+  
   
 }
+    
+}
+
+
 
