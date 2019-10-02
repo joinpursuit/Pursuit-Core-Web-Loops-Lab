@@ -141,3 +141,49 @@ while ( z <= 100){
   z++;
 
 }
+// question 8
+
+let bottle = 99;
+while (bottle >= 1){
+  console.log(bottle + " bottles of beer on the wall, "+ bottle  + " bottles of beer.");
+  bottle--; 
+  console.log("Take one down and pass it around, " + bottle+  " bottles of beer on the wall.")
+if ( bottle === 1 ){
+  console.log(bottle + " bottles of beer on the wall, "+ bottle + " bottles of beer ");
+  console.log("take one down, no more bottles of beer on the wall.");
+  bottle --;
+  }
+  if(bottle === 0){
+    console.log("No more bottles of beer on the wall, no more bottles of beer")
+    console.log("Go to the store and buy some more, 99 bottles of beer on the wall.")
+    
+    
+  } 
+  
+ 
+}
+//question 9
+function assignGrade(score) {
+  if (score > 90) {
+      return 'A';
+  } else if (score > 80) {
+      return 'B';
+  } else if (score > 70) {
+      return 'C';
+  } else if (score > 65) {
+      return 'D';
+  } else {
+      return 'F';
+  };
+};
+console.log(assignGrade(91))
+
+//question 10
+let str = "*";
+
+for(let i = str; i <= ""; i++){
+  str+=i;
+  console.log(str);
+  
+}
+
