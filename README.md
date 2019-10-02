@@ -121,7 +121,7 @@ while (i > 3) {
 
 Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
 let i = 1;
-for(var i =1; i <= 100; i++){
+for(i =1; i <= 100; i++){
   if(i % 5 === 0){
     console.log(i + "Buzz")
   } else if(i % 3 === 0){
@@ -133,7 +133,17 @@ for(var i =1; i <= 100; i++){
 ## Problem Seven
 
 Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
-
+for(i = 1; i<= 100; i++){
+  if(i % 3 === 0 && i % 5 === 0){
+    console.log(i + "FizzBuzz");
+  } else if(i % 3 ===0){
+    console.log(i + "Fizz");
+  } else if(i % 5 === 0){
+    console.log(i + "Buzz");
+  } else{
+    console.log(i);
+  }
+}
 ## Problem Eight
 
 Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
