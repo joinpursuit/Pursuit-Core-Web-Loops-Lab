@@ -212,11 +212,11 @@
 // // **
 // // ```
 
-for (let N = 2; N <= 4; N +=2) {
-    if (N * 2){
-        console.log('**')
-    }
-}
+// for (let N = 2; N <= 4; N +=2) {
+//     if (N * 2){
+//         console.log('**')
+//     }
+// }
 // // Example 2:
 // // Input: `let N = 3`
 
@@ -241,25 +241,25 @@ for (let N = 2; N <= 4; N +=2) {
 // //   You will need 2 loops for this.
 // // </details>
 
-// // let num = 3
-// // let a = "*"
+// let num = 3
+// let a = "*"
 
-// // for(i = 1; i<=num; i ++) {
-// //    console.log("rows "+i)
-// //     for (j = 0; j < num; j++){
-// //        // console.log("This is Start")
-// //         // if(j >= i){
-// //         //     a += a
-// //            console.log(a);
-// //         // }
-// //     //     if(j = i){
-// //     //   console.log(a);
-// //     //     }
-// //   //  a +=a;
-// //     }
-// //    // console.log("Outside *\n")
-// //    a +=a
-// // }
+// for(i = 1; i<=num; i ++) {
+//    console.log("rows "+i)
+//     for (j = 0; j < num; j++){
+//        // console.log("This is Start")
+//         // if(j >= i){
+//         //     a += a
+//            console.log(a);
+//         // }
+//     //     if(j = i){
+//     //   console.log(a);
+//     //     }
+//   //  a +=a;
+//     }
+//    // console.log("Outside *\n")
+//    a +=a
+// }
 // for (let N = 3; N <= 9; N +=3) {
 //     if (N * 3){
 //         console.log('***')
@@ -282,3 +282,11 @@ for (let N = 2; N <= 4; N +=2) {
     
 // }
 // console.log("The sum is "+all)
+
+let i = 0;
+
+for(let i=3 ; i<10 ; i++){
+
+   console.log(i)
+
+}
