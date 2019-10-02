@@ -167,6 +167,22 @@
 
 // Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
+// let x = 0
+//     while (x <= 100) {
+//         if (x % 3 === 0 && x % 5 === 0){
+//             console.log("fizzbuzz")
+//         }
+//         else if (x % 5 == 0){
+//             console.log("buzz")
+//         }else if (x % 3 == 0){
+//             console.log("fizz")
+//         }
+//          else {
+//             console.log(x)
+//         } x += 1;
+//     }
+
+
 // ## Problem Eight
 
 // Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
@@ -191,6 +207,19 @@
 //   1 bottle of beer on the wall, 1 bottle of beer.
 //   Take one down, pass it around, No more bottle of beer on the wall.
 //   ```
+
+// let x = 99;
+//     while (x >= 2){
+//      if (x >= 1){
+//         console.log(x + " bottles of beer on the wall, " + x + " bottles of beer.");
+//         console.log("Take one down, pass it around, " + (x - 1) + " bottles of beer on the wall.");
+//         x -= 1;
+//     } else (x === 0)
+//         console.log(x + " bottles of beer on the wall, " + x + " bottles of beer.");
+//         console.log("Take one down, pass it around, " + "no more " + " bottle of beer on the wall.");
+//     }
+
+
 
 // ## Problem Nine
 
@@ -229,8 +258,21 @@
 //   You will need 2 loops for this.
 // </details>
 
+// let size = 50;
+// let asterisks = "*";
+// for (let x = 1; x <= size; x++){
+//     console.log(asterisks.repeat(size));
+// }
+
 // ## Problem Ten
 
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-
 // Find the sum of all the multiples of 3 or 5 below 1000.
+
+// let sum = 0;
+//     for (let num = 0; num <=1000; num++){
+//         if (num % 3 === 0 || num % 5 === 0){
+//             sum += num;
+
+//         }
+//     }console.log(sum)
