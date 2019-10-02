@@ -73,12 +73,22 @@
 
 // ```js
 // let x = 5
-let x = 5
-while (x > 0){
-    console.log(x * 9)
-    x--
-}
-// ***** B. *****
-for (let x1 = 3; x1 > 0; x1-- ){
-    console.log (x1*9)
+// let x = 5
+// while (x > 0){
+//     console.log(x * 9)
+//     x--
+// }
+// // ***** B. *****
+// for (let x1 = 3; x1 > 0; x1-- ){
+//     console.log (x1*9)
+// }
+// ## Problem Four
+
+// Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
+let solu4 = 0
+while (solu4 < 100){
+    if (solu4 % 5 === 0 && solu4 % 2 === 1){
+        console.log(solu4)
+    }
+    solu4++
 }
