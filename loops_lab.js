@@ -146,3 +146,4 @@ for (let numFnB = 1; numFnB < 1000; numFnB++) {
   }
 }
 console.log(sum)
+
