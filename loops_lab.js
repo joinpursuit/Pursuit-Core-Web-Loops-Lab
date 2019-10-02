@@ -97,44 +97,43 @@
 
 // Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
-for(let i = 1; i<= 100; i++){
-    if (i % 3 ===0 && i % 5 === 0) {
-        console.log("fizzbuzz")
-    }else if( i % 5 === 0){
-        console.log("buzz")
-    }else if( i % 3 === 0){
-        console.log("fizz")
-    }else {
-        console.log(i)
-    }
-}
+// for(let i = 1; i<= 100; i++){
+//     if (i % 3 ===0 && i % 5 === 0) {
+//         console.log("fizzbuzz")
+//     }else if( i % 5 === 0){
+//         console.log("buzz")
+//     }else if( i % 3 === 0){
+//         console.log("fizz")
+//     }else {
+//         console.log(i)
+//     }
+// }
 
 // ## Problem Eight
 
-// Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
-
-//   ```
-//   99 bottles of beer on the wall, 99 bottles of beer.
-//   Take one down, pass it around, 98 bottles of beer on the wall.
-//   ```
-
 // This verse is repeated, each time with one less bottle, until the number of bottles is 0. When the number of bottles is 2, the verse is:
-
-//   ```
 //   2 bottles of beer on the wall, 2 bottles of beer.
 //   Take one down, pass it around, 1 bottle of beer on the wall.
-//   ```
 
 //   In the last line, the word bottles (plural), is  replaced with bottle (singular)
-
 //   When the number of bottles is 1, the verse is:
-
-//   ```
 //   1 bottle of beer on the wall, 1 bottle of beer.
 //   Take one down, pass it around, No more bottle of beer on the wall.
-//   ```
 
-
+let decreasedBeer = 0;
+for(let i = 100; i > 0; i -= 1) {
+    decreasedBeer = i - 1;
+    if(i > 2) {
+        console.log(i + " bottles of beer on the wall, " + i + " bottles of beer.");
+        console.log("Take one down, pass it around, " + decreasedBeer + " bottles of beer on the wall.")
+    } else if (i === 2) {
+        console.log(i + " bottles of beer on the wall, " + i + " bottles of beer.");
+        console.log("Take one down, pass it around, " + decreasedBeer + " bottle of beer on the wall.")
+    } else if (i === 1) {
+        console.log(i + " bottle of beer on the wall, " + i + " bottle of beer.");
+        console.log("Take one down, pass it around, No more bottle of beer on the wall.")
+    }
+}
 // ## Problem Nine
 
 // Given an integer N draw a square of N x N asterisks. Look at the examples.
