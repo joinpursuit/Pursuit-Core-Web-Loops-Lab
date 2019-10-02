@@ -4,7 +4,7 @@
 //     num-=1
 // }
 
-// b)
+// 
 // for (num1 = 50; num1 >=1; num1-=1){
 //     console.log(num1)
 // }
@@ -33,7 +33,7 @@
 // let x =  1
 // while ()
 
-// 
+
 // let x = 0
 // while (x<=100){
 //     console.log(x + " " + "*" + " " + "9" + " " + "=" + " " + x*9)
@@ -57,18 +57,42 @@
 //     i += 1
 // }
 
-let x = 1
-while (x <= 100){
-    if (x % 3 === 0 ){
-        console.log("fizz")
-        x ++
-    }else {
-         console.log(x)
-         x ++
-     }
+// let x = 1
+// while (x <= 100){
+//     if (x % 3 === 0 ){
+//         console.log("fizz")
+//         x ++
+//     }else {
+//          console.log(x)
+//          x ++
+//      }
         
-    if (x % 5 === 0){
-        console.log("buzz")
-        x ++
-    }
-}
+//     if (x % 5 === 0){
+//         console.log("buzz")
+//         x ++
+//     }
+// }
+
+// for (x = 1; x <= 100; x++){
+//     if ( x % 3 === 0){
+//         console.log ("fizz")
+//     } else {
+//         console.log(x)
+//     }
+//     if (x % 5 === 0){
+//         console.log("buzzz")
+//     }
+// }
+// let x = 99
+// while (x > 0){
+//     console.log(x + " " + "bottles of beer on the wall" + " " + x + " " + "numbers of beer,")
+//     console.log("Take one down, pass it around,")
+//      x = x-1
+//  if (x === 1) {
+//      console.log(" 1 bottle of beer on the one, one bottle of beer, take on dow pass it around, ")
+//  } else if (x === 0) { 
+//     console.log("no more bottles of beer on the wall")
+//  }
+ 
+// }
+
