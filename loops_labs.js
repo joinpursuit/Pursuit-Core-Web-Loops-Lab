@@ -105,3 +105,56 @@ for (bottles; bottles >= 0; bottles--) {
 }
 }
 
+// Given an integer N draw a square of N x N asterisks. Look at the examples.
+
+// Example 1:
+// Input: `let N = 2`
+
+// Output:
+// ```js
+// **
+// **
+// ```
+
+// Example 2:
+// Input: `let N = 3`
+
+// Output:
+// ```js
+// ***
+// ***
+// ***
+// ```
+
+// <details>
+//   <summary>
+//     Hint 1 
+//   </summary>
+//   Try printing/logging a single line of * first.
+// </details>
+
+// <details>
+//   <summary>
+//     Hint 2
+//   </summary>
+//   You will need 2 loops for this.
+// </details>
+
+
+let l = '*'
+let c = 10
+
+for (let i = 0; i < c; i++) {
+    console.log(l.repeat(c));
+}
+
+//Problem 10
+
+let sum = 0
+
+for (let i = 0; i < 1000; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+        sum += i; 
+    }
+  }
+  console.log(sum)
