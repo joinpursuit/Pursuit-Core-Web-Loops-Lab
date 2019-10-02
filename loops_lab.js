@@ -123,16 +123,34 @@
 
 // Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
-let pro7 = 1;
-while (pro7 <= 100) {
-    if (pro7 % 3 === 0 && pro7 % 5 === 0){
-        console.log("FizzBuzz")
-    }else if(
-        pro7 % 3 === 0) {
-        console.log("Fizz");
-    } else if (pro7 % 5 === 0) {
-        console.log("Buzz");
+// let pro7 = 1;
+// while (pro7 <= 100) {
+//     if (pro7 % 3 === 0 && pro7 % 5 === 0){
+//         console.log("FizzBuzz")
+//     }else if(
+//         pro7 % 3 === 0) {
+//         console.log("Fizz");
+//     } else if (pro7 % 5 === 0) {
+//         console.log("Buzz");
+//     } else {
+//         console.log(pro7);
+//     } pro7++;
+// }
+
+// ## Problem Eight
+
+// Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
+
+let beer = 100;
+while (beer >= 1) {
+    if (beer >= 3) {
+        console.log(`${beer} bottles of beer on the wall, ${beer} bottles of beer.
+        Take one down, pass it around, ${beer - 1} bottles of beer on the wall.`)
+    } else if (beer === 2) {
+        console.log(`${beer } bottles of beer on the wall, ${beer} bottles of beer.
+        Take one down, pass it around, ${beer - 1} bottle of beer on the wall.`)
     } else {
-        console.log(pro7);
-    } pro7++;
+        console.log(`1 bottle of beer on the wall, 1 bottle of beer.
+        Take one down, pass it around, No more bottle of beer on the wall.`)
+    } beer--;
 }
