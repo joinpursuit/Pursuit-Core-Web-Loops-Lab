@@ -75,7 +75,18 @@ for (max = 0; max <= 18; max += 1) {
 
 // a. Write a `while` loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result 
 
+let x = 0
+while (x <= 7) {
+    console.log(x * 9)
+    x += 1
+    }
+
+
 // b. Use a `for` loop instead.
+
+for (let r = 0; r <= 7; r += 1) {
+    console.log(r * 9)
+}
 
 // Example:
 
@@ -96,6 +107,16 @@ for (max = 0; max <= 18; max += 1) {
 
 
 // Write a `while` loop and a `for` loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result (e.g. "2 * 9 = 18").
+
+for (let f = 0; f <= 9; f += 1) {
+    console.log(f + " * 9 = " + (f * 9))
+}
+
+let j = 0
+while (j <= 9) {
+    console.log(j + " * 9 = " + (j * 9))
+    j++
+}
 
 
 // ## Problem Four
