@@ -259,8 +259,22 @@ for (let b = 99; b <= 99; b -= 1) {
 //   You will need 2 loops for this.
 // </details>
 
+let size = 5;
+let asterisk = "*";
+for (let i = 1; i <= size; i +=1){
+    console.log(asterisk.repeat(size));
+}
+
 // ## Problem Ten
 
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 // Find the sum of all the multiples of 3 or 5 below 1000.
+
+let sum1 = 0
+for (let x = 0; x < 1000; x++) {
+ if (x % 3 === 0 && x % 5 === 0) {
+   sum1 += x
+ }
+}
+console.log("Sum1 is " + sum1)
