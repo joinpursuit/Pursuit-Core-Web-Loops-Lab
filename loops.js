@@ -84,16 +84,21 @@
 //     }
 // }
 // let x = 99
-// while (x > 0){
+// while (x > 1){
 //     console.log(x + " " + "bottles of beer on the wall" + " " + x + " " + "numbers of beer,")
 //     console.log("Take one down, pass it around,")
 //      x = x-1
-//  if (x === 1) {
-//      console.log(" 1 bottle of beer on the one, one bottle of beer, take on dow pass it around, ")
-//  } else if (x === 0) { 
-//     console.log("no more bottles of beer on the wall")
+// }   
+//  if (x === 1 || x === 0) {
+//      console.log(" 1 more bottle of beer on the one, one bottle of beer, take on down pass it around, ")
+//      console.log("no more bottles of beer on the wall")
 //  }
  
-// }
+let sum1 = 0
+for (let x = 0; x < 1000; x++){
+   if (x % 3 === 0 && x % 5 === 0){
+     sum1 += x
+ }
+}
+    console.log("sum 1 is " + sum1)
 
-//
