@@ -1,3 +1,4 @@
+//Problem Set 1
 //a. Write a `while` loop that takes the variable `num` and
 // logs all the numbers, descending, between "num" and 1
 let num = 5;
@@ -16,6 +17,7 @@ for (let num2 = 10; num2 >= 1; num2 -= 1){
     console.log ("The number is: "+num2);
 };
 
+// Problem Set 2
 //a. Write a `while` loop that takes the variable "max", and iterates over all numbers from 0 to "max". 
 //For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 let max = 8
@@ -46,6 +48,7 @@ for (let counter2 = 0;counter2 <= max; counter2 += 1){
         ]
 }
 
+// Problem Set 3
 //a. Write a `while` loop that takes the variable "x" and iterates over all numbers 
 //from 0 to "x". For each iteration of the loop, it will multiply the number of "x" 
 //by 9 and log the result 
@@ -62,9 +65,22 @@ while (y <= x) {
 
 //b. Use a `for` loop instead.
 
+let y2 = 9
 
+for(let x2 = 0; x2 >= y2; x2++ ){
 
+    console.log(y + " * 9 =" + y * 9)
 
+}
 
+//Problem Set 4
+//Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
+for (let numNum = 5; numNum <=100; numNum += 10 ){
+        
+    
+        console.log(numNum)
+
+    
+}
 
