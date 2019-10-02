@@ -165,3 +165,64 @@ a-=1
 
 }
 
+// Given an integer N draw a square of N x N asterisks. Look at the examples.
+
+// Example 1:
+// Input: `let N = 2`
+
+// Output:
+// ```js
+// **
+// **
+// ```
+
+// Example 2:
+// Input: `let N = 3`
+
+// Output:
+// ```js
+// ***
+// ***
+// ***
+// ```
+// let N = 3
+
+// let R = N
+
+// let numx = 0
+
+// for (let b = 0;b < N; b ++ ) {
+//     while (numx < R) {
+//         console.log("*") 
+//         numx ++
+//             }
+// console.log("*" ) 
+
+// }
+
+let N = 4;
+let askt = "";
+
+for(let outter = 0; outter < N; outter++){
+    console.log('\n');
+   for(let inner = 0; inner < N; inner++){
+       askt += "*";
+   }
+
+console.log(askt);
+}
+
+//If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+//Find the sum of all the multiples of 3 or 5 below 1000.
+
+let sum1 = 0;
+
+for(let b = 0; b < 1000; b ++){
+
+    if (b%3 === 0 || b%5 === 0){
+        sum1 += b
+
+       } 
+
+}
+console.log(sum1)
