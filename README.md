@@ -49,7 +49,13 @@ a. Write a `while` loop that takes the variable "max", and iterates over all num
 For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 
 b. Use a `for` loop instead
-
+for(let h = 0; h <= 25; h++){
+  if(h % 2 === 0){
+    console.log(h + "is even");
+  } else {
+    console.log(h + "is odd");
+  }
+}
 Example: 
 
 ```js
@@ -114,7 +120,16 @@ while (i > 3) {
 ## Problem Six
 
 Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
-
+let i = 1;
+for(var i =1; i <= 100; i++){
+  if(i % 5 === 0){
+    console.log(i + "Buzz")
+  } else if(i % 3 === 0){
+    console.log(i + "Fizz")
+  } else {
+    console.log(i)
+  }
+}
 ## Problem Seven
 
 Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
