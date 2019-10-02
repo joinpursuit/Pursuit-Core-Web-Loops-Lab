@@ -103,17 +103,36 @@
 //     i += 1
 // }
 // The loop will run for inifinity because i is already greater than 3 and will never return a false value. 
+
 // ## Problem Six
 
 // Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
 
-let pro6 = 1;
-while (pro6 <= 100) {
-    if (pro6 % 3 === 0) {
+// let pro6 = 1;
+// while (pro6 <= 100) {
+//     if (pro6 % 3 === 0) {
+//         console.log("Fizz");
+//     } else if (pro6 % 5 === 0 && pro6 % 3 > 0) {
+//         console.log("Buzz");
+//     } else {
+//         console.log(pro6);
+//     } pro6++;
+// }
+
+// ## Problem Seven
+
+// Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
+
+let pro7 = 1;
+while (pro7 <= 100) {
+    if (pro7 % 3 === 0 && pro7 % 5 === 0){
+        console.log("FizzBuzz")
+    }else if(
+        pro7 % 3 === 0) {
         console.log("Fizz");
-    } else if (pro6 % 5 === 0 && pro6 % 3 > 0) {
+    } else if (pro7 % 5 === 0) {
         console.log("Buzz");
     } else {
-        console.log(pro6);
-    } pro6++;
+        console.log(pro7);
+    } pro7++;
 }
