@@ -160,13 +160,46 @@ for (let w = 1; w <= 100; w++) {
        console.log(w);
      }
 }
+
+
 // ## Problem Seven
 
 // Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
+let a = 1
+for (let a = 1; a <= 100; a++) {
+    if (a % 3 === 0 && a % 5 === 0) {
+      console.log("FizzBuzz")
+    } else if (a % 3 === 0) {
+        console.log("Fizz") 
+    } else if (a % 5 === 0) {
+        console.log("Buzz")
+    } else {
+        console.log(a)
+     }
+
+}
+
+
+
 // ## Problem Eight
 
 // Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
+
+let b = 99
+let decrease = (b - 1)
+for (let b = 99; b <= 99; b -= 1) {
+    if (b > 2) {
+        console.log(b + " bottles of beer on the wall, " + b + " bottles of beer. Take one down, pass it around, " + (b - 1) + " bottles of beer on the wall.")
+    } else if (b === 2) {
+        console.log(b + " bottles of beer on the wall, " + b + " bottles of beer. Take one down, pass it around, " + (b - 1) + " bottle of beer on the wall.")
+    } else if (b === 1) {
+        console.log(b + " bottle of beer on the wall, " + b + " bottle of beer. Take one down, pass it around, " + b + " bottle of beer on the wall.")
+    }
+}
+
+
+
 
 //   ```
 //   99 bottles of beer on the wall, 99 bottles of beer.
