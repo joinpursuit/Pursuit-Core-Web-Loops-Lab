@@ -96,22 +96,53 @@
 
 console.log("Problem 8")
 
+for (let bott = 5; bott >0; bott--){
+    if (bott >2){console.log((bott) + " bottle of beer on the wall," + (bott-1) + " bottles of beer. Take one down, pass it around.")
+}
+    else if (bott ===2){
+        console.log(bott + " bottles of beer on the one, 1 bottle of beer, take on down pass it around, ")
+    }
+    else {
+        console.log("1 bottle of beer on the wall, No more bottle of beer on the wall")
+    }
+}
 
-let x = 5
-while (x > 0){
-    console.log(x + " " + "bottles of beer on the wall" + " " + (x-1) + " " + "numbers of beer,")
-    console.log("Take one down, pass it around,")
-     x = x-1
- if (x === 1) {
-     console.log(" 1 bottle of beer on the one,NO bottle of beer, take on dow pass it around, ")
- } else if (x === 0) {
-    console.log("no more bottles of beer on the wall")
- }}
+// let x = 4
+// while (x > 2) {
+//     console.log(x+ "bottle of beer on the wall, 1 bottle of beer. Take one down, pass it around. No more bottle of beer on the wall");
+// if (x === 2) {
+//     console.log(x+ " bottles of beer on the one, " + x -1 + " bottle of beer, take on down pass it around, ")
+// } else (x > 2); {
+//     console.log(x+ " bottles of beer on the wall, " + x -1 + "bottles numbers of beer, Take one down, pass it around,")
+// }  
+// x--;
+// }
 
 
  console.log('Problem 9')
- for (let  sQ = 1; sQ <=5; sQ++){
-    if(sQ <4) {
-    console.log('*' +(sQ+'*')) 
- }
- }
+//  for (let  sQ = 1; sQ <=5; sQ++){
+//     if(sQ <5) {
+//     console.log('*' +(sQ+'*')) 
+//  }
+//  }
+
+
+let N = 3;
+let askt = "";
+for(let outter = 0; outter < N; outter++){
+   for(let inner = 0; inner < N; inner++){
+       askt += "*";
+   }
+}
+console.log(askt);
+
+console.log("Problem 10")
+
+let sum = 0
+
+for (let numFnB = 1; numFnB < 1000; numFnB++) {
+  if (numFnB % 3 ===0 || numFnB % 5===0){
+      sum += numFnB;
+  }
+}
+console.log(sum)
