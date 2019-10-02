@@ -123,24 +123,43 @@ while (j <= 9) {
 
 // Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
+for (let i = 1; i <= 100 && i >=1; i ++) {
+    if (i % 5 === 0 && i % 2 !== 0) {
+      console.log(i)
+    }
+  }
+
 // ## Problem Five
 
 // Without running/executing your code, how many times will the loop below run? Explain why.
 
-// ```js
+// js
 // let i = 5;
 
 // while (i > 3) {
 //     i += 1
 // }
 
-// // Your explanation here
-// ```
+// Your explanation here
+
+// It won't log because there is no console.log, there is nothing to print.
+
+
 
 // ## Problem Six
 
 // Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
 
+let w = 1
+for (let w = 1; w <= 100; w++) {
+    if (w % 3 === 0) {
+      console.log("Fizz") 
+    } else if (w % 5 === 0) {
+    console.log("Buzz");
+     } else {
+       console.log(w);
+     }
+}
 // ## Problem Seven
 
 // Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
