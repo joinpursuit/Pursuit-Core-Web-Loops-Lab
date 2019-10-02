@@ -85,10 +85,21 @@
 // ## Problem Four
 
 // Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
-let solu4 = 0
-while (solu4 < 100){
-    if (solu4 % 5 === 0 && solu4 % 2 === 1){
-        console.log(solu4)
-    }
-    solu4++
-}
+// let solu4 = 0
+// while (solu4 < 100){
+//     if (solu4 % 5 === 0 && solu4 % 2 === 1){
+//         console.log(solu4)
+//     }
+//     solu4++
+// }
+// ## Problem Five
+
+// Without running/executing your code, how many times will the loop below run? Explain why.
+
+// ```js
+// let i = 5;
+
+// while (i > 3) {
+//     i += 1
+// }
+// The loop will run for inifinity because i is already greater than 3 and will never return a false value. 
