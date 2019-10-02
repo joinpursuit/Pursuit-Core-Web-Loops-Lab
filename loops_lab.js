@@ -120,20 +120,20 @@
 //   1 bottle of beer on the wall, 1 bottle of beer.
 //   Take one down, pass it around, No more bottle of beer on the wall.
 
-let decreasedBeer = 0;
-for(let i = 100; i > 0; i -= 1) {
-    decreasedBeer = i - 1;
-    if(i > 2) {
-        console.log(i + " bottles of beer on the wall, " + i + " bottles of beer.");
-        console.log("Take one down, pass it around, " + decreasedBeer + " bottles of beer on the wall.")
-    } else if (i === 2) {
-        console.log(i + " bottles of beer on the wall, " + i + " bottles of beer.");
-        console.log("Take one down, pass it around, " + decreasedBeer + " bottle of beer on the wall.")
-    } else if (i === 1) {
-        console.log(i + " bottle of beer on the wall, " + i + " bottle of beer.");
-        console.log("Take one down, pass it around, No more bottle of beer on the wall.")
-    }
-}
+// let decreasedBeer = 0;
+// for(let i = 100; i > 0; i -= 1) {
+//     decreasedBeer = i - 1;
+//     if(i > 2) {
+//         console.log(i + " bottles of beer on the wall, " + i + " bottles of beer.");
+//         console.log("Take one down, pass it around, " + decreasedBeer + " bottles of beer on the wall.")
+//     } else if (i === 2) {
+//         console.log(i + " bottles of beer on the wall, " + i + " bottles of beer.");
+//         console.log("Take one down, pass it around, " + decreasedBeer + " bottle of beer on the wall.")
+//     } else if (i === 1) {
+//         console.log(i + " bottle of beer on the wall, " + i + " bottle of beer.");
+//         console.log("Take one down, pass it around, No more bottle of beer on the wall.")
+//     }
+// }
 // ## Problem Nine
 
 // Given an integer N draw a square of N x N asterisks. Look at the examples.
@@ -143,10 +143,21 @@ for(let i = 100; i > 0; i -= 1) {
 
 //   Hint 2
 //   You will need 2 loops for this.
-
+// size = 3
+// for (let i = 1; i < size; i+=1){
+//     console.log(size)
+// }
 
 // ## Problem Ten
 
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 // Find the sum of all the multiples of 3 or 5 below 1000.
+// let sumOfMultiples = 0;
+// for(let i = 0; i < 1000; i += 1) {
+//     if(i % 3 === 0 || i % 5 === 0) {
+//         sumOfMultiples += i;
+//         console.log(sumOfMultiples);
+//     }
+// }
+// console.log("sum 1 is " + sumOfMultiples);
