@@ -3,16 +3,16 @@
 // ## Problem One 
 
 // a. Write a `while` loop that takes the variable `num` and logs all the numbers, descending, between "num" and 1
-let num = 30;
-while (num >= 1) {
-    console.log(num);
-    num -= 2;
-}
-console.log("are you working")
-// b. Write a `for` loop that takes the variable `num` and logs all the numbers, descending, between "num" and 1
-for (let i = 30; i >= 1; i -=2) {
-    console.log(i)
-}
+// let num = 30;
+// while (num >= 1) {
+//     console.log(num);
+//     num -= 2;
+// }
+
+// // b. Write a `for` loop that takes the variable `num` and logs all the numbers, descending, between "num" and 1
+// for (let i = 30; i >= 1; i -=2) {
+//     console.log(i)
+// }
 
 // Example:
 
@@ -37,16 +37,19 @@ for (let i = 30; i >= 1; i -=2) {
 
 // a. Write a `while` loop that takes the variable "max", and iterates over all numbers from 0 to "max". 
 // For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
-let max = 50
-while (max <= 50) {
-    // console.log(max)
-} if (max % 2 === 0) {
-    console.log(max + "is even") 
-    } else {
-    console.log(max) 
-}
+
+// let max = 50
+// while (max > 0) {
+//     if (max % 2 === 0)
+//     console.log(max + " is even")
+//     max +=1
+// }
 
 // b. Use a `for` loop instead
+
+// for (let i = 0 ; i < max ; i++) {
+//     if (i === )
+// }
 
 // Example: 
 
@@ -67,9 +70,16 @@ while (max <= 50) {
 // ## Problem Three
 
 // a. Write a `while` loop that takes the variable "x" and iterates over all numbers from 0 to "x". For each iteration of the loop, it will multiply the number of "x" by 9 and log the result 
+// let x = 0;
+// while (x <= 45){
+//     console.log(x + " " + "*" + " " + "9" + "=" + " " + x*9);
+//     x +=1;
+// }
+// // b. Use a `for` loop instead.
 
-// b. Use a `for` loop instead.
-
+// for (let x = 0; x <= 45; x +=1) {
+//     console.log(x + " " + "*" + " " + "9" + "=" + " " + x*9)
+// }
 // Example:
 
 // ```js
@@ -91,6 +101,13 @@ while (max <= 50) {
 
 // ## Problem Four
 
+// for (let i = 1; i < 100 ; i +=5) {
+//     if (i % 5 === 0) {
+//         console.log(i)
+//     }
+//} 
+
+
 // Write code that prints/logs all the numbers that end in a 5 from 1 to 100, **exclusive**.
 
 // ## Problem Five
@@ -105,11 +122,38 @@ while (max <= 50) {
 // }
 
 // // Your explanation here
-// ```
+// Theres nothing to run with no console.log
 
 // ## Problem Six
 
 // Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
+
+let fizz = 0
+let buzz = 0
+// for (i = 0; i < 100; i++) {
+//     console.log(i)
+//  } if (i % 3 === 0) {
+//         console.log("fizz")
+//     } else if { (i % 5 ===0) 
+//         {
+//         console.log ("buzz")
+//     }
+// for (i = 1; i < 100; i ++) {
+//     console.log(i) 
+// } if (i % 3 === 0) {
+//     console.log('fizz')
+// } else if (i % 5 === 0) {
+//         console.log('buzz')
+//     }
+for (let i = 1; i <= 5; i ++) {
+    if (i % 3 === 0) {
+    console.log( i + ' fizz');
+} else {
+    console.log(i);
+}
+// else if (i % 5 === 0) { {continue; }
+//     console.log('buzz')
+// }
 
 // ## Problem Seven
 
