@@ -10,3 +10,27 @@ while (numA > 1) {
     numA--;
 }
 console.log(numA)
+
+// b.Write a
+// for loop that takes the variable num and logs all the numbers, descending, between "num"
+// and 1
+
+// Example:
+
+//     let num = 8
+
+// // Your code here
+
+// /* Logs:
+// 8
+// 7
+// 6
+// 5
+// 4
+// 3
+// 2
+// 1
+// */
+for (let numB = 8; numB >= 1; numB--) {
+    console.log(numB)
+}
