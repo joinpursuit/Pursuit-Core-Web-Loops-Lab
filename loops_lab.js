@@ -58,3 +58,35 @@ while (i <= max) {
 //     }
 //     i++;
 // }
+
+
+// b.Use a
+// for loop instead
+
+// Example:
+
+//     let max = 3
+
+// // Your code here
+
+// /* Logs:
+// "0 is even"
+// "1 is odd"
+// "2 is even"
+// "3 is odd"
+// */
+
+let maxB = 20;
+
+for (let i = 0; i <= maxB; i++) {
+    i % 2 === 0 ? console.log(`${i} is even`) : console.log(`${i} is odd`)
+}
+
+// let testMaxB = 20
+// for (let i = 0; i <= testMaxB; i++) {
+//     if (i % 2 === 0) {
+//         console.log(`${i} is even`)
+//     } else {
+//         console.log(`${i} is odd`)
+//     }
+// }
