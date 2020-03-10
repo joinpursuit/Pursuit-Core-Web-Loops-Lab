@@ -18,7 +18,7 @@ for (let i = 10; i >= 1; i--) {
 let max = 3
 let number = 0
 while (number <= max) {
-    if (number % 2 === 0){
+    if (number % 2 === 0) {
         console.log(number + ' is even')
     } else {
         console.log(number + ' is odd')
@@ -28,14 +28,14 @@ while (number <= max) {
 
 //b.
 for (let i = 0; i <= 3; i++) {
-    if (i % 2 === 0){
+    if (i % 2 === 0) {
         console.log(i + ' is even')
     } else {
         console.log(i + ' is odd')
     }
 }
 
-//Problem 3
+//Problem Three
 
 //a.
 let x = 5
@@ -48,6 +48,14 @@ while (y <= x) {
 }
 
 //b.
-for (let i = 0; i <= 5; i++){
+for (let i = 0; i <= 5; i++) {
     console.log(i + " * 9 " + "= " + i * 9)
+}
+
+//Problem Four
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 10 !== 0 && i % 5 === 0) {
+        console.log(i)
+    }
 }
