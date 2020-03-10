@@ -34,3 +34,19 @@ for (let i = 0; i <= 3; i++) {
         console.log(i + ' is odd')
     }
 }
+
+//Problem 3
+
+//a.
+let x = 5
+let y = 0
+
+while (y <= x) {
+    console.log(y * 9)
+    y++
+}
+
+//b.
+for (let i = 0; i <= 5; i++){
+    console.log(i * 9)
+}
