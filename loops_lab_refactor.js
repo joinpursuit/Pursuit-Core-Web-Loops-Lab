@@ -42,11 +42,12 @@ let x = 5
 let y = 0
 
 while (y <= x) {
-    console.log(y * 9)
+    y * 9
+    console.log(y + " * 9 " + "= " + y * 9)
     y++
 }
 
 //b.
 for (let i = 0; i <= 5; i++){
-    console.log(i * 9)
+    console.log(i + " * 9 " + "= " + i * 9)
 }
