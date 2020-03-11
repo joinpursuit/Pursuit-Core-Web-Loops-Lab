@@ -104,3 +104,12 @@ for (i = 99; i >= 1 ; i--) {
       console.log("Take one down, pass it around, No more bottle of beer on the wall.")
     }
 }
+
+//Problem Nine
+
+let N = 5
+
+for(let i = 0; i < N; i++) {
+  console.log("*".repeat(N))
+}
+
