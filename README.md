@@ -117,7 +117,9 @@ Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 
 
 ## Problem Eight
 
-Write a program that would log the [lyrics of the song 99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html). This is the first verse of the song:
+Write a program that would log the [lyrics of the song 99 Bottles of Beer](
+  
+). This is the first verse of the song:
 
   ```
   99 bottles of beer on the wall, 99 bottles of beer.

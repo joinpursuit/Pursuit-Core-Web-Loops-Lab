@@ -76,7 +76,7 @@ for (let i = 1; i <= 100; i++) {
     }
 }
 
-//  Problem Seven
+//Problem Seven
 
 for (let i = 1; i <= 100; i++) {
     if(i % 5 === 0 && i % 3 === 0) {
@@ -88,4 +88,19 @@ for (let i = 1; i <= 100; i++) {
     } else {
       console.log(i)
     }
-  }
+}
+
+//Problem Eight
+
+for (i = 99; i >= 1 ; i--) {
+    if (i > 2) {
+      console.log(i + " bottles of beer on the wall, " + i + " bottles of beer.")
+      console.log("Take one down, pass it around, " + (i - 1) + " bottles of beer on the wall.")
+    } else if (i === 2) {
+      console.log(i + " bottles of beer on the wall , " + i + " bottles of beer.")
+      console.log("Take one down, pass it around, "+ (i - 1) + " bottle of beer on the wall.")
+    } else if (i < 2) {
+      console.log(i + " bottle of beer on the wall, " + i + " bottle of beer.")
+      console.log("Take one down, pass it around, No more bottle of beer on the wall.")
+    }
+}
