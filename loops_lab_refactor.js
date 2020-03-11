@@ -59,3 +59,7 @@ for (let i = 1; i <= 100; i++) {
         console.log(i)
     }
 }
+
+//Problem Five
+ 
+//The loop will run infinitely because 5 (the initialization) is greater than 3. The initialized variable increases by 1, which makes the conditional statement always true.
