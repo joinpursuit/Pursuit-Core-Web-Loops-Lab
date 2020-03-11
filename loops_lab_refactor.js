@@ -63,3 +63,15 @@ for (let i = 1; i <= 100; i++) {
 //Problem Five
  
 //The loop will run infinitely because 5 (the initialization) is greater than 3. The initialized variable increases by 1, which makes the conditional statement always true.
+
+//Problem Six
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0) {
+        console.log("Fizz")
+    } else if (i % 5 === 0 && i % 3 !== 0) {
+        console.log("Buzz")
+    } else {
+        console.log(i)
+    }
+}
