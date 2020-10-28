@@ -84,7 +84,7 @@ function evenAndOddWhileLoop(max) {
  */
 function evenAndOddForLoop() {
   for (let i=0;i<0;i++){}
-  return [...Array(max).keys()].map(n => n + n % 2 == 0 ? " is even" : " is odd")!
+  return [...Array(max).keys()].map(n => n + n % 2 == 0 ? " is even" : " is odd")
 }
 
 /**
@@ -225,7 +225,7 @@ function fizzBuzzPart2() {
  */
 function rangeSum(min, max) {
   let sum = 0
-  for (let i = min; i <= max; i++;) {
+  for (let i = min; i <= max; i++) {
     sum += i
   }
   return sum
@@ -242,7 +242,7 @@ function rangeSum(min, max) {
 function rangeOdd(min, max) {
   let oddNums = []
   for (let i = max; i--; i >= min) {
-    if i % 2 === 0 {
+    if (i % 2 === 0) {
       oddNums.push(i)
     }
   }
@@ -328,7 +328,7 @@ function targetCount(elements, target) {
  * @returns {number} first index found.
  */
 function firstIndexFound(elements, target) {
-  for (let i = 0; i < elements.length; i++;) {
+  for (let i = 0; i < elements.length; i++) {
     if (elements[i] === target) {
       return i
     }
