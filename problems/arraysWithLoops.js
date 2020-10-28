@@ -26,6 +26,7 @@ function shoutWhileLoop(arr) {
   let newArr = []
   while (i < arr.length) {
     newArr[i] = arr[i] + "!"
+    i++
   }
   return newArr
 }
@@ -67,13 +68,13 @@ function sumArray(nums) {
  */
 
 function oddArray(nums) {
-  let sum = 0
+  let oddNums = []
   for (let num of nums) {
     if (num % 2 === 1) {
-      sum += num
+      oddNums.push(num)
     }
   }
-  return sum
+  return oddNums
 }
 
 /**
@@ -83,13 +84,13 @@ function oddArray(nums) {
  */
 
 function evenArray(nums) {
-  let sum = 0
+  let evenNums = []
   for (let num of nums) {
     if (num % 2 === 0) {
-      sum += num
+      evenNums.push(num)
     }
   }
-  return sum
+  return evenNums
 }
 
 /**
@@ -118,7 +119,7 @@ function findSmallest(nums) {
 function findSecondSmallest(nums) {
   let min = nums[0] < nums[1] ? nums[0] : nums[1]
   let secondMin = nums[0] < nums[1] ? nums[1] : nums[0]
-  for (let num of nums) {
+  for (let num of nums.slice(2)) {
     if (num < min) {
       secondMin = min
       min = num
@@ -137,12 +138,12 @@ function findSecondSmallest(nums) {
 
 function findSecondLargest(nums) {
   let max = nums[0] > nums[1] ? nums[0] : nums[1]
-  let secondMax = nums[0] < nums[1] ? nums[1] : nums[0]
-  for (let num of nums) {
+  let secondMax = nums[0] > nums[1] ? nums[1] : nums[0]
+  for (let num of nums.slice(2)) {
     if (num > max) {
       secondMax = max
       max = num
-    } else if (num > secondMin) {
+    } else if (num > secondMax) {
       secondMax = num
     }
   }

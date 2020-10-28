@@ -37,7 +37,7 @@ function oneTillDoneForLoop(n) {
 function doneToZeroWhileLoop(n) {
   let i = n
   let nums = []
-  while (i >= 0) {
+  while (i > 0) {
     nums.push(i)
     i--
   }
@@ -52,7 +52,7 @@ function doneToZeroWhileLoop(n) {
  */
 function doneToZeroForLoop(n) {
   let nums = []
-  for (let i = n; i--; i>=0) {
+  for (let i = n; i>0; i--) {
     nums.push(i)
   }
   return nums
@@ -69,7 +69,7 @@ function doneToZeroForLoop(n) {
  */
 function evenAndOddWhileLoop(max) {
   while (true) {
-    return [...Array(max).keys()].map(n => n + n % 2 == 0 ? " is even" : " is odd")
+    return [...Array(max).keys(), max].map((n) => n + (n % 2 === 0 ? " is even" : " is odd"))
   }
 }
 
@@ -82,9 +82,9 @@ function evenAndOddWhileLoop(max) {
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {
+function evenAndOddForLoop(max) {
   for (let i=0;i<0;i++){}
-  return [...Array(max).keys()].map(n => n + n % 2 == 0 ? " is even" : " is odd")
+  return [...Array(max).keys(), max].map((n) => n + (n % 2 === 0 ? " is even" : " is odd"))
 }
 
 /**
@@ -103,7 +103,7 @@ function evenAndOddForLoop() {
  */
 function tillXTimes9WhileLoop(number) {
   let a = "while"
-  return [...Array(number).keys].map(n => n * 9)
+  return [...Array(number).keys(), number].map(n => n * 9)
 
 }
 
@@ -123,7 +123,7 @@ function tillXTimes9WhileLoop(number) {
  */
 function tillXTimes9ForLoop(number) {
   let a = "for"
-  return [...Array(number).keys].map(n => n * 9)
+  return [...Array(number).keys(), number].map(n => n * 9)
 }
 
 
@@ -133,9 +133,9 @@ function tillXTimes9ForLoop(number) {
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop(max) {
+function endsWithFiveWhileLoop(max = 100) {
   let a = "while"
-  return [...Array(max.keys)].filter(n => n % 5 === 0 && n % 10 !== 0)
+  return [...Array(max).keys(), max].filter(n => n % 5 === 0 && n % 10 !== 0)
 }
 
 
@@ -146,9 +146,9 @@ function endsWithFiveWhileLoop(max) {
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop(max) {
+function endsWithFiveForLoop(max = 100) {
   let a = "for"
-  return [...Array(max.keys)].filter(n => n % 5 === 0 && n % 10 !== 0)
+  return [...Array(max).keys(), max].filter(n => n % 5 === 0 && n % 10 !== 0)
 }
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
@@ -180,7 +180,7 @@ while (i > 3) {
 
  */
 function fizzBuzzPart1() {
-  return [...Array(99).keys()].map(n => n + 1).map(n => {
+  return [...Array(100).keys()].map(n => n + 1).map(n => {
     if (n % 3 === 0) {
       return "Fizz"
     } else if (n % 5 === 0) {
@@ -202,7 +202,7 @@ function fizzBuzzPart1() {
 
  */
 function fizzBuzzPart2() {
-  return [...Array(99).keys()].map(n => n + 1).map(n => {
+  return [...Array(100).keys()].map(n => n + 1).map(n => {
     if (n % 3 === 0 && n % 5 === 0) {
       return "FizzBuzz"
     }
@@ -241,8 +241,8 @@ function rangeSum(min, max) {
  */
 function rangeOdd(min, max) {
   let oddNums = []
-  for (let i = max; i--; i >= min) {
-    if (i % 2 === 0) {
+  for (let i = max; i >= min; i--) {
+    if (i % 2 === 1) {
       oddNums.push(i)
     }
   }
