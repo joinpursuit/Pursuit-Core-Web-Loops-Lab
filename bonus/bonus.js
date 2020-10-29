@@ -18,7 +18,14 @@ Take one down, pass it around, No more bottle of beer on the wall.
  * @return {string[]}
  */
 
-function ninetyNineBottlesOfBeerOnTheWall() {}
+function ninetyNineBottlesOfBeerOnTheWall(n = 99) {
+  if (n === 1) {
+    return ["1 bottle of beer on the wall, 1 bottle of beer. Take one down, pass it around, No more bottle of beer on the wall."]
+  } else {
+    const str = `${n} bottles of beer on the wall, ${n} bottles of beer. Take one down, pass it around, ${n - 1} ${n - 1 === 1 ? "bottle" : "bottles"} of beer on the wall.`
+    return [str, ...ninetyNineBottlesOfBeerOnTheWall(n - 1)]
+  }
+}
 
 /**
   * Given an integer N draw a square of N x N asterisks. Look at the examples.
@@ -41,7 +48,9 @@ Output:
     ***
 ]
   */
-function drawSquare() {}
+function drawSquare(N) {
+  return Array(N).fill(Array(N).fill("*").join(''))
+}
 /**
   * If we list all the natural numbers below 10 that are multiples of 3 or 5,
   *  we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -49,7 +58,9 @@ function drawSquare() {}
   *  @returns {number}
   */
 
-function multiplesOf3And5Sum() {}
+function multiplesOf3And5Sum() {
+  return [...Array(1000).keys()].filter(n => n % 3 === 0 || n % 5 === 0).reduce((a,b) => a + b)
+}
 
 module.exports = {
   ninetyNineBottlesOfBeerOnTheWall,
