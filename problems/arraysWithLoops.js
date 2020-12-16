@@ -4,9 +4,16 @@
  * Must use a for loop
  * @param {Array} - ["I", "am", "a", "happy", "array"]
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
+ * // array length = 4;   0    1      2     3          4 
+ * // index = array.length-1
+ * // middleelement = (array.length-1)/2
+ * = 2
+ * array[2]
  */
 
-function shoutForLoop() {}
+function shoutForLoop(array) {
+
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
