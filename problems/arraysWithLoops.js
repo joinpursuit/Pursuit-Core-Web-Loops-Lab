@@ -6,6 +6,8 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
+//  for (let num=1)
+
 function shoutForLoop() {}
 /**
  * Takes in an array and returns a new array with element
@@ -86,14 +88,14 @@ function findSecondLargest() {}
 function removeDups() {}
 
 module.exports = {
-  shoutForLoop,
-  shoutWhileLoop,
-  shoutForOfLoop,
-  sumArray,
-  oddArray,
-  evenArray,
-  findSmallest,
-  findSecondSmallest,
-  findSecondLargest,
-  removeDups,
+    shoutForLoop,
+    shoutWhileLoop,
+    shoutForOfLoop,
+    sumArray,
+    oddArray,
+    evenArray,
+    findSmallest,
+    findSecondSmallest,
+    findSecondLargest,
+    removeDups,
 };
