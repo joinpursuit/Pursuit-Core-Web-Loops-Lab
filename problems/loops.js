@@ -4,7 +4,15 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+function oneTillDoneWhileLoop(number) {
+  let n = number
+  let array = []
+  while (1 <= n) {
+    n -= 1
+    array.
+
+  }
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
