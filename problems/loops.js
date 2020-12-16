@@ -4,7 +4,18 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+ 
+ function oneTillDoneWhileLoop(n) {
+  let arr = []
+  let tracker = 1
+
+  while (arr.length < n) {
+    arr.push(tracker)
+    tracker += 1
+  }
+  return arr
+ }
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -12,7 +23,11 @@ function oneTillDoneWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+function oneTillDoneForLoop(n) {
+  for (let s = 1; s < n; s += 1) {
+    return arr
+  }
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
