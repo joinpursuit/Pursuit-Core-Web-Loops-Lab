@@ -4,7 +4,17 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+function oneTillDoneWhileLoop(n) {
+  let a = 1
+  let newArr = []
+
+  while (a <= n) {
+    newArr.push(a)
+    a++
+  }
+  return newArr
+}
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -12,15 +22,30 @@ function oneTillDoneWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+function oneTillDoneForLoop(n) {
+  let num = []
 
+  for (let i = 1; i <= n; i += 1) {
+    num.push(i)
+  }
+  return num
+}
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be a while loop
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+function doneToZeroWhileLoop(n) {
+  let num = []
+  let i = n
+
+ while (i > 0) {
+    num.push(i)
+    i--
+  }
+
+  return num
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -28,8 +53,13 @@ function doneToZeroWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
-
+function doneToZeroForLoop(n) {
+  let nArr = []
+  for (let i = n ; i > 0 ; i--){
+  nArr.push(i)
+  }
+  return nArr
+  }
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
