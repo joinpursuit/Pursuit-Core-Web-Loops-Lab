@@ -5,7 +5,6 @@
  * @returns {number[]}
  */
 function oneTillDoneWhileLoop() {}
-
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
  * Must be written with a for loop
@@ -13,7 +12,6 @@ function oneTillDoneWhileLoop() {}
  * @returns {number[]}
  */
 function oneTillDoneForLoop() {}
-
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be a while loop
