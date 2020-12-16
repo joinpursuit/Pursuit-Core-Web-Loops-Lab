@@ -4,7 +4,17 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+
+
+function oneTillDoneWhileLoop(number) {
+  let n = 0
+  let array = new Array();
+  while (n < number) {
+    array[n] = n + 1;
+  }
+  return array;
+}
+console.log(oneTillDoneWhileLoop(5))
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
