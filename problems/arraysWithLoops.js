@@ -24,7 +24,6 @@ function shoutForLoop(array) {
  */
 
 function shoutWhileLoop() {}
-
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
