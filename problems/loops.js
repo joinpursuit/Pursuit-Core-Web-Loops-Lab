@@ -291,7 +291,10 @@ rangeOdd(3,7)
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+function rangeEveryOther(min, max) {
+ 
+}
+rangeEveryOther()
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array
@@ -301,8 +304,14 @@ function rangeEveryOther() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
-
+function containsWhileLoop(elements, target) {
+  if(elements.includes(target)){
+    return true
+  } else {
+    return false
+  }
+}
+containsWhileLoop([1,2,3], 2)
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array

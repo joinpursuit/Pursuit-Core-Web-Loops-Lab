@@ -78,6 +78,7 @@ function oddArray(nums) {
   }
   return newArr
 }
+
 oddArray([1,2,3,4,5])
 /**
  * Takes in an array and returns an array of all the even valued elements
@@ -111,6 +112,7 @@ function findSmallest(nums) {
   }
   return smallest
 }
+
 findSmallest([1,2,3])
 /**
  * Takes in array and returns the second smallest number in the array
@@ -119,7 +121,19 @@ findSmallest([1,2,3])
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+  let smallest = Infinity
+  let secondSmallest = Infinity
+  for(let i = 0; i < nums.length; i++) {
+    if(nums[i] < smallest) {
+      secondSmallest = smallest
+      smallest = nums[i]
+    } else if (nums[i] < secondSmallest)
+      secondSmallest = nums[i]
+    }
+    return secondSmallest
+}
+findSecondSmallest([1,2,3,4])
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -127,8 +141,20 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
-
+function findSecondLargest(nums) {
+  let largest = -Infinity
+  let secondLargest = -Infinity
+  for(let i = 0; i < nums.length; i++){
+    if(nums[i] > largest){
+      secondLargest = largest
+      largest = nums[i]
+    } else if (nums[i] > secondLargest){
+      secondLargest = nums[i]
+    }
+  }
+  return secondLargest
+}
+findSecondLargest([1,2,3,4])
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
  * Exp Input: [4,2,6,2,2,6,4,9,2,1] Output: [4, 2, 6, 9, 1]
@@ -136,7 +162,15 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+  let newArr = []
+  for(let i = 0; i < nums.length; i++){
+    if(!newArr.includes(nums[i])){
+      newArr.push(nums[i])
+    }
+  }
+  return newArr
+}
 
 module.exports = {
   shoutForLoop,
