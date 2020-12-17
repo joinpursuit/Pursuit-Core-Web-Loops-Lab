@@ -4,30 +4,60 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+function oneTillDoneWhileLoop(num) {
+  let i = 1
+  let newArr = []
+  while(i <= num){
+    newArr.push(i)
+    i++
+  }
+  return newArr
+}
+oneTillDoneWhileLoop(3)
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
  * Must be written with a for loop
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+function oneTillDoneForLoop(num) {
+  let newArr = []
+  for(let i = 1; i <= num; i++){
+    newArr.push(i)
+  }
+  return newArr
+}
+oneTillDoneForLoop(3)
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be a while loop
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
-
+function doneToZeroWhileLoop(num) {
+  let newArr = []
+  let i = 0
+  while(i < num){
+    newArr.push(num)
+    num--
+  }
+  return newArr
+}
+doneToZeroWhileLoop(5)
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be written with a for loop
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
-
+function doneToZeroForLoop(num) {
+  let newArr = []
+  for(let i = 0; i < num; num--){
+    newArr.push(num)
+  }
+  return newArr
+}
+doneToZeroForLoop(5)
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -37,7 +67,20 @@ function doneToZeroForLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
+function evenAndOddWhileLoop(max) {
+  let newArr = []
+  let i = 0
+  while(i <= max){
+    if(i % 2 === 0){
+      newArr.push(i + " is even")
+    } else {
+      newArr.push(i + " is odd")
+    }
+    i++
+  }
+  return newArr
+}
+evenAndOddWhileLoop(5)
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -48,8 +91,18 @@ function evenAndOddWhileLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
-
+function evenAndOddForLoop(max) {
+  let newArr = []
+  for(let i = 0; i <= max; i++){
+    if(i % 2 === 0){
+      newArr.push(i + " is even")
+    } else {
+      newArr.push(i + " is odd")
+    }
+  }
+  return newArr
+}
+evenAndOddForLoop(5)
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
  *  For each iteration, it will multiply the current number by 9 and store the result in an array.
@@ -64,8 +117,16 @@ function evenAndOddForLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9WhileLoop() {}
-
+function tillXTimes9WhileLoop(x) {
+  let newArr = []
+  let i = 0
+  while(i <= x){
+    newArr.push(i * 9)
+    i++
+  }
+  return newArr
+}
+tillXTimes9WhileLoop(5)
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
  *  For each iteration, it will multiply the current number by 9 and store the result in an array.
@@ -80,26 +141,46 @@ function tillXTimes9WhileLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
-
-
+function tillXTimes9ForLoop(x) {
+  let newArr = []
+  for(let i = 0; i <= x; i++){
+    newArr.push(i * 9)
+  }
+  return newArr
+}
+tillXTimes9ForLoop(5)
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a while loop
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
-
-
-
+function endsWithFiveWhileLoop() {
+  let newArr = []
+  let i = 0
+  while(i < 100){
+    if(i % 5 === 0 && i % 10 !== 0){
+      newArr.push(i)
+    }
+    i++
+  }
+  return newArr
+}
+endsWithFiveWhileLoop()
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a for loop
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+function endsWithFiveForLoop() {
+  let newArr =[]
+  for(let i = 5; i < 100; i += 10){
+    newArr.push(i)
+  }
+  return newArr
+}
+endsWithFiveForLoop()
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 
@@ -129,8 +210,20 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
-
+function fizzBuzzPart1() {
+  let newArr = []
+  for(let i = 1; i <= 100; i++){
+    if(i % 3 === 0){
+      newArr.push('Fizz')
+    } else if(i % 5 === 0 && i % 3 !== 0){
+      newArr.push('Buzz')
+    } else {
+      newArr.push(i)
+    }
+  }
+  return newArr
+}
+fizzBuzzPart1()
 
  /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
@@ -141,8 +234,22 @@ function fizzBuzzPart1() {}
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
-
+function fizzBuzzPart2() {
+  let newArr = []
+  for(let i = 1; i <= 100; i++){
+    if(i % 5 === 0 && i % 3 === 0){
+      newArr.push('FizzBuzz')
+    } else if(i % 5 === 0 && i % 3 !== 0){
+      newArr.push('Buzz')
+    } else if(i % 3 === 0){
+      newArr.push('Fizz')
+    } else {
+      newArr.push(i)
+    }
+  }
+  return newArr
+}
+fizzBuzzPart2()
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
 
@@ -150,8 +257,14 @@ function fizzBuzzPart2() {}
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
-
+function rangeSum(min, max) {
+  let sum = 0
+  for(let i = min; i <= max; i++){
+    sum += i
+  }
+  return sum
+}
+rangeSum()
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
  * in that range
@@ -160,8 +273,16 @@ function rangeSum() {}
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() {}
-
+function rangeOdd(min, max) {
+  let newArr = []
+  for(let i = min; i <= max; max--){
+    if(max % 2 !== 0){
+      newArr.push(max)
+    }
+  }
+  return newArr
+}
+rangeOdd(3,7)
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
 
@@ -171,7 +292,6 @@ function rangeOdd() {}
  * @returns {number[]} includes every other element
  */
 function rangeEveryOther() {}
-
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array
