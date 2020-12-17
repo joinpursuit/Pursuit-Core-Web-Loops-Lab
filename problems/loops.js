@@ -4,15 +4,32 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
-
+function oneTillDoneWhileLoop(n) {
+let i = 1
+    let num = []
+    while (i <= n) {
+      num.push(i)
+      i++
+  }
+  return num
+  }
+  
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
  * Must be written with a for loop
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+function oneTillDoneForLoop(n) {
+  
+    let num = []
+    for (let i = 1;i <= n; i ++) {
+      num.push(i)
+      
+    }
+    return num
+  }
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -20,7 +37,16 @@ function oneTillDoneForLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+function doneToZeroWhileLoop(n) {
+  let i = n
+  let num = []
+  while(i > 0) {
+   num.push(i)
+   i--
+  }
+  return num
+}
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -28,7 +54,16 @@ function doneToZeroWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
+function doneToZeroForLoop(n) {
+  let num = []
+  
+  for (let i = n ; i > 0 ; i-- ) {
+    num.push(i)
+  } 
+    
+  return num 
+  }
+
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
