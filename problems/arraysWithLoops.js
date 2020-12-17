@@ -6,7 +6,13 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+function shoutForLoop(array) {
+  for ( let element = 0; element < array.length;element++ ){
+    array[element]+='!'
+  }
+  return array
+
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -15,7 +21,14 @@ function shoutForLoop() {}
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
+function shoutWhileLoop(array) {
+  let element = 0
+  while(element < array.length ){
+    array[element]+='!'
+    element++;
+  }
+  return array
+}
 
 /**
  * Takes in an array and returns a new array with element
@@ -83,7 +96,9 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+  
+}
 
 module.exports = {
   shoutForLoop,
