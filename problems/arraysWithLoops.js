@@ -6,7 +6,15 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+function shoutForLoop(array) {
+  
+  for(let i = 0 ; i < array.length ; i++) {
+     array[i] = array[i] + '!' ;
+  }
+  return array
+}
+//secondArr[0] = 'giraffe'
+console.log(shoutForLoop(["I", "am", "a", "happy", "array"]))
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -15,7 +23,14 @@ function shoutForLoop() {}
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
+function shoutWhileLoop(array) {
+  let sum = 0
+while(sum < array.length ) {
+  array[sum] = array[sum] + '!' 
+  sum += 1 
+}
+return array
+}
 
 /**
  * Takes in an array and returns a new array with element
@@ -25,7 +40,12 @@ function shoutWhileLoop() {}
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForOfLoop() {}
+function shoutForOfLoop(array) {
+  for (const element of array){
+    element + "!"
+  }
+  
+}
 
 /**
  * Takes in an array and returns the sum of all values
@@ -33,15 +53,27 @@ function shoutForOfLoop() {}
  * @returns {number} sum
  */
 
-function sumArray() {}
-
+function sumArray(nums) {
+  var sum = 0
+  for(let i = 0 ; i < nums.length ; i++){
+   sum += nums[i]
+ }
+ return sum
+}
+console.log(sumArray([1,2,3,4,5]))
 /**
  * Takes in an array and returns an array of all the odd valued elements
  * @param {number[]} nums
  * @returns {array} odds
  */
 
-function oddArray() {}
+function oddArray(nums) {
+  for(let i = 1 ; i < num.length ; i += 2) {
+      newNums = nums[i];
+ }
+ return newNums
+
+}
 
 /**
  * Takes in an array and returns an array of all the even valued elements
