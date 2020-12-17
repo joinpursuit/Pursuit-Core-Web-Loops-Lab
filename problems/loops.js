@@ -146,14 +146,23 @@ function tillXTimes9WhileLoop(x) {
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop(x) {
-
-  let arr = []
-  for (let i = 0; i <= x; i++) {
-      arr.push(i * 9)
-}
+function tillXTimes9ForLoop(x){
+  let i = 0
+  let arr= []
+  for (let i = 0; i <= x; i += 1){
+    arr.push(i*9)
+  }
   return arr
-}
+} 
+
+//{
+
+  //let arr = []
+  //for (let i = 0; i <= x; i++) {
+     // arr.push(i * 9)
+//}
+  //return arr
+//}
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -161,17 +170,16 @@ function tillXTimes9ForLoop(x) {
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
-//{
+function endsWithFiveWhileLoop(){}
 
-//let i = 0
-//let arr = []
+// let i = 0
+// let arr = []
 
-//while (i <= 100) {
-  //arr.push(i*5)
-//}
-  //return arr
-//}
+// while (i <= 100) {
+//   arr.push(i*5)
+// }
+//   return arr
+// }
 
 
 /**
