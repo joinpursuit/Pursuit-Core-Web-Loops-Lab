@@ -18,7 +18,22 @@ Take one down, pass it around, No more bottle of beer on the wall.
  * @return {string[]}
  */
 
-function ninetyNineBottlesOfBeerOnTheWall() {}
+function ninetyNineBottlesOfBeerOnTheWall() 
+{
+
+  let newArray = []
+
+  for (var n = 99; n > 2;  n -= 1)
+    {
+        newArray.push(`${n} bottles of beer on the wall, ${n} bottles of beer. Take one down, pass it around, ${n-1} bottles of beer on the wall.`)
+
+    }
+    newArray.push(`${n} bottles of beer on the wall, ${n} bottles of beer. Take one down, pass it around, ${n-1} bottle of beer on the wall.`)
+    n -= 1
+    newArray.push(`${n} bottle of beer on the wall, ${n} bottle of beer. Take one down, pass it around, No more bottle of beer on the wall.`)
+
+  return newArray  
+}
 
 /**
   * Given an integer N draw a square of N x N asterisks. Look at the examples.
@@ -41,7 +56,28 @@ Output:
     ***
 ]
   */
-function drawSquare() {}
+function drawSquare(N)
+
+{
+  var column = []
+  var newArray = ''
+
+  for(var m = 0; m < N; m +=1)
+  {
+      for (var n = 0; n < N; n += 1)
+        {
+          newArray = newArray +'*' 
+        }
+      column[m] = newArray 
+      newArray  = '' 
+  }    
+  return column
+}
+
+drawSquare(3)
+
+
+
 /**
   * If we list all the natural numbers below 10 that are multiples of 3 or 5,
   *  we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -49,7 +85,22 @@ function drawSquare() {}
   *  @returns {number}
   */
 
-function multiplesOf3And5Sum() {}
+function multiplesOf3And5Sum() 
+{
+    var sum = 0 
+    for( var n = 999; n > 1 ; n -= 1)
+      {
+        if((n % 5) === 0)
+        {
+          sum = sum + n 
+        }else if (n % 3 === 0)
+         {
+           sum = sum + n
+         }
+
+      }
+    return sum  
+}
 
 module.exports = {
   ninetyNineBottlesOfBeerOnTheWall,
