@@ -6,7 +6,9 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+function shoutForLoop(array) {
+  
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
