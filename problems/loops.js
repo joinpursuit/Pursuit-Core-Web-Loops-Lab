@@ -294,7 +294,7 @@ rangeOdd(3,7)
 function rangeEveryOther(min, max) {
  
 }
-rangeEveryOther()
+//rangeEveryOther()
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array
@@ -305,10 +305,9 @@ rangeEveryOther()
  * @returns {boolean} true if the array contains our target, otherwise false
  */
 function containsWhileLoop(elements, target) {
-  if(elements.includes(target)){
-    return true
-  } else {
-    return false
+  let i = 0
+  while(i < elements.length){
+    return elements[i] === target
   }
 }
 containsWhileLoop([1,2,3], 2)
@@ -321,7 +320,12 @@ containsWhileLoop([1,2,3], 2)
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+function containsForLoop(elements, target) {
+  for(let i = 0; i < elements.length; i++){
+    return elements[i] === target
+  }
+}
+containsForLoop([1,2,3,4], 5)
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -329,7 +333,16 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+function targetCount(elements, target) {
+  let count = 0
+  for(let i = 0; i < elements.length; i++){
+    if(elements[i] === target){
+      count++
+    }
+  }
+  return count
+}
+targetCount([1,2,3], 4)
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -339,7 +352,16 @@ function targetCount() {}
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+function firstIndexFound(elements, target) {
+  for(let i = 0; i < elements.length; i++){
+    if(elements[i] = target){
+      return elements[i]
+    } else {
+      return -1
+    }
+  }
+}
+firstIndexFound([1,2,3,4], 5)
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -349,8 +371,16 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
-
+function lastIndexFound(elements, target) {
+  for(let i = 0; i < elements.length; i--){
+    if(elements[i] === target){
+      return elements[i]
+    } else {
+      return -1
+    }
+  }
+}
+lastIndexFound([1,2,3,4], 4)
 /**
  * Takes in an array.
  * Returns a new array where each element has been multiplied by its index.
@@ -358,8 +388,14 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
-
+function timesIndex(elements) {
+  let newArr = []
+  for(let i = 0; i < elements.length; i++){
+    newArr.push(elements[i] * i)
+  }
+  return newArr
+}
+timesIndex([1,2,3])
 
 /**
  * Takes in an array.
@@ -370,7 +406,10 @@ function timesIndex() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+function cumulativeSum(elements) {
+  
+
+}
 
 
 
