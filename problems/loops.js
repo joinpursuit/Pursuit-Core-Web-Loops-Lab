@@ -4,7 +4,17 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+function oneTillDoneWhileLoop(n) {
+  let a = 1
+  let newArr = []
+
+  while (a <= n) {
+    newArr.push(a)
+    a += 1
+  }
+    return newArr
+
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -12,7 +22,14 @@ function oneTillDoneWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+function oneTillDoneForLoop(n) {
+  let num = []
+
+  for (let i = 1; i <= n; i += 1) {
+    num.push(i)
+  }
+  return num
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -20,7 +37,16 @@ function oneTillDoneForLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+function doneToZeroWhileLoop(n) {
+    let num = []
+    let i = n
+  
+   while (i > 0) {
+      num.push(i)
+      i--
+    }
+    return num
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -28,7 +54,14 @@ function doneToZeroWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
+function doneToZeroForLoop(n) {
+  let newArray = []
+
+  for (let i = n; i > 0; i--) {
+    newArray.push(i)
+  }
+  return newArray
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -39,7 +72,20 @@ function doneToZeroForLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
+function evenAndOddWhileLoop(max) {
+  let newArr = []
+  let i = 0;
+
+  while(i <= max) {
+     if(i % 2 === 0) {
+       newArr.push(`${i} is even`)
+       i++
+    }
+     newArr.push(`${i} is odd`)
+     i++    
+  }
+return newArr
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -50,7 +96,18 @@ function evenAndOddWhileLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
+function evenAndOddForLoop(max) {
+  let newArr = []
+
+  for (let i = 0; i <= max; i += 1) {
+    if (i % 2 === 0) {
+      newArr.push(`${i} is even`)
+  } else {
+    newArr.push(`${i} is odd`)
+  }
+}
+   return newArr
+  }   
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -66,7 +123,15 @@ function evenAndOddForLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9WhileLoop() {}
+function tillXTimes9WhileLoop(x) {
+  let i = 0
+  let newArr = []
+  while (i <= x) {
+    newArr.push(i * 9)
+    i++
+  }
+  return newArr
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -82,7 +147,14 @@ function tillXTimes9WhileLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
+function tillXTimes9ForLoop(x) {
+  let newArr = []
+
+  for(let i = 0; i <= x; i += 1) {
+    newArr.push(i * 9)
+  }
+  return newArr
+}
 
 
 /**
