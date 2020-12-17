@@ -4,7 +4,16 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+function oneTillDoneWhileLoop(number) {
+  let num = 1
+  let theArray = []
+  while (num < number){
+    theArray.push(num)
+    num += 1
+  }
+  return theArray
+  
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -12,7 +21,13 @@ function oneTillDoneWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+function oneTillDoneForLoop(number) {
+  let array = []
+  for(i = 1;i <= number;i += 1){
+    array.push[i]  
+  }
+  return array[i]
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -20,7 +35,15 @@ function oneTillDoneForLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+function doneToZeroWhileLoop(number) {
+  let num = 0
+  let theArray = []
+  while(number >= num){
+    theArray.push[i]
+    num -= 1 
+  }
+  return theArray
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -28,7 +51,13 @@ function doneToZeroWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
+function doneToZeroForLoop(number) {
+  let array = []
+  for(i = number;i >= 0;i -= 1){
+    array.push(number[i])
+  }
+  return array
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -39,7 +68,21 @@ function doneToZeroForLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
+function evenAndOddWhileLoop(max) {
+  let num = 0
+  let newArray = []
+  while(num <= max){
+    if(num % 2 === 0){
+      let even = `${num}` + 'is even'
+      newArray.push[even]
+    }else {
+      let odd = `${num}` +  'is odd'
+      newArray.push[odd]
+    }
+    num += 1
+  }
+  return newArray
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -50,7 +93,20 @@ function evenAndOddWhileLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
+function evenAndOddForLoop(max) {
+  let newArray = []
+  for(i = 0; i <= max;i++){
+    if(num % 2 === 0){
+      let even = max[i] + 'is even'
+      newArray.push[even]
+    }else {
+      let odd = max[i] +  'is odd'
+      newArray.push[odd]
+    }
+    
+  }
+  return newArray
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -66,7 +122,16 @@ function evenAndOddForLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9WhileLoop() {}
+function tillXTimes9WhileLoop(x) {
+  let num = 0
+  let array = []
+  while (num <= x){
+   let curr = num * 9
+   array.push(curr)
+   num += 1
+  }
+  return array
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -82,7 +147,15 @@ function tillXTimes9WhileLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
+function tillXTimes9ForLoop(x) {
+  let array = []
+  for(i = 0;i <= x;i++){
+    let hold = i * 9
+    array.push[hold]
+  
+  }
+  return array
+}
 
 
 /**
@@ -91,7 +164,15 @@ function tillXTimes9ForLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
+function endsWithFiveWhileLoop() {
+  let num = 5
+  let array = []
+  while(num <= 100){
+    array.push[num]
+    num += 10
+  }
+  return array
+}
 
 
 
@@ -101,7 +182,12 @@ function endsWithFiveWhileLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+function endsWithFiveForLoop(num) {
+  for(i = 5;i <= 100;i += 10){
+    return i
+  }
+  i += 10
+}
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 
@@ -120,7 +206,7 @@ while (i > 3) {
 
 /**
  * // Write your explanation here!
- *
+ *This will produce an Infinate loop because i will always be larger than 3
  */
 
  /**
@@ -131,7 +217,17 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
+function fizzBuzzPart1(num) {
+  for(i = 1;i < 100;i += 1){
+    if(i % 3 === 0){
+      return 'Fizz'
+    }else if(i % 5 === 0){
+      return 'Buzz'
+    }else{
+      return i
+    }
+  }
+}
 
 
  /**
@@ -143,7 +239,21 @@ function fizzBuzzPart1() {}
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
+function fizzBuzzPart2() {
+  let num = 1
+  while(num <= 100){
+    if(num % 3 === 0 && num % 5 === 0){
+      return 'FizzBuzz'
+    } else if (num % 3 === 0 && num % 5 !== 0){
+      return 'Fizz'
+    } else if (num % 5 === 0 && num % 3 !== 0){
+      return 'Buzz'
+    } else {
+      return num
+    }
+  }
+  num += 1
+}
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
