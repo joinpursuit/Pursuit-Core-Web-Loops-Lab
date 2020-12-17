@@ -4,7 +4,15 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+function oneTillDoneWhileLoop(n) {
+  array = []
+  let i = 0
+  while(i < n) {
+    array[i] = i + 1
+    i++
+  }
+  return array
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -12,7 +20,13 @@ function oneTillDoneWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+function oneTillDoneForLoop(n) {
+  array = []
+  for(i = 0 ; i < n; i++){
+    array[i] = i + 1
+  }
+  return array
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -20,16 +34,33 @@ function oneTillDoneForLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
-
+function doneToZeroWhileLoop(n) {
+  array = []
+  let i = 0
+  const m = n
+  while(i < m) {
+    array[i] = n 
+    i += 1
+    n -= 1 
+  }
+  return array
+}
+console.log(doneToZeroWhileLoop(4))
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be written with a for loop
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
-
+function doneToZeroForLoop(n) {
+  array = []
+  const m = n
+  for(let i = 0;i < m;i += 1 ,n -= 1 ){
+    array[i] = n
+  }
+  return array
+}
+console.log(doneToZeroForLoop(4))
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -39,8 +70,20 @@ function doneToZeroForLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
-
+function evenAndOddWhileLoop(max) {
+  array = []
+  let i = 0
+  while(i <= max){
+    if (i % 2 === 0){
+      array[i] = i + " is even"
+    }else{
+      array[i] = i + " is odd"
+    }
+    i += 1
+  }
+  return array
+}
+console.log(evenAndOddWhileLoop(4))
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -50,7 +93,17 @@ function evenAndOddWhileLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
+function evenAndOddForLoop(max) {
+  array = []
+  for(i = 0; i <= max ; i += 1 ){
+    if (i % 2 === 0){
+      array[i] = i + " is even"
+    }else{
+      array[i] = i + " is odd"
+    }
+  }
+  return array 
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
