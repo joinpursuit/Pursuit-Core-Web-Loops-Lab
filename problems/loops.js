@@ -6,11 +6,11 @@
  */
 function oneTillDoneWhileLoop(number) {
   let num = 1
-  let array = newArray() 
+  newArray =[]
   while ( num <= number){
     newArray.push(num)
    num++;
-  }return array
+  }return newArray
 }
 
 /**
@@ -20,10 +20,10 @@ function oneTillDoneWhileLoop(number) {
  * @returns {number[]}
  */
 function oneTillDoneForLoop(number) {
-  let array = newArray()
+  newArray = []
   for (let num = 1; num <= number; num +=1){
     newArray.push(num)
-    }return array
+    }return newArray
 }
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -33,11 +33,11 @@ function oneTillDoneForLoop(number) {
  */
 function doneToZeroWhileLoop(number) {
   let num = 0
-  let array = newArray()
+  newArray = []
   while ( number > num){
     newArray.push(number)
    number --;
-  }return array
+  }return newArray
 }
 
 /**
@@ -47,10 +47,10 @@ function doneToZeroWhileLoop(number) {
  * @returns {number[]}
  */
 function doneToZeroForLoop(number) {
-  let array = newArray()
+  newArray = []
   for (let num = 0; number > num ; number -=1){
     newArray.push(number)
-    }return array
+    }return newArray
 }
 
 /**
@@ -64,15 +64,15 @@ function doneToZeroForLoop(number) {
  */
 function evenAndOddWhileLoop(max) {
   let num = 0
-  let array = newArray()
+ newArray = []
  while ( num <= max){
-   if ((num % 2) == 0){
-    newArray[num] =num + 'even'
-    num ++ 
+   if (num % 2 == 0){
+    newArray.push (num + 'even')
     }else{
-      newArray[num] = num + 'odd'
-      num++
-    }return array
+      newArray.push (num + 'odd')
+    }num++
+   }return newArray
+    
 }
 
 /**
@@ -85,15 +85,14 @@ function evenAndOddWhileLoop(max) {
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
 function evenAndOddForLoop(max){
-  let array = newArray();
-  for( let num =0; num <= max; num++){
-    if (num %2 ==0){
-     newArray[num] =num + 'even'
-     num ++ 
-     }else{
-       newArray[num] = num + 'odd'
-       num++
-     }return array
+  newArray = [];
+  for( let num =0; num <= max; num+1){
+    if ((num %2) ==0){
+     newArray.push(num + 'even')
+     }
+     else{
+       newArray.push(num + 'odd')
+     }return newArray
     }   
 }
 
@@ -135,7 +134,12 @@ function tillXTimes9WhileLoop(x) {
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
+function tillXTimes9ForLoop(x) {
+  let newArray = []
+  for( let num = 0; num<= x; num+1){xcode
+    newArray.push(num*9)
+  }return newArray
+}
 
 
 /**
