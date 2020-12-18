@@ -55,7 +55,7 @@ console.log(doneToZeroWhileLoop(4))
 function doneToZeroForLoop(n) {
   array = []
   const m = n
-  for(let i = 0;i < m;i += 1 ,n -= 1 ){
+  for(let i = 0;i < m ;i += 1 ,n -= 1 ){
     array[i] = n
   }
   return array
@@ -119,7 +119,17 @@ function evenAndOddForLoop(max) {
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9WhileLoop() {}
+function tillXTimes9WhileLoop(x) {
+  array = []
+  let i = 0
+  while(i <= x){
+    array[i] = i * 9
+
+    i++
+  }
+  return array
+}
+console.log(tillXTimes9WhileLoop(5))
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -135,7 +145,13 @@ function tillXTimes9WhileLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
+function tillXTimes9ForLoop(x) {
+  array = []
+  for(i = 0 ; i <= x ; i++ ){
+    array[i] = i * 9
+  }
+  return array
+}
 
 
 /**
@@ -144,9 +160,16 @@ function tillXTimes9ForLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
-
-
+function endsWithFiveWhileLoop() {
+array = []
+let i = 0
+while( i <= 9 ){
+array[i] = (i * 10) + 5  
+i++  
+ }
+ return array 
+}
+console.log(endsWithFiveWhileLoop())
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -154,10 +177,14 @@ function endsWithFiveWhileLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+function endsWithFiveForLoop() {
 // Try refactoring the code above to increment your i by 10 and starting at 5.
-
-
+array = []
+for( i = 0;i <= 9 ; i++ ){
+  array[i] = (i * 10) + 5 
+}
+return array
+}
 
 /**
  Without running/executing your code, how many times will the loop below run?
@@ -173,7 +200,8 @@ while (i > 3) {
 
 /**
  * // Write your explanation here!
- *
+ * The code will continue to loop forever because i will continue to increase  
+ * 
  */
 
  /**
@@ -184,8 +212,20 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
-
+function fizzBuzzPart1() {
+  array = []
+  for( i = 0 ; i <= 99 ; i++ ){
+    if((i +1) % 3 === 0 ){
+      array[i] = "Fizz" 
+    }else if((i + 1) % 5 === 0){
+      array[i] = "Buzz"
+    }else{
+      array[i] = i + 1
+    }
+  }
+  return array 
+}
+console.log(fizzBuzzPart1())
 
  /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
