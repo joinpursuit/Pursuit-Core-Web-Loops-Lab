@@ -148,7 +148,15 @@ function tillXTimes9WhileLoop(x) {
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
+function tillXTimes9ForLoop(x) {
+  let myArray = [];
+  for (i = 0; i <= x; i++) {
+    myArray.push(i * 9)
+  } 
+  return myArray
+}
+    
+    
 
 
 /**
@@ -157,7 +165,18 @@ function tillXTimes9ForLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
+function endsWithFiveWhileLoop() {
+   let num = 0;
+   let numFiveArray = [];
+  while(num < 100) { 
+    num += 5;
+    if (num % 10 === 5) {
+      numFiveArray.push(num);
+    } 
+  
+  }
+  return numFiveArray
+}
 
 
 
