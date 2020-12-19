@@ -28,7 +28,7 @@ const oneTillDoneForLoop = (number) => {
   }
   return myArray
 }
-console.log(oneTillDoneForLoop(9))
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -36,7 +36,16 @@ console.log(oneTillDoneForLoop(9))
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+const doneToZeroWhileLoop = (number) => {
+  let num = number;
+  let myArray = [];
+  while(num > 0) { 
+    myArray.push(num);
+    num -= 1;
+  }
+  return myArray 
+}
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
