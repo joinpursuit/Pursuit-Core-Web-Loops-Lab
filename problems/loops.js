@@ -186,7 +186,18 @@ function endsWithFiveWhileLoop() {
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+function endsWithFiveForLoop() {
+  
+  let myArray = [];
+  for (let i = 0; i < 100; i += 5) {
+    if (i % 10 === 5) {
+      myArray.push(i);
+    } 
+  }
+  return myArray
+}
+
+
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 
