@@ -295,7 +295,14 @@ console.log(rangeOdd(0,10))
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+const rangeEveryOther = (min, max) => {
+  let arr = [];
+  for(i = min; i <= max; i+=2) {
+    arr.push(i)
+  }
+  return arr;
+}
+console.log(rangeEveryOther())
 
 /**
  * Takes in an array and a target.
