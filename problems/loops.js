@@ -4,12 +4,17 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
-//num = 4 
-//loop 1 [1] loop2 [1,2] loop3 [1, 2, 3] loop4 [1, 2, 3, 4]
-//create an array with 4 indexes [1, 2, 3, 4] 
-//exits aand prints the array
 
+ const oneTillDoneWhileLoop = (num) => {
+   let i = 1 
+   let arr = []
+   while(i <= num) {
+      arr.push(i)
+      i++
+   } 
+   return arr 
+  }
+console.log(oneTillDoneWhileLoop(5)) 
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -17,7 +22,14 @@ function oneTillDoneWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+const oneTillDoneForLoop = (num) => {
+  let arr = [];
+  for(let i = 1; i <= num; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+console.log(oneTillDoneForLoop(5)) 
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -25,7 +37,16 @@ function oneTillDoneForLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+const doneToZeroWhileLoop = (num) => {
+  let i = num;
+  let arr = [];
+  while(i > 0) {
+    arr.push(i);
+  i--;
+  }
+  return arr;
+}
+console.log(doneToZeroWhileLoop(5))
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
