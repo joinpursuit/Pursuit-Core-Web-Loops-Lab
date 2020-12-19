@@ -296,7 +296,15 @@ function fizzBuzzPart2() {
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
+const rangeSum = (min, max) => {
+  let sum = 0;
+  for (let i = min; i <= max; i++){
+    sum += i
+    console.log(i)
+  }
+  return sum   
+} 
+
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
