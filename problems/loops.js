@@ -4,8 +4,18 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop(number) {}
-  
+function oneTillDoneWhileLoop(number) {
+  num = 0
+  arr=[]
+  while( num < number){
+//    console.log(num)
+    num += 1
+    arr.push(num)
+    
+  }
+  return arr
+}
+console.log(oneTillDoneWhileLoop(10))
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -13,8 +23,14 @@ function oneTillDoneWhileLoop(number) {}
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
-
+function oneTillDoneForLoop(number) {
+  arr=[]
+  for (let num=1; num<=number; num+=1){
+   arr.push(num) 
+  }
+  return arr
+}
+console.log(oneTillDoneForLoop(10))
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be a while loop
