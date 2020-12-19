@@ -44,7 +44,7 @@ function doneToZeroWhileLoop(number) {
     newNum.push(i)
     i--
   }
-
+return newNum;
 
 }
 
@@ -56,11 +56,10 @@ function doneToZeroWhileLoop(number) {
  */
 function doneToZeroForLoop(number) {
   let newNum = [];
-  for (let i = number;i > 0; i--) {
+  for (let i = number; i > 0; i--) {
     newNum.push(i);
   }
   return newNum;
-
 
 }
 
