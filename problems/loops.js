@@ -160,7 +160,17 @@ function tillXTimes9ForLoop(x) {
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
+function endsWithFiveWhileLoop() {
+  i=1
+  arr = []
+  while( i<= 100){
+    if(i % 5===0 && i % 2 !==0 ){
+      arr.push(i)
+    }
+    i += 1
+  }
+  return arr
+}
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
