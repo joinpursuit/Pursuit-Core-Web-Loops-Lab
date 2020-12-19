@@ -53,7 +53,13 @@ const doneToZeroWhileLoop = (number) => {
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
+const doneToZeroForLoop = (number) => {
+  let myArray = [];
+  for (let i = number; i > 0; i--) {
+    myArray.push(i);
+  }
+  return myArray
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
