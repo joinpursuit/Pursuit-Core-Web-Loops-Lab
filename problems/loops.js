@@ -268,6 +268,24 @@ function fizzBuzzPart1() {
 
  */
 function fizzBuzzPart2() {
+  let num = 0;
+  let myArray = [];
+  while(num < 100) { 
+    num += 1;
+    if (num % 5 === 0 && num % 3 === 0) { 
+      myArray.push("FizzBuzz")  
+    } 
+    else if (num % 5 === 0 && num % 3 !== 0) {
+      myArray.push("Buzz")
+    } 
+    else if (num % 3 === 0) {
+      myArray.push("Fizz")
+
+    }
+    else myArray.push(num)
+     
+  }
+  return myArray
   
 }
 
