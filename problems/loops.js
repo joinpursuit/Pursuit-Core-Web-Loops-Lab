@@ -8,27 +8,11 @@ function oneTillDoneWhileLoop(number) {
   let newNum = [];
   let i = 1;
   while (i <= number) {
-<<<<<<< HEAD
     newNum.push(i);
     i++;
   }
   return newNum;
 }
-// function shoutForLoop(array) {
-//   let newArray = []
-//   for (let i = 0; i < array.length; i++) {
-//     newArray.push(array[i]+ '!')
-//   }
-//   return newArray;
-// }
-=======
-  newNum.push(i);
-    i++;
-  }
-return newNum;
-}
-
->>>>>>> 878fc052e7977cb0b6c4e50b3004c56f414ca4fb
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -37,12 +21,11 @@ return newNum;
  * @returns {number[]}
  */
 function oneTillDoneForLoop(number) {
-let newNum = [];
-for( let i=1; i<= number; i++) {
-  newNum.push(i);
-}
-return newNum;
-
+  let newNum = [];
+  for (let i = 1; i <= number; i++) {
+    newNum.push(i);
+  }
+  return newNum;
 }
 
 /**
@@ -51,7 +34,15 @@ return newNum;
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop(number) {}
+function doneToZeroWhileLoop(number) {
+  let newNum = []; 
+  let i = number
+  while (i > 0){
+    newNum.push(i)
+    i--
+  }
+  return newNum;
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
