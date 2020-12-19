@@ -4,7 +4,19 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+
+ const oneTillDoneWhileLoop = (num) => {
+   let i = 1 
+   let arr = []
+   while(i <= num) {
+      arr.push(i)
+      i++
+   } 
+   return arr 
+  }
+console.log(oneTillDoneWhileLoop(5)) 
+
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).

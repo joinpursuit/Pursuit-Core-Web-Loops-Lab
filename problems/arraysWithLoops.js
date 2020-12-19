@@ -6,7 +6,11 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+const shoutForLoop =(array) => {
+  for (i = 0; i < array.length; i++){
+    return 
+  }
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
