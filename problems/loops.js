@@ -22,7 +22,11 @@ return newNum;
  * @returns {number[]}
  */
 function oneTillDoneForLoop(number) {
-let newNum 
+let newNum = [];
+for( let i=1; i<= number; i++) {
+  newNum.push(i);
+}
+return newNum;
 
 }
 
@@ -32,7 +36,7 @@ let newNum
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+function doneToZeroWhileLoop(number) {}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
