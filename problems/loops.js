@@ -208,7 +208,7 @@ while (i > 3) {
 
 /**
  * // Write your explanation here!
- *
+ * it will run an infinite amount of times because when you initialize it, 5 is greater than 3, so the next iteration will be with 6 which is also greater than 3, all the iterations will greater than 3 and we are not telling the while code when to stop 
  */
 
 /**
@@ -219,7 +219,21 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
+function fizzBuzzPart1() {
+  i = 1
+  arr =[]
+  for(i ; i <=100; i++){
+    if(i%3===0){
+      arr.push("Fizz")
+    }else if (i % 3 !==0 && i % 5  ===0) {
+      arr.push("Buzz")
+      }else{
+        arr.push(i)
+      }
+    }
+    return(arr)
+  }
+
 
 /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
