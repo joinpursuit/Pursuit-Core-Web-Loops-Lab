@@ -5,8 +5,8 @@
  * @returns {number[]}
  */
 function oneTillDoneWhileLoop(number) {
-  let i = 1
   let nums = []
+  let i = 1
   while (i<= number) {
     nums.push(i)
     i++
@@ -35,8 +35,8 @@ function oneTillDoneForLoop(number) {
  * @returns {number[]}
  */
 function doneToZeroWhileLoop(number) {
-  let i = number
   let nums = []
+  let i = number
   while (i > 0) {
     nums.push(i)
     i--
@@ -68,17 +68,17 @@ function doneToZeroForLoop(number) {
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
 function evenAndOddWhileLoop(max) {
+  let newArray = []
   let i = 0 
-  let arr = []
   while (i<= max){
     if (i % 2 === 0){
-      arr.push(`${i} is even`)
+      newArray.push(`${i} is even`) 
       i++
     }
-    arr.push(`${i} is odd`)
+    newArray.push(`${i} is odd`)
     i++
   }
-  return arr
+  return newArray
 }
 
 /**
@@ -117,8 +117,8 @@ function evenAndOddForLoop(max) {
 * 5 * 9 = 45
  */
 function tillXTimes9WhileLoop(x) {
-  let i = 0
   let arr = []
+  let i = 0
   while(i<=x){
     arr.push (i*9)
     i++
@@ -142,7 +142,7 @@ function tillXTimes9WhileLoop(x) {
  */
 function tillXTimes9ForLoop(x) {
   let arr = []
-  for (let i = 0; x>= i; i++) {
+  for (let i = 0; i <= x; i++) {
     arr.push(i*9)
   }
   return arr
@@ -158,12 +158,14 @@ function tillXTimes9ForLoop(x) {
 function endsWithFiveWhileLoop() {
   let arr = []
   let i = 0
-  while (i <= 100) {
-    arr.push(i+=5)
+  while (i < 100) {
+    if(i % 5 === 0 && i % 10 !== 0) {
+    arr.push(i)
+  }
+  i++
   }
   return arr
 }
-// Come back later 
 
 
 /**
@@ -172,8 +174,23 @@ function endsWithFiveWhileLoop() {
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+function endsWithFiveForLoop() {
+  let arr = []
+  for(i = 1 ; i < 100; i++) {
+    if (i % 5 === 0 && i % 10 !== 0){
+      arr.push(i)
+    }
+  }
+  return arr
+}
 // Try refactoring the code above to increment your i by 10 and starting at 5.
+// let arr = []
+//   for(i = 5 ; i < 100; i+= 10) {
+//     if (i % 5 === 0 && i % 10 !== 0){
+//       arr.push(i)
+//     }
+//    return arr
+//   }
 
 
 
@@ -191,7 +208,7 @@ while (i > 3) {
 
 /**
  * // Write your explanation here!
- *
+ * *Infinity loop. The code above will continously run since "i" will always be greater than 3 and is increased by 1 each time.
  */
 
  /**
@@ -202,7 +219,19 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
+function fizzBuzzPart1() {
+  let arr =[]
+  for (let i = 1; i <= 100; i++){
+    if (i % 3 === 0){
+      arr.push("Fizz")
+    } else if (i % 5 === 0 && i % 3 !== 0){
+      arr.push("Buzz")
+    } else {
+      arr.push (i) 
+    }
+  }
+  return arr
+}
 
 
  /**
@@ -214,7 +243,23 @@ function fizzBuzzPart1() {}
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
+function fizzBuzzPart2() {
+  let arr = []
+  for(let i = 1; i <= 100; i++){
+    if(i % 3 === 0) 
+      if(i % 5 === 0){
+        arr.push("FizzBuzz")
+      }else {
+        arr.push("Fizz")
+      }else if(i % 5 === 0){
+      arr.push("Buzz")
+      }else {
+      arr.push(i)
+      }
+  }
+  return arr
+}
+
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
@@ -223,7 +268,13 @@ function fizzBuzzPart2() {}
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
+function rangeSum(min,max) {
+  let sum = 0
+  for (let i = min; i<= max;i++){
+  sum += i
+  }
+  return sum 
+}
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
@@ -233,7 +284,15 @@ function rangeSum() {}
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() {}
+function rangeOdd(min, max) {
+  let arr = []
+  for ( let i = min;i <= max; max--) {
+    if (max % 2 !== 0) {
+      arr.push(max)
+    }
+  }
+  return arr
+}
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -243,7 +302,13 @@ function rangeOdd() {}
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+function rangeEveryOther(min, max) {
+  let arr = []
+  for (let i = min; i<= max; i += 2){
+    arr.push(i)
+  }
+  return arr
+}
 
 /**
  * Takes in an array and a target.
@@ -254,7 +319,16 @@ function rangeEveryOther() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+function containsWhileLoop(elements, target) {
+  let i = 0
+  while (i<= elements.length -1){
+    if (elements[i] === target){
+        return true 
+      i++
+    }
+  }
+  return false
+}
 
 /**
  * Takes in an array and a target.
