@@ -70,8 +70,20 @@ const doneToZeroForLoop = (number) => {
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
-
+const evenAndOddWhileLoop = (max) => {
+  let num = -1;
+  let myArray = [];
+  while(num < max) { 
+    num += 1;
+    if (num % 2 === 0) {
+      myArray.push(`${num} is even`);
+    } else {
+      myArray.push(`${num} is odd`);
+    } 
+  }
+  return myArray
+}
+console.log(evenAndOddWhileLoop(9))
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
