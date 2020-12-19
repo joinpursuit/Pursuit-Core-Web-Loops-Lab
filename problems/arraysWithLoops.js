@@ -105,12 +105,13 @@ function evenArray(nums) {
  */
 
 function findSmallest(nums) {
-  let order = nums.sort()
-  num = 0
-  while(num = 0){
-    return nums[num]
+  let small = 999999999
+  for(i = 0;i < nums.length; i++){
+    if(nums[i] <= small){
+      small = nums[i]
+    }
   }
-
+ return small
 }
 
 /**
@@ -121,19 +122,21 @@ function findSmallest(nums) {
  */
 
 function findSecondSmallest(nums){
-  for(i = 0;i < nums.length;i++){
-    let smallest = 100
-    let secondSmallest = 100
-    if(i < smallest){
-      return i = smallest
-    }
-    for(j = 0;j< nums.length;j++){
-      if(j < secondSmallest && j > smallest){
-        return j === secondSmallest
-      }
+  let smallest = Number.MAX_SAFE_INTEGER + 1
+    let secondSmallest = Number.MAX_SAFE_INTEGER + 2
+  for(let i = 0;i < nums.length;i++){
+    if(nums[i] <= smallest){
+      smallest = nums[i]
     }
   }
-}
+    for(let j = 0;j< nums.length;j++){
+      if(nums[j] <= secondSmallest && nums[j] > smallest){
+        secondSmallest = nums[j]
+      }
+    }
+    return  secondSmallest
+  }
+ 
 //[3, 8, 4, 9, 2]
 /**
  * Takes in array and returns the second largest number in the array
@@ -142,18 +145,19 @@ function findSecondSmallest(nums){
  */
 
 function findSecondLargest(nums) {
-  for(i = 0;i < nums.length;i++){
-  let largest = 0
-  let secLargest = 0
-  if(i > largest){
-    return i = largest
-  }
-  }
-  for(j=0;j<nums.length;i++){
-    if(j > secLargest && j < largest){
-      return j = secLargest
+  let largest = Number.MIN_SAFE_INTEGER + 2
+  let secondLargest = Number.MIN_SAFE_INTEGER + 1
+  for(let i = 0;i < nums.length;i++){
+    if(nums[i] >= largest){
+      largest = nums[i]
     }
   }
+    for(let j = 0;j< nums.length;j++){
+      if(nums[j] >= secondLargest && nums[j] < largest){
+        secondLargest = nums[j]
+      }
+    }
+    return  secondLargest
 }
 
 /**
@@ -164,8 +168,17 @@ function findSecondLargest(nums) {
  */
 // Hint: Look into the `.includes` method.
 function removeDups(nums) {
-  for(i=0;i<nums.length;i++){}
+  let newArray = []
+  let dupArray = []
+  for(let i = 0;i < nums.length;i++){
+    if(newArray.includes(nums[i])){
+      dupArray.push(nums[i])
 
+    }else{
+      newArray.push(nums[i])
+    }
+  }
+  return newArray
 }
 
 module.exports = {
