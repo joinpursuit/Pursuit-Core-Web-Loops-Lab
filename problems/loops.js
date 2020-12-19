@@ -94,7 +94,18 @@ console.log(evenAndOddWhileLoop(10));
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
+function evenAndOddForLoop(max) {
+  let i = 0;
+  let arr = [];
+  for (i; i <= max; i++){
+    if (i % 2 ===0){
+      arr.push(i + " is even");
+ } else {
+  arr.push(i + " is odd")
+ }
+    } return arr
+  } 
+
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
