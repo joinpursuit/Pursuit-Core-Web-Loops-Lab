@@ -121,7 +121,15 @@ function evenAndOddForLoop(max) {
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9WhileLoop() {}
+function tillXTimes9WhileLoop(x) {
+  i=0
+  arr =[]
+  while( i <= x){
+    arr.push(i * 9)
+    i+=1
+  }
+  return arr
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
