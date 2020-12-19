@@ -7,11 +7,19 @@
 const oneTillDoneWhileLoop = (num) => {
   let i = 1
   let arr = []
+<<<<<<< HEAD
   while (i <= num) {
     arr.push(i)
     i++;
   }
   return arr;
+=======
+  while(i <= num) {
+    arr.push(i)
+    i++
+  } 
+  return arr
+>>>>>>> 4bb69094fee13e5f96c49ed25f8fd02fad1d3ec8
 }
 
 /**
@@ -21,12 +29,20 @@ const oneTillDoneWhileLoop = (num) => {
  * @returns {number[]}
  */
 const oneTillDoneForLoop = (num) => {
+<<<<<<< HEAD
   let arr = [];
   for (let i = 1; i <= num;i++){
     arr.push(i);
   }
   return arr;
 
+=======
+  let arr = []
+  for(let i = 1; i <= num; i++) {
+    arr.push(i)
+  }
+  return arr
+>>>>>>> 4bb69094fee13e5f96c49ed25f8fd02fad1d3ec8
 }
 
 /**
