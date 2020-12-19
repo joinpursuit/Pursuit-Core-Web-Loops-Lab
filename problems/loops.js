@@ -7,19 +7,11 @@
 const oneTillDoneWhileLoop = (num) => {
   let i = 1
   let arr = []
-<<<<<<< HEAD
   while (i <= num) {
     arr.push(i)
-    i++;
-  }
-  return arr;
-=======
-  while(i <= num) {
-    arr.push(i)
     i++
-  } 
+  }
   return arr
->>>>>>> 4bb69094fee13e5f96c49ed25f8fd02fad1d3ec8
 }
 
 /**
@@ -29,20 +21,11 @@ const oneTillDoneWhileLoop = (num) => {
  * @returns {number[]}
  */
 const oneTillDoneForLoop = (num) => {
-<<<<<<< HEAD
-  let arr = [];
-  for (let i = 1; i <= num;i++){
-    arr.push(i);
-  }
-  return arr;
-
-=======
   let arr = []
-  for(let i = 1; i <= num; i++) {
+  for (let i = 1; i <= num; i++) {
     arr.push(i)
   }
   return arr
->>>>>>> 4bb69094fee13e5f96c49ed25f8fd02fad1d3ec8
 }
 
 /**
@@ -51,7 +34,17 @@ const oneTillDoneForLoop = (num) => {
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() { }
+const doneToZeroWhileLoop = (number) => {
+  let i = number
+  let arr = []
+  while (i > 0) {
+    arr.push(i)
+    i--;
+  }
+  return arr
+
+
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -59,7 +52,13 @@ function doneToZeroWhileLoop() { }
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() { }
+const doneToZeroForLoop = (number) => {
+  let arr = []
+  for (let i = number; i > 0; i--) {
+    arr.push(i)
+  }
+  return arr;
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
