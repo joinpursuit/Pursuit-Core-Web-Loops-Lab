@@ -4,7 +4,8 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+function oneTillDoneWhileLoop(number) {}
+  
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
