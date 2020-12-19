@@ -6,7 +6,14 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+function shoutForLoop(array) {
+let newArray = []
+for (let i = 0; i < array.length; i+=1) {
+  newArray.push(array[i] + "!")
+}
+return newArray
+}
+
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -15,7 +22,15 @@ function shoutForLoop() {}
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
+function shoutWhileLoop(array) {
+  let newArray = []
+  let i = 0
+  while(i < array.length){
+    newArray.push(array[i] + "!");
+    i ++; 
+  }
+  return newArray
+}
 
 /**
  * Takes in an array and returns a new array with element
@@ -25,7 +40,10 @@ function shoutWhileLoop() {}
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForOfLoop() {}
+function shoutForOfLoop(array) {
+  let newArray = []
+  for (newArray )
+}
 
 /**
  * Takes in an array and returns the sum of all values
@@ -33,7 +51,13 @@ function shoutForOfLoop() {}
  * @returns {number} sum
  */
 
-function sumArray() {}
+function sumArray(nums) {
+  let sum = 0;
+  for (let i = 0; i <nums.length; i+= 1) {
+    sum += nums[i];
+  }
+  return sum;
+};
 
 /**
  * Takes in an array and returns an array of all the odd valued elements
