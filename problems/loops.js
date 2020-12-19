@@ -35,13 +35,15 @@ function oneTillDoneForLoop(number) {
  * @returns {number[]}
  */
 function doneToZeroWhileLoop(number) {
-  let newNum = []; 
-  let i = number
-  while (i > 0){
+   
+  let newNum = [];
+  let i = number;
+  while (i > 0) {
     newNum.push(i)
     i--
   }
-  return newNum;
+
+
 }
 
 /**
@@ -50,7 +52,10 @@ function doneToZeroWhileLoop(number) {
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
+
+
+
+
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
