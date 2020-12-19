@@ -54,8 +54,14 @@ console.log(doneToZeroWhileLoop(5))
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
-
+const doneToZeroForLoop = num => {
+  let arr = [];
+  for (i = num; i > 0; i--) {
+    arr.push(i);
+  }
+  return arr;
+}
+console.log(doneToZeroForLoop(5))
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -65,8 +71,17 @@ function doneToZeroForLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
-
+const evenAndOddWhileLoop =(max) =>{
+  let i = 0;
+  let arr = [];
+  while (i <= max) {
+    (i % 2 === 0) ? arr.push(i + " is even") : arr.push(i + " is odd")
+    i++ 
+    
+  }
+  return arr 
+}
+ console.log(evenAndOddWhileLoop(5))
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -76,8 +91,14 @@ function evenAndOddWhileLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
-
+const evenAndOddForLoop =(max) => {
+  let arr = []
+  for (let i = 0; i <= max; i++) {
+    (i % 2 === 0) ? arr.push(i + " is even") : arr.push(i + " is odd")
+  }
+  return arr
+}
+console.log(evenAndOddForLoop(5))
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
  *  For each iteration, it will multiply the current number by 9 and store the result in an array.
