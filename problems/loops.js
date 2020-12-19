@@ -68,7 +68,22 @@ const doneToZeroForLoop = () => {
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
+    const evenAndOddWhileLoop = (max) => {
+        let newArray = []
+        let i = 0
+        while (i <= max){
+          if (i % 2 === 0){
+            newArray.push (i + " is even" ) 
+          i++
+          }else {
+            newArray.push(i + " is odd") 
+          i++
+          }
+          
+        } 
+
+          return newArray
+    }   
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -79,7 +94,17 @@ function evenAndOddWhileLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
+    const evenAndOddForLoop= (max) => {
+      let newArray = []
+      for ( let i = 0; i <= max; i++){
+        if (i % 2 === 0){
+          newArray.push(i + " is even")
+        }else{
+          newArray.push(i + " is odd")
+        }
+      }
+      return newArray
+    }
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
