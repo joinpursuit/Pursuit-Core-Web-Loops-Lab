@@ -5,6 +5,11 @@
  * @returns {number[]}
  */
 function oneTillDoneWhileLoop() {}
+//num = 4 
+//loop 1 [1] loop2 [1,2] loop3 [1, 2, 3] loop4 [1, 2, 3, 4]
+//create an array with 4 indexes [1, 2, 3, 4] 
+//exits aand prints the array
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
