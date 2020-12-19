@@ -257,8 +257,16 @@ console.log(fizzBuzzPart2())
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
+const rangeSum = (min,max) => {
+  let sum = 0;
+  for (i = min; i <= max; i++) {
+    sum += i 
+  }
+  return sum 
+}
+   
 
+console.log(rangeSum(0,10))
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
  * in that range
@@ -267,7 +275,17 @@ function rangeSum() {}
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() {}
+const rangeOdd = (min,max) => {
+  let arr = []
+  for (i = max; i >= min; i--) {
+    if (i % 2 === 1)
+    arr.push(i)
+
+  }
+  return arr 
+}
+
+console.log(rangeOdd(0,10))
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
