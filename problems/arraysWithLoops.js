@@ -74,7 +74,17 @@
  * @returns {array} odds
  */
 
-function oddArray() {}
+// let numns = [ 1, 2, 3, 4, 5 ]
+
+const oddArray = (nums) =>{
+  let newArray = [] // newarray= [ 1,3  ] 
+  let i = 0;
+  while ( nums [ i ] % 2 === 1 ){  // i = 3 , nums[3] = 4  && i < nums.length
+  newArray.push ( nums [ i ] )      // num[2] = 3
+  i++                           // i = 3 
+  }
+  return newArray
+}
 
 /**
  * Takes in an array and returns an array of all the even valued elements
