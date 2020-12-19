@@ -37,7 +37,9 @@ const shoutWhileLoop = arr => {
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForOfLoop() { }
+function shoutForOfLoop() { 
+ 
+}
 
 /**
  * Takes in an array and returns the sum of all values
