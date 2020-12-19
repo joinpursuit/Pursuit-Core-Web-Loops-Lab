@@ -4,7 +4,16 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+const oneTillDoneWhileLoop = (number) => {
+  let i = 1;
+  let newArray = []
+  while(i <= number) {
+    newArray.push(i)
+    i++
+
+  } 
+  return newArray
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -12,7 +21,13 @@ function oneTillDoneWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+const oneTillDoneForLoop = (number) => {
+  let newArray = [];
+  for(i = 1; i <= number; i++) {
+    newArray.push(i)
+  }
+  return newArray;
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -20,7 +35,15 @@ function oneTillDoneForLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+const doneToZeroWhileLoop = (number) => {
+  let newArray = [];
+  let i = number;
+  while(i > 0) {
+    newArray.push(i);
+    i--;
+  }
+  return newArray;
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -28,7 +51,13 @@ function doneToZeroWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
+const doneToZeroForLoop = (number) => {
+  let newArray = [];
+  for(i = number; i > 0; i--) {
+    newArray.push(i)
+  }
+  return newArray;
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
