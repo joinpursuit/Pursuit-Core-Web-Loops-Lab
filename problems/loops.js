@@ -11,11 +11,10 @@ function oneTillDoneWhileLoop(number) {
 //    console.log(num)
     num += 1
     arr.push(num)
-    
   }
   return arr
 }
-console.log(oneTillDoneWhileLoop(10))
+//console.log(oneTillDoneWhileLoop(10))
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -30,7 +29,7 @@ function oneTillDoneForLoop(number) {
   }
   return arr
 }
-console.log(oneTillDoneForLoop(10))
+//console.log(oneTillDoneForLoop(10))
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be a while loop
@@ -46,8 +45,6 @@ function doneToZeroWhileLoop(number) {
   }
   return arr
 }
-console.log(doneToZeroWhileLoop(10))
-
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -55,8 +52,15 @@ console.log(doneToZeroWhileLoop(10))
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
-
+function doneToZeroForLoop(number) {
+  let i=number
+  arr=[]
+  for (i;i>=1 ; i-= 1) {
+    arr.push(i)
+  }
+  return arr
+}
+console.log (doneToZeroForLoop(10))
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
