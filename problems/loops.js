@@ -200,6 +200,17 @@ function endsWithFiveForLoop() {
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
+// function endsWithTenForLoop() {
+  
+//   let myArray = [];
+//   for (let i = 5; i < 100; i += 10) {
+//     if (i % 10 === 5) {
+//       myArray.push(i);
+//     } 
+//   }
+//   return myArray
+// }
+
 
 
 /**
@@ -212,12 +223,13 @@ let i = 5;
 while (i > 3) {
     i += 1
 }
-*/
+*/ // 
 
 /**
  * // Write your explanation here!
  *
- */
+ */ // ITS GOING TO BE AN INFINITE LOOP BECAUSE THE CONDITION WILL ALWAYS BE TRUE.
+ 
 
  /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
