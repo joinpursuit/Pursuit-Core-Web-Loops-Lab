@@ -83,7 +83,7 @@ const evenAndOddWhileLoop = (max) => {
   }
   return myArray
 }
-console.log(evenAndOddWhileLoop(9))
+
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -93,7 +93,18 @@ console.log(evenAndOddWhileLoop(9))
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
+const evenAndOddForLoop = (max) => {
+  let myArray = [];
+  for (i = 0; i <= max; i++) {
+    if (i % 2 === 0) {
+      myArray.push(`${i} is even`);
+    } else {
+      myArray.push(`${i} is odd`);
+    } 
+  }
+  return myArray
+  }
+
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
