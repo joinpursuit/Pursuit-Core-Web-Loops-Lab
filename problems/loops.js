@@ -81,7 +81,7 @@ function evenAndOddWhileLoop(max) {
     }
     i += 1;
   }
-  return arr
+  return arr;
 }
 console.log(evenAndOddWhileLoop(10));
 
@@ -97,15 +97,15 @@ console.log(evenAndOddWhileLoop(10));
 function evenAndOddForLoop(max) {
   let i = 0;
   let arr = [];
-  for (i; i <= max; i++){
-    if (i % 2 ===0){
+  for (i; i <= max; i++) {
+    if (i % 2 === 0) {
       arr.push(i + " is even");
- } else {
-  arr.push(i + " is odd")
- }
-    } return arr
-  } 
-
+    } else {
+      arr.push(i + " is odd");
+    }
+  }
+  return arr;
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -122,13 +122,13 @@ function evenAndOddForLoop(max) {
 * 5 * 9 = 45
  */
 function tillXTimes9WhileLoop(x) {
-  i=0
-  arr =[]
-  while( i <= x){
-    arr.push(i * 9)
-    i+=1
+  i = 0;
+  arr = [];
+  while (i <= x) {
+    arr.push(i * 9);
+    i += 1;
   }
-  return arr
+  return arr;
 }
 
 /**
@@ -146,12 +146,12 @@ function tillXTimes9WhileLoop(x) {
 * 5 * 9 = 45
  */
 function tillXTimes9ForLoop(x) {
-  i=0
-  arr =[]
-  for(i; i <= x; i++){
-    arr.push (i * 9)
-  } 
-  return arr
+  i = 0;
+  arr = [];
+  for (i; i <= x; i++) {
+    arr.push(i * 9);
+  }
+  return arr;
 }
 
 /**
@@ -161,15 +161,15 @@ function tillXTimes9ForLoop(x) {
 
  */
 function endsWithFiveWhileLoop() {
-  i=1
-  arr = []
-  while( i<= 100){
-    if(i % 5===0 && i % 2 !==0 ){
-      arr.push(i)
+  i = 1;
+  arr = [];
+  while (i <= 100) {
+    if (i % 5 === 0 && i % 2 !== 0) {
+      arr.push(i);
     }
-    i += 1
+    i += 1;
   }
-  return arr
+  return arr;
 }
 
 /**
@@ -179,18 +179,15 @@ function endsWithFiveWhileLoop() {
 
  */
 function endsWithFiveForLoop() {
-  i=1
-  arr = []
-  for (i; i <= 100;i+=1 ){
-    if (i % 5===0 && i % 2 !==0){
-      arr.push (i)  
-    } 
+  i = 1;
+  arr = [];
+  for (i; i <= 100; i += 1) {
+    if (i % 5 === 0 && i % 2 !== 0) {
+      arr.push(i);
+    }
   }
- return arr
+  return arr;
 }
-
-
-
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
@@ -208,7 +205,7 @@ while (i > 3) {
 
 /**
  * // Write your explanation here!
- * it will run an infinite amount of times because when you initialize it, 5 is greater than 3, so the next iteration will be with 6 which is also greater than 3, all the iterations will greater than 3 and we are not telling the while code when to stop 
+ * it will run an infinite amount of times because when you initialize it, 5 is greater than 3, so the next iteration will be with 6 which is also greater than 3, all the iterations will greater than 3 and we are not telling the while code when to stop
  */
 
 /**
@@ -220,20 +217,19 @@ while (i > 3) {
 
  */
 function fizzBuzzPart1() {
-  i = 1
-  arr =[]
-  for(i ; i <=100; i++){
-    if(i%3===0){
-      arr.push("Fizz")
-    }else if (i % 3 !==0 && i % 5  ===0) {
-      arr.push("Buzz")
-      }else{
-        arr.push(i)
-      }
+  i = 1;
+  arr = [];
+  for (i; i <= 100; i++) {
+    if (i % 3 === 0) {
+      arr.push("Fizz");
+    } else if (i % 3 !== 0 && i % 5 === 0) {
+      arr.push("Buzz");
+    } else {
+      arr.push(i);
     }
-    return(arr)
   }
-
+  return arr;
+}
 
 /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
@@ -244,7 +240,21 @@ function fizzBuzzPart1() {
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
+function fizzBuzzPart2() {
+  let arr = [];
+  for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      arr.push("FizzBuzz");
+    } else if (i % 3 === 0) {
+      arr.push("Fizz");
+    } else if (i % 3 !== 0 && i % 5 === 0) {
+      arr.push("Buzz");
+    } else {
+      arr.push(i);
+    }
+  }
+  return arr
+}
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
