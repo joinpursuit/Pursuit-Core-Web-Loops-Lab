@@ -288,12 +288,12 @@ const rangeOdd = (min, max) => {
  * @returns {number[]} includes every other element
  */
 const rangeEveryOther = (min, max) => {
-  let arr = []
+  let arr = [];
   for (let i = min; i <= max; i += 2) {
     arr.push(i);
   }
   return arr;
-}
+};
 
 /**
  * Takes in an array and a target.
@@ -313,8 +313,7 @@ const containsWhileLoop = (elements, target) => {
     i++;
   }
   return false;
-
-}
+};
 
 /**
  * Takes in an array and a target.
@@ -325,7 +324,15 @@ const containsWhileLoop = (elements, target) => {
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() { }
+const containsForLoop = (elements, target) => {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return true;
+    }
+  }
+  return false;
+};
+
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -333,7 +340,16 @@ function containsForLoop() { }
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() { }
+const targetCount = (elements, target) => {
+  let matches = 0
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      matches++
+    }
+  }
+  return matches
+}
+
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -343,7 +359,7 @@ function targetCount() { }
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() { }
+function firstIndexFound() {}
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -353,7 +369,7 @@ function firstIndexFound() { }
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() { }
+function lastIndexFound() {}
 
 /**
  * Takes in an array.
@@ -362,7 +378,7 @@ function lastIndexFound() { }
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() { }
+function timesIndex() {}
 
 /**
  * Takes in an array.
@@ -373,7 +389,7 @@ function timesIndex() { }
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() { }
+function cumulativeSum() {}
 
 module.exports = {
   oneTillDoneWhileLoop,
