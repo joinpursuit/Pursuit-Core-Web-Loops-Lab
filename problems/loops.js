@@ -37,7 +37,17 @@ console.log(oneTillDoneForLoop(10))
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+function doneToZeroWhileLoop(number) {
+  let i = number
+  arr=[]
+  while( i >= 1){
+    arr.push(i)
+    i -=  1
+  }
+  return arr
+}
+console.log(doneToZeroWhileLoop(10))
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
