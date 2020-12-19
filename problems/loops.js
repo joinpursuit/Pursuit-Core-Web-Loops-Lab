@@ -153,15 +153,30 @@ console.log(tillXTimes9ForLoop(5))
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
-
+const endsWithFiveWhileLoop = () => {
+  let i = 5;
+  let arr = [];
+  while (i <= 100) {
+    arr.push(i)
+      i+=10
+  }
+  return arr
+}
+console.log(endsWithFiveWhileLoop(5))
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a for loop
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+const endsWithFiveForLoop =() =>{
+  let arr = []
+  for (i = 5; i <= 100; i+=10) {
+    arr.push(i)
+  }
+   return arr
+}
+console.log(endsWithFiveForLoop(5))
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 /**
