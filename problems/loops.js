@@ -341,14 +341,14 @@ const containsForLoop = (elements, target) => {
  * @returns {number} number of occurances
  */
 const targetCount = (elements, target) => {
-  let matches = 0
+  let matches = 0;
   for (let i = 0; i < elements.length; i++) {
     if (elements[i] === target) {
-      matches++
+      matches++;
     }
   }
-  return matches
-}
+  return matches;
+};
 
 /**
  * Takes in an array and a target.
@@ -366,7 +366,7 @@ const firstIndexFound = (elements, target) => {
     }
   }
   return -1;
-}
+};
 
 /**
  * Takes in an array and a target.
@@ -379,12 +379,12 @@ const firstIndexFound = (elements, target) => {
  */
 const lastIndexFound = (elements, target) => {
   for (let i = elements.length - 1; i >= 0; i--) {
-    if (elements[i] === target){
+    if (elements[i] === target) {
       return i;
     }
   }
   return -1;
-}
+};
 
 /**
  * Takes in an array.
@@ -393,7 +393,12 @@ const lastIndexFound = (elements, target) => {
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() { }
+const timesIndex = (elements) => {
+  for (let i = 0; i < elements.length; i++) {
+    elements[i] = elements[i] * i;
+  }
+  return elements;
+};
 
 /**
  * Takes in an array.
@@ -404,7 +409,12 @@ function timesIndex() { }
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() { }
+const cumulativeSum = (elements) => {
+  for (let i = 1; i < elements.length; i++) {
+    elements[i] = elements[i] + elements[i - 1];
+  }
+  return elements;
+};
 
 module.exports = {
   oneTillDoneWhileLoop,
