@@ -26,7 +26,15 @@ const shoutForLoop = array => {
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
+const shoutWhileLoop =  array => {
+  let newArray1 = [];
+  let i = 0;
+while (i < array.length) {
+  newArray1.push(array[i] + "!")
+  i++
+}
+return newArray1
+}
 
 /**
  * Takes in an array and returns a new array with element
