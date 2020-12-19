@@ -313,7 +313,17 @@ console.log(rangeEveryOther())
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+const containsWhileLoop = (elements, target) => {
+  let i = 0;
+  while(i < elements.length) {
+    if (target === elements[i]) {
+        return true;
+    }  
+      i++;
+    }
+  return false;
+}
+console.log(containsWhileLoop([6, 7, 9], 8))
 
 /**
  * Takes in an array and a target.
