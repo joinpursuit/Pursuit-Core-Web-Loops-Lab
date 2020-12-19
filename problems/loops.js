@@ -36,7 +36,17 @@ return newNum;
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop(number) {}
+function doneToZeroWhileLoop(number) {
+   
+  let newNum = [];
+  let i = number;
+  while (i > 0) {
+    newNum.push(i)
+    i--
+  }
+
+
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -44,7 +54,15 @@ function doneToZeroWhileLoop(number) {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
+function doneToZeroForLoop(number) {
+  let newNum = [];
+  for (let i = number;i > 0; i--) {
+    newNum.push(i);
+  }
+  return newNum;
+
+
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
