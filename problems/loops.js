@@ -21,7 +21,14 @@ const oneTillDoneWhileLoop = (num) => {
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+// function oneTillDoneForLoop() {}
+const oneTillDoneForLoop = (num) => {
+  let anjusArray = []
+  for(let i = 1; i <= num; i++){
+      anjusArray.push(i)
+  }
+    return anjusArray
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -29,15 +36,29 @@ function oneTillDoneForLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
-
+// function doneToZeroWhileLoop() {}
+const doneToZeroWhileLoop = (num) => {
+  let newArray = []
+  let i = num
+  while(i > 0){
+    newArray.push(i)
+    i--
+  } return newArray
+}
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be written with a for loop
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
+// function doneToZeroForLoop() {}
+const doneToZeroForLoop = (num) => {
+  let anjusNewArray = []
+  for(let i = num; i > 0; i--){
+    anjusNewArray.push(i)
+  }
+    return anjusNewArray
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
