@@ -5,14 +5,14 @@
  * @returns {number[]}
  */
 function oneTillDoneWhileLoop(number) {
-  num = 0
-  arr=[]
-  while( num < number){
-//    console.log(num)
-    num += 1
-    arr.push(num)
+  num = 0;
+  arr = [];
+  while (num < number) {
+    //    console.log(num)
+    num += 1;
+    arr.push(num);
   }
-  return arr
+  return arr;
 }
 //console.log(oneTillDoneWhileLoop(10))
 
@@ -23,11 +23,11 @@ function oneTillDoneWhileLoop(number) {
  * @returns {number[]}
  */
 function oneTillDoneForLoop(number) {
-  arr=[]
-  for (let num=1; num<=number; num+=1){
-   arr.push(num) 
+  arr = [];
+  for (let num = 1; num <= number; num += 1) {
+    arr.push(num);
   }
-  return arr
+  return arr;
 }
 //console.log(oneTillDoneForLoop(10))
 /**
@@ -37,13 +37,13 @@ function oneTillDoneForLoop(number) {
  * @returns {number[]}
  */
 function doneToZeroWhileLoop(number) {
-  let i = number
-  arr=[]
-  while( i >= 1){
-    arr.push(i)
-    i -=  1
+  let i = number;
+  arr = [];
+  while (i >= 1) {
+    arr.push(i);
+    i -= 1;
   }
-  return arr
+  return arr;
 }
 
 /**
@@ -53,14 +53,14 @@ function doneToZeroWhileLoop(number) {
  * @returns {number[]}
  */
 function doneToZeroForLoop(number) {
-  let i=number
-  arr=[]
-  for (i;i>=1 ; i-= 1) {
-    arr.push(i)
+  let i = number;
+  arr = [];
+  for (i; i >= 1; i -= 1) {
+    arr.push(i);
   }
-  return arr
+  return arr;
 }
-console.log (doneToZeroForLoop(10))
+console.log(doneToZeroForLoop(10));
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -70,7 +70,20 @@ console.log (doneToZeroForLoop(10))
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
+function evenAndOddWhileLoop(max) {
+  let i = 0;
+  let arr = [];
+  while (i <= max) {
+    if (i % 2 === 0) {
+      arr.push(i + " is even");
+    } else {
+      arr.push(i + " is odd");
+    }
+    i += 1;
+  }
+  return arr
+}
+console.log(evenAndOddWhileLoop(10));
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -115,7 +128,6 @@ function tillXTimes9WhileLoop() {}
  */
 function tillXTimes9ForLoop() {}
 
-
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a while loop
@@ -123,8 +135,6 @@ function tillXTimes9ForLoop() {}
 
  */
 function endsWithFiveWhileLoop() {}
-
-
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -134,8 +144,6 @@ function endsWithFiveWhileLoop() {}
  */
 function endsWithFiveForLoop() {}
 // Try refactoring the code above to increment your i by 10 and starting at 5.
-
-
 
 /**
  Without running/executing your code, how many times will the loop below run?
@@ -154,7 +162,7 @@ while (i > 3) {
  *
  */
 
- /**
+/**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
  * For numbers divisible by 3, add "Fizz" instead of the number into the array.
  * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
@@ -164,8 +172,7 @@ while (i > 3) {
  */
 function fizzBuzzPart1() {}
 
-
- /**
+/**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
  * For numbers divisible by 3, add "Fizz" instead of the number into the array.
  * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
@@ -264,7 +271,6 @@ function lastIndexFound() {}
  */
 function timesIndex() {}
 
-
 /**
  * Takes in an array.
  * Returns a new array where each element is the cumulative sum so far.
@@ -275,8 +281,6 @@ function timesIndex() {}
  * @returns {number[]}
  */
 function cumulativeSum() {}
-
-
 
 module.exports = {
   oneTillDoneWhileLoop,
