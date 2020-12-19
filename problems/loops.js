@@ -4,6 +4,7 @@
  * @param {number}
  * @returns {number[]}
  */
+
 const oneTillDoneWhileLoop = (number) => {
   let num = 0;
   let myArray = [];
@@ -14,14 +15,20 @@ const oneTillDoneWhileLoop = (number) => {
   return myArray
 }
 
-
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
  * Must be written with a for loop
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+const oneTillDoneForLoop = (number) => {
+  let myArray = [];
+  for (let i = 1; i <= number; i++) {
+    myArray.push(i);
+  }
+  return myArray
+}
+console.log(oneTillDoneForLoop(9))
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
