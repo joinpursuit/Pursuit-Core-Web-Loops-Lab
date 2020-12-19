@@ -6,7 +6,13 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+  const shoutForLoop = (array) => {
+    let newArray = []; 
+    for (let i = 0; i < array.length; i++) {
+      newArray.push(array[i] + "!")
+    }
+    return newArray 
+  }
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -15,7 +21,17 @@ function shoutForLoop() {}
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
+  const  shoutWhileLoop = array =>  {
+    let newArray = [];
+    let idx = 0 
+    while (idx < array.length) {
+      newArray.push(array[idx] + "!") 
+      idx++
+    }
+    return newArray
+ }
+
+  
 
 /**
  * Takes in an array and returns a new array with element
@@ -24,8 +40,19 @@ function shoutWhileLoop() {}
  * @param {Array} - ["I", "am", "a", "happy", "array"]
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
+    // const iterable = [10, 20, 30];
 
-function shoutForOfLoop() {}
+// for (let value of iterable) {
+//   value += 1;
+//   console.log(value);
+
+  const shoutForOfLoop = (array) => {
+    let newArray = []
+      for (let i of array) {
+        newArray.push(i + "!")  
+      }
+    return newArray 
+  }  
 
 /**
  * Takes in an array and returns the sum of all values
@@ -33,7 +60,13 @@ function shoutForOfLoop() {}
  * @returns {number} sum
  */
 
-function sumArray() {}
+ const sumArray = (nums) => {
+   let sum = 0;
+   for (let i = 0; i < nums.length ; i++) {
+      sum += nums[i] 
+   }
+   return sum 
+ }
 
 /**
  * Takes in an array and returns an array of all the odd valued elements
