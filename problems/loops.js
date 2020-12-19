@@ -239,7 +239,23 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
+function fizzBuzzPart1() {
+  let num = 0;
+  let myArray = [];
+  while(num < 100) { 
+    num += 1;
+    if (num % 3 === 0) {
+      myArray.push("Fizz")
+    } else if (num % 5 === 0 && num % 3 !== 0) {
+
+      myArray.push("Buzz")
+    } 
+    else myArray.push(num)
+     
+  }
+  return myArray
+}
+
 
 
  /**
@@ -251,7 +267,9 @@ function fizzBuzzPart1() {}
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
+function fizzBuzzPart2() {
+  
+}
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
