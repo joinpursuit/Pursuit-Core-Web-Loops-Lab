@@ -7,8 +7,8 @@
 function oneTillDoneWhileLoop(n) {
   let num = 1 
   let number = []
-  while (num <= n) {
-    number.push (num)
+  while(num <= n) {
+    number.push(num)
     num += 1
   }
   return number
@@ -77,7 +77,8 @@ function evenAndOddWhileLoop(max) {
       array.push(i + "is odd")
       i += 1
     }
-  return array
+    return array
+   }
 }
 
 /**
@@ -89,17 +90,17 @@ function evenAndOddWhileLoop(max) {
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-let string = []
+
 function evenAndOddForLoop(max) {
-  for(let i =0; i <= max; i +=)  {
+  let string = []
+  for(let i =0; i <= max; i ++) {
       if (i % 2 === 0) {
       string.push(i + " is even")
-      i+=
       } else {
       string.push(i + " is odd")
-      i+=
-      }
-    }
+      } 
+      i++
+    } 
   return string 
 }
 
@@ -122,7 +123,7 @@ function tillXTimes9WhileLoop(x) {
   let i = 0 
   while (i <= x) {
     bracket1.push(i * 9)
-    i+=
+    i++
   }
   return bracket1
 }
@@ -162,9 +163,9 @@ function endsWithFiveWhileLoop() {
   while (i <= 100) {
     if((i % 10) === 5) {
       five.push(1)
-      i +=
+      i ++
     } else {
-      i +=
+      i ++
     }
   }
   return number 
@@ -181,14 +182,13 @@ function endsWithFiveWhileLoop() {
  */
 function endsWithFiveForLoop() {
   let five = []
-  for( let i = 1; i <= 100; i += ) {
+  for(let i = 1; i <= 100; i ++) {
     if ((i % 10)=== 5) {
       five.push(i)
-    }
-    else {
-    }
-  return five 
+    } 
   }
+  return five 
+}
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
@@ -219,16 +219,16 @@ while (i > 3) {
  */
 function fizzBuzzPart1() {
   let fuzz = [] 
-  for(let i = 1; i <= 100; i +=) {
+  for(let i = 1; i <= 100; i ++) {
     if ((i % 3) === 0) {
       fuzz.push("Fizz")
-    }
-    else if ((i % 5 === 0) {
+    } else if ((i % 5 === 0)) {
       fuzz.push("Buzz")
-  } else {
+    } else {
       fuzz.push(i)
+    }
+  return fuzz
   }
-return fuzz
 }
 
 
@@ -243,19 +243,18 @@ return fuzz
  */
 function fizzBuzzPart2() {
   let fuzz = [] 
-  for (let i = 1; i <= 100; i +=) {
+  for (let i = 1; i <= 100; i ++) {
     if(((i % 3) === 0)  && ((i % 5) === 0)) {
       fuzz.push("FizzBuzz")
-    }
-    else if ((i % 3) === 0) {
+    } else if ((i % 3) === 0) {
       fuzz.push("Fizz")
-    }
-    else if ((i % 5 === 0) {
+    } else if ((i % 5 === 0)) {
       fuzz.push("Buzz")
     } else {
       fuzz.push(i)
     }
   return fuzz
+  }
 }
 
 /**
