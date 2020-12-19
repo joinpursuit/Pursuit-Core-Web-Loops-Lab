@@ -4,7 +4,22 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+function oneTillDoneWhileLoop(number) {
+  let newNum = [];
+  let i = 1;
+  while (i <= number) {
+    newNum.push(i);
+    i++;
+  }
+  return newNum;
+}
+// function shoutForLoop(array) {
+//   let newArray = []
+//   for (let i = 0; i < array.length; i++) {
+//     newArray.push(array[i]+ '!')
+//   }
+//   return newArray;
+// }
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -84,7 +99,6 @@ function tillXTimes9WhileLoop() {}
  */
 function tillXTimes9ForLoop() {}
 
-
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a while loop
@@ -92,8 +106,6 @@ function tillXTimes9ForLoop() {}
 
  */
 function endsWithFiveWhileLoop() {}
-
-
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -103,8 +115,6 @@ function endsWithFiveWhileLoop() {}
  */
 function endsWithFiveForLoop() {}
 // Try refactoring the code above to increment your i by 10 and starting at 5.
-
-
 
 /**
  Without running/executing your code, how many times will the loop below run?
@@ -123,7 +133,7 @@ while (i > 3) {
  *
  */
 
- /**
+/**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
  * For numbers divisible by 3, add "Fizz" instead of the number into the array.
  * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
@@ -133,8 +143,7 @@ while (i > 3) {
  */
 function fizzBuzzPart1() {}
 
-
- /**
+/**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
  * For numbers divisible by 3, add "Fizz" instead of the number into the array.
  * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
@@ -233,7 +242,6 @@ function lastIndexFound() {}
  */
 function timesIndex() {}
 
-
 /**
  * Takes in an array.
  * Returns a new array where each element is the cumulative sum so far.
@@ -244,8 +252,6 @@ function timesIndex() {}
  * @returns {number[]}
  */
 function cumulativeSum() {}
-
-
 
 module.exports = {
   oneTillDoneWhileLoop,
