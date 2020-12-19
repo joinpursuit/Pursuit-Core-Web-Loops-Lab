@@ -177,6 +177,7 @@ const endsWithFiveForLoop =() =>{
    return arr
 }
 console.log(endsWithFiveForLoop(5))
+
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 /**
@@ -186,25 +187,39 @@ console.log(endsWithFiveForLoop(5))
 /*
 let i = 5;
 
-while (i > 3) {
+while (i > 3) { 
     i += 1
 }
 */
-
 /**
  * // Write your explanation here!
- *
+  ANSWER: infinate because it does not count to a falsy value. Increments to infinity.
  */
 
 /**
- * Returns an array with all the numbers from all the numbers from 1 to 100.
+ * Returns an array with all the numbers from 1 to 100.
  * For numbers divisible by 3, add "Fizz" instead of the number into the array.
  * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
 
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
+const fizzBuzzPart1 = () => {
+  let i = 1;
+  let arr = [];
+    while(i <= 100) {
+      if (i % 3 === 0){
+        arr.push("Fizz");
+      } else if (i % 5 === 0){
+        arr.push("Buzz");
+      } else {
+        arr.push(i);
+      }
+      i++;
+    }
+  return arr;
+}
+console.log(fizzBuzzPart1())
 
 /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
@@ -215,7 +230,25 @@ function fizzBuzzPart1() {}
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
+const fizzBuzzPart2 = () => {
+  let i = 1;
+  let arr = [];
+    while(i <= 100) {
+      if ((i % 3 === 0) && (i % 5 === 0)){
+        arr.push("FizzBuzz");
+      } else if(i % 3 === 0){
+        arr.push("Fizz");
+      } else if (i % 5 === 0){
+        arr.push("Buzz");
+      } else {
+        arr.push(i);
+      }
+      i++;
+    }
+  return arr;
+}
+console.log(fizzBuzzPart2())
+
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
