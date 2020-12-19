@@ -45,7 +45,7 @@ function doneToZeroWhileLoop(n) {
   }
   return array
 }
-console.log(doneToZeroWhileLoop(4))
+//console.log(doneToZeroWhileLoop(4))
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be written with a for loop
@@ -60,7 +60,7 @@ function doneToZeroForLoop(n) {
   }
   return array
 }
-console.log(doneToZeroForLoop(4))
+//console.log(doneToZeroForLoop(4))
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -83,7 +83,7 @@ function evenAndOddWhileLoop(max) {
   }
   return array
 }
-console.log(evenAndOddWhileLoop(4))
+//console.log(evenAndOddWhileLoop(4))
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -129,7 +129,7 @@ function tillXTimes9WhileLoop(x) {
   }
   return array
 }
-console.log(tillXTimes9WhileLoop(5))
+//console.log(tillXTimes9WhileLoop(5))
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -169,7 +169,7 @@ i++
  }
  return array 
 }
-console.log(endsWithFiveWhileLoop())
+//console.log(endsWithFiveWhileLoop())
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -225,7 +225,7 @@ function fizzBuzzPart1() {
   }
   return array 
 }
-console.log(fizzBuzzPart1())
+//console.log(fizzBuzzPart1())
 
  /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
@@ -236,7 +236,22 @@ console.log(fizzBuzzPart1())
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
+function fizzBuzzPart2() {
+  array = []
+  for( i = 0 ; i <= 99 ; i++ ){
+    if((i +1) % 3 === 0 && (i + 1) % 5 === 0 ){
+      array[i] = "FizzBuzz"
+    }else if((i +1) % 3 === 0 ){
+      array[i] = "Fizz" 
+    }else if((i + 1) % 5 === 0){
+      array[i] = "Buzz"
+    }else{
+      array[i] = i + 1
+    }
+  }
+  return array  
+}
+//console.log(fizzBuzzPart2())
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
@@ -245,8 +260,15 @@ function fizzBuzzPart2() {}
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
+function rangeSum(min, max) {
+  sum = 0
+  for(i = min; i <= max; i++){
+    sum += i  
 
+  }
+  return sum 
+}
+//console.log(rangeSum(1,3))
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
  * in that range
@@ -255,7 +277,24 @@ function rangeSum() {}
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() {}
+function rangeOdd(min, max) {
+  array = []
+    if (max % 2 === 1){ 
+      for(let i = 0;i <= (max - min)/2 ;i++ ){
+        array[i] = max - i*2 
+      }
+    }else if(max % 2 === 0 && min % 2 === 0){
+      for(let i = 0;i < (max - min)/2 ;i++ ){
+        array[i] = max - i*2 -1
+      } 
+    }else{
+        array[i] = max - i*2
+
+    }
+  
+  return array
+}
+//console.log(rangeOdd(1,13))
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -265,8 +304,16 @@ function rangeOdd() {}
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+function rangeEveryOther(min, max) {
+  array = []
+  for(let i = 0;i <= (max - min)/2 ;i++ ){
+        array[i] = min + i*2
 
+    }
+
+  return array
+}
+//console.log(rangeEveryOther(1,13))
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array
@@ -276,7 +323,16 @@ function rangeEveryOther() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+function containsWhileLoop(elements, target) {
+ let i = 0
+ while (i < elements.length){
+  if (target === elements[i]){
+    return true
+  }
+  i++
+ }
+return false
+}
 
 /**
  * Takes in an array and a target.
@@ -287,7 +343,17 @@ function containsWhileLoop() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+function containsForLoop(elements, target) {
+  
+  for(i = 0 ; i < elements.length ;i++){
+    if(target === elements[i]){
+       return true
+    }
+  }
+  return false
+}
+//console.log(containsForLoop([1,2,5],3))
+
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -295,7 +361,15 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+function targetCount(elements,target) {
+  sum = 0
+  for(i = 0;i < elements.length;i++){
+    if(target === elements[i]){
+      sum += 1
+    }
+  }
+return sum 
+}
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -305,7 +379,18 @@ function targetCount() {}
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+function firstIndexFound(elements, target) {
+   
+  for(i = 0 ; i < elements.length ; i++ ){
+    if(target === elements[i]){
+    return i       
+    }
+  }
+  if(target !== elements[i]){
+    return -1
+  } 
+}
+console.log(firstIndexFound([5,5,2,5], 5))
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
