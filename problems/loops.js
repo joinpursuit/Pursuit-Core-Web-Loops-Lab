@@ -340,10 +340,9 @@ const containsForLoop = (elements, target) => {
   for (i = 0; i < elements.length; i++) {
     if (target === elements[i]) {
       return true;
-    } else {
-      return false;
-    }
+    } 
   }
+      return false;
 };
 
 /**
@@ -353,9 +352,17 @@ const containsForLoop = (elements, target) => {
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+//function targetCount() {}
 // const targetCount = (elements, target) => {}
 // console.log(targetCount(["a", "b", "word"], "word"))
+const targetCount = (elements, target) => { 
+  let count = 0;
+  for (i = 0; i < elements.length; i++)
+    if (elements[i] === target) {
+      count++;
+    }
+  return count;
+};
 
 /**
  * Takes in an array and a target.
@@ -366,7 +373,15 @@ function targetCount() {}
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+//function firstIndexFound() {}
+const firstIndexFound = (elements, target) => {
+  for (i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+};
 
 /**
  * Takes in an array and a target.
@@ -377,7 +392,15 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+//function lastIndexFound() {}
+const lastIndexFound = (elements, target) => {
+  for (i = elements.length - 1; i >= 0; i--) {
+    if (elements[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+};
 
 /**
  * Takes in an array.

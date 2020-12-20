@@ -82,9 +82,9 @@ return sum;
 //function oddArray() {}
 const oddArray = (nums) => {
   let arrOfOdds = [];
-  for (const elements of nums){
-    if (elements % 2 === 1) {
-      arrOfOdds.push(elements);
+  for (const element of nums){
+    if (element % 2 === 1) {
+      arrOfOdds.push(element);
     }
   }
 return arrOfOdds;
@@ -95,16 +95,32 @@ return arrOfOdds;
  * @param {number[]} nums
  * @returns {array} evens
  */
-
-function evenArray() {}
+//function evenArray() {}
+const evenArray = (nums) => {
+  let arrOfEvens = [];
+  for (const element of nums){
+    if (element % 2 === 0){
+      arrOfEvens.push(element)
+    }
+  }
+  return arrOfEvens;
+}
 
 /**
  * Takes in array and returns the smallest number in the array
  * @param {number[]} nums
  * @returns {number} smallest value
  */
-
-function findSmallest() {}
+//function findSmallest() {}
+const findSmallest = (nums) => {
+  let smallest = nums[0];
+  for (const element of nums){
+    if(element <= smallest) { 
+      smallest = element;
+    }
+  }
+    return smallest;
+}
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -112,9 +128,28 @@ function findSmallest() {}
  * @param {number[]} nums
  * @returns {number} second smallest value
  */
+//function findSecondSmallest() {}
+const findSecondSmallest = (nums) =>{
+  let smallest = nums[0];
+  let secondSmallest = nums[1];
+  for (const element of nums){
+    if (element <= secondSmallest){
+      secondSmallest = element;
+    }
+    if (secondSmallest < smallest) {
+      smallest  = secondSmallest;
+    }
+  }
+  return secondSmallest;
+}
 
-function findSecondSmallest() {}
-
+// f
+  //       if(element <= smallest) { 
+  //         smallest = element;
+  //       } else if ((element <= secondSmallest) && (element > smallest)) {
+  //         secondSmallest = element;
+  //       }
+  // }
 /**
  * Takes in array and returns the second largest number in the array
  * @param {number[]} nums
