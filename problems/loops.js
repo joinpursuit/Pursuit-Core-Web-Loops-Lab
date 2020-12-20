@@ -430,28 +430,9 @@ const cumulativeSum = (elements) => {
   for (let i = 0; i < elements.length; i++) {
     sum += elements[i]
     myArray.push(sum);
-    
   }
   return myArray
 }
-
-
-// const rangeSum = (min, max) => {
-//   let sum = 0;
-//   for (let i = min; i <= max; i++) {
-//     sum += i;
-//     console.log(i);
-//   }
-//   return sum;
-// };
-
-
-
-
-
-
-
-
 
 
 
