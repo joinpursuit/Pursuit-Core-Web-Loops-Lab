@@ -182,9 +182,18 @@ function endsWithFiveForLoop() {
     }
   }
   return myArray;
-} // // ITS GOING TO BE AN INFINITE LOOP BECAUSE THE CONDITION WILL ALWAYS BE TRUE.
+} /**
+ * Returns an array with all the numbers from all the numbers from 1 to 100.
+ * For numbers divisible by 3, add "Fizz" instead of the number into the array.
+ * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
 
-// Try refactoring the code above to increment your i by 10 and starting at 5.
+ * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
+
+ */ // // ITS GOING TO BE AN INFINITE LOOP BECAUSE THE CONDITION WILL ALWAYS BE TRUE.
+/**
+ * // Write your explanation here!
+ *
+ */ // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 // function endsWithTenForLoop() {
 
@@ -207,18 +216,7 @@ let i = 5;
 while (i > 3) {
     i += 1
 }
-*/ /**
- * // Write your explanation here!
- *
- */ /**
- * Returns an array with all the numbers from all the numbers from 1 to 100.
- * For numbers divisible by 3, add "Fizz" instead of the number into the array.
- * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
-
- * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
-
- */
-function fizzBuzzPart1() {
+*/ function fizzBuzzPart1() {
   let num = 0;
   let myArray = [];
   while (num < 100) {
@@ -295,8 +293,6 @@ const rangeOdd = (min, max) => {
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
-
-
  * @param {number} min number
  * @param {number} max number
  * @returns {number[]} includes every other element
@@ -358,11 +354,11 @@ const targetCount = (elements, target) => {
   count = 0
   for (let i = 0; i < elements.length; i++) {
     if (elements[i] === target) {
-       count ++ 
+      count++;
     }
   }
-  return count 
-}
+  return count;
+};
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -372,15 +368,14 @@ const targetCount = (elements, target) => {
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
-
-
-
-
-
-
-
-
+const firstIndexFound = (elements, target) => {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+};
 
 /**
  * Takes in an array and a target.
@@ -391,7 +386,14 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+const lastIndexFound = (elements, target) => {
+  for (let i = elements.length - 1; i > 0; i--) {
+    if (elements[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+};
 
 /**
  * Takes in an array.
@@ -400,7 +402,14 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+function timesIndex(elements) {
+  let myArray = [];
+  for (let i = 0; i < elements.length; i++) {
+    console.log(i);
+    myArray.push(elements[i] * i);
+  }
+  return myArray;
+}
 
 /**
  * Takes in an array.
@@ -416,13 +425,11 @@ const cumulativeSum = (elements) => {
   let myArray = [];
   let sum = 0;
   for (let i = 0; i < elements.length; i++) {
-    sum += elements[i]
+    sum += elements[i];
     myArray.push(sum);
   }
-  return myArray
-}
-
-
+  return myArray;
+};
 
 module.exports = {
   oneTillDoneWhileLoop,

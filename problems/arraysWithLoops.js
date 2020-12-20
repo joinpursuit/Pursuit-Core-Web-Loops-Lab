@@ -6,7 +6,14 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+function shoutForLoop(arr) {
+  let myArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    console.log(i);
+    myArray.push(`${arr[i]}!`);
+  }
+  return myArray;
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
