@@ -8,12 +8,12 @@
 const oneTillDoneWhileLoop = (number) => {
   let num = 0;
   let myArray = [];
-  while(num < number) { 
+  while (num < number) {
     num += 1;
     myArray.push(num);
   }
-  return myArray
-}
+  return myArray;
+};
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -26,9 +26,8 @@ const oneTillDoneForLoop = (number) => {
   for (let i = 1; i <= number; i++) {
     myArray.push(i);
   }
-  return myArray
-}
-
+  return myArray;
+};
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -39,13 +38,12 @@ const oneTillDoneForLoop = (number) => {
 const doneToZeroWhileLoop = (number) => {
   let num = number;
   let myArray = [];
-  while(num > 0) { 
+  while (num > 0) {
     myArray.push(num);
     num -= 1;
   }
-  return myArray 
-}
-
+  return myArray;
+};
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -58,8 +56,8 @@ const doneToZeroForLoop = (number) => {
   for (let i = number; i > 0; i--) {
     myArray.push(i);
   }
-  return myArray
-}
+  return myArray;
+};
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -73,16 +71,16 @@ const doneToZeroForLoop = (number) => {
 const evenAndOddWhileLoop = (max) => {
   let num = -1;
   let myArray = [];
-  while(num < max) { 
+  while (num < max) {
     num += 1;
     if (num % 2 === 0) {
       myArray.push(`${num} is even`);
     } else {
       myArray.push(`${num} is odd`);
-    } 
+    }
   }
-  return myArray
-}
+  return myArray;
+};
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -100,11 +98,10 @@ const evenAndOddForLoop = (max) => {
       myArray.push(`${i} is even`);
     } else {
       myArray.push(`${i} is odd`);
-    } 
+    }
   }
-  return myArray
-  }
-
+  return myArray;
+};
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -123,15 +120,12 @@ const evenAndOddForLoop = (max) => {
 function tillXTimes9WhileLoop(x) {
   let num = -1;
   let myArray = [];
-  while(num < x) { 
+  while (num < x) {
     num += 1;
     myArray.push(num * 9);
-    
-    } 
-  
-  return myArray
+  }
 
-
+  return myArray;
 }
 
 /**
@@ -151,13 +145,10 @@ function tillXTimes9WhileLoop(x) {
 function tillXTimes9ForLoop(x) {
   let myArray = [];
   for (i = 0; i <= x; i++) {
-    myArray.push(i * 9)
-  } 
-  return myArray
+    myArray.push(i * 9);
+  }
+  return myArray;
 }
-    
-    
-
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -166,19 +157,16 @@ function tillXTimes9ForLoop(x) {
 
  */
 function endsWithFiveWhileLoop() {
-   let num = 0;
-   let numFiveArray = [];
-  while(num < 100) { 
+  let num = 0;
+  let numFiveArray = [];
+  while (num < 100) {
     num += 5;
     if (num % 10 === 5) {
       numFiveArray.push(num);
-    } 
-  
+    }
   }
-  return numFiveArray
+  return numFiveArray;
 }
-
-
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -187,31 +175,27 @@ function endsWithFiveWhileLoop() {
 
  */
 function endsWithFiveForLoop() {
-  
   let myArray = [];
   for (let i = 0; i < 100; i += 5) {
     if (i % 10 === 5) {
       myArray.push(i);
-    } 
+    }
   }
-  return myArray
-}
-
+  return myArray;
+} // // ITS GOING TO BE AN INFINITE LOOP BECAUSE THE CONDITION WILL ALWAYS BE TRUE.
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 // function endsWithTenForLoop() {
-  
+
 //   let myArray = [];
 //   for (let i = 5; i < 100; i += 10) {
 //     if (i % 10 === 5) {
 //       myArray.push(i);
-//     } 
+//     }
 //   }
 //   return myArray
 // }
-
-
 
 /**
  Without running/executing your code, how many times will the loop below run?
@@ -223,15 +207,10 @@ let i = 5;
 while (i > 3) {
     i += 1
 }
-*/ // 
-
-/**
+*/ /**
  * // Write your explanation here!
  *
- */ // ITS GOING TO BE AN INFINITE LOOP BECAUSE THE CONDITION WILL ALWAYS BE TRUE.
- 
-
- /**
+ */ /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
  * For numbers divisible by 3, add "Fizz" instead of the number into the array.
  * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
@@ -242,23 +221,18 @@ while (i > 3) {
 function fizzBuzzPart1() {
   let num = 0;
   let myArray = [];
-  while(num < 100) { 
+  while (num < 100) {
     num += 1;
     if (num % 3 === 0) {
-      myArray.push("Fizz")
+      myArray.push("Fizz");
     } else if (num % 5 === 0 && num % 3 !== 0) {
-
-      myArray.push("Buzz")
-    } 
-    else myArray.push(num)
-     
+      myArray.push("Buzz");
+    } else myArray.push(num);
   }
-  return myArray
+  return myArray;
 }
 
-
-
- /**
+/**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
  * For numbers divisible by 3, add "Fizz" instead of the number into the array.
  * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
@@ -270,23 +244,17 @@ function fizzBuzzPart1() {
 function fizzBuzzPart2() {
   let num = 0;
   let myArray = [];
-  while(num < 100) { 
+  while (num < 100) {
     num += 1;
-    if (num % 5 === 0 && num % 3 === 0) { 
-      myArray.push("FizzBuzz")  
-    } 
-    else if (num % 5 === 0 && num % 3 !== 0) {
-      myArray.push("Buzz")
-    } 
-    else if (num % 3 === 0) {
-      myArray.push("Fizz")
-
-    }
-    else myArray.push(num)
-     
+    if (num % 5 === 0 && num % 3 === 0) {
+      myArray.push("FizzBuzz");
+    } else if (num % 5 === 0 && num % 3 !== 0) {
+      myArray.push("Buzz");
+    } else if (num % 3 === 0) {
+      myArray.push("Fizz");
+    } else myArray.push(num);
   }
-  return myArray
-  
+  return myArray;
 }
 
 /**
@@ -296,7 +264,13 @@ function fizzBuzzPart2() {
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
+function rangeSum(min, max) {
+  let num = min;
+  while (num <= max) {
+    num++ 
+  }
+  return num
+}
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
@@ -377,7 +351,6 @@ function lastIndexFound() {}
  */
 function timesIndex() {}
 
-
 /**
  * Takes in an array.
  * Returns a new array where each element is the cumulative sum so far.
@@ -388,8 +361,6 @@ function timesIndex() {}
  * @returns {number[]}
  */
 function cumulativeSum() {}
-
-
 
 module.exports = {
   oneTillDoneWhileLoop,
