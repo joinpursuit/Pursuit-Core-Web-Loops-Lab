@@ -92,13 +92,13 @@ const evenAndOddWhileLoop = (max) => {
  */
 const evenAndOddForLoop = (max) => {
   let newArray = [];
-  for(i = 0; i <= max; i++) {
+  for (i = 0; i <= max; i++) {
     if (i % 2 === 0) {
       newArray.push(i + " is even");
     } else newArray.push(i + " is odd");
   }
-  return newArray
-}
+  return newArray;
+};
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -117,12 +117,12 @@ const evenAndOddForLoop = (max) => {
 const tillXTimes9WhileLoop = (x) => {
   let newArray = [];
   let i = 0;
-  while(i <= x) {
+  while (i <= x) {
     newArray.push(i * 9);
     i++;
   }
   return newArray;
-}
+};
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -140,11 +140,11 @@ const tillXTimes9WhileLoop = (x) => {
  */
 const tillXTimes9ForLoop = (x) => {
   let newArray = [];
-  for(i = 0; i <= x; i++) {
+  for (i = 0; i <= x; i++) {
     newArray.push(i * 9);
   }
   return newArray;
-}
+};
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -153,19 +153,14 @@ const tillXTimes9ForLoop = (x) => {
 
  */
 const endsWithFiveWhileLoop = () => {
-  let newArray = [];
-  let i = 1;
-  while(i < 100) {
-    if(i % 2 === 1) {
-      newArray.push (i * 5);
-      else {
-
-      }
-    } i++
-  
-  } 
-return newArray
-}
+  let i = 5;
+  let arr = [];
+  while (i <= 100) {
+    arr.push(i);
+    i += 10;
+  }
+  return arr;
+};
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -173,7 +168,14 @@ return newArray
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+const endsWithFiveForLoop = () => {
+  let arr = [];
+  for (let i = 5; i < 100; i += 10);
+  {
+    arr.push(i);
+  }
+  return arr;
+};
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 /**
