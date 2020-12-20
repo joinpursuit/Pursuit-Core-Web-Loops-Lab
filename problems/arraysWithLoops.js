@@ -65,8 +65,14 @@ const shoutForOfLoop = (array) => {
  * @param {number[]} nums
  * @returns {number} sum
  */
-
-function sumArray() {}
+//function sumArray() {}
+const sumArray = (nums) => {
+  let sum = 0;
+  for (const element of nums){
+   sum += element;
+  }
+return sum;
+}
 
 /**
  * Takes in an array and returns an array of all the odd valued elements
