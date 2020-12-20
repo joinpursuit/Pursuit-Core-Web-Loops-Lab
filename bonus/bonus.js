@@ -18,7 +18,20 @@ Take one down, pass it around, No more bottle of beer on the wall.
  * @return {string[]}
  */
 
-function ninetyNineBottlesOfBeerOnTheWall() {}
+function ninetyNineBottlesOfBeerOnTheWall() {
+  let arr = []
+  for (let i = 99; i > 0; i--) {
+    if (i === 1) {
+      arr.push("1 bottle of beer on the wall, 1 bottle of beer. Take one down, pass it around, No more bottle of beer on the wall.")
+    } else if (i === 2) {
+
+      arr.push("2 bottles of beer on the wall, 2 bottles of beer. Take one down, pass it around, 1 bottle of beer on the wall.")
+    } else {
+      arr.push(i + " bottles of beer on the wall, " + i + " bottles of beer. Take one down, pass it around, " + (i - 1) + " bottles of beer on the wall.")
+    }
+  }
+  return arr
+}
 
 /**
   * Given an integer N draw a square of N x N asterisks. Look at the examples.
@@ -41,7 +54,14 @@ Output:
     ***
 ]
   */
-function drawSquare() {}
+function drawSquare(N) {
+  let arr = []
+  let star = "*"
+  for (let i = 0; i < N; i++) {
+    arr.push(star.repeat(N))
+  }
+return arr
+}
 /**
   * If we list all the natural numbers below 10 that are multiples of 3 or 5,
   *  we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -49,7 +69,17 @@ function drawSquare() {}
   *  @returns {number}
   */
 
-function multiplesOf3And5Sum() {}
+function multiplesOf3And5Sum() {
+  let sum = 0
+  for (let i = 3; i < 1000; i++) {
+    if (i % 3 === 0) {
+      sum += i
+    }else if (i % 5 === 0) {
+      sum += i
+    }
+  }
+  return sum 
+}
 
 module.exports = {
   ninetyNineBottlesOfBeerOnTheWall,
