@@ -114,6 +114,7 @@ const findSmallest = (nums) => {
  */
 
 const findSecondSmallest = nums => {
+  
   let smallest = 1000;
   let secondSmallest = 1000;
 
@@ -139,6 +140,7 @@ const findSecondSmallest = nums => {
  */
 
 const findSecondLargest = nums => {
+
   let largest = -1000;
   let secondLargest = -1000;
 
@@ -167,7 +169,6 @@ const removeDups = nums => {
   for (let i = 1; i < nums.length; i++) {
     if (arr.includes(nums[i])) {
       arr.splice(i,1)
-      i++;
     }
   }
   console.log(arr + "  > "+nums)
