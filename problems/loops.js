@@ -7,7 +7,7 @@
 function oneTillDoneWhileLoop(n) {
   array = []
   let i = 0
-  while(i < n) {
+  while (i < n) {
     array[i] = i + 1
     i++
   }
@@ -22,7 +22,7 @@ function oneTillDoneWhileLoop(n) {
  */
 function oneTillDoneForLoop(n) {
   array = []
-  for(i = 0 ; i < n; i++){
+  for (i = 0; i < n; i++) {
     array[i] = i + 1
   }
   return array
@@ -38,10 +38,10 @@ function doneToZeroWhileLoop(n) {
   array = []
   let i = 0
   const m = n
-  while(i < m) {
-    array[i] = n 
+  while (i < m) {
+    array[i] = n
     i += 1
-    n -= 1 
+    n -= 1
   }
   return array
 }
@@ -55,7 +55,7 @@ function doneToZeroWhileLoop(n) {
 function doneToZeroForLoop(n) {
   array = []
   const m = n
-  for(let i = 0;i < m ;i += 1 ,n -= 1 ){
+  for (let i = 0; i < m; i += 1, n -= 1) {
     array[i] = n
   }
   return array
@@ -73,10 +73,10 @@ function doneToZeroForLoop(n) {
 function evenAndOddWhileLoop(max) {
   array = []
   let i = 0
-  while(i <= max){
-    if (i % 2 === 0){
+  while (i <= max) {
+    if (i % 2 === 0) {
       array[i] = i + " is even"
-    }else{
+    } else {
       array[i] = i + " is odd"
     }
     i += 1
@@ -95,14 +95,14 @@ function evenAndOddWhileLoop(max) {
  */
 function evenAndOddForLoop(max) {
   array = []
-  for(i = 0; i <= max ; i += 1 ){
-    if (i % 2 === 0){
+  for (i = 0; i <= max; i += 1) {
+    if (i % 2 === 0) {
       array[i] = i + " is even"
-    }else{
+    } else {
       array[i] = i + " is odd"
     }
   }
-  return array 
+  return array
 }
 
 /**
@@ -122,7 +122,7 @@ function evenAndOddForLoop(max) {
 function tillXTimes9WhileLoop(x) {
   array = []
   let i = 0
-  while(i <= x){
+  while (i <= x) {
     array[i] = i * 9
 
     i++
@@ -147,7 +147,7 @@ function tillXTimes9WhileLoop(x) {
  */
 function tillXTimes9ForLoop(x) {
   array = []
-  for(i = 0 ; i <= x ; i++ ){
+  for (i = 0; i <= x; i++) {
     array[i] = i * 9
   }
   return array
@@ -161,13 +161,13 @@ function tillXTimes9ForLoop(x) {
 
  */
 function endsWithFiveWhileLoop() {
-array = []
-let i = 0
-while( i <= 9 ){
-array[i] = (i * 10) + 5  
-i++  
- }
- return array 
+  array = []
+  let i = 0
+  while (i <= 9) {
+    array[i] = (i * 10) + 5
+    i++
+  }
+  return array
 }
 //console.log(endsWithFiveWhileLoop())
 
@@ -178,12 +178,12 @@ i++
 
  */
 function endsWithFiveForLoop() {
-// Try refactoring the code above to increment your i by 10 and starting at 5.
-array = []
-for( i = 0;i <= 9 ; i++ ){
-  array[i] = (i * 10) + 5 
-}
-return array
+  // Try refactoring the code above to increment your i by 10 and starting at 5.
+  array = []
+  for (i = 0; i <= 9; i++) {
+    array[i] = (i * 10) + 5
+  }
+  return array
 }
 
 /**
@@ -204,52 +204,52 @@ while (i > 3) {
  * 
  */
 
- /**
- * Returns an array with all the numbers from all the numbers from 1 to 100.
- * For numbers divisible by 3, add "Fizz" instead of the number into the array.
- * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
+/**
+* Returns an array with all the numbers from all the numbers from 1 to 100.
+* For numbers divisible by 3, add "Fizz" instead of the number into the array.
+* For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
 
- * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
+* @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
- */
+*/
 function fizzBuzzPart1() {
   array = []
-  for( i = 0 ; i <= 99 ; i++ ){
-    if((i +1) % 3 === 0 ){
-      array[i] = "Fizz" 
-    }else if((i + 1) % 5 === 0){
+  for (i = 0; i <= 99; i++) {
+    if ((i + 1) % 3 === 0) {
+      array[i] = "Fizz"
+    } else if ((i + 1) % 5 === 0) {
       array[i] = "Buzz"
-    }else{
+    } else {
       array[i] = i + 1
     }
   }
-  return array 
+  return array
 }
 //console.log(fizzBuzzPart1())
 
- /**
- * Returns an array with all the numbers from all the numbers from 1 to 100.
- * For numbers divisible by 3, add "Fizz" instead of the number into the array.
- * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
- * For numbers that are divisible by both 3 and 5 add "FizzBuzz" into the array.
+/**
+* Returns an array with all the numbers from all the numbers from 1 to 100.
+* For numbers divisible by 3, add "Fizz" instead of the number into the array.
+* For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
+* For numbers that are divisible by both 3 and 5 add "FizzBuzz" into the array.
 
- * @returns {Array}
+* @returns {Array}
 
- */
+*/
 function fizzBuzzPart2() {
   array = []
-  for( i = 0 ; i <= 99 ; i++ ){
-    if((i +1) % 3 === 0 && (i + 1) % 5 === 0 ){
+  for (i = 0; i <= 99; i++) {
+    if ((i + 1) % 3 === 0 && (i + 1) % 5 === 0) {
       array[i] = "FizzBuzz"
-    }else if((i +1) % 3 === 0 ){
-      array[i] = "Fizz" 
-    }else if((i + 1) % 5 === 0){
+    } else if ((i + 1) % 3 === 0) {
+      array[i] = "Fizz"
+    } else if ((i + 1) % 5 === 0) {
       array[i] = "Buzz"
-    }else{
+    } else {
       array[i] = i + 1
     }
   }
-  return array  
+  return array
 }
 //console.log(fizzBuzzPart2())
 
@@ -262,11 +262,11 @@ function fizzBuzzPart2() {
  */
 function rangeSum(min, max) {
   sum = 0
-  for(i = min; i <= max; i++){
-    sum += i  
+  for (i = min; i <= max; i++) {
+    sum += i
 
   }
-  return sum 
+  return sum
 }
 //console.log(rangeSum(1,3))
 /**
@@ -279,19 +279,19 @@ function rangeSum(min, max) {
  */
 function rangeOdd(min, max) {
   array = []
-    if (max % 2 === 1){ 
-      for(let i = 0;i <= (max - min)/2 ;i++ ){
-        array[i] = max - i*2 
-      }
-    }else if(max % 2 === 0 && min % 2 === 0){
-      for(let i = 0;i < (max - min)/2 ;i++ ){
-        array[i] = max - i*2 -1
-      } 
-    }else{
-        array[i] = max - i*2
-
+  if (max % 2 === 1) {
+    for (let i = 0; i <= (max - min) / 2; i++) {
+      array[i] = max - i * 2
     }
-  
+  } else if (max % 2 === 0 && min % 2 === 0) {
+    for (let i = 0; i < (max - min) / 2; i++) {
+      array[i] = max - i * 2 - 1
+    }
+  } else {
+    array[i] = max - i * 2
+
+  }
+
   return array
 }
 //console.log(rangeOdd(1,13))
@@ -306,10 +306,10 @@ function rangeOdd(min, max) {
  */
 function rangeEveryOther(min, max) {
   array = []
-  for(let i = 0;i <= (max - min)/2 ;i++ ){
-        array[i] = min + i*2
+  for (let i = 0; i <= (max - min) / 2; i++) {
+    array[i] = min + i * 2
 
-    }
+  }
 
   return array
 }
@@ -324,14 +324,14 @@ function rangeEveryOther(min, max) {
  * @returns {boolean} true if the array contains our target, otherwise false
  */
 function containsWhileLoop(elements, target) {
- let i = 0
- while (i < elements.length){
-  if (target === elements[i]){
-    return true
+  let i = 0
+  while (i < elements.length) {
+    if (target === elements[i]) {
+      return true
+    }
+    i++
   }
-  i++
- }
-return false
+  return false
 }
 
 /**
@@ -344,10 +344,10 @@ return false
  * @returns {boolean} true if the array contains our target, otherwise false
  */
 function containsForLoop(elements, target) {
-  
-  for(i = 0 ; i < elements.length ;i++){
-    if(target === elements[i]){
-       return true
+
+  for (i = 0; i < elements.length; i++) {
+    if (target === elements[i]) {
+      return true
     }
   }
   return false
@@ -361,14 +361,14 @@ function containsForLoop(elements, target) {
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount(elements,target) {
+function targetCount(elements, target) {
   sum = 0
-  for(i = 0;i < elements.length;i++){
-    if(target === elements[i]){
+  for (i = 0; i < elements.length; i++) {
+    if (target === elements[i]) {
       sum += 1
     }
   }
-return sum 
+  return sum
 }
 /**
  * Takes in an array and a target.
@@ -380,17 +380,17 @@ return sum
  * @returns {number} first index found.
  */
 function firstIndexFound(elements, target) {
-   
-  for(i = 0 ; i < elements.length ; i++ ){
-    if(target === elements[i]){
-    return i       
+
+  for (i = 0; i < elements.length; i++) {
+    if (target === elements[i]) {
+      return i
     }
   }
-  if(target !== elements[i]){
+  if (target !== elements[i]) {
     return -1
-  } 
+  }
 }
-console.log(firstIndexFound([5,5,2,5], 5))
+//console.log(firstIndexFound([5,5,2,5], 5))
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -400,7 +400,20 @@ console.log(firstIndexFound([5,5,2,5], 5))
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+function lastIndexFound(elements, target) {
+  lastIndex = 0
+  for (i = 0; i < elements.length; i++) {
+    if (target === elements[i]) {
+      lastIndex = i
+    }
+  }
+  if (target === elements[lastIndex]) {
+    return lastIndex
+  } else {
+    return -1
+  }
+}
+//console.log(lastIndexFound([2], 2))
 
 /**
  * Takes in an array.
@@ -409,7 +422,14 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+function timesIndex(elements) {
+  array = []
+  for (i = 0; i < elements.length; i++) {
+    array[i] = elements[i]* i 
+  }
+  return array 
+}
+//console.log(timesIndex([5,5,2,5], 5))
 
 
 /**
@@ -421,8 +441,18 @@ function timesIndex() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
-
+function cumulativeSum(elements) {
+  array=[]
+  for (i = 0; i < elements.length; i++) {
+    if (i === 0){
+    array[i] = elements[i]
+    }else{
+      array[i] = elements[i] + array[i - 1]
+    } 
+  }
+  return array 
+ }
+console.log(cumulativeSum([5,5,2,5]))
 
 
 module.exports = {
