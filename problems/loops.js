@@ -119,7 +119,7 @@ const tillXTimes9WhileLoop = (x) => {
   let i = 0;
   let arr = [];
   while (i <= x) {
-   arr.push(i * 9);
+    arr.push(i * 9);
     i++;
   }
   return arr;
@@ -142,11 +142,11 @@ const tillXTimes9WhileLoop = (x) => {
  */
 const tillXTimes9ForLoop = (x) => {
   let arr = [];
-  for(i=0; i <= x; i++){
+  for (i = 0; i <= x; i++) {
     arr.push(i * 9);
   }
   return arr;
-}
+};
 //console.log(tillXTimes9ForLoop(5))
 
 /**
@@ -159,11 +159,11 @@ const endsWithFiveWhileLoop = () => {
   let i = 5;
   let arr = [];
   while (i <= 100) {
-    arr.push(i)
-      i+=10
+    arr.push(i);
+    i += 10;
   }
-  return arr
-}
+  return arr;
+};
 //console.log(endsWithFiveWhileLoop(5))
 
 /**
@@ -172,13 +172,13 @@ const endsWithFiveWhileLoop = () => {
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-const endsWithFiveForLoop =() =>{
-  let arr = []
-  for (i = 5; i <= 100; i+=10) {
-    arr.push(i)
+const endsWithFiveForLoop = () => {
+  let arr = [];
+  for (i = 5; i <= 100; i += 10) {
+    arr.push(i);
   }
-   return arr
-}
+  return arr;
+};
 //console.log(endsWithFiveForLoop(5))
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
@@ -210,18 +210,18 @@ while (i > 3) {
 const fizzBuzzPart1 = () => {
   let i = 1;
   let arr = [];
-    while(i <= 100) {
-      if (i % 3 === 0){
-        arr.push("Fizz");
-      } else if (i % 5 === 0){
-        arr.push("Buzz");
-      } else {
-        arr.push(i);
-      }
-      i++;
+  while (i <= 100) {
+    if (i % 3 === 0) {
+      arr.push("Fizz");
+    } else if (i % 5 === 0) {
+      arr.push("Buzz");
+    } else {
+      arr.push(i);
     }
+    i++;
+  }
   return arr;
-}
+};
 //console.log(fizzBuzzPart1())
 
 /**
@@ -236,22 +236,21 @@ const fizzBuzzPart1 = () => {
 const fizzBuzzPart2 = () => {
   let i = 1;
   let arr = [];
-    while(i <= 100) {
-      if ((i % 3 === 0) && (i % 5 === 0)){
-        arr.push("FizzBuzz");
-      } else if(i % 3 === 0){
-        arr.push("Fizz");
-      } else if (i % 5 === 0){
-        arr.push("Buzz");
-      } else {
-        arr.push(i);
-      }
-      i++;
+  while (i <= 100) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      arr.push("FizzBuzz");
+    } else if (i % 3 === 0) {
+      arr.push("Fizz");
+    } else if (i % 5 === 0) {
+      arr.push("Buzz");
+    } else {
+      arr.push(i);
     }
+    i++;
+  }
   return arr;
-}
+};
 //console.log(fizzBuzzPart2())
-
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
@@ -260,13 +259,13 @@ const fizzBuzzPart2 = () => {
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-const rangeSum = (min,max) => {
+const rangeSum = (min, max) => {
   let sum = 0;
   for (i = min; i <= max; i++) {
-    sum += i 
+    sum += i;
   }
-  return sum 
-}
+  return sum;
+};
 //console.log(rangeSum(0,10))
 
 /**
@@ -278,15 +277,15 @@ const rangeSum = (min,max) => {
  * @returns {number[]} all odd numbers in range decreasing
  */
 
-const rangeOdd = (min,max) => {
+const rangeOdd = (min, max) => {
   let arr = [];
   for (i = max; i >= min; i--) {
-    if (i % 2 === 1){ 
+    if (i % 2 === 1) {
       arr.push(i);
     }
   }
-  return arr; 
-}
+  return arr;
+};
 //console.log(rangeOdd(0,10))
 
 /**
@@ -299,11 +298,11 @@ const rangeOdd = (min,max) => {
  */
 const rangeEveryOther = (min, max) => {
   let arr = [];
-  for(i = min; i <= max; i+=2) {
-    arr.push(i)
+  for (i = min; i <= max; i += 2) {
+    arr.push(i);
   }
   return arr;
-}
+};
 //console.log(rangeEveryOther())
 
 /**
@@ -317,14 +316,14 @@ const rangeEveryOther = (min, max) => {
  */
 const containsWhileLoop = (elements, target) => {
   let i = 0;
-  while(i < elements.length) {
+  while (i < elements.length) {
     if (target === elements[i]) {
-        return true;
-    }  
-      i++;
+      return true;
     }
+    i++;
+  }
   return false;
-}
+};
 //console.log(containsWhileLoop([6, 7, 9], 8))
 
 /**
@@ -338,13 +337,14 @@ const containsWhileLoop = (elements, target) => {
  */
 //function containsForLoop() {}
 const containsForLoop = (elements, target) => {
-  for(i = 0; i < elements.length; i++){
-    target === elements[i];
-    return true;
+  for (i = 0; i < elements.length; i++) {
+    if (target === elements[i]) {
+      return true;
+    } else {
+      return false;
+    }
   }
-  return false;
-}
-//console.log(containsForLoop([5,6,7], 8))
+};
 
 /**
  * Takes in an array and a target.
@@ -367,6 +367,7 @@ function targetCount() {}
  * @returns {number} first index found.
  */
 function firstIndexFound() {}
+
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -388,12 +389,11 @@ function lastIndexFound() {}
 //function timesIndex() {}
 const timesIndex = (elements) => {
   let arr = [];
-  for(i = 0; i < elements.length; i++) {
+  for (i = 0; i < elements.length; i++) {
     arr.push(i * elements[i]);
   }
   return arr;
-}
-
+};
 
 /**
  * Takes in an array.
@@ -408,12 +408,11 @@ const timesIndex = (elements) => {
 const cumulativeSum = (elements) => {
   let arr = [];
   let sum = 0;
-  for(i = 0; i < elements.length ; i++) {
-    arr.push(sum += elements[i]);
+  for (i = 0; i < elements.length; i++) {
+    arr.push((sum += elements[i]));
   }
   return arr;
-}
-
+};
 
 module.exports = {
   oneTillDoneWhileLoop,
