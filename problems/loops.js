@@ -266,13 +266,12 @@ function fizzBuzzPart2() {
  */
 const rangeSum = (min, max) => {
   let sum = 0;
-  for (let i = min; i <= max; i++){
-    sum += i
-    console.log(i)
+  for (let i = min; i <= max; i++) {
+    sum += i;
+    console.log(i);
   }
-  return sum   
-} 
-
+  return sum;
+};
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
@@ -284,16 +283,15 @@ const rangeSum = (min, max) => {
  */
 const rangeOdd = (min, max) => {
   let myArray = [];
-  while(max >= min) { 
+  while (max >= min) {
     if (max % 2 === 1) {
       myArray.push(max);
     }
-    
-    max -= 1;
-}
-  return myArray
-}
 
+    max -= 1;
+  }
+  return myArray;
+};
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -303,14 +301,13 @@ const rangeOdd = (min, max) => {
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-const rangeEveryOther = (min, max)=> {
+const rangeEveryOther = (min, max) => {
   let myArray = [];
-  for (let i = min; i <= max; i += 2){
-    
-    myArray.push(i)
+  for (let i = min; i <= max; i += 2) {
+    myArray.push(i);
   }
-  return myArray
-}
+  return myArray;
+};
 
 /**
  * Takes in an array and a target.
@@ -321,7 +318,16 @@ const rangeEveryOther = (min, max)=> {
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-const containsWhileLoop = () => {}
+const containsWhileLoop = (elements, target) => {
+  let i = 0;
+  while (i < elements.length) {
+    if (elements[i] === target) {
+      return true;
+    }
+    i++;
+  }
+  return false;
+};
 
 /**
  * Takes in an array and a target.
@@ -332,7 +338,15 @@ const containsWhileLoop = () => {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+const containsForLoop = (elements, target) => {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return true;
+    }
+  }
+  return false;
+};
+
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -340,7 +354,13 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+const targetCount = (elements, target) => {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return true;
+    }
+  }
+}
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
