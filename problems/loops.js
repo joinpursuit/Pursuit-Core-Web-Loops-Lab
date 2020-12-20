@@ -357,7 +357,15 @@ function targetCount() {}
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+function firstIndexFound(elements, target) {
+  for (let i = 0; i <= elements.length; i++){
+    if (elements[i] === target) {
+      return i
+    }
+  }
+  return -1 
+}
+
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -367,7 +375,14 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+function lastIndexFound(elements, target) {
+  for ( let i = elements.length -1;i >=0; i--) {
+    if (elements[i] === target)
+    return i
+  }
+  return -1 
+}
+
 
 /**
  * Takes in an array.
@@ -376,7 +391,14 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+function timesIndex(elements) {
+  let newArray = []
+  for (let i = 0; i <= elements.length; i++) {
+    let newNumber = i * elements[i]
+    newArray.push (newNumber)
+  }
+  return newArray
+}
 
 
 /**

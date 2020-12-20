@@ -24,7 +24,7 @@ function shoutForLoop(array) {
 function shoutWhileLoop(array) {
   let newArray= []
   let i = 0
-  while(i <= array.length -1) {
+  while(i < array.length) {
     newArray.push (array[i] + "!")
     i++
   }
@@ -86,7 +86,7 @@ function oddArray(nums) {
 
 function evenArray(nums) {
   let newArray = []
-  for (let i = 0; i <= nums.length - 1; i++){
+  for (let i = 0; i <= nums.length; i++){
     if (nums[i]% 2 === 0) {
       newArray.push (nums[i])
     }
@@ -101,7 +101,13 @@ function evenArray(nums) {
  */
 
 function findSmallest(nums) {
-  
+  let i = nums[0]
+  for (let num of nums) {
+    if (num < i) {
+      i = num
+    }
+  }
+  return i
 }
 
 /**
