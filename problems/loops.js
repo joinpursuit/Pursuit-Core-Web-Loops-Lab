@@ -4,7 +4,19 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneWhileLoop() {}
+// function oneTillDoneWhileLoop() {}
+const oneTillDoneWhileLoop = number => {
+  let num = 1
+  let arr = []
+  
+  while (num <= number) {
+    arr.push(num)
+    num += 1 //num = num + 1
+  }
+  
+  return arr; 
+  
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -12,7 +24,18 @@ function oneTillDoneWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop() {}
+// function oneTillDoneForLoop() {}
+const oneTillDoneForLoop = number => {
+  let arr = []
+  
+  for (let num = 1; num <= number; num += 1) {
+  arr.push(num)
+  
+  }
+  
+  return arr;
+}
+
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -20,7 +43,19 @@ function oneTillDoneForLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+// function doneToZeroWhileLoop() {}
+const doneToZeroWhileLoop = number => {
+  let num = number
+  let arr = []
+
+  while(num > 0) {
+    arr.push(num)
+    num -= 1
+  }
+  return arr
+}
+
+  
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -28,7 +63,14 @@ function doneToZeroWhileLoop() {}
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroForLoop() {}
+// function doneToZeroForLoop() {}
+const doneToZeroForLoop = number => {
+  let arr = []
+  for(let num = number; num > 0; num -= 1) {
+    arr.push(num)
+  }
+  return arr
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -39,7 +81,23 @@ function doneToZeroForLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
+// function evenAndOddWhileLoop() {}
+const evenAndOddWhileLoop = max => {
+  let num = 0
+  let arr = []
+    while(num <= max) {
+      if(num % 2 === 0) {
+        arr.push(num + " is even" )
+        num ++
+      } else {
+          arr.push(num + " is odd")
+          num ++
+        }
+      } 
+      return arr
+      
+}
+
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
