@@ -44,7 +44,13 @@ return newArray1
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForOfLoop() {}
+const shoutForOfLoop = (array) => {
+  let newArray = []
+  for(element of array) {
+    newArray.push(element + "!")
+  }
+return newArray
+}
 
 /**
  * Takes in an array and returns the sum of all values
@@ -52,7 +58,13 @@ function shoutForOfLoop() {}
  * @returns {number} sum
  */
 
-function sumArray() {}
+const sumArray = (nums) => {
+  let sum = 0
+  for(let i = 0; i < nums.length; i++) {
+    sum += nums[i]
+  }
+  return sum
+}
 
 /**
  * Takes in an array and returns an array of all the odd valued elements
@@ -60,7 +72,16 @@ function sumArray() {}
  * @returns {array} odds
  */
 
-function oddArray() {}
+const oddArray = (nums) => {
+  let newArray = nums.slice(0)
+  for(let i = 0; i < nums.length; i++) {
+    if(i % 2 ===1) {
+      newArray.push(nums[i])
+    }
+    return newArray
+  }
+  
+}
 
 /**
  * Takes in an array and returns an array of all the even valued elements
