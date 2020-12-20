@@ -12,6 +12,12 @@ for (let i = 0; i < array.length; i+=1) {
   newArray.push(array[i] + "!")
 }
 return newArray
+function shoutForLoop (array)  {
+  let newArray = []
+  for (let i = 0; i< array.length; i+= 1) {
+    newArray.push(array[i] + '!')
+   }
+  return newArray
 }
 
 /**
@@ -30,6 +36,14 @@ function shoutWhileLoop(array) {
     i ++; 
   }
   return newArray
+function shoutWhileLoop (array) {
+  let newArray = []
+  let i = 0;
+  while (i < array.length) {
+    newArray.push(array[i] + '!' );
+    i++;
+  }
+      return newArray
 }
 
 /**
@@ -42,7 +56,10 @@ function shoutWhileLoop(array) {
 
 function shoutForOfLoop(array) {
   let newArray = []
-  for (newArray )
+  for(let i = 0; i < array.length; i+= 1) {
+    newArray.push(array[i] + '!');
+   }
+   return newArray
 }
 
 /**
@@ -65,7 +82,9 @@ function sumArray(nums) {
  * @returns {array} odds
  */
 
-function oddArray() {}
+function oddArray(nums) {
+  let 
+}
 
 /**
  * Takes in an array and returns an array of all the even valued elements

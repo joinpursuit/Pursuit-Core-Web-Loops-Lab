@@ -5,7 +5,7 @@
  * @returns {number[]}
  */
 function oneTillDoneWhileLoop(number) {
-  let i = 1;
+  let i = 0;
   while (i < array.length) {
     console.log(number[i]);
     i++;
