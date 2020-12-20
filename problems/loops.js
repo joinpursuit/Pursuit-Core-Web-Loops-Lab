@@ -138,7 +138,13 @@ const tillXTimes9WhileLoop = (x) => {
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
+const tillXTimes9ForLoop = (x) => {
+  let newArray = [];
+  for(i = 0; i <= x; i++) {
+    newArray.push(i * 9);
+  }
+  return newArray;
+}
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -146,7 +152,20 @@ function tillXTimes9ForLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
+const endsWithFiveWhileLoop = () => {
+  let newArray = [];
+  let i = 1;
+  while(i < 100) {
+    if(i % 2 === 1) {
+      newArray.push (i * 5);
+      else {
+
+      }
+    } i++
+  
+  } 
+return newArray
+}
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
