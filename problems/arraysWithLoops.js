@@ -79,9 +79,11 @@
 const oddArray = (nums) =>{
   let newArray = [] // newarray= [ 1,3  ] 
   let i = 0;
-  while ( nums [ i ] % 2 === 1 ){  // i = 3 , nums[3] = 4  && i < nums.length
-  newArray.push ( nums [ i ] )      // num[2] = 3
-  i++                           // i = 3 
+  while ( i < nums.length ){
+    if (nums [ i ] % 2 === 1){
+      newArray.push ( nums [ i ] )
+    }
+  i++                         
   }
   return newArray
 }
@@ -92,7 +94,15 @@ const oddArray = (nums) =>{
  * @returns {array} evens
  */
 
-function evenArray() {}
+const evenArray = (nums) => {
+  let newArray = [];
+  for(i = 0; i < nums.length; i++){
+    if(nums [ i ] % 2 === 0  ){
+      newArray.push ( nums [ i ] )  
+    }
+  }
+  return newArray;
+}
 
 /**
  * Takes in array and returns the smallest number in the array
@@ -100,7 +110,18 @@ function evenArray() {}
  * @returns {number} smallest value
  */
 
-function findSmallest() {}
+const findSmallest = (number) =>{
+  let num = 0;
+  for(i = 0; i < number.length; i++){
+    if( number[i]   < number[i+1]   ){
+      num = number[i];
+      continue
+    }else if( num > number[i]) {
+      num = num
+      }
+  }
+  return num; 
+}
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -109,7 +130,11 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+const findSecondSmallest = (numbs) =>{
+  let number = 0;
+  numbs.sort(function(a, b));
+
+}
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -117,7 +142,9 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest() {
+  points.sort(function(a, b){return b-a});
+}
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -126,7 +153,11 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+const removeDups = (nums) => {
+  let newArray = [];
+   
+  return newArray;
+}
 
 module.exports = {
   shoutForLoop,
