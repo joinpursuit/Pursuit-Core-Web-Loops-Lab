@@ -353,7 +353,7 @@ const rangeEveryOther = (min, max)=> {
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+const containsWhileLoop = () => {}
 
 /**
  * Takes in an array and a target.
