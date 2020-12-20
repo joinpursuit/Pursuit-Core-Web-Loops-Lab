@@ -376,8 +376,11 @@ const targetCount = (elements, target) => {
   let numOccur = 0
   let i = 0
   while(i < elements.length) {
-    if()
-}
+    if(elements[i] === target){
+      numOccur = numOccur + 1
+    }
+    i++;
+  } return numOccur
 }
 /**
  * Takes in an array and a target.
@@ -388,7 +391,16 @@ const targetCount = (elements, target) => {
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+//function firstIndexFound() {}
+const firstIndexFound = (elements, target) =>{
+  let indexNum = -1
+  for(let i = 0; i < elements.length; i++){
+    if(elements[i] === target){
+      indexNum = indexNum + i + 1
+      break;
+    }
+  } return indexNum
+}
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -398,7 +410,17 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+function lastIndexFound(elements,target) {
+  let lastIndex = -1
+  let i = elements.length - 1;
+  while(i >= 0){
+    if(elements[i]===target){
+      lastIndex = lastIndex + i + 1
+      break;
+    }
+    i--
+  } return lastIndex
+}
 
 /**
  * Takes in an array.
@@ -407,7 +429,12 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+function timesIndex(elements) {
+  let newArrayIndex = []
+  for(let i=0; i<elements.length;i++){
+    newArrayIndex.push(i*elements[i])
+  } return newArrayIndex
+}
 
 
 /**
@@ -419,7 +446,14 @@ function timesIndex() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+function cumulativeSum(elements) {
+  let cumulativeNum = 0
+  let newArrayCumul = []
+  for(let i=0;i<elements.length;i++){
+    cumulativeNum = cumulativeNum + elements[i]
+    newArrayCumul.push(cumulativeNum)
+  } return newArrayCumul
+}
 
 
 
