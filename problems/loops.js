@@ -264,13 +264,15 @@ function fizzBuzzPart2() {
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum(min, max) {
-  let num = min;
-  while (num <= max) {
-    num++ 
+const rangeSum = (min, max) => {
+  let sum = 0;
+  for (let i = min; i <= max; i++){
+    sum += i
+    console.log(i)
   }
-  return num
-}
+  return sum   
+} 
+
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
@@ -280,7 +282,18 @@ function rangeSum(min, max) {
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() {}
+const rangeOdd = (min, max) => {
+  let myArray = [];
+  while(max >= min) { 
+    if (max % 2 === 1) {
+      myArray.push(max);
+    }
+    
+    max -= 1;
+}
+  return myArray
+}
+
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -290,7 +303,14 @@ function rangeOdd() {}
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+const rangeEveryOther = (min, max)=> {
+  let myArray = [];
+  for (let i = min; i <= max; i += 2){
+    
+    myArray.push(i)
+  }
+  return myArray
+}
 
 /**
  * Takes in an array and a target.
@@ -301,7 +321,7 @@ function rangeEveryOther() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+const containsWhileLoop = () => {}
 
 /**
  * Takes in an array and a target.
