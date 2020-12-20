@@ -314,7 +314,18 @@ const rangeSum = (min, max) => {
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() {}
+const rangeOdd = (min, max) => {
+  let myArray = [];
+  while(max >= min) { 
+    if (max % 2 === 1) {
+      myArray.push(max);
+    }
+    
+    max -= 1;
+}
+  return myArray
+}
+console.log(rangeOdd(2, 3))
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
