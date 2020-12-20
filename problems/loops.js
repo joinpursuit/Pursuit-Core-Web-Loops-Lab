@@ -287,7 +287,15 @@ function rangeSum(min, max) {
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() { }
+function rangeOdd(min, max) {
+  let range = []
+  for (max; max >= min; max--) {
+    if (max % 2 === 1) {
+      range.push(max)
+    }
+  }
+  return range
+}
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -297,7 +305,13 @@ function rangeOdd() { }
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() { }
+function rangeEveryOther(min, max) {
+  let range = []
+  for (min; min <= max; min += 2) {
+    range.push(min)
+  }
+  return range
+}
 
 /**
  * Takes in an array and a target.
@@ -308,7 +322,16 @@ function rangeEveryOther() { }
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() { }
+function containsWhileLoop(elements, target) {
+  let i = 0
+  while (i < elements.length) {
+    if (elements[i] === target) {
+      return true
+    }
+    i++
+  }
+  return false
+}
 
 /**
  * Takes in an array and a target.
@@ -319,7 +342,14 @@ function containsWhileLoop() { }
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() { }
+function containsForLoop(elements, target) {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return true
+    }
+  }
+  return false
+}
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -327,7 +357,15 @@ function containsForLoop() { }
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() { }
+function targetCount(elements, target) {
+  let occ = 0
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      occ++
+    }
+  }
+  return occ
+}
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -337,7 +375,14 @@ function targetCount() { }
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() { }
+function firstIndexFound(elements, target) {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return i
+    }
+  }
+  return -1
+}
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
