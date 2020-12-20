@@ -46,7 +46,14 @@ const shoutWhileLoop = (arr) => {
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForOfLoop() {}
+// function shoutForOfLoop() {}
+const shoutForOfLoop = array => {
+  let output = []
+  for(let element of array) {
+    output.push(element + "!")
+  }
+  return output
+}
 
 /**
  * Takes in an array and returns the sum of all values
@@ -54,7 +61,14 @@ function shoutForOfLoop() {}
  * @returns {number} sum
  */
 
-function sumArray() {}
+// function sumArray() {}
+const sumArray = nums => {
+  let sum = 0
+  for(let i = 0; i < nums.length; i++) {
+    sum += nums[i]
+  }
+  return sum
+}
 
 /**
  * Takes in an array and returns an array of all the odd valued elements
@@ -62,7 +76,15 @@ function sumArray() {}
  * @returns {array} odds
  */
 
-function oddArray() {}
+// function oddArray() {}
+const oddArray = nums => {
+  let oddnums = []
+    for(let i = 0; i < nums.length; i++) {
+      if(oddnums % 2 === 1)
+      odd.nums.push(nums[1])
+    }
+  return oddnums
+}
 
 /**
  * Takes in an array and returns an array of all the even valued elements
