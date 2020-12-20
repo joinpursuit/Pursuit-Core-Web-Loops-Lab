@@ -22,7 +22,15 @@ function shoutForLoop(arr) {
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
+function shoutWhileLoop(arr) {
+  let i = 0;
+  let myArray = [];
+  while (i < arr.length) {
+    myArray.push(`${arr[i]}!`)
+    i++ 
+  }
+  return myArray;
+}
 
 /**
  * Takes in an array and returns a new array with element
