@@ -75,9 +75,9 @@ function evenAndOddWhileLoop(max) {
       arr.push(num + " is even")
     } else {
       arr.push(num + " is odd")
-    } 
+    }
     num++
-  } 
+  }
   return arr
 }
 
@@ -90,7 +90,18 @@ function evenAndOddWhileLoop(max) {
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() { }
+function evenAndOddForLoop(max) {
+  let arr = []
+  let num = 0
+  for (num; num <= max; num++) {
+    if (num % 2 === 0) {
+      arr.push(num + " is even")
+    } else {
+      arr.push(num + " is odd")
+    }
+  }
+  return arr
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -106,7 +117,15 @@ function evenAndOddForLoop() { }
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9WhileLoop() { }
+function tillXTimes9WhileLoop(x) {
+  let num = 0
+  let arr = []
+  while (num <= x) {
+    arr.push(num * 9)
+    num++
+  }
+  return arr
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -122,7 +141,14 @@ function tillXTimes9WhileLoop() { }
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() { }
+function tillXTimes9ForLoop(x) {
+  let arr = []
+  let num = 0
+  for (num; num <= x; num++) {
+    arr.push(num * 9);
+  }
+  return arr
+}
 
 
 /**
@@ -131,7 +157,19 @@ function tillXTimes9ForLoop() { }
  * @returns {number[]} [5, 15, 25, ..., 95]
  
  */
-function endsWithFiveWhileLoop() { }
+function endsWithFiveWhileLoop() {
+  let arr = []
+  let num = 1
+  while (num <= 100) {
+    if (num % 10 === 5) {
+      arr.push(num)
+      num++
+    } else {
+      num++
+    }
+  }
+  return arr
+}
 
 
 
@@ -141,7 +179,18 @@ function endsWithFiveWhileLoop() { }
  * @returns {number[]} [5, 15, 25, ..., 95]
  
  */
-function endsWithFiveForLoop() { }
+
+function endsWithFiveForLoop() {
+  let arr = []
+  let num = 5
+  for (num; num <= 100; num += 5) {
+    if (num % 10 === 5) {
+      arr.push(num)
+    }
+  }
+  return arr
+}
+
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 
@@ -160,7 +209,8 @@ while (i > 3) {
 
 /**
  * // Write your explanation here!
- *
+// infinite loop:  
+// since i is already greater than 3 there is no condition that stops the loop from running.
  */
 
 /**
@@ -171,7 +221,21 @@ while (i > 3) {
 * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
  
 */
-function fizzBuzzPart1() { }
+function fizzBuzzPart1() {
+  let arr = []
+  let num = 1
+  for (num; num <= 100; num++) {
+    if (num % 3 === 0) {
+      arr.push("Fizz")
+    }
+    else if (num % 5 === 0 && num % 3 !== 0) {
+      arr.push("Buzz")
+    } else {
+      arr.push(num)
+    }
+  }
+  return arr
+}
 
 
 /**
@@ -183,7 +247,22 @@ function fizzBuzzPart1() { }
 * @returns {Array}
  
 */
-function fizzBuzzPart2() { }
+function fizzBuzzPart2() {
+  let arr = []
+  let num = 1
+  for (num; num <= 100; num++) {
+    if (num % 3 === 0 && num % 5 !== 0) {
+      arr.push("Fizz")
+    } else if (num % 5 === 0 && num % 3 !== 0) {
+      arr.push("Buzz")
+    } else if (num % 5 === 0 && num % 3 === 0) {
+      arr.push("FizzBuzz")
+    } else {
+      arr.push(num)
+    }
+  }
+  return arr
+}
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
@@ -192,7 +271,13 @@ function fizzBuzzPart2() { }
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() { }
+function rangeSum(min, max) {
+  let sum = 0;
+  for (min; min <= max; min++) {
+    sum += min;
+  }
+  return sum;
+}
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
