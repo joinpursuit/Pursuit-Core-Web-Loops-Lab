@@ -325,7 +325,7 @@ const rangeOdd = (min, max) => {
 }
   return myArray
 }
-console.log(rangeOdd(2, 3))
+
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -335,7 +335,14 @@ console.log(rangeOdd(2, 3))
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+const rangeEveryOther = (min, max)=> {
+  let myArray = [];
+  for (let i = min; i <= max; i += 2){
+    
+    myArray.push(i)
+  }
+  return myArray
+}
 
 /**
  * Takes in an array and a target.
