@@ -355,7 +355,6 @@ const containsForLoop = (elements, target) => {
  * @returns {number} number of occurances
  */
 const targetCount = (elements, target) => {
-<<<<<<< HEAD
   count = 0
   for (let i = 0; i < elements.length; i++) {
     if (elements[i] === target) {
@@ -363,15 +362,6 @@ const targetCount = (elements, target) => {
     }
   }
   return count 
-=======
-  let count = 0;
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i] === target) {
-       count ++;
-    }
-  }
-  return count;
->>>>>>> fd17e8b3c858af18f9a4ebdf6884d300ee125e43
 }
 /**
  * Takes in an array and a target.
@@ -382,14 +372,15 @@ const targetCount = (elements, target) => {
  * @param {number|string} target
  * @returns {number} first index found.
  */
-const firstIndexFound = (elements, target) => {
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i] === target) {
-      return i;
-    }
-  }
-  return -1;
-}
+function firstIndexFound() {}
+
+
+
+
+
+
+
+
 
 /**
  * Takes in an array and a target.
@@ -400,14 +391,7 @@ const firstIndexFound = (elements, target) => {
  * @param {number|string} target
  * @returns {number} last index found.
  */
-const lastIndexFound = (elements, target) => {
-  for (let i = elements.length -1; i > 0; i--) {
-    if (elements[i] === target) {
-      return i;
-    }
-  }
-  return -1; 
-}
+function lastIndexFound() {}
 
 /**
  * Takes in an array.
@@ -416,14 +400,7 @@ const lastIndexFound = (elements, target) => {
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex(elements) {
-  let myArray = [];
-  for (let i = 0; i < elements.length; i++) {
-    console.log(i)
-    myArray.push(elements[i] * i);
-  }
-  return myArray
-}
+function timesIndex() {}
 
 /**
  * Takes in an array.
@@ -434,36 +411,7 @@ function timesIndex(elements) {
  * @param {number[]} elements
  * @returns {number[]}
  */
-const cumulativeSum = (elements) => {
-  let myArray = [];
-  let sum = 0;
-  for (let i = 0; i < elements.length; i++) {
-    sum += elements[i]
-    myArray.push(sum);
-    
-  }
-  return myArray
-}
-
-
-// const rangeSum = (min, max) => {
-//   let sum = 0;
-//   for (let i = min; i <= max; i++) {
-//     sum += i;
-//     console.log(i);
-//   }
-//   return sum;
-// };
-
-
-
-
-
-
-
-
-
-
+function cumulativeSum() {}
 
 module.exports = {
   oneTillDoneWhileLoop,
