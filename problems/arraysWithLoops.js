@@ -138,7 +138,18 @@ function findSecondLargest() { }
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() { }
+const removeDups = nums => {
+  let arr = nums.slice(0);
+  for (let i = 1; i < nums.length; i++) {
+    if (arr.includes(nums[i])) {
+      arr.splice(i,1)
+      i++;
+    }
+  }
+  console.log(arr + "  > "+nums)
+  return arr;
+
+}
 
 module.exports = {
   shoutForLoop,
