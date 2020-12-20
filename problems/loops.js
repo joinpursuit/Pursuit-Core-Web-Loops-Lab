@@ -392,7 +392,14 @@ function firstIndexFound(elements, target) {
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() { }
+function lastIndexFound(elements, target) {
+  for (let i = elements.length - 1; i > 0; i--) {
+    if (elements[i] === target) {
+      return i
+    }
+  }
+  return -1
+}
 
 /**
  * Takes in an array.
@@ -401,7 +408,13 @@ function lastIndexFound() { }
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() { }
+function timesIndex(elements) {
+  let arr = []
+  for (let i = 0; i < elements.length; i++) {
+    arr.push(elements[i] * i)
+  }
+  return arr
+}
 
 
 /**
@@ -413,7 +426,12 @@ function timesIndex() { }
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() { }
+function cumulativeSum(elements) {
+  for (let i = 1; i < elements.length; i++) {
+    elements[i] = elements[i] + elements[i - 1]
+  }
+  return elements
+}
 
 
 
