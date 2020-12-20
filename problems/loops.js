@@ -14,7 +14,7 @@ const oneTillDoneWhileLoop = (num) => {
   }
   return arr;
 };
-console.log(oneTillDoneWhileLoop(5));
+//console.log(oneTillDoneWhileLoop(5));
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -29,7 +29,7 @@ const oneTillDoneForLoop = (num) => {
   }
   return arr;
 };
-console.log(oneTillDoneForLoop(5));
+//console.log(oneTillDoneForLoop(5));
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -46,7 +46,7 @@ const doneToZeroWhileLoop = (num) => {
   }
   return arr;
 };
-console.log(doneToZeroWhileLoop(5));
+//console.log(doneToZeroWhileLoop(5));
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -61,7 +61,8 @@ const doneToZeroForLoop = (num) => {
   }
   return arr;
 };
-console.log(doneToZeroForLoop(5));
+//console.log(doneToZeroForLoop(5));
+
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -80,7 +81,8 @@ const evenAndOddWhileLoop = (max) => {
   }
   return arr;
 };
-console.log(evenAndOddWhileLoop(5));
+//console.log(evenAndOddWhileLoop(5));
+
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -97,7 +99,7 @@ const evenAndOddForLoop = (max) => {
   }
   return arr;
 };
-console.log(evenAndOddForLoop(5));
+//console.log(evenAndOddForLoop(5));
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -122,6 +124,7 @@ const tillXTimes9WhileLoop = (x) => {
   }
   return arr;
 };
+
 console.log(tillXTimes9WhileLoop(5));
 
 /**
@@ -145,6 +148,7 @@ const tillXTimes9ForLoop = (x) => {
   }
   return arr;
 };
+
 console.log(tillXTimes9ForLoop(5));
 
 /**
@@ -162,7 +166,9 @@ const endsWithFiveWhileLoop = () => {
   }
   return arr;
 };
+
 console.log(endsWithFiveWhileLoop(5));
+
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a for loop
@@ -176,7 +182,11 @@ const endsWithFiveForLoop = () => {
   }
   return arr;
 };
+
 console.log(endsWithFiveForLoop(5));
+
+
+
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
@@ -219,7 +229,11 @@ const fizzBuzzPart1 = () => {
   }
   return arr;
 };
+
 console.log(fizzBuzzPart1());
+
+//console.log(fizzBuzzPart1())
+
 
 /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
@@ -247,7 +261,12 @@ const fizzBuzzPart2 = () => {
   }
   return arr;
 };
+
 console.log(fizzBuzzPart2());
+
+//console.log(fizzBuzzPart2())
+
+
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
 
@@ -263,7 +282,9 @@ const rangeSum = (min, max) => {
   return sum;
 };
 
+
 console.log(rangeSum(0, 10));
+
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
  * in that range
@@ -272,6 +293,7 @@ console.log(rangeSum(0, 10));
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
+
 const rangeOdd = (min, max) => {
   let arr = [];
   for (i = max; i >= min; i--) {
@@ -281,6 +303,7 @@ const rangeOdd = (min, max) => {
 };
 
 console.log(rangeOdd(0, 10));
+
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -297,7 +320,10 @@ const rangeEveryOther = (min, max) => {
   }
   return arr;
 };
+
 console.log(rangeEveryOther());
+
+
 
 /**
  * Takes in an array and a target.
@@ -311,14 +337,18 @@ console.log(rangeEveryOther());
 const containsWhileLoop = (elements, target) => {
   let i = 0;
   while (i < elements.length) {
-    if (elements[i] === target) {
-      return true;
+  if (elements[i] === target) {
+  return true;
     }
     i++;
   }
   return false;
 };
+
 console.log(containsWhileLoop([1, 2, 3, 5, 7], 5));
+
+
+
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array
@@ -328,6 +358,7 @@ console.log(containsWhileLoop([1, 2, 3, 5, 7], 5));
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
+
 const containsForLoop = (elements, target) => {
   let i = 0;
   for (i = 0; i < elements.length; i++) {
@@ -339,6 +370,8 @@ const containsForLoop = (elements, target) => {
 };
 
 console.log(containsWhileLoop([1, 2, 3, 5, 7], 5));
+
+
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -346,6 +379,7 @@ console.log(containsWhileLoop([1, 2, 3, 5, 7], 5));
  * @param {number|string} target
  * @returns {number} number of occurances
  */
+
 const targetCount = (elements, target) => {
   let count = 0;
   for (i = 0; i < elements.length; i++)
@@ -356,6 +390,7 @@ const targetCount = (elements, target) => {
 };
 console.log(targetCount([1, 2, 2, 2, 4, 5], 2));
 
+
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -365,6 +400,7 @@ console.log(targetCount([1, 2, 2, 2, 4, 5], 2));
  * @param {number|string} target
  * @returns {number} first index found.
  */
+
 const firstIndexFound = (elements, target) => {
   for (i = 0; i < elements.length; i++) {
     if (elements[i] === target) {
@@ -374,6 +410,7 @@ const firstIndexFound = (elements, target) => {
   return -1;
 };
 console.log(firstIndexFound([1, 2, 4, 5, 6], 4));
+
 
 /**
  * Takes in an array and a target.
@@ -401,7 +438,14 @@ console.log(lastIndexFound([1, 2, 4, 5, 4], 4));
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+//function timesIndex() {}
+const timesIndex = (elements) => {
+  let arr = [];
+  for (i = 0; i < elements.length; i++) {
+    arr.push(i * elements[i]);
+  }
+  return arr;
+};
 
 /**
  * Takes in an array.
@@ -412,7 +456,15 @@ function timesIndex() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+//function cumulativeSum() {}
+const cumulativeSum = (elements) => {
+  let arr = [];
+  let sum = 0;
+  for (i = 0; i < elements.length; i++) {
+    arr.push((sum += elements[i]));
+  }
+  return arr;
+};
 
 module.exports = {
   oneTillDoneWhileLoop,
