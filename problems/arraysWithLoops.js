@@ -39,8 +39,26 @@ const shoutWhileLoop = (array) => {
  * @param {Array} - ["I", "am", "a", "happy", "array"]
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
+// for (variable of iterable) {
+//   statement
+// }
 
-function shoutForOfLoop() {}
+//const array1 = ['a', 'b', 'c'];
+// for (const element of array1) {
+//   console.log(element);
+// }
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
+
+//function shoutForOfLoop() {}
+const shoutForOfLoop = (array) => {
+  let newArr = [];
+  for (const element of array) {
+    newArr.push(element + "!")
+  }
+  return newArr;
+}
 
 /**
  * Takes in an array and returns the sum of all values
