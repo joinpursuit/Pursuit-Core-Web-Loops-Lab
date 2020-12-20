@@ -167,6 +167,7 @@ const removeDups = nums => {
   for (let i = 1; i < nums.length; i++) {
     if (arr.includes(nums[i])) {
       arr.splice(i,1)
+      i++;
     }
   }
   console.log(arr + "  > "+nums)
