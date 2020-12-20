@@ -18,7 +18,22 @@ Take one down, pass it around, No more bottle of beer on the wall.
  * @return {string[]}
  */
 
-function ninetyNineBottlesOfBeerOnTheWall() {}
+function ninetyNineBottlesOfBeerOnTheWall() {
+  let beer = []
+  for (let i = 99; i > 0; i--) {
+    if (i === 1) {
+      beer.push(`${i} bottle of beer on the wall, ${i} bottle of beer. ` +
+      `Take one down, pass it around, No more bottle of beer on the wall.`);
+    } else if (i === 2) {
+      beer.push(`${2} bottles of beer on the wall, 2 bottles of beer. ` +
+        `Take one down, pass it around, ${i - 1} bottle of beer on the wall.`);
+    } else {
+      beer.push(`${i} bottles of beer on the wall, ${i} bottles of beer. ` +
+        `Take one down, pass it around, ${i - 1} bottles of beer on the wall.`);
+    }
+  }
+  return beer;
+}
 
 /**
   * Given an integer N draw a square of N x N asterisks. Look at the examples.
@@ -49,7 +64,16 @@ function drawSquare() {}
   *  @returns {number}
   */
 
-function multiplesOf3And5Sum() {}
+function multiplesOf3And5Sum() {
+  let maxNum = 1000;
+  let sum = 0;
+  for (let i = 3; i < maxNum; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
 
 module.exports = {
   ninetyNineBottlesOfBeerOnTheWall,
