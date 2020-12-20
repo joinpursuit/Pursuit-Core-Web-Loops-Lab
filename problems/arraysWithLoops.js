@@ -7,10 +7,13 @@
  */
 
 const shoutForLoop =(array) => {
-  for (i = 0; i < array.length; i++){
-    return 
+  let newArr = [];
+  for(i = 0; i < array.length; i++) {
+    newArr.push(array[i] + "!"); // array[i]
   }
+  return newArr;
 }
+
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -18,8 +21,16 @@ const shoutForLoop =(array) => {
  * @param {Array} - ["I", "am", "a", "happy", "array"]
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
-
-function shoutWhileLoop() {}
+//function shoutWhileLoop() {}
+const shoutWhileLoop = (array) => {
+  let newArr = [];
+  let i = 0;
+  while(i < array.length){
+    newArr.push(array[i] + "!")
+    i++
+  }
+  return newArr;
+}
 
 /**
  * Takes in an array and returns a new array with element
