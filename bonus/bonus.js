@@ -56,7 +56,27 @@ Output:
     ***
 ]
   */
-function drawSquare() {}
+function drawSquare(N) {
+  // Walked through with Jordan B.R. during lab
+  let starBox = [];
+  let star = '*';
+  for(let i = 0; i < N; i++){
+    starBox.push(star.repeat(N));
+  }
+  return starBox;
+
+  // was trying a while loop but can't seem to get the right number for *
+  // let starBox = [];
+  // let star = '*';
+  // let element = '';
+  // while(N > 0){
+  //   element = element + star;
+  //   N--;
+  //   starBox.push(star);
+  // }
+  // console.log(starBox);
+  // return starBox;
+}
 /**
   * If we list all the natural numbers below 10 that are multiples of 3 or 5,
   *  we get 3, 5, 6 and 9. The sum of these multiples is 23.
