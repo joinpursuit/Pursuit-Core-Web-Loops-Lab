@@ -355,11 +355,13 @@ const containsForLoop = (elements, target) => {
  * @returns {number} number of occurances
  */
 const targetCount = (elements, target) => {
+  let count = 0;
   for (let i = 0; i < elements.length; i++) {
     if (elements[i] === target) {
-      return true;
+       count ++;
     }
   }
+  return count;
 }
 /**
  * Takes in an array and a target.
@@ -370,7 +372,15 @@ const targetCount = (elements, target) => {
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+const firstIndexFound = (elements, target) => {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -380,7 +390,14 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+const lastIndexFound = (elements, target) => {
+  for (let i = elements.length -1; i > 0; i--) {
+    if (elements[i] === target) {
+      return i;
+    }
+  }
+  return -1; 
+}
 
 /**
  * Takes in an array.
@@ -389,7 +406,14 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+function timesIndex(elements) {
+  let myArray = [];
+  for (let i = 0; i < elements.length; i++) {
+    console.log(i)
+    myArray.push(elements[i] * i);
+  }
+  return myArray
+}
 
 /**
  * Takes in an array.
@@ -400,7 +424,36 @@ function timesIndex() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+const cumulativeSum = (elements) => {
+  let myArray = [];
+  let sum = 0;
+  for (let i = 0; i < elements.length; i++) {
+    sum += elements[i]
+    myArray.push(sum);
+    
+  }
+  return myArray
+}
+
+
+// const rangeSum = (min, max) => {
+//   let sum = 0;
+//   for (let i = min; i <= max; i++) {
+//     sum += i;
+//     console.log(i);
+//   }
+//   return sum;
+// };
+
+
+
+
+
+
+
+
+
+
 
 module.exports = {
   oneTillDoneWhileLoop,
