@@ -5,13 +5,13 @@
  * @returns {number[]}
  */
 function oneTillDoneWhileLoop(number) {
-  let newNum = [];
-  let i = 1;
-  while (i <= number) {
-    newNum.push(i);
-    i++;
-  }
-  return newNum;
+	let newNum = [];
+	let i = 1;
+	while (i <= number) {
+		newNum.push(i);
+		i++;
+	}
+	return newNum;
 }
 
 /**
@@ -21,11 +21,11 @@ function oneTillDoneWhileLoop(number) {
  * @returns {number[]}
  */
 function oneTillDoneForLoop(number) {
-  let newNum = [];
-  for (let i = 1; i <= number; i++) {
-    newNum.push(i);
-  }
-  return newNum;
+	let newNum = [];
+	for (let i = 1; i <= number; i++) {
+		newNum.push(i);
+	}
+	return newNum;
 }
 
 /**
@@ -35,15 +35,13 @@ function oneTillDoneForLoop(number) {
  * @returns {number[]}
  */
 function doneToZeroWhileLoop(number) {
-   
-  let newNum = [];
-  let i = number;
-  while (i > 0) {
-    newNum.push(i)
-    i--
-  }
-return newNum;
-
+	let newNum = [];
+	let i = number;
+	while (i > 0) {
+		newNum.push(i);
+		i--;
+	}
+	return newNum;
 }
 
 /**
@@ -52,21 +50,13 @@ return newNum;
  * @param {number}
  * @returns {number[]}
  */
-<<<<<<< HEAD
-
-
-
-
-=======
 function doneToZeroForLoop(number) {
-  let newNum = [];
-  for (let i = number; i > 0; i--) {
-    newNum.push(i);
-  }
-  return newNum;
-
+	let newNum = [];
+	for (let i = number; i > 0; i--) {
+		newNum.push(i);
+	}
+	return newNum;
 }
->>>>>>> a6b1ab6ad1c6a144886b628a1432f10de47683d8
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -77,7 +67,19 @@ function doneToZeroForLoop(number) {
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
+function evenAndOddWhileLoop(max) {
+	let newNumber = [];
+	let num = 0;
+	while (num <= max) {
+		if (num % 2 === 0) {
+			newNumber.push(num + ' is even');
+		} else {
+			newNumber.push(num + ' is odd');
+		}
+		num++;
+	}
+	return newNumber;
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -88,8 +90,17 @@ function evenAndOddWhileLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
-
+function evenAndOddForLoop(max) {
+	let newNumber = [];
+	for (num = 0; num <= max; num++) {
+		if (num % 2 === 0) {
+			newNumber.push(num + ' is even');
+		} else {
+			newNumber.push(num + ' is odd');
+		}
+	}
+	return newNumber;
+}
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
  *  For each iteration, it will multiply the current number by 9 and store the result in an array.
@@ -104,7 +115,15 @@ function evenAndOddForLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9WhileLoop() {}
+function tillXTimes9WhileLoop(x) {
+  let newNumber = [];
+  let num = 0;
+  while ( num <= x)
+  return newNumber.push(num * 9); {
+    num++;
+  }
+  return newNumber;
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -120,7 +139,13 @@ function tillXTimes9WhileLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
+function tillXTimes9ForLoop(x) {
+	let newNumber = [];
+	for (let num = 0; num <= x; num++) {
+		newNumber.push(num * 9);
+	}
+	return newNumber;
+}
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -128,7 +153,17 @@ function tillXTimes9ForLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
+function endsWithFiveWhileLoop() {
+  let newNumber = [];
+  let i = 0
+  while ( i  < 100); {
+    if(i % 10 === 5) {
+      newNumber.push(num);
+    }
+    num++;
+  }
+  return newNumber;
+}
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -277,26 +312,26 @@ function timesIndex() {}
 function cumulativeSum() {}
 
 module.exports = {
-  oneTillDoneWhileLoop,
-  oneTillDoneForLoop,
-  doneToZeroWhileLoop,
-  doneToZeroForLoop,
-  evenAndOddWhileLoop,
-  evenAndOddForLoop,
-  tillXTimes9WhileLoop,
-  tillXTimes9ForLoop,
-  endsWithFiveWhileLoop,
-  endsWithFiveForLoop,
-  fizzBuzzPart1,
-  fizzBuzzPart2,
-  rangeSum,
-  rangeOdd,
-  rangeEveryOther,
-  containsWhileLoop,
-  containsForLoop,
-  targetCount,
-  firstIndexFound,
-  lastIndexFound,
-  timesIndex,
-  cumulativeSum,
+	oneTillDoneWhileLoop,
+	oneTillDoneForLoop,
+	doneToZeroWhileLoop,
+	doneToZeroForLoop,
+	evenAndOddWhileLoop,
+	evenAndOddForLoop,
+	tillXTimes9WhileLoop,
+	tillXTimes9ForLoop,
+	endsWithFiveWhileLoop,
+	endsWithFiveForLoop,
+	fizzBuzzPart1,
+	fizzBuzzPart2,
+	rangeSum,
+	rangeOdd,
+	rangeEveryOther,
+	containsWhileLoop,
+	containsForLoop,
+	targetCount,
+	firstIndexFound,
+	lastIndexFound,
+	timesIndex,
+	cumulativeSum,
 };
