@@ -332,17 +332,14 @@ function rangeEveryOther(min, max) {
  * @returns {boolean} true if the array contains our target, otherwise false
  */
 function containsWhileLoop(elements, target) {
-  // let i = 0;
-  // while(i < elements.length){
-  //   i++;
-  //   if(elements[i] === target){
-  //     console.log(elements[i] + ' line 1');
-  //     return true;
-  //   }else if(array[i] !== target){
-  //     console.log(elements[i] + ' line 2');
-  //     return false;
-  //   }
-  // }
+  let i = 0;
+  while(i < elements.length){
+    if(elements[i] === target){
+      return true;
+    }
+    i++;
+  }
+  return false;
 }
 
 /**
@@ -405,13 +402,12 @@ function firstIndexFound(elements, target) {
  * @returns {number} last index found.
  */
 function lastIndexFound(elements, target) {
-  for(let i = 0; i < elements.length; i++) {
-    if(elements[i] === target){
-      // console.log(i);
+  for (let i = elements.length - 1; i >= 0; i--) {
+    if (elements[i] === target) {
       return i;
     }
   }
- return -1;
+  return -1;
 }
 
 /**
@@ -422,12 +418,10 @@ function lastIndexFound(elements, target) {
  * @returns {number[]}
  */
 function timesIndex(elements) {
-  let times = [];
   for(let i = 0; i < elements.length; i++) {
-    times.push(i);
-    times[i] = elements[i] * i;
+    elements[i] = elements[i] * i;
   }
-  return times;
+  return elements;
 }
 
 
@@ -441,11 +435,10 @@ function timesIndex(elements) {
  * @returns {number[]}
  */
 function cumulativeSum(elements) {
-  let sumArray = [];
-  for(let i = 0;i < elements.length; i++){
-    return i;
+  for (let i = 1; i < elements.length; i++) {
+    elements[i] = elements[i] + elements[i - 1];
   }
-  return sumArray;
+  return elements;
 }
 
 
