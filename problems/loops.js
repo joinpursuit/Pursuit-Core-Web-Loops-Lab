@@ -373,7 +373,7 @@ function lastIndexFound(elements, target) {
  */
 function timesIndex(elements) {
   let arr = [];
-  for (let i = 0; i <= elements.length - 1; i++) {
+  for (let i = 0; i < elements.length; i++) {
     arr[i] = elements[i] * i;
   }
   return arr;
@@ -394,7 +394,7 @@ function cumulativeSum(elements) {
   }
   let arr = [];
   arr.push(elements[0]);
-  for (let i = 1; i <= elements.length - 1; i++) {
+  for (let i = 1; i < elements.length; i++) {
     arr[i] = arr[i-1] + elements[i];
   }
   return arr;
