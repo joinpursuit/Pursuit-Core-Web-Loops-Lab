@@ -399,16 +399,8 @@ function lastIndexFound(elements, target) {
  * @returns {number[]}
  */
 function timesIndex(elements) {
-  let i=0
-  let arr=[]
-  while (elements.length * i){
-    i+=1
-    arr.push(i) 
-  }
-  return arr
+  let arr = [] // need to create a new  array 
 }
-
-
 
 /**
  * Takes in an array.
@@ -419,7 +411,8 @@ function timesIndex(elements) {
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+function cumulativeSum(elements) {}
+
 
 module.exports = {
   oneTillDoneWhileLoop,
