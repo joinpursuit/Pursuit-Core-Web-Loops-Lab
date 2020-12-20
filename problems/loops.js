@@ -117,12 +117,12 @@ const tillXTimes9WhileLoop = (x) => {
   let i = 0;
   let arr = [];
   while (i <= x) {
-   arr.push(i * 9);
+    arr.push(i * 9);
     i++;
   }
   return arr;
 };
-console.log(tillXTimes9WhileLoop(5))
+console.log(tillXTimes9WhileLoop(5));
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -140,12 +140,12 @@ console.log(tillXTimes9WhileLoop(5))
  */
 const tillXTimes9ForLoop = (x) => {
   let arr = [];
-  for(i=0; i <= x; i++){
+  for (i = 0; i <= x; i++) {
     arr.push(i * 9);
   }
   return arr;
-}
-console.log(tillXTimes9ForLoop(5))
+};
+console.log(tillXTimes9ForLoop(5));
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -157,26 +157,26 @@ const endsWithFiveWhileLoop = () => {
   let i = 5;
   let arr = [];
   while (i <= 100) {
-    arr.push(i)
-      i+=10
+    arr.push(i);
+    i += 10;
   }
-  return arr
-}
-console.log(endsWithFiveWhileLoop(5))
+  return arr;
+};
+console.log(endsWithFiveWhileLoop(5));
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a for loop
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-const endsWithFiveForLoop =() =>{
-  let arr = []
-  for (i = 5; i <= 100; i+=10) {
-    arr.push(i)
+const endsWithFiveForLoop = () => {
+  let arr = [];
+  for (i = 5; i <= 100; i += 10) {
+    arr.push(i);
   }
-   return arr
-}
-console.log(endsWithFiveForLoop(5))
+  return arr;
+};
+console.log(endsWithFiveForLoop(5));
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
@@ -207,19 +207,19 @@ while (i > 3) {
 const fizzBuzzPart1 = () => {
   let i = 1;
   let arr = [];
-    while(i <= 100) {
-      if (i % 3 === 0){
-        arr.push("Fizz");
-      } else if (i % 5 === 0){
-        arr.push("Buzz");
-      } else {
-        arr.push(i);
-      }
-      i++;
+  while (i <= 100) {
+    if (i % 3 === 0) {
+      arr.push("Fizz");
+    } else if (i % 5 === 0) {
+      arr.push("Buzz");
+    } else {
+      arr.push(i);
     }
+    i++;
+  }
   return arr;
-}
-console.log(fizzBuzzPart1())
+};
+console.log(fizzBuzzPart1());
 
 /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
@@ -233,23 +233,21 @@ console.log(fizzBuzzPart1())
 const fizzBuzzPart2 = () => {
   let i = 1;
   let arr = [];
-    while(i <= 100) {
-      if ((i % 3 === 0) && (i % 5 === 0)){
-        arr.push("FizzBuzz");
-      } else if(i % 3 === 0){
-        arr.push("Fizz");
-      } else if (i % 5 === 0){
-        arr.push("Buzz");
-      } else {
-        arr.push(i);
-      }
-      i++;
+  while (i <= 100) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      arr.push("FizzBuzz");
+    } else if (i % 3 === 0) {
+      arr.push("Fizz");
+    } else if (i % 5 === 0) {
+      arr.push("Buzz");
+    } else {
+      arr.push(i);
     }
+    i++;
+  }
   return arr;
-}
-console.log(fizzBuzzPart2())
-
-
+};
+console.log(fizzBuzzPart2());
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
 
@@ -257,16 +255,15 @@ console.log(fizzBuzzPart2())
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-const rangeSum = (min,max) => {
+const rangeSum = (min, max) => {
   let sum = 0;
   for (i = min; i <= max; i++) {
-    sum += i 
+    sum += i;
   }
-  return sum 
-}
-   
+  return sum;
+};
 
-console.log(rangeSum(0,10))
+console.log(rangeSum(0, 10));
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
  * in that range
@@ -275,17 +272,15 @@ console.log(rangeSum(0,10))
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-const rangeOdd = (min,max) => {
-  let arr = []
+const rangeOdd = (min, max) => {
+  let arr = [];
   for (i = max; i >= min; i--) {
-    if (i % 2 === 1)
-    arr.push(i)
-
+    if (i % 2 === 1) arr.push(i);
   }
-  return arr 
-}
+  return arr;
+};
 
-console.log(rangeOdd(0,10))
+console.log(rangeOdd(0, 10));
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -297,12 +292,12 @@ console.log(rangeOdd(0,10))
  */
 const rangeEveryOther = (min, max) => {
   let arr = [];
-  for(i = min; i <= max; i+=2) {
-    arr.push(i)
+  for (i = min; i <= max; i += 2) {
+    arr.push(i);
   }
   return arr;
-}
-console.log(rangeEveryOther())
+};
+console.log(rangeEveryOther());
 
 /**
  * Takes in an array and a target.
@@ -313,8 +308,17 @@ console.log(rangeEveryOther())
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
-
+const containsWhileLoop = (elements, target) => {
+  let i = 0;
+  while (i < elements.length) {
+    if (elements[i] === target) {
+      return true;
+    }
+    i++;
+  }
+  return false;
+};
+console.log(containsWhileLoop([1, 2, 3, 5, 7], 5));
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array
@@ -324,7 +328,17 @@ function containsWhileLoop() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+const containsForLoop = (elements, target) => {
+  let i = 0;
+  for (i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return true;
+    }
+  }
+  return false;
+};
+
+console.log(containsWhileLoop([1, 2, 3, 5, 7], 5));
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -332,7 +346,16 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+const targetCount = (elements, target) => {
+  let count = 0;
+  for (i = 0; i < elements.length; i++)
+    if (elements[i] === target) {
+      count++;
+    }
+  return count;
+};
+console.log(targetCount([1, 2, 2, 2, 4, 5], 2));
+
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -342,7 +365,16 @@ function targetCount() {}
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+const firstIndexFound = (elements, target) => {
+  for (i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+};
+console.log(firstIndexFound([1, 2, 4, 5, 6], 4));
+
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -352,7 +384,15 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+const lastIndexFound = (elements, target) => {
+  for (i = elements.length - 1; i >= 0; i--) {
+    if (elements[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+};
+console.log(lastIndexFound([1, 2, 4, 5, 4], 4));
 
 /**
  * Takes in an array.
