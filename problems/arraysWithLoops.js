@@ -39,12 +39,13 @@ const shoutWhileLoop = (arr) => {
  */
 
 const shoutForOfLoop = (arr) => {
-    let newArray = []
-    for(i = 0; i < arr.length; i++) {
-      newArray.push(arr[i] + "!")
-    }
-  return newArray;
+  let newArray = []
+  for(let newArray of arr) {
+    i++;
   }
+return newArray.push("!");
+}
+  
 
 /**
  * Takes in an array and returns the sum of all values
@@ -81,15 +82,27 @@ const oddArray = (nums) => {
  * @returns {array} evens
  */
 
-function evenArray() {}
-
+const evenArray = (nums)=> {
+  let evens = []
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 1) continue;
+    evens.push(nums[i]);
+  }
+  return evens
+}
 /**
  * Takes in array and returns the smallest number in the array
  * @param {number[]} nums
  * @returns {number} smallest value
  */
 
-function findSmallest() {}
+const findSmallest = (nums) => {
+  let smallest = Math.min.apply(Math, nums);
+  nums.indexOf(smallest), 1
+  return smallest;
+}
+
+
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -98,7 +111,11 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+const findSecondSmallest = (nums) => {
+  let secondSmallest = Math.min.apply(null, nums);
+  nums.indexOf(secondSmallest), 1
+  return secondSmallest +1;
+}
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -106,8 +123,11 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
-
+const findSecondLargest = (nums) => {
+let secondLargest = Math.max.apply(null, nums);
+nums.indexOf(secondLargest), 1
+return secondLargest -1;
+}
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
  * Exp Input: [4,2,6,2,2,6,4,9,2,1] Output: [4, 2, 6, 9, 1]
@@ -115,7 +135,14 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+const removeDups = (nums) => {
+  let array = [... new Set(nums)];{
+    return array;
+  }
+
+
+
+}
 
 module.exports = {
   shoutForLoop,
