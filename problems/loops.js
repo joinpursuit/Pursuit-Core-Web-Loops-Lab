@@ -291,8 +291,8 @@ function rangeOdd(min, max) {
  */
 function rangeEveryOther(min, max) {
   let arr = [];
-  for (let i = min; i <= max; i++) {
-    arr.push(i + 1);
+  for (let i = min; i <= max; i+=2) {
+    arr.push(i)
   }
   return arr
 }
@@ -307,7 +307,18 @@ function rangeEveryOther(min, max) {
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+function containsWhileLoop(elements, target) {
+  let i = 0
+  while (i < elements.length) {
+    if (elements[i] === target){
+      return true;
+    }
+    i+=1
+    }
+
+  return false 
+}
+console.log(containsWhileLoop([2,3,4,5],7))
 
 /**
  * Takes in an array and a target.
@@ -318,7 +329,14 @@ function containsWhileLoop() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+function containsForLoop(elements, target) {
+  for(let i = 0 ; i < elements.length ; i++) {
+    if (elements[i] === target){
+      return true
+    }
+  }
+  return false 
+}
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -326,7 +344,15 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+function targetCount(elements,target) {
+  sum = 0
+  for ( let i = 0 ; i < elements.length ; i++) {
+    if (elements[i] === target) {
+      sum = sum + 1
+    }
+  }
+  return sum 
+}
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
