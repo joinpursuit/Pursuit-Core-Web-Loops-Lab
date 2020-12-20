@@ -355,11 +355,13 @@ const containsForLoop = (elements, target) => {
  * @returns {number} number of occurances
  */
 const targetCount = (elements, target) => {
+  count = 0
   for (let i = 0; i < elements.length; i++) {
     if (elements[i] === target) {
-      return true;
+       count ++ 
     }
   }
+  return count 
 }
 /**
  * Takes in an array and a target.
