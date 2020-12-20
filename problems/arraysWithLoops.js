@@ -122,7 +122,12 @@ const findSecondSmallest = nums => {
     if (nums[i] < smallest)
       smallest = nums[i]
   }
-  return smallest;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > smallest && nums[i] < secondSmallest)
+      secondSmallest = nums[i];
+  }
+  return secondSmallest;
 }
 
 /**
@@ -163,9 +168,7 @@ const removeDups = nums => {
       arr.push(nums[i]);
     }
   }
-  console.log(arr + "  > "+nums)
   return arr;
-
 }
 
 module.exports = {
