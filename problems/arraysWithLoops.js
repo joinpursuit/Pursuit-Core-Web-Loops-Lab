@@ -6,7 +6,13 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+function shoutForLoop(Array) {
+  let arr = [];
+  for (let i = 0; i < array.length; i++) {
+    arr[i] = array[i] + "!";
+  }
+  return arr;
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -15,7 +21,15 @@ function shoutForLoop() {}
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
+function shoutWhileLoop(Array) {
+  let arr = [];
+  let i = 0;
+  while (i < Array.length) {
+    arr[i] = Array[i] + "!";
+    i++;
+  }
+  return arr;
+}
 
 /**
  * Takes in an array and returns a new array with element
@@ -66,7 +80,15 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+  let secSmallest = nums[0];
+  for (let i = 0; i <= nums.length; i++){
+    if (nums[i] < secSmallest){ 
+    secSmallest = nums[i];
+    } 
+  }  
+  return secSmallest + 1;
+}
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -74,7 +96,15 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+  let secLargest = nums[0];
+  for(let i = 0; i <= nums.length; i++){
+    if(nums[i] > secLargest){
+      secLargest = nums[i]
+    }
+  }
+      return secLargest -1
+}
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -83,7 +113,15 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+  let arr = []
+  for(let i = 0; i < nums.length; i++){
+    if(! arr.includes(nums[i])){
+      arr.push(nums[i])
+    }
+  }
+    return arr
+}
 
 module.exports = {
   shoutForLoop,
