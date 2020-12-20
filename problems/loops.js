@@ -14,7 +14,7 @@ const oneTillDoneWhileLoop = (num) => {
   }
   return arr;
 };
-console.log(oneTillDoneWhileLoop(5));
+//console.log(oneTillDoneWhileLoop(5));
 
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
@@ -29,7 +29,7 @@ const oneTillDoneForLoop = (num) => {
   }
   return arr;
 };
-console.log(oneTillDoneForLoop(5));
+//console.log(oneTillDoneForLoop(5));
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -46,7 +46,7 @@ const doneToZeroWhileLoop = (num) => {
   }
   return arr;
 };
-console.log(doneToZeroWhileLoop(5));
+//console.log(doneToZeroWhileLoop(5));
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -61,7 +61,8 @@ const doneToZeroForLoop = (num) => {
   }
   return arr;
 };
-console.log(doneToZeroForLoop(5));
+//console.log(doneToZeroForLoop(5));
+
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -80,7 +81,8 @@ const evenAndOddWhileLoop = (max) => {
   }
   return arr;
 };
-console.log(evenAndOddWhileLoop(5));
+//console.log(evenAndOddWhileLoop(5));
+
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
  *  For each iteration, it will check if the current number is even or odd and add the result to a new array
@@ -97,7 +99,7 @@ const evenAndOddForLoop = (max) => {
   }
   return arr;
 };
-console.log(evenAndOddForLoop(5));
+//console.log(evenAndOddForLoop(5));
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -122,7 +124,7 @@ const tillXTimes9WhileLoop = (x) => {
   }
   return arr;
 };
-console.log(tillXTimes9WhileLoop(5))
+//console.log(tillXTimes9WhileLoop(5))
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -145,7 +147,7 @@ const tillXTimes9ForLoop = (x) => {
   }
   return arr;
 }
-console.log(tillXTimes9ForLoop(5))
+//console.log(tillXTimes9ForLoop(5))
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -162,7 +164,8 @@ const endsWithFiveWhileLoop = () => {
   }
   return arr
 }
-console.log(endsWithFiveWhileLoop(5))
+//console.log(endsWithFiveWhileLoop(5))
+
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a for loop
@@ -176,7 +179,7 @@ const endsWithFiveForLoop =() =>{
   }
    return arr
 }
-console.log(endsWithFiveForLoop(5))
+//console.log(endsWithFiveForLoop(5))
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
@@ -219,7 +222,7 @@ const fizzBuzzPart1 = () => {
     }
   return arr;
 }
-console.log(fizzBuzzPart1())
+//console.log(fizzBuzzPart1())
 
 /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
@@ -247,7 +250,7 @@ const fizzBuzzPart2 = () => {
     }
   return arr;
 }
-console.log(fizzBuzzPart2())
+//console.log(fizzBuzzPart2())
 
 
 /**
@@ -264,9 +267,8 @@ const rangeSum = (min,max) => {
   }
   return sum 
 }
-   
+//console.log(rangeSum(0,10))
 
-console.log(rangeSum(0,10))
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
  * in that range
@@ -275,17 +277,17 @@ console.log(rangeSum(0,10))
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
+
 const rangeOdd = (min,max) => {
-  let arr = []
+  let arr = [];
   for (i = max; i >= min; i--) {
-    if (i % 2 === 1)
-    arr.push(i)
-
+    if (i % 2 === 1){ 
+      arr.push(i);
+    }
   }
-  return arr 
+  return arr; 
 }
-
-console.log(rangeOdd(0,10))
+//console.log(rangeOdd(0,10))
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -302,7 +304,7 @@ const rangeEveryOther = (min, max) => {
   }
   return arr;
 }
-console.log(rangeEveryOther())
+//console.log(rangeEveryOther())
 
 /**
  * Takes in an array and a target.
@@ -323,7 +325,7 @@ const containsWhileLoop = (elements, target) => {
     }
   return false;
 }
-console.log(containsWhileLoop([6, 7, 9], 8))
+//console.log(containsWhileLoop([6, 7, 9], 8))
 
 /**
  * Takes in an array and a target.
@@ -334,7 +336,16 @@ console.log(containsWhileLoop([6, 7, 9], 8))
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+//function containsForLoop() {}
+const containsForLoop = (elements, target) => {
+  for(i = 0; i < elements.length; i++){
+    target === elements[i];
+    return true;
+  }
+  return false;
+}
+//console.log(containsForLoop([5,6,7], 8))
+
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -343,6 +354,9 @@ function containsForLoop() {}
  * @returns {number} number of occurances
  */
 function targetCount() {}
+// const targetCount = (elements, target) => {}
+// console.log(targetCount(["a", "b", "word"], "word"))
+
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -371,7 +385,15 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+//function timesIndex() {}
+const timesIndex = (elements) => {
+  let arr = [];
+  for(i = 0; i < elements.length; i++) {
+    arr.push(i * elements[i]);
+  }
+  return arr;
+}
+
 
 /**
  * Takes in an array.
