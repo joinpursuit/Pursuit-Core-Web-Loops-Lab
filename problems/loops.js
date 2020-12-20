@@ -161,15 +161,13 @@ const tillXTimes9ForLoop = (x) =>{
 
  */
 const endsWithFiveWhileLoop = () =>{
-  let i = 1;
   let number = [];
-  while(i <=100) {
-  if (number % 5 === 0 && number % 10 === 5) {
-      number.push(i);
-      i++;
-    }
-    return number;
+  let i = 1;
+  while (i < 100) {
+    if (i % 10 === 5) number.push(i);
+    i++;
   }
+  return number;
 }
 
 
@@ -180,7 +178,13 @@ const endsWithFiveWhileLoop = () =>{
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+const endsWithFiveForLoop = () =>{
+  let number = [];
+  for (let i = 1; i <= 100; i++){
+    if (i % 10 === 5) number.push(i);
+  }
+  return number;
+}
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 
