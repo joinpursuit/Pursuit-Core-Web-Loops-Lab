@@ -71,7 +71,7 @@ return arr
 
 function multiplesOf3And5Sum() {
   let sum = 0
-  for (let i = 3; i < 1000; i++) {
+  for (let i = 0; i < 1000; i++) {
     if (i % 3 === 0) {
       sum += i
     }else if (i % 5 === 0) {
