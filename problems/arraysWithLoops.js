@@ -40,10 +40,10 @@ const shoutWhileLoop = (arr) => {
 
 const shoutForOfLoop = (arr) => {
   let newArray = []
-  for(let newArray of arr) {
-    i++;
+  for(let element of arr){
+    newArray.push(element + "!");
   }
-return newArray.push("!");
+return newArray;
 }
   
 
