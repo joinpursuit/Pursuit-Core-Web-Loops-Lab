@@ -51,10 +51,10 @@ const doneToZeroWhileLoop = ( number) => {
  * @param {number}
  * @returns {number[]}
  */
-const doneToZeroForLoop = () => {
+const doneToZeroForLoop = (number) => {
   let newArray = []
-  for ( let i = 0; number >= i ; number-- ){
-    newArray.push( number )
+  for (i = number; i > 0; i--){
+    newArray.push(i)  
   }
   return newArray
 }
@@ -120,7 +120,15 @@ const doneToZeroForLoop = () => {
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9WhileLoop() {}
+ const tillXTimes9WhileLoop = (x) =>  {
+   let newArray = []
+   let i = 0
+    while (i <= x){
+     newArray.push(i * 9)
+     i++
+   } 
+   return newArray
+ }
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -136,7 +144,13 @@ function tillXTimes9WhileLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
+const tillXTimes9ForLoop = (x) => {
+  let newArray = []
+  for (let i = 0 ; i <= x ; i++) {
+    newArray.push(i * 9)
+  }
+  return newArray
+}
 
 
 /**
@@ -145,7 +159,15 @@ function tillXTimes9ForLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop() {}
+  const endsWithFiveWhileLoop = () => {
+    let newArray = []
+    let i = 5
+    while (i <= 100){
+     newArray.push(i)
+      i+= 10
+    }
+    return newArray
+  }
 
 
 
@@ -155,7 +177,13 @@ function endsWithFiveWhileLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+  const endsWithFiveForLoop = () => {
+  let newArray = []
+  for (i = 5; i <= 100 ; i+= 10){
+    newArray.push(i)
+  }
+  return newArray
+}
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
 
@@ -174,7 +202,7 @@ while (i > 3) {
 
 /**
  * // Write your explanation here!
- *
+ * The loop is an infinite loop. 5 will keep being incremented by 1 and all the numbers will be greater than 3
  */
 
  /**
@@ -185,7 +213,21 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
+  const fizzBuzzPart1 = () => {
+    let newArray = []
+    let i = 1
+    while (i <= 100){
+      if (i % 3 === 0){
+      newArray.push("Fizz") 
+      }else if (i % 5 === 0) {
+        newArray.push("Buzz")
+        }else{
+          newArray.push(i)
+        }
+        i++
+      }
+    return newArray
+  }
 
 
  /**
@@ -197,7 +239,23 @@ function fizzBuzzPart1() {}
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
+ const  fizzBuzzPart2 = () => {
+   let newArray = []
+   let i = 1
+   while (i <= 100){
+    if (i % 3 === 0 && i % 5 === 0){
+      newArray.push("FizzBuzz")
+      }else if (i % 3 === 0) {
+        newArray.push("Fizz")
+      }else if  ( i % 5 === 0) {
+        newArray.push("Buzz")
+      }else {
+        newArray.push(i)
+      }
+      i++ 
+   }
+    return newArray
+ }
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
@@ -206,7 +264,13 @@ function fizzBuzzPart2() {}
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
+ const rangeSum = (min, max) => {
+   let sum = 0;
+   for (i = min; i <= max; i++) {
+    sum +=i 
+   }
+    return sum 
+ }
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
