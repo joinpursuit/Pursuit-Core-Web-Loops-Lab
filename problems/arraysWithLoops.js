@@ -136,7 +136,11 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+  let duplicates = []
+  let nonDuplicates = []
+  
+}
 
 module.exports = {
   shoutForLoop,
