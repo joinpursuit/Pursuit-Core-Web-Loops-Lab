@@ -118,15 +118,7 @@ function findSmallest(nums) {
  */
 
 function findSecondSmallest(nums) {
-  let smallestNum = nums[0];
-  let secondSmallestNum = smallestNum;
-  for (let i = 0; i < nums.length; i++){
-    if (nums[i] < smallestNum){
-     secondSmallestNum = smallestNum;
-      smallestNum = nums[i];
-    } 
-  return secondSmallestNum
-}
+
 }
 
 /**
