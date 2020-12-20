@@ -79,8 +79,16 @@ return sum;
  * @param {number[]} nums
  * @returns {array} odds
  */
-
-function oddArray() {}
+//function oddArray() {}
+const oddArray = (nums) => {
+  let arrOfOdds = [];
+  for (const elements of nums){
+    if (elements % 2 === 1) {
+      arrOfOdds.push(elements);
+    }
+  }
+return arrOfOdds;
+}
 
 /**
  * Takes in an array and returns an array of all the even valued elements
