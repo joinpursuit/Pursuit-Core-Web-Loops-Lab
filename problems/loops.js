@@ -174,8 +174,8 @@ function endsWithFiveWhileLoop() {
  */
 function endsWithFiveForLoop() {
   let newArray = [];
-  for (let num = 0; num <= 100; num++){
-    if (num % 10 === 5){
+  for (let num = 0; num <= 100; num++) {
+    if (num % 10 === 5) {
       newArray.push(num);
     }
   }
@@ -184,13 +184,13 @@ function endsWithFiveForLoop() {
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
-/**
+/** (let num = 5; num <= 100; num + 10)
  Without running/executing your code, how many times will the loop below run?
   Explain why.
- */
+ /** it will be ran 9 times because once you increment by 10 you can go into 100 only 9 times. Once you hit 95 you can no longer
+  * increment by 10
 /*
 let i = 5;
-
 while (i > 3) {
     i += 1
 }
@@ -198,7 +198,8 @@ while (i > 3) {
 
 /**
  * // Write your explanation here!
- *
+ * This will create an infinite loop because you have set no max value. I will continue to be incremented because the condition
+ * says while i is bigger than 3, and we already set i's value to 5 when we started the loop
  */
 
 /**
@@ -209,7 +210,21 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
+function fizzBuzzPart1() {
+  let newArray = [];
+  let num = 1;
+  while (num <= 100) {
+    if (num % 3 === 0) {
+      newArray.push("Fizz");
+    } else if (num % 5 === 0 && num % 3 != 0) {
+      newArray.push("Buzz");
+    } else {
+      newArray.push(num);
+    }
+    num++;
+  }
+  return newArray;
+}
 
 /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
@@ -220,7 +235,21 @@ function fizzBuzzPart1() {}
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
+function fizzBuzzPart2() {
+  let newArray = [];
+  for (let num = 1; num <= 100; num++) {
+    if (num % 3 === 0 && num % 5 === 0) {
+      newArray.push("FizzBuzz");
+    } else if (num % 3 === 0) {
+      newArray.push("Fizz");
+    } else if (num % 5 === 0) {
+      newArray.push("Buzz");
+    } else {
+      newArray.push(num);
+    }
+  }
+  return newArray;
+}
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
@@ -229,7 +258,13 @@ function fizzBuzzPart2() {}
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
+function rangeSum(min, max) {
+  let sum = 0;
+  for (let num = min; num <= max; num++) {
+    sum += num;
+  }
+  return sum;
+}
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
@@ -239,8 +274,15 @@ function rangeSum() {}
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() {}
-
+function rangeOdd(min, max) {
+  let newArray = [];
+  for (let num = max; num >= min; num--) {
+    if (num % 2 === 1) {
+      newArray.push(num);
+    }
+  }
+  return newArray;
+}
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
 
@@ -249,7 +291,13 @@ function rangeOdd() {}
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+function rangeEveryOther(min,max) {
+  let newArray = [];
+  for (let num = min; num <= max; num=+2){
+    newArray.push(num);
+  }
+  return newArray;
+}
 
 /**
  * Takes in an array and a target.

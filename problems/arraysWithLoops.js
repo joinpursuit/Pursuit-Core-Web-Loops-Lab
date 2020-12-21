@@ -13,8 +13,6 @@ function shoutForLoop(array) {
   return newArray;
 }
 
-<<<<<<< HEAD
-=======
 function shoutForLoop(array) {
   let newArray = []
   for (let i = 0; i < array.length; i++) {
@@ -27,7 +25,6 @@ function shoutForLoop(array) {
 
 
 
->>>>>>> 878fc052e7977cb0b6c4e50b3004c56f414ca4fb
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
