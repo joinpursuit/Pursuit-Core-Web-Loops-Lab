@@ -14,6 +14,7 @@ function oneTillDoneWhileLoop(n) {
   return array
 }
 
+
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
  * Must be written with a for loop
@@ -169,7 +170,7 @@ function endsWithFiveWhileLoop() {
   }
   return array
 }
-//console.log(endsWithFiveWhileLoop())
+//console.log(endsWithFiveWhileLoop([1,2,3,]))
 
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
@@ -425,9 +426,9 @@ function lastIndexFound(elements, target) {
 function timesIndex(elements) {
   array = []
   for (i = 0; i < elements.length; i++) {
-    array[i] = elements[i]* i 
+    array[i] = elements[i] * i
   }
-  return array 
+  return array
 }
 //console.log(timesIndex([5,5,2,5], 5))
 
@@ -442,17 +443,17 @@ function timesIndex(elements) {
  * @returns {number[]}
  */
 function cumulativeSum(elements) {
-  array=[]
+  array = []
   for (i = 0; i < elements.length; i++) {
-    if (i === 0){
-    array[i] = elements[i]
-    }else{
+    if (i === 0) {
+      array[i] = elements[i]
+    } else {
       array[i] = elements[i] + array[i - 1]
-    } 
+    }
   }
-  return array 
- }
-console.log(cumulativeSum([5,5,2,5]))
+  return array
+}
+console.log(cumulativeSum([5, 5, 2, 5]))
 
 
 module.exports = {

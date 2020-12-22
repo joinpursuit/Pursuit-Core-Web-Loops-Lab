@@ -41,12 +41,12 @@ function shoutWhileLoop(array) {
  */
 
 function shoutForOfLoop(array) {
-
-  for (let elements of array) {
-    array = array[elements] + "!"
-
+  newArray = []
+  for (let element of array) {
+    const v = element + "!"
+    newArray.push(v)
   }
-  return array
+  return newArray
 }
 //console.log(shoutForOfLoop(["I", "am", "a", "happy", "array"]))
 
@@ -132,20 +132,20 @@ function findSmallest(nums) {
  */
 
 function findSecondSmallest(nums) {
-  var min = Infinity 
+  var min = Infinity
   var secondMin = Infinity
   for (var i = 0; i < nums.length; i++) {
     if (nums[i] < min) {
       secondMin = min;
-      min = nums[i];
+      min = nums[i]
     } else if (nums[i] < secondMin) {
-      secondMin = nums[i];
+      secondMin = nums[i]
     }
-  } 
+  }
   return secondMin
 }
 
-console.log(findSecondSmallest([3,2,4,1,5]))
+//console.log(findSecondSmallest([3,2,4,1,5]))
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -162,7 +162,17 @@ function findSecondLargest() { }
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() { }
+function removeDups(arr) {
+  let output = []
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i]
+    if (output.includes(num)) {
+      continue
+    } output.push(num)
+
+  }
+  return output
+}
 
 module.exports = {
   shoutForLoop,
