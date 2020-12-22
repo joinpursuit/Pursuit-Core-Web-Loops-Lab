@@ -17,7 +17,7 @@ function oneTillDoneWhileLoop(number) {
  * Must be written with a for loop
  * @param {number}
  * @returns {number[]}
- */
+ */ 
 function oneTillDoneForLoop(number) {
   for (let number = 1; number < 10; num +=1) {
     console.log(number)
@@ -30,7 +30,10 @@ function oneTillDoneForLoop(number) {
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+function doneToZeroWhileLoop(number) {
+  let i = 1
+  while (i <= number)
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -49,7 +52,19 @@ function doneToZeroForLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddWhileLoop() {}
+function evenAndOddWhileLoop(max) {
+  let i = 0
+  let arr = []
+  while (i <= max) {
+    if (i % 2 === 0) {
+      arr.push(i + " is even");
+      i++;
+    } else {
+      arr.push(i + " is odd");
+      i++;
+    }
+  }return arr
+}
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -60,7 +75,18 @@ function evenAndOddWhileLoop() {}
  * @param {number} max number
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
-function evenAndOddForLoop() {}
+function evenAndOddForLoop(max) {
+   
+  let arr = []
+  for (let i = 0; i<= max; i++) {
+    if (i % 2 === 0) {
+      arr.push(i + " is even")
+    } else {
+      arr.push(i + " is odd")
+    }
+  }
+  return arr
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -76,7 +102,15 @@ function evenAndOddForLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9WhileLoop() {}
+function tillXTimes9WhileLoop(x) {
+  let i = 0 
+  let arr = []
+  while (i <= x){
+    arr.push(i * 9);
+    i++;
+  }
+  return arr
+}
 
 /**
  * Takes in the variable "x", and iterates over all numbers from 0 to "x".
@@ -92,7 +126,13 @@ function tillXTimes9WhileLoop() {}
 * 4 * 9 = 36
 * 5 * 9 = 45
  */
-function tillXTimes9ForLoop() {}
+function tillXTimes9ForLoop(x) {
+  let arr = []
+  for (let i = 0; i <= x; i++) {
+    arr.push(i * 9)
+  }
+  return arr
+}
 
 
 /**
@@ -101,7 +141,19 @@ function tillXTimes9ForLoop() {}
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop(number[]) {}
+function endsWithFiveWhileLoop() {
+  let i = 1
+  let arr = []
+  while (i <= 100){
+    if (i % 5 === 0 && i % 2 !== 0) {
+      arr.push(i);
+    } else {
+      arr.pop(i);
+    }
+    return arr
+  }
+}
+
 
 
 

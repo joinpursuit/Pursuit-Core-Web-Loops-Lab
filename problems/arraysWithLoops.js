@@ -19,7 +19,7 @@ function shoutForLoop (array)  {
    }
   return newArray
 }
-
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -45,7 +45,7 @@ function shoutWhileLoop (array) {
   }
       return newArray
 }
-
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -83,7 +83,7 @@ function sumArray(nums) {
  */
 
 function oddArray(nums) {
-  let 
+  
 }
 
 /**
