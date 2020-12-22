@@ -223,9 +223,11 @@ function fizzBuzzPart1() {
 
   for (let i = 1 ; i <= array.length - 1 ; i ++) {
     if (i % 3 === 0){
+      array.push(i)
       return ("Fizz")
   } 
     else if (i % 5 === 0){
+      array.push(i)
       return ("Buzz")
   }
 }
