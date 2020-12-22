@@ -155,44 +155,40 @@ function tillXTimes9ForLoop(x){
   return arr
 } 
 
-//{
-
-  //let arr = []
-  //for (let i = 0; i <= x; i++) {
-     // arr.push(i * 9)
-//}
-  //return arr
-//}
-
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a while loop
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveWhileLoop(){}
+function endsWithFiveWhileLoop(){
+  let i = 1
+  let arr = []
 
-// let i = 0
-// let arr = []
-
-// while (i <= 100) {
-//   arr.push(i*5)
-// }
-//   return arr
-// }
-
-
+  while (i <= 20){
+    arr.push(i * 5)
+    i += 2
+  }
+  return arr
+}
+console.log(endsWithFiveWhileLoop())
 /**
  * Returns an array with all the numbers that end in 5 from 1 to 100
 * Must be done with a for loop
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+function endsWithFiveForLoop(){
+  let i = 5
+  let arr = []
+
+  for (let i = 5; i<= 100; i +=10){
+    arr.push(i)
+  }
+  return arr
+}
+console.log(endsWithFiveForLoop([]))
 // Try refactoring the code above to increment your i by 10 and starting at 5.
-
-
-
 /**
  Without running/executing your code, how many times will the loop below run?
   Explain why.
@@ -203,11 +199,14 @@ let i = 5;
 while (i > 3) {
     i += 1
 }
-*/
+
+
+*/ 
+// The loop won't run
 
 /**
  * // Write your explanation here!
- *
+ * // the result is not being returned or logged
  */
 
  /**
@@ -218,8 +217,21 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
+function fizzBuzzPart1() {
+  let i = 1
+  let array = newArray(100)
 
+  for (let i = 1 ; i <= array.length - 1 ; i ++) {
+    if (i % 3 === 0){
+      return ("Fizz")
+  } 
+    else if (i % 5 === 0){
+      return ("Buzz")
+  }
+}
+  return array.length(i)
+
+}
 
  /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
