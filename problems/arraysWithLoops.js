@@ -121,7 +121,19 @@ return smallest
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+const findSecondSmallest = (nums)=> {
+ let smallest = Infinity
+ let secondSmallest = Infinity
+ for(let i = 0; i < nums.length; i++){
+   if(nums[i]<smallest){
+     secondSmallest = smallest
+     smallest = nums[i]  
+  } else if (nums[i]<secondSmallest){
+    secondSmallest = nums[i]
+   }
+ }
+ return secondSmallest
+}
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -129,8 +141,20 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
-
+function findSecondLargest(array) {
+  let largest = -Infinity
+  let secondLargest = -Infinity
+  for(let i=0; i<array.length; i++){
+    if(array[i]>largest){
+      secondLargest = largest
+      largest = array[i]
+    } else if(array[i]>secondLargest){
+      secondLargest = array[i]
+    }
+  }
+  return secondLargest
+}
+  
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
  * Exp Input: [4,2,6,2,2,6,4,9,2,1] Output: [4, 2, 6, 9, 1]
@@ -138,7 +162,15 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(array) {
+  let noDupsArray = []
+  for(let i=0; i<array.length; i++){
+    if(!noDupsArray.includes(array[i])){
+      noDupsArray.push(array[i])
+    }
+  }
+  return noDupsArray
+}
 
 module.exports = {
   shoutForLoop,
