@@ -153,7 +153,21 @@ function findSecondSmallest(nums) {
  * @returns {number} second largest value
  */
 
-function findSecondLargest() { }
+function findSecondLargest(nums) {
+  var lgst = - Infinity
+  var secondLgst = - Infinity
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] > lgst) {
+      secondLgst = lgst;
+      lgst = nums[i]
+    } else if (nums[i] > secondLgst) {
+      secondLgst = nums[i]
+    }
+  }
+  return secondLgst
+}
+console.log(findSecondLargest([3,2,4,1,5]))
+
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
