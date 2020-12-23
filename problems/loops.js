@@ -292,9 +292,13 @@ rangeOdd(3,7)
  * @returns {number[]} includes every other element
  */
 function rangeEveryOther(min, max) {
- 
+  let newArr = []
+  for(let i = min; i <= max; i += 2){
+    newArr.push(i)
+  }
+  return newArr
 }
-//rangeEveryOther()
+rangeEveryOther(2,4)
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array
@@ -307,10 +311,13 @@ function rangeEveryOther(min, max) {
 function containsWhileLoop(elements, target) {
   let i = 0
   while(i < elements.length){
-    return elements[i] === target
+    if(elements[i] === target){
+      return true
+    }
+    i++
   }
+  return false
 }
-containsWhileLoop([1,2,3], 2)
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array
@@ -322,10 +329,13 @@ containsWhileLoop([1,2,3], 2)
  */
 function containsForLoop(elements, target) {
   for(let i = 0; i < elements.length; i++){
-    return elements[i] === target
+    if(elements[i] === target){
+      return true
+    }
   }
+  return false
 }
-containsForLoop([1,2,3,4], 5)
+containsForLoop([1,2,3,4], 2)
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -353,15 +363,14 @@ targetCount([1,2,3], 4)
  * @returns {number} first index found.
  */
 function firstIndexFound(elements, target) {
-  for(let i = 0; i < elements.length; i++){
-    if(elements[i] = target){
-      return elements[i]
-    } else {
-      return -1
+  for(let i = 0; i <= elements.length; i++){
+    if(elements[i] === target) {
+      return i
     }
   }
+  return -1
 }
-firstIndexFound([1,2,3,4], 5)
+firstIndexFound([1,2,3], 5)
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -372,15 +381,13 @@ firstIndexFound([1,2,3,4], 5)
  * @returns {number} last index found.
  */
 function lastIndexFound(elements, target) {
-  for(let i = 0; i < elements.length; i--){
+  for(let i = elements.length; i >= 0; i--){
     if(elements[i] === target){
-      return elements[i]
-    } else {
-      return -1
+      return i
     }
   }
+  return -1
 }
-lastIndexFound([1,2,3,4], 4)
 /**
  * Takes in an array.
  * Returns a new array where each element has been multiplied by its index.
@@ -407,10 +414,12 @@ timesIndex([1,2,3])
  * @returns {number[]}
  */
 function cumulativeSum(elements) {
-  
-
+  for(let i = 1; i < elements.length; i++){
+    elements[i] = elements[i - 1] + elements[i]
+  }
+  return elements
 }
-
+cumulativeSum([12,3,4])
 
 
 module.exports = {
