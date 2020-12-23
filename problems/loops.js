@@ -383,8 +383,8 @@ function targetCount(elements, target) {
  */
 function firstIndexFound(elements, target) {
   let store = 0
-  for(let i = 0; i < elements.length; i++){
-    if(array[i] === target){
+  for(let i = 0; i <= elements.length; i++){
+    if(elements[i] === target){
       return i
     } else {store = -1}
   }
