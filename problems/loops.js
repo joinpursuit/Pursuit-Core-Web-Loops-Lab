@@ -36,13 +36,13 @@ function oneTillDoneForLoop(number) {
  * @returns {number[]}
  */
 function doneToZeroWhileLoop(number) {
-  // let num = 0
-  // let theArray = []
-  // while(number > num){
-  //   num -= 1
-  //   theArray.push(num)
-  // }
-  // return theArray
+  let num = 1
+  let theArray = []
+  while(number >= num){
+    theArray.push(number)
+    number -= 1
+  }
+  return theArray
 }
 
 /**
@@ -321,16 +321,16 @@ function rangeEveryOther(min, max) {
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop(element, target) {
-  let results = 0
-  let num = 0
-  while(element[num] < element.length){
-    if(element[num] === target){
-      results === true
+function containsWhileLoop(elements, target) {
+  let results = true
+  let i = 0
+  while(i < elements.length - 1){
+    if(elements[i] === target){
+      results = true
     } else {
-      results === false
+      results = false
     }
-    num += 1
+    i = i + 1
   }
   return results 
 }
