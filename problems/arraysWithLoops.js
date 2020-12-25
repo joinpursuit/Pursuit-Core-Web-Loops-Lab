@@ -9,7 +9,8 @@
 function shoutForLoop(array) {
   let newArray = []
   for(let i = 0; i <= array.length - 1; i++){
-    newArray[i] = array[i] + "!"
+    newArray.push(array[i] + "!")
+    
   }
   return newArray
 }
@@ -46,6 +47,7 @@ function shoutForOfLoop(array) {
   }
   return newArray
 }
+
 
 /**
  * Takes in an array and returns the sum of all values
@@ -101,13 +103,13 @@ function evenArray(nums) {
  */
 
 function findSmallest(nums) {
-  let i = nums[0]
-  for (let num of nums) {
-    if (num < i) {
-      i = num
+  let smallestNum = Infinity
+  for (let i = 0; i <= nums.length-1; i++) {
+    if(nums[i]<smallestNum) {
+      smallestNum = nums [i]
     }
   }
-  return i
+  return smallestNum
 }
 
 /**
@@ -117,7 +119,19 @@ function findSmallest(nums) {
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+  let smallest = Infinity
+  let secondSmallest = Infinity
+  for(let i = 0; i <= nums.length -1; i++){
+    if(nums[i]< smallest) {
+      secondSmallest = smallest
+      smallest = nums[i]
+    } else if (nums[i] < secondSmallest) {
+      secondSmallest = nums[i]
+    }
+  }
+  return secondSmallest
+}
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -125,7 +139,19 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+  let largest = -Infinity
+  let secondLargest = -Infinity
+  for (let i = 0; i <= nums.length -1; i ++){
+    if (nums[i]>largest){
+    secondLargest = largest
+    largest = nums[i]
+  } else if (nums[i] > secondLargest){
+    secondLargest = nums[i]
+  }
+}
+  return secondLargest
+}
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -134,7 +160,15 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+  let newArray = []
+  for (let i = 0; i <= nums.length -1; i ++) {
+    if (!newArray.includes(nums[i])) {
+      newArray.push(nums[i])
+    }
+  }
+  return newArray
+}
 
 module.exports = {
   shoutForLoop,
