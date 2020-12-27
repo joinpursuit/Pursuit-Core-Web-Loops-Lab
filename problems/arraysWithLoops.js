@@ -7,12 +7,13 @@
  */
 
 function shoutForLoop(array) {
+  let newArray = []
   for ( let element = 0; element < array.length;element++ ){
-    array[element]+='!'
+    newArry.push(array[element]+ '!')
   }
-  return array
-
+  return newArray
 }
+
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -22,12 +23,13 @@ function shoutForLoop(array) {
  */
 
 function shoutWhileLoop(array) {
+  let newArray = []
   let element = 0
-  while(element < array.length ){
-    array[element]+='!'
+  while(element <= array.length ){
+    newArray.push.apply(array[element]+ '!')
     element++;
   }
-  return array
+  return newArray
 }
 
 /**

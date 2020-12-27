@@ -64,14 +64,14 @@ function doneToZeroForLoop(number) {
  */
 function evenAndOddWhileLoop(max) {
   let num = 0
- newArray = []
+ let newArray = []
  while ( num <= max){
-   if (num % 2 == 0){
+   if ((num % 2) === 0){
     newArray.push (num + 'even')
     }else{
       newArray.push (num + 'odd')
     }num++
-   }return newArray
+  }return newArray
     
 }
 
@@ -86,14 +86,14 @@ function evenAndOddWhileLoop(max) {
  */
 function evenAndOddForLoop(max){
   newArray = [];
-  for( let num =0; num <= max; num+1){
-    if ((num %2) ==0){
+  for( let num =0; num <= max; num++){
+    if (num %2 ==0){
      newArray.push(num + 'even')
-     }
+    }
      else{
        newArray.push(num + 'odd')
-     }return newArray
-    }   
+      }return newArray
+  }   
 }
 
 
@@ -240,7 +240,17 @@ function rangeEveryOther() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+function containsWhileLoop(elements, target) {
+let b =0
+  while(b <= elements.length ) {
+    if (elements[b] !== target){
+      b++
+      }else{
+          return true
+      }
+  }return false
+
+}
 
 /**
  * Takes in an array and a target.
@@ -251,7 +261,14 @@ function containsWhileLoop() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+function containsForLoop(elements, target) {
+  for (let b = 0; b <= elements.length; b++){
+    if (elements[b] !== target){
+      }else{
+        return true
+      }
+  }return false
+}
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -259,7 +276,18 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+function targetCount(elements, target) {
+  let b = 0
+  let targetaccurences =0
+  while(b <=elements.length){
+      if( elements[b] == target){
+        targetaccurences ++
+        b++
+      }else{
+        b++
+      }
+  }return targetaccurences
+}
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -269,7 +297,16 @@ function targetCount() {}
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+function firstIndexFound(elements, target) {
+  let n = 0
+  while(n <= elements.length){
+    if(elements[n] == target){
+      return n
+    }else{
+      n++
+    }
+  }return -1
+}
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -279,7 +316,16 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+function lastIndexFound(elements, target) {
+  let n = elements.length
+  while(n >= 0){
+    if(elements[n] == target){
+      return n
+    }else{
+      n--
+    }
+  }return -1
+}
 
 /**
  * Takes in an array.
@@ -288,7 +334,14 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+function timesIndex(elements) {
+  let n = 0
+  let newArr =[]
+  while(n < elements.length){
+    newArr[n] = n * elements[n]
+    n++
+  }return newArr
+}
 
 
 /**
@@ -300,7 +353,17 @@ function timesIndex() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+function cumulativeSum(elements) {
+  let newArr = []
+  let n = 0
+  while(n < elements.length){
+    if( n ===0){
+      newArr[n] = elements[n]
+    }else{
+      newArr[n] = (newArr[n-1] + elements[n])
+    }n++
+  }return newArr
+}
 
 
 
