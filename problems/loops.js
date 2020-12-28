@@ -79,8 +79,8 @@ function evenAndOddWhileLoop(max) {
       array2.push(i + " is odd")
       i++
     }
-  return array2
   }
+  return array2
 }
 
 /**
@@ -93,15 +93,16 @@ function evenAndOddWhileLoop(max) {
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
 function evenAndOddForLoop(max) {
-  let bracket = []
-  for (let i = 0; i <= max; i++)
+  let array = []
+  for (let i = 0; i <= max; i++) {
     if (i % 2 === 0) {
       array.push(i + " is even")
     }
     else {
     array.push(i + " is odd")
     }
-  return bracket
+  }
+  return array
 }
 
 /**
@@ -284,8 +285,16 @@ function rangeSum(min , max) {
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd(min , max) {}
-
+function rangeOdd(min , max) {
+  let arr = []
+  for (let i = max; i >= min; i--) {
+    if ((i % 2) === 1) {
+      arr.push(i)
+    }
+  }
+  return arr
+}
+//rangeOdd(1,10) === [9,7,5,3,1]
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
 
@@ -294,7 +303,13 @@ function rangeOdd(min , max) {}
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+function rangeEveryOther(min, max) {
+  let arr = []
+  for (let i = min; i <= max; i += 2) {
+    arr.push(i)
+  }
+  return arr
+}
 
 /**
  * Takes in an array and a target.
@@ -305,8 +320,17 @@ function rangeEveryOther() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
-
+function containsWhileLoop(elements, target) {
+  let i = 0 
+  let arr = elements
+  while (i <= (arr.length - 1)) {
+    if (arr[i] === target) {
+      return true
+    }
+    i++
+  }
+  return false
+}
 /**
  * Takes in an array and a target.
  * Determines whether or not that target exists in the array
@@ -316,7 +340,15 @@ function containsWhileLoop() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+function containsForLoop(elements, target) {
+  let arr = elements
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return true
+    }
+  }
+  return false
+}
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -324,7 +356,16 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+function targetCount(elements, target) {
+  let arr = elements
+  let count = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      count++
+    }
+  }
+  return count
+}
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -334,7 +375,14 @@ function targetCount() {}
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+function firstIndexFound(elements, target) {
+  for (let i = 0; i <= (elements.length - 1); i++) {
+    if (elements[i] === target) {
+      return i
+    }
+  }
+  return -1
+}
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -344,8 +392,14 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
-
+function lastIndexFound(elements, target) {
+  for (let i = (elements.length - 1); i >= 0; i--) {
+    if (elements[i] === target) {
+      return i
+    }
+  }
+  return -1
+}
 /**
  * Takes in an array.
  * Returns a new array where each element has been multiplied by its index.
@@ -353,8 +407,13 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
-
+function timesIndex(elements) {
+  let newArr = []
+  for (let i = 0; i <= ((elements.length) - 1); i++) {
+    newArr.push(elements[i] * i)
+  }
+  return newArr
+}
 
 /**
  * Takes in an array.
@@ -365,7 +424,15 @@ function timesIndex() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+function cumulativeSum(elements) {
+  let newArray = []
+  let newNumber = 0
+  for (let i = 0; i < elements.length; i++) {
+    newNumber = newNumber + elements[i]
+    newArray.push(newNumber)
+  }
+  return newArray
+}
 
 
 
