@@ -363,12 +363,12 @@ function targetCount(elements, target) {
  */
 function firstIndexFound(elements, target) {
   let i = 0;
-  while (i < elements.length){
-    if(elements[i] === target){
-      return i;    
+  while (i < elements.length) {
+    if (elements[i] === target) {
+      return i;
     }
-    i +=1 
-    }
+    i += 1;
+  }
   return -1;
 }
 /**
@@ -382,12 +382,12 @@ function firstIndexFound(elements, target) {
  */
 function lastIndexFound(elements, target) {
   let i = elements.length - 1;
-  while (i > 0){
-    if(elements[i] === target){
-      return i;    
+  while (i > 0) {
+    if (elements[i] === target) {
+      return i;
     }
-    i -=1 
-    }
+    i -= 1;
+  }
   return -1;
 }
 
@@ -399,8 +399,13 @@ function lastIndexFound(elements, target) {
  * @returns {number[]}
  */
 function timesIndex(elements) {
-  let arr = [] // need to create a new  array 
+  for (let i = 0; i < elements.length; i++) {
+    elements[i] = elements[i] * i;
+  }
+  return elements;
 }
+//elements.length represeents total elements in array, BUT each element has its own index number and the first one starts at 0 so the length is alaways one more than the actual index number
+
 
 /**
  * Takes in an array.
@@ -411,8 +416,12 @@ function timesIndex(elements) {
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum(elements) {}
-
+function cumulativeSum(elements) {
+  for (let i = 1; i < elements.length; i++) {
+    elements[i] = elements[i] + elements[i - 1];
+  }
+  return elements;
+}
 
 module.exports = {
   oneTillDoneWhileLoop,
