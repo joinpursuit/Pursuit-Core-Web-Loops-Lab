@@ -83,7 +83,13 @@ function sumArray(nums) {
  */
 
 function oddArray(nums) {
-  
+  let array = []
+  for (i = 0; i < nums.length; i++ ) {
+    if (nums[i] % 2 !== 0) {
+        array.push(nums[i])
+    }
+  }
+  return array
 }
 
 /**
@@ -92,7 +98,15 @@ function oddArray(nums) {
  * @returns {array} evens
  */
 
-function evenArray() {}
+function evenArray(nums) {
+  let array = []
+  for (i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      array.push(nums[i])
+    }
+  }
+  return array
+}
 
 /**
  * Takes in array and returns the smallest number in the array
@@ -100,7 +114,13 @@ function evenArray() {}
  * @returns {number} smallest value
  */
 
-function findSmallest() {}
+function findSmallest(nums) {
+  let array = []
+  for (i = 0; i < nums.length; i++) {
+    
+  }
+  return 2
+}
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -117,7 +137,13 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+//   let array = []
+//   for (i = nums; i < array.length; i++) {
+//     i = array.sort(i)[array.length - 2]
+//   }
+//   return array.indexOf(i)
+ }
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
