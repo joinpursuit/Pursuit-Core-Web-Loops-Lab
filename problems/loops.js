@@ -320,13 +320,13 @@ while (i > 3) {
  const containsWhileLoop = (elements, target) => {
   let i = 0
   while (i < elements.length) {
-    if (elements[i] === target){ 
+    if (elements[i] == target){ 
       return true
-    }else {
-      return false
     }
     i++
+    
   }
+  return false;
  } 
 
 /**
@@ -341,11 +341,10 @@ while (i > 3) {
  const containsForLoop = (elements, target) => {
   for ( i = 0; i < elements.length; i++){ 
     if (elements[i] === target){ 
-      return true
-    }else {
-      return false
+      return true;
     }
   }
+  return false;
 }
 /**
  * Takes in an array and a target.
@@ -382,7 +381,7 @@ while (i > 3) {
      if (elements[i] === target){
        return num = i
      }else {
-       continue 
+       continue; 
      }
    }
    return -1 
@@ -397,17 +396,13 @@ while (i > 3) {
  * @returns {number} last index found.
  */
  const lastIndexFound = (elements, target) => {
-   let num = 0
-   for (i = 0; i < elements.length; i++){
-     if (elements[i] === target){
-       num = i 
-       continue
-     }else {
-       continue
-     }
-     return num 
-   }
-   return -1
+  let num = -1;
+  for (i = 0; i < elements.length; i++){
+    if (elements[i] === target){
+      num = i 
+    }
+  }
+  return num
  }
 
 /**
@@ -436,14 +431,13 @@ while (i > 3) {
  * @returns {number[]}
  */
  const cumulativeSum = (elements) => {
-   let newArray = []
-   let sum = 0
-   for (i =0; i < elements.length; i++){
-     sum += elements[i] 
-        newArray.push(elements[i] + sum)
-        break ; 
-   }
-   return newArray
+  let newArray = []
+  let sum = 0
+  for (i =0; i < elements.length; i++){
+       newArray.push(elements[i] + sum) 
+       sum += elements[i] 
+  }
+  return newArray
  }
 
 

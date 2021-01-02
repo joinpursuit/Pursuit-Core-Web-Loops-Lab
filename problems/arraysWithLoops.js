@@ -111,14 +111,13 @@ const evenArray = (nums) => {
  */
 
 const findSmallest = (number) =>{
-  let num = 0;
+  let num = number [0];
   for(i = 0; i < number.length; i++){
-    if( number[i]   < number[i+1]   ){
+    if( number[i] < num ){
       num = number[i];
-      continue
-    }else if( num > number[i]) {
-      num = num
-      }
+    }else {
+      num = num;
+    }
   }
   return num; 
 }
@@ -132,7 +131,7 @@ const findSmallest = (number) =>{
 
 const findSecondSmallest = (numbs) =>{
   let number = 0;
-  numbs.sort(function(a, b));
+  
 
 }
 
@@ -142,8 +141,19 @@ const findSecondSmallest = (numbs) =>{
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {
-  points.sort(function(a, b){return b-a});
+function findSecondLargest(nums) {
+  let firstLargest = 0;
+  let secondLargest = 0;
+for ( let i =0 ; i < nums; i++){
+const num = nums[i]
+if ( num > firstLargest){
+  secondLargest = firstLargest;
+  firstLargest = num;
+}else if ( num > secondLargest){
+  secondLargest = num;
+}
+}
+  return secondLargest
 }
 
 /**
