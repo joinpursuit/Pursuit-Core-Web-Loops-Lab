@@ -89,7 +89,15 @@ const oddArray = (nums) => {
  * @returns {array} evens
  */
 
-function evenArray() {}
+function evenArray(nums) {
+  let evenNums = []
+  for (let i of nums) {
+    if (i % 2 === 0) {
+      evenNums.push(i)
+    }
+    return evenNums
+  }
+}
 
 /**
  * Takes in array and returns the smallest number in the array
@@ -97,7 +105,15 @@ function evenArray() {}
  * @returns {number} smallest value
  */
 
-function findSmallest() {}
+function findSmallest(nums) {
+  let i = nums[0]
+  for (let num of num) {
+    if (num < i ) {
+      i = num
+    }
+    return i
+  }
+}
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -106,7 +122,20 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+  let smallestNum = nums[0]
+  let secondSmallest = nums[1]
+  for (let i=1; i < nums.length; i+= 1) {
+    if (nums[i] < smallestNum) {
+      secondSmallest = smallestNum
+      smallestNum = nums[i]
+    } else if (num[i] < secondSmallest) {
+      secondSmallest = nums[i]
+
+    }
+    return secondSmallest
+  }
+}
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -114,7 +143,18 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+  let largestNum = nums[0]
+  let secondLargest = nums[0]
+  for(let i = 1; i < nums.length; i+= 1) {
+    if(nums[i] > largestNum) {
+      secondLargest = largestNumlargestNum = nums[i]
+    } else if (nums[i] > secondLargest) {
+      secondLargest = nums[i]
+    }
+    return secondLargest
+  }
+}
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -123,7 +163,14 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+  let array = []
+  for (let num of nums0) {
+    if(array.includes(num) === false) {
+      array.push(num)
+    }
+  }
+}
 
 module.exports = {
   shoutForLoop,

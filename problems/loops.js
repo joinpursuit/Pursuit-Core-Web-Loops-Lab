@@ -93,11 +93,7 @@ const evenAndOddWhileLoop = (max) => {
  */
 const evenAndOddForLoop = (max) => {
   let newArray = [];
-<<<<<<< HEAD
-  for (i = 0; i <= max; i++) {
-=======
   for (let i = 0; i <= max; i++) {
->>>>>>> 41172c4530c4e2e91a074868b3f01d279149710b
     if (i % 2 === 0) {
       newArray.push(i + " is even");
     } else {
@@ -147,11 +143,7 @@ const tillXTimes9WhileLoop = (x) => {
  */
 const tillXTimes9ForLoop = (x) => {
   let newArray = [];
-<<<<<<< HEAD
-  for (i = 0; i <= x; i++) {
-=======
   for (let i = 0; i <= x; i++) {
->>>>>>> 41172c4530c4e2e91a074868b3f01d279149710b
     newArray.push(i * 9);
   }
   return newArray;
@@ -164,15 +156,6 @@ const tillXTimes9ForLoop = (x) => {
 
  */
 const endsWithFiveWhileLoop = () => {
-<<<<<<< HEAD
-  let i = 5;
-  let arr = [];
-  while (i <= 100) {
-    arr.push(i);
-    i += 10;
-  }
-  return arr;
-=======
   let newArray = [];
   let i = 5;
   while (i < 100) {
@@ -180,7 +163,6 @@ const endsWithFiveWhileLoop = () => {
     i += 10;
   }
   return newArray;
->>>>>>> 41172c4530c4e2e91a074868b3f01d279149710b
 };
 
 /**
@@ -190,20 +172,11 @@ const endsWithFiveWhileLoop = () => {
 
  */
 const endsWithFiveForLoop = () => {
-<<<<<<< HEAD
-  let arr = [];
-  for (let i = 5; i < 100; i += 10);
-  {
-    arr.push(i);
-  }
-  return arr;
-=======
   let newArray = [];
   for (let i = 5; i < 100; i += 10) {
     newArray.push(i);
   }
   return newArray;
->>>>>>> 41172c4530c4e2e91a074868b3f01d279149710b
 };
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
