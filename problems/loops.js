@@ -418,7 +418,17 @@ function timesIndex(elements) {
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum(elements) {}
+function cumulativeSum(elements) {
+  let array = []
+  let i = 0
+  let sum = 0
+  while(i < elements.length){
+    element = sum+= elements[i]
+    array.push(element)
+    i++
+}
+  return array
+}
 
 module.exports = {
   oneTillDoneWhileLoop,
