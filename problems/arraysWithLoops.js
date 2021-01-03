@@ -130,14 +130,15 @@ const findSmallest = (nums) => {
  */
 
 const findSecondSmallest = (nums) => {
-  let secondSmallest = nums[1];
-  let smallest = nums[0];
-  for (const element of nums) {
-    if (element < smallest) {
+  let smallest = Infinity;
+  let secondSmallest = Infinity;
+  for (let i = 0; i < nums.length; i++) {
+    const a = nums[i]
+    if (a < smallest) {
       secondSmallest = smallest;
-      smallest = element;
-    } else if (element < secondSmallest && element !== smallest) {
-      secondSmallest = element;
+      smallest = a;
+    } else if (a < secondSmallest) {
+      secondSmallest = a;
     }
   }
   return secondSmallest;
@@ -149,8 +150,21 @@ const findSecondSmallest = (nums) => {
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
-
+const findSecondLargest = (nums) => {
+  let largest = -Infinity
+  let secondLargest = -Infinity
+  for (i = 0; i < nums.length; i++) {
+    const a = nums[i];
+    if (a > largest) {
+      secondLargest = largest;
+      largest = a;
+    } else if(a > secondLargest) {
+      secondLargest = a
+    }
+  }
+  return secondLargest
+}
+console.log(findSecondLargest([6,7,2,9]))
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
  * Exp Input: [4,2,6,2,2,6,4,9,2,1] Output: [4, 2, 6, 9, 1]
