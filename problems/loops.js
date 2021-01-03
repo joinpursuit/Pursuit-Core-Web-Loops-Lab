@@ -291,11 +291,12 @@ function rangeOdd(min, max) {
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther(min,max) {
+function rangeEveryOther(min, max) {
   let newArray = [];
-  for (let num = min; num <= max; num=+2){
+  for (let num = min; num <= max; num += 2) {
     newArray.push(num);
   }
+
   return newArray;
 }
 
@@ -308,7 +309,17 @@ function rangeEveryOther(min,max) {
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+function containsWhileLoop(elements, target) {
+  let num = 0;
+  while (num < elements.length) {
+    if (elements[num] === target) {
+      return true;
+    }
+
+    num++;
+  }
+  return false;
+}
 
 /**
  * Takes in an array and a target.
@@ -319,7 +330,14 @@ function containsWhileLoop() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+function containsForLoop(elements, target) {
+  for (let num = 0; num < elements.length; num++) {
+    if (elements[num] === target) {
+      return true;
+    }
+  }
+  return false;
+}
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -327,7 +345,17 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+function targetCount(elements, target) {
+  let number = 0;
+
+  for (i = 0; i <= elements.length - 1; i++) {
+    if (elements[i] === target) {
+      number++;
+    }
+  }
+  return number;
+}
+
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -337,7 +365,15 @@ function targetCount() {}
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+function firstIndexFound(elements, target) {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -347,7 +383,21 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+function lastIndexFound(elements, target) {
+  let lastIndex;
+  let counter = 0;
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === target) {
+      lastIndex = i;
+      counter++;
+    }
+  }
+  if (counter === 0){
+    return -1;
+  }
+
+  return lastIndex;
+}
 
 /**
  * Takes in an array.

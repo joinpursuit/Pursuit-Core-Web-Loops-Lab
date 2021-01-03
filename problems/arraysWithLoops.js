@@ -6,24 +6,13 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 function shoutForLoop(array) {
-  let newArray = []
-  for (let i = 0; i < array.length; i++) {
-    newArray.push(array[i]+ '!')
+  let newArray = [];
+
+  for (let i = 0; i <= array.length - 1; i++) {
+    newArray.push(array[i] + "!");
   }
   return newArray;
 }
-
-function shoutForLoop(array) {
-  let newArray = []
-  for (let i = 0; i < array.length; i++) {
-   newArray.push(array[i] + "!") 
-  }    
-    return newArray;
-
-
-}
-
-
 
 /**
  * Takes in an array and returns a new array with element
@@ -33,17 +22,16 @@ function shoutForLoop(array) {
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop(array) {}
-let newArray = []
-let i = 0
-  while( i < array.length) {
-    if (newArray == []) {
-    console.log(newArray.push(array[i] + "!"))
-  }
-  num++;
-}
-  
+function shoutWhileLoop(array) {
+  let newArray = [];
+  let i = 0;
+  while (i <= array.length - 1) {
+    newArray.push(array[i] + "!");
 
+    i++;
+  }
+  return newArray;
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -52,7 +40,13 @@ let i = 0
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForOfLoop() {}
+function shoutForOfLoop(array) {
+  let newArray = [];
+  for (let word of array) {
+    newArray.push(word + "!");
+  }
+  return newArray;
+}
 
 /**
  * Takes in an array and returns the sum of all values
@@ -93,7 +87,18 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+let smallest = Infinity
+let secondSmallest = Infinity
+for (let i = 0; i < nums.length; i++){
+  if (nums[i] < smallest) {
+    smallest = nums[i]
+  } else if (nums[i] < secondSmallest) {
+    secondSmallest = nums[i]
+  
+}
+}
+}
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -110,7 +115,17 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(arr) {
+  let output = [];
+  let num;
+  for (let i = 0; i <= arr.length - 1; i++) {
+    num = arr[i];
+    if (!output.includes(num)) {
+      output.push(num);
+    }
+  }
+  return output;
+}
 
 module.exports = {
   shoutForLoop,
