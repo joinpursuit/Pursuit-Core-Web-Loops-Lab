@@ -245,7 +245,8 @@ function fizzBuzzPart2() {
  */
 function rangeSum(min, max) {
   let sum = 0;
-  for (let i = min; i <= max; i++) sum += i;
+  for (let i = min; i <= max; i++) 
+  sum += i;
   return sum;
 }
 
@@ -310,7 +311,7 @@ function containsWhileLoop(elements, target) {
  * @returns {boolean} true if the array contains our target, otherwise false
  */
 function containsForLoop(elements, target) {
-  for (let i = 0; i <= elements.length; i++)
+  for (let i = 0; i < elements.length; i++)
     if (elements[i] === target) {
       return true;
     }
@@ -357,10 +358,11 @@ function firstIndexFound(elements, target) {
  * @returns {number} last index found.
  */
 function lastIndexFound(elements, target) {
-  for (let i = elements.length; i >= 0; i--)
+  for (let i = elements.length; i >= 0; i--) {
     if (elements[i] === target) {
       return i;
     }
+  }
   return -1;
 }
 
