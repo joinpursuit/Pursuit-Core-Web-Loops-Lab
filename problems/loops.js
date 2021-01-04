@@ -195,14 +195,7 @@ let i = 5;
 while (i > 3) {
     i += 1
 }
-*/ function fizzBuzzPart1() {
-  let arr = [];
-  for (let i = 1; i <= 100; i++)
-    if (i % 3 === 0) arr.push("Fizz");
-    else if (i % 5 === 0) arr.push("Buzz");
-    else arr.push(i);
-  return arr;
-}
+*/
 
 /**
  * // Write your explanation here!
@@ -382,7 +375,7 @@ function lastIndexFound(elements, target) {
  */
 function timesIndex(elements) {
   let arr = [];
-  for (let i = 0; i <= elements.length - 1; i++) {
+  for (let i = 0; i < elements.length; i++) {
     arr[i] = elements[i] * i;
   }
   return arr;
