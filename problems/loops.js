@@ -180,7 +180,7 @@ const endsWithFiveWhileLoop = () =>{
  */
 const endsWithFiveForLoop = () =>{
   let number = [];
-  for (let i = 1; i <= 100; i++){
+  for (let i = 1; i < 100; i++){
     if (i % 10 === 5) number.push(i);
   }
   return number;
@@ -217,9 +217,9 @@ while (i > 3) {
 const fizzBuzzPart1 = () => {
   let array = [];
   for (let i = 1;i <= 100; i++)
-    if (i % 3 === 0) array.push("Fizz");
-    else if (i % 5 === 0) array.push("Buzz");
-    else array.push(i);
+    if (i % 3 === 0) array.push("Fizz")
+    else if (i % 5 === 0) array.push("Buzz")
+    else array.push(i)
   return array;
 
 }
@@ -285,7 +285,7 @@ const rangeSum = (min, max) => {
 const rangeOdd = (min, max)=> {
   let array = [];
   for (let i = max; i>= min; i--) {
-  if (i % 2 !==0)
+  if (i % 2 ===1)
   array.push(i)
   }
   return array
@@ -302,7 +302,7 @@ const rangeOdd = (min, max)=> {
 const rangeEveryOther = (min, max) => {
   let array = [];
   for (let i = min; i <= max; i +=2){ // increasing every other element
-    array.push(i)
+    array.push(i) // push the results
   }
   return array;
 }
@@ -318,8 +318,8 @@ const rangeEveryOther = (min, max) => {
  */
 const containsWhileLoop = (elements, target) => {
   let i = 0;
-  while (i <= elements.length){
-    if (elements[i] === target)
+  while (i <= elements.length){ // i=0 
+    if (elements[i] === target) // index pull specific value of the array
       return true;
       i++;
   }
@@ -426,7 +426,7 @@ const cumulativeSum = (elements) =>{
   let array = [];
   array.push(elements[0]);
   for (let i = 1; i < elements.length; i++){
-    array[i] = array[i-1] + elements[i];
+    array[i] = array[i-1] + elements[i]; // elements are just numbers assign in to the array
   }
   return array;
 }

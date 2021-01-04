@@ -22,12 +22,13 @@ return newArray;
  */
 
 const shoutWhileLoop = (arr) => {
-  let i = arr.length; 
-    while (i) {
-        i--;
-        arr[i] += "!";
-    }
-  return arr;
+  let newArr =[];
+  let i = 0;
+  while (i < arr.length){
+    newArr.push(arr[i] + "!")
+    i++;
+  }
+  return newArr;
   }
   
 /**
@@ -70,9 +71,10 @@ const sumArray = (nums) => {
 const oddArray = (nums) => {
   let odds = []
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 === 0) continue;
+    if (nums[i] % 2 !== 0){
     odds.push(nums[i]);
   }
+}
   return odds
 }
 
@@ -85,9 +87,10 @@ const oddArray = (nums) => {
 const evenArray = (nums)=> {
   let evens = []
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 === 1) continue;
+    if (nums[i] % 2 === 0){
     evens.push(nums[i]);
   }
+}
   return evens
 }
 /**
@@ -97,8 +100,12 @@ const evenArray = (nums)=> {
  */
 
 const findSmallest = (nums) => {
-  let smallest = Math.min.apply(Math, nums);
-  nums.indexOf(smallest), 1
+  let smallest = nums[0]
+  for (let i = 0; i < nums.length; i++){
+    if (nums[i]<smallest){
+      smallest = nums[i];
+    }
+  }
   return smallest;
 }
 
@@ -112,10 +119,15 @@ const findSmallest = (nums) => {
  */
 
 const findSecondSmallest = (nums) => {
-  let secondSmallest = Math.min.apply(null, nums);
-  nums.indexOf(secondSmallest), 1
+  let secondSmallest = nums[0]
+  for (let i = 0; i <=nums.length; i++){
+    if (nums[i]<secondSmallest){
+      secondSmallest = nums[i];
+    }
+  }
   return secondSmallest +1;
 }
+
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -124,9 +136,13 @@ const findSecondSmallest = (nums) => {
  */
 
 const findSecondLargest = (nums) => {
-let secondLargest = Math.max.apply(null, nums);
-nums.indexOf(secondLargest), 1
-return secondLargest -1;
+  let secondLargest = nums[0]
+  for (let i = 0; i < nums.length; i++){
+    if (nums[i] > secondLargest){
+      secondLargest = nums[i];
+    }
+  }
+  return secondLargest -1;
 }
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
