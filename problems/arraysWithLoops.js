@@ -125,7 +125,7 @@ function findSecondSmallest(nums) {
       smallestNumber = nums[i]
     }
     else if (nums[i] < secondSmallest) {
-        secondSmallest = num[i]
+        secondSmallest = nums[i]
     } 
   }
   return secondSmallest
