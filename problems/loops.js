@@ -392,7 +392,7 @@ function lastIndexFound(elements, target) {
       counter++;
     }
   }
-  if (counter === 0){
+  if (counter === 0) {
     return -1;
   }
 
@@ -406,7 +406,13 @@ function lastIndexFound(elements, target) {
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+function timesIndex(elements) {
+  let newArray = [];
+  for (let i = 0; i < elements.length; i++) {
+    newArray.push(elements[i] * i);
+  }
+  return newArray;
+}
 
 /**
  * Takes in an array.
@@ -417,7 +423,15 @@ function timesIndex() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+function cumulativeSum(elements) {
+  let newArray = [];
+  let sum = 0;
+  for (let i = 0; i < elements.length; i++) {
+    sum += elements[i];
+    newArray.push(sum);
+  }
+  return newArray;
+}
 
 module.exports = {
   oneTillDoneWhileLoop,
