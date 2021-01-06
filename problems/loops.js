@@ -224,7 +224,6 @@ function fizzBuzzPart1() {
     else
       array.push(i)
   return array
-
 }
 
 
@@ -317,7 +316,6 @@ function containsWhileLoop(elements, target) {
   }
   return false
 }
-
 
 /**
  * Takes in an array and a target.
