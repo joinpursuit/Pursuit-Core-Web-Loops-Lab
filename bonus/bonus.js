@@ -18,7 +18,25 @@ Take one down, pass it around, No more bottle of beer on the wall.
  * @return {string[]}
  */
 
-function ninetyNineBottlesOfBeerOnTheWall() {}
+function ninetyNineBottlesOfBeerOnTheWall() { //answer produces a loop
+  // let numOfBottles = 100 
+  // let newNum = numOfBottles - 1
+  // let more = 'bottles'
+  // let singular = 'bottle'
+  // while(numOfBottles > 0){
+  //   numOfBottles -= 1
+  //   newNum = numOfBottles - 1
+  //   if(numOfBottles > 2){
+  //   console.log(
+  //    `${numOfBottles} ${more} of beer on the wall, ${numOfBottles} ${more} of beer. Take one down, pass it around, ${newNum} ${more} of beer on the wall.`)
+  // } else if(numOfBottles = 2){
+  //   console.log(
+  //   `${numOfBottles} ${more} of beer on the wall, ${more} of beer. Take one down, pass it around, ${newNum} ${singular} of beer on the wall.`)
+  // }else {
+  //   console.log(`${numOfBottles} ${singular} of beer on the wall, ${numOfBottles} ${singular} of beer. Take one down, pass it around, No more ${singular} of beer on the wall.`)
+  // }
+  // }
+}
 
 /**
   * Given an integer N draw a square of N x N asterisks. Look at the examples.
@@ -49,7 +67,20 @@ function drawSquare() {}
   *  @returns {number}
   */
 
-function multiplesOf3And5Sum() {}
+function multiplesOf3And5Sum() {
+  let array = []
+  let discard = []
+  for(i=0; i < 1000; i++){
+    if(i % 3 === 0){
+      array.push(i)
+    } else if(i % 5 === 0){
+      array.push(i)
+    } else {
+      discard.push(i)
+    }
+  }
+  array.reduce(reducer)
+}
 
 module.exports = {
   ninetyNineBottlesOfBeerOnTheWall,

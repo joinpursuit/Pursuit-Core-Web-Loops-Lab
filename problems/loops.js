@@ -322,17 +322,14 @@ function rangeEveryOther(min, max) {
  * @returns {boolean} true if the array contains our target, otherwise false
  */
 function containsWhileLoop(elements, target) {
-  let results = true
-  let i = 0
-  while(i < elements.length - 1){
+ let i = 0
+  while(i < elements.length){
     if(elements[i] === target){
-      results = true
-    } else {
-      results = false
-    }
+      return true
+    } 
     i = i + 1
   }
-  return results 
+  return false
 }
 
 /**
@@ -344,16 +341,16 @@ function containsWhileLoop(elements, target) {
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop(array, target) {
-  let t = true
-  for(let i = 0; i < array.length - 1;i += 1){
-    if(target === array[i]){
-      t === true
-    }else {
-      t === false
-    }
+function containsForLoop(elements, target) {
+  
+  for(let i = 0; i < elements.length;i += 1){
+    if(elements[i] === target){
+      return true
+      
+    } 
+    
   }
-  return t
+  return false
 }
 /**
  * Takes in an array and a target.
