@@ -99,10 +99,16 @@ function evenArray(nums) {
  */
 
 function findSmallest(nums) {
-  for(i=0 ; i <nums.length; i+=1){
-    
+  let smallestValue= num[i]
+  for(let i=0 ; i < nums.length; i+=1){
+    if (num[i+1] > smallestValue){
+    }
   }
-}
+  return smallestValue
+  }
+  
+  
+
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -111,7 +117,9 @@ function findSmallest(nums) {
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+
+}
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -119,7 +127,9 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+
+}
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -128,7 +138,9 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+
+}
 
 module.exports = {
   shoutForLoop,

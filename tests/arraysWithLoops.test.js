@@ -86,7 +86,7 @@ describe("oddArray", () => {
   });
 });
 
-describe.only("evenArray", () => {
+describe("evenArray", () => {
   test("returns a new array of only the odd valued elements", () => {
     expect(evenArray([1, 2, 3, 4, 5])).toEqual([2, 4]);
     expect(evenArray([0, 2, 4, 6])).toEqual([0, 2, 4, 6]);
@@ -94,7 +94,7 @@ describe.only("evenArray", () => {
   });
 });
 
-describe("findSmallest", () => {
+describe.only("findSmallest", () => {
   test("returns the smallest element in an array", () => {
     expect(findSmallest([1, 2, 3, 4])).toBe(1);
     expect(findSmallest([5, 4, 3, 2])).toBe(2);
