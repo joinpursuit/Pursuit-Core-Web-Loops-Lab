@@ -6,13 +6,13 @@
  */
 
 const oneTillDoneWhileLoop = (num) => {
-  let i = 1;
-  let arr = [];
-  while (i <= num) {
-    arr.push(i);
-    i++;
+  let arr = []
+  let i = 1
+  while (i <= num){
+    arr.push(i)
+  i ++ 
   }
-  return arr;
+   return arr
 };
 //console.log(oneTillDoneWhileLoop(5));
 

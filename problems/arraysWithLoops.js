@@ -13,7 +13,7 @@ const shoutForLoop = (array) => {
   }
   return newArr;
 };
-
+// console.log(shoutForLoop(["apple", "banana", "pineapple"]))
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -73,7 +73,7 @@ const sumArray = (nums) => {
   }
   return sum;
 };
-
+console.log(sumArray([1 , 2 , 4]))
 /**
  * Takes in an array and returns an array of all the odd valued elements
  * @param {number[]} nums
@@ -181,7 +181,7 @@ const removeDups = (nums) => {
   }
   return arr;
 };
-console.log(removeDups([1, 2, 2, 2, 4, 5, 5, 6, 7]));
+// console.log(removeDups([1, 2, 2, 2, 4, 5, 5, 6, 7]));
 module.exports = {
   shoutForLoop,
   shoutWhileLoop,
