@@ -57,7 +57,15 @@ function evenArray() {}
  * @returns {number} smallest value
  */
 
-function findSmallest() {}
+function findSmallest(nums) {
+let smallest = nums[0]
+for(let i = 0; i < nums.length; i++) {
+  if(nums[i]< smallest) {
+    smallest = nums[i]
+  }
+}
+return smallest
+}
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -66,7 +74,23 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+  let smallest = Infinity;
+  let secondSmallest = Infinity;
+  for( let i = 0; i < nums.length; i++){
+    const num = nums[i];
+    if (num < smallest) {
+      secondSmallest = smallest;
+      smallest = num;
+
+    } else if (num < secondSmallest) {
+      secondSmallest = num;
+    }
+  }
+ return secondSmallest;
+}
+
+
 
 /**
  * Takes in array and returns the second largest number in the array
