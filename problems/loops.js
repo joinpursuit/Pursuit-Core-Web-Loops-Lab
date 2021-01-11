@@ -275,7 +275,13 @@ const fizzBuzzPart2 = () => {
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
+function rangeSum(min, max) {
+  let sum = 0
+  for (let i = min; i <= max; i++) {
+    sum += i
+  }
+  return sum
+}
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
@@ -285,7 +291,15 @@ function rangeSum() {}
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() {}
+function rangeOdd(min, max) {
+  let arr = []
+  for(let i = max; i >= min; i--) {
+    if(i % 2 === 1) {
+      arr.push(i)
+    }
+  }
+  return arr;
+}
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -295,7 +309,13 @@ function rangeOdd() {}
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+function rangeEveryOther(min, max) {
+  let arr = []
+  for(let i = min; i <= max; i+=2){
+    arr.push(i)
+  }
+  return arr;
+}
 
 /**
  * Takes in an array and a target.
@@ -306,7 +326,16 @@ function rangeEveryOther() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+function containsWhileLoop(elements, target) {
+  let i = 0;
+  while(i < elements.length){
+    if (elements[i] === target) {
+      return true
+    }
+    i++
+  } 
+  return false  
+}
 
 /**
  * Takes in an array and a target.
@@ -317,7 +346,14 @@ function containsWhileLoop() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+function containsForLoop(elements, target) {
+  for (let i = 0; i < elements.length; i++) {
+    if(elements[i] === target) {
+      return true
+    }
+  }
+  return false;
+}
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -325,7 +361,14 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+function targetCount(elements, target) {
+  let output = 0
+  for(let i = 0; i < elements.length; i++) {
+    if(elements[i] === target) {
+      output = output + 1
+    }
+  }return output
+}
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
@@ -335,7 +378,14 @@ function targetCount() {}
  * @param {number|string} target
  * @returns {number} first index found.
  */
-function firstIndexFound() {}
+function firstIndexFound(elements, target) {
+  for(let i = 0; i < elements.length; i++) {
+    if(elements[i] === target){
+      return i 
+    }
+  }
+  return -1
+}
 /**
  * Takes in an array and a target.
  * Determines the last index that the target is found at.
@@ -345,7 +395,14 @@ function firstIndexFound() {}
  * @param {number|string} target
  * @returns {number} last index found.
  */
-function lastIndexFound() {}
+function lastIndexFound(elements,target) {
+  for(let i = elements.length - 1; i >= 0; i--) {
+    if(elements[i] === target) {
+      return i
+    }
+  }
+  return -1
+}
 
 /**
  * Takes in an array.
@@ -354,7 +411,13 @@ function lastIndexFound() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function timesIndex() {}
+function timesIndex(elements) {
+  let newArr = [];
+  for(let i = 0; i < elements.length; i++){
+    newArr.push(elements[i] * i) 
+  }
+  return newArr
+}
 
 /**
  * Takes in an array.
@@ -365,7 +428,16 @@ function timesIndex() {}
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+function cumulativeSum(elements) {
+  let newArr = [];
+  let sum = 0
+  for(let i = 0; i < elements.length; i++) {
+    newArr.push(elements[i] + sum)
+    sum += elements[i]
+
+  }
+  return newArr
+}
 
 module.exports = {
   oneTillDoneWhileLoop,

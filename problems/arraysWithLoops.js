@@ -78,12 +78,12 @@ const sumArray = nums => {
 
 // function oddArray() {}
 const oddArray = nums => {
-  let oddnums = []
+  let arr = []
     for(let i = 0; i < nums.length; i++) {
-      if(oddnums % 2 === 1)
-      odd.nums.push(nums[1])
+      if(nums[i] % 2 === 1)
+      arr.push(nums[i])
     }
-  return oddnums
+  return arr
 }
 
 /**
@@ -92,7 +92,15 @@ const oddArray = nums => {
  * @returns {array} evens
  */
 
-function evenArray() {}
+function evenArray(nums) {
+  let arr = []
+  for(let i = 0; i <= nums.length; i++) {
+    if(nums[i] % 2 === 0) {
+        arr.push(nums[i])
+    }
+  }
+    return arr
+  }
 
 /**
  * Takes in array and returns the smallest number in the array
@@ -100,8 +108,16 @@ function evenArray() {}
  * @returns {number} smallest value
  */
 
-function findSmallest() {}
-
+function findSmallest(nums) {
+  let smallest = Infinity
+  for(let i = 0; i < nums.length; i++) {
+    if(nums[i] < smallest) {
+      smallest = nums[i];
+    }
+  }
+  return smallest
+}
+// [2,3,5,7,8,9]
 /**
  * Takes in array and returns the second smallest number in the array
  * You may NOT use sort
@@ -109,7 +125,21 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+  let firstSmallest = nums[0] < nums[1] ? nums[0] : nums[1] //= 1
+  let secondSmallest = nums[0] > nums[1] ? nums [0] : nums[1] // =2
+  //assigns a second smallest
+  for(let i = 2; i < nums.length; i++ ) { // [0], [1], [2]
+    if(nums[i] < firstSmallest) { // -3 < 1
+      secondSmallest = firstSmallest //
+      firstSmallest = nums[i]
+    } else if(nums[i] < secondSmallest) {
+      secondSmallest =nums[i]
+    }
+  }
+  return secondSmallest
+}
+// console.log(findSecondSmallest((1,2,-3,4)))
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -117,7 +147,21 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+  let firstLargest = nums[0] > nums[1] ? nums[0] : nums[1]; // [1]
+  let secondLargest = nums[0] < nums[1] ? nums[0] : nums[1]; // 10
+  for(let i = 2; i < nums.length; i++) {
+    if(nums[i] > firstLargest) { // 8 < 12
+      secondLargest = firstLargest //
+      firstLargest = nums[i] //
+    } else if(nums[i] > secondLargest) { 
+      secondLargest = nums[i] //
+    }
+  }
+  return secondLargest
+}                            // [0],[1],[2],[3]
+// console.log((findSecondLargest([10, 12, 14, 11])))
+
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -126,7 +170,18 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+  let newArr = [];
+  for(let i = 0; i < nums.length; i++) {
+    if(newArr.includes(nums[i]) !== nums[i]) {
+      newArr.push(nums[i])
+    
+    }
+  
+  } 
+  return newArr
+}                     //[0],[1],[2],
+console.log((removeDups([4, 2, 6, 2, 2, 6, 4, 9, 2, 1])))
 
 module.exports = {
   shoutForLoop,
