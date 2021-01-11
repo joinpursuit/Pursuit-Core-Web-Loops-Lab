@@ -119,14 +119,21 @@ const findSmallest = (nums) => {
  */
 
 const findSecondSmallest = (nums) => {
-  let secondSmallest = nums[0]
-  for (let i = 0; i <=nums.length; i++){
-    if (nums[i]<secondSmallest){
-      secondSmallest = nums[i];
+  let smallest = Infinity;
+  let secondSmallest = Infinity;
+  for (let i = 0; i < nums.length; i++){
+    if (smallest > nums[i]); {
+        smallest = nums[i];
+      }
+  for (let i = 0; i < nums.length; i++){
+      if (secondSmallest > nums[i] && nums[i]>smallest){
+        secondSmallest = nums[i];
+      }
     }
   }
-  return secondSmallest +1;
+  return secondSmallest;
 }
+console.log(findSecondSmallest([1, 3, 5]))
 
 
 /**
