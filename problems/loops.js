@@ -427,6 +427,7 @@ const timesIndex = (elements) => {
  * @param {number[]} elements
  * @returns {number[]}
  */
+
 //function cumulativeSum() {}
 const cumulativeSum = (elements) => {
   let arr = [];

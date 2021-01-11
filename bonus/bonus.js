@@ -41,7 +41,18 @@ Output:
     ***
 ]
   */
-function drawSquare() {}
+//function drawSquare() {}
+  const drawSquare = (n) => {
+  let str = "";
+  let arr = [];
+  for(i = 0; i < n; i++) {
+    str += "*";
+  }
+  for(i = 0; i < n; i++) {
+    arr.push(str);
+  }
+  return arr;
+  }
 /**
   * If we list all the natural numbers below 10 that are multiples of 3 or 5,
   *  we get 3, 5, 6 and 9. The sum of these multiples is 23.
