@@ -173,7 +173,7 @@ function findSecondLargest(nums) {
 function removeDups(nums) {
   let newArr = [];
   for(let i = 0; i < nums.length; i++) {
-    if(newArr.includes(nums[i]) !== nums[i]) {
+    if(!newArr.includes(nums[i])) {
       newArr.push(nums[i])
     
     }
