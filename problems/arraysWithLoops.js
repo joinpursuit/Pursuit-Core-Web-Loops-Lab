@@ -9,7 +9,7 @@
 function shoutForLoop(array) {
   let newArray = []
   for ( let element = 0; element < array.length;element++ ){
-    newArry.push(array[element]+ '!')
+    newArray.push(array[element]+ '!')
   }
   return newArray
 }
@@ -22,11 +22,12 @@ function shoutForLoop(array) {
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
+ 
 function shoutWhileLoop(array) {
   let newArray = []
   let element = 0
-  while(element <= array.length ){
-    newArray.push.apply(array[element]+ '!')
+  while(element < array.length ){
+    newArray.push(array[element]+ '!')
     element++;
   }
   return newArray
@@ -55,8 +56,8 @@ function shoutForOfLoop(array) {
 
 function sumArray(nums) {
   let sum = 0
-  for(let n =0; n < nums.length; n+1){
-    sum +=nums[n]
+  for(let n =0; n < nums.length; n++){
+    sum = sum +nums[n]
   }return sum
 }
 
@@ -68,13 +69,14 @@ function sumArray(nums) {
 
 function oddArray(nums) {
   let newArray = []
-  for (let n =0; n < nums.length; n+1){
+  for (let n = 0; n <nums.length; n++ ){
     if(nums[n] %2 !==0){ 
       newArray.push(nums[n])
-    }return newArray
+    }
     
-  }
+  }return newArray
 }
+
 
 /**
  * Takes in an array and returns an array of all the even valued elements
@@ -84,12 +86,13 @@ function oddArray(nums) {
 
 function evenArray(nums) {
   let newArray = []
-  for (let n =0; n < nums.length; n+1){
+  for (let n =0; n < nums.length; n++){
     if(nums[n] %2 ===0){ 
       newArray.push(nums[n])
-    }return newArray
-  }
+    }
+  }return newArray
 }
+
 
 /**
  * Takes in array and returns the smallest number in the array
@@ -114,14 +117,17 @@ function findSmallest(nums) {
  */
 
 function findSecondSmallest(nums) {
-  let smallest = Infinity
-  let SecondSmallest = Infinity
+  let smallest = nums[0]
+  let secondSmallest = nums[1]
   for( let n = 0; n < nums.length;n++){
-    if(nums[n]<smallest){
-      secondsmallest = nums[n]
-    }else if( nums[n]<secondsmallest)
-    secondsmallest = nums[n]
-  }return secondsmallest
+    if(nums[n] < smallest){
+      secondSmallest = smallest
+      smallest = nums[n]
+    }else if( nums[n] < secondSmallest && nums[n] > smallest){
+      secondSmallest = nums[n]
+    }
+    
+  }return secondSmallest
 
 }
 
@@ -132,14 +138,17 @@ function findSecondSmallest(nums) {
  */
 
 function findSecondLargest(nums) {
-  let largest= -Infinity
-  let Secondlargest= -Infinity
+  let largest= nums[0]
+  let secondlargest= nums[1]
   for( let n = 0; n < nums.length;n++){
-    if(nums[n]<largest){
-      secondsmallest = nums[n]
-    }else if( nums[n]<Secondlargest)
-    Secondlargest = nums[n]
-  }return Secondlargest
+    if(nums[n] > largest){
+      secondlargest = largest
+      largest = nums[n]
+    }else if( nums[n] > secondlargest &&  nums[n] < largest){
+      secondlargest = nums[n] 
+    }
+    
+  }return secondlargest
 
 }
 
@@ -159,6 +168,7 @@ function removeDups(nums) {
   }return newArray
   
 }
+
 
 module.exports = {
   shoutForLoop,
