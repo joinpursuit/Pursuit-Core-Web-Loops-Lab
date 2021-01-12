@@ -100,7 +100,14 @@ return newArray
  */
 
 function findSmallest(nums) {
-return Math.min(...nums)
+// return Math.min(...nums) also works
+let smallest = nums[0]
+  for(let i = 0; i <= nums.length; i++){
+    if(nums[i] < smallest){
+      smallest = nums[i]
+    }
+  }
+  return smallest
 };
 
 /**
@@ -111,9 +118,20 @@ return Math.min(...nums)
  */
 
 function findSecondSmallest(nums) {
-
-}
-
+let smallest = nums[0]
+  for(let i = 0; i <= nums.length; i++){
+    if(nums[i] < smallest){
+      smallest = nums[i]
+    } 
+    secondSmallest = nums[1]
+      for(let i = 0; i <= nums.length; i++){
+        if(nums[i] < secondSmallest && nums[i] !== smallest){
+          secondSmallest = nums[i]
+        }
+      }
+    }
+    return secondSmallest
+  };
 /**
  * Takes in array and returns the second largest number in the array
  * @param {number[]} nums
@@ -121,8 +139,10 @@ function findSecondSmallest(nums) {
  */
 
 function findSecondLargest(nums) {
-let newArray = nums.sort((a,b) => a-b)
-return newArray.slice(-2, -1)
+for(let i = 0; i <= nums.length; i++){
+  nums.sort(function(a, b){return b - a})
+}
+  return nums[1]
 }
 
 /**
@@ -132,7 +152,15 @@ return newArray.slice(-2, -1)
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+let newArray = []
+for(let i = 0; i < nums.length; i++){
+  if(!newArray.includes(nums[i])){
+    newArray.push(nums[i])
+  }
+}
+  return newArray
+};
 
 module.exports = {
   shoutForLoop,
