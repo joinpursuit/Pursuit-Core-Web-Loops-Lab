@@ -7,11 +7,11 @@
  */
 
 const shoutForLoop = (array) => {
-  let newArr = [];
-  for (i = 0; i < array.length; i++) {
-    newArr.push(array[i] + "!"); // array[i]
-  }
-  return newArr;
+	let newArr = [];
+	for (i = 0; i < array.length; i++) {
+		newArr.push(array[i] + "!"); // array[i]
+	}
+	return newArr;
 };
 
 /**
@@ -23,13 +23,13 @@ const shoutForLoop = (array) => {
  */
 //function shoutWhileLoop() {}
 const shoutWhileLoop = (array) => {
-  let newArr = [];
-  let i = 0;
-  while (i < array.length) {
-    newArr.push(array[i] + "!");
-    i++;
-  }
-  return newArr;
+	let newArr = [];
+	let i = 0;
+	while (i < array.length) {
+		newArr.push(array[i] + "!");
+		i++;
+	}
+	return newArr;
 };
 
 /**
@@ -53,11 +53,11 @@ const shoutWhileLoop = (array) => {
 
 //function shoutForOfLoop() {}
 const shoutForOfLoop = (array) => {
-  let newArr = [];
-  for (const element of array) {
-    newArr.push(element + "!");
-  }
-  return newArr;
+	let newArr = [];
+	for (const element of array) {
+		newArr.push(element + "!");
+	}
+	return newArr;
 };
 
 /**
@@ -67,11 +67,11 @@ const shoutForOfLoop = (array) => {
  */
 //function sumArray() {}
 const sumArray = (nums) => {
-  let sum = 0;
-  for (const element of nums) {
-    sum += element;
-  }
-  return sum;
+	let sum = 0;
+	for (const element of nums) {
+		sum += element;
+	}
+	return sum;
 };
 
 /**
@@ -81,13 +81,13 @@ const sumArray = (nums) => {
  */
 //function oddArray() {}
 const oddArray = (nums) => {
-  let arrOfOdds = [];
-  for (const element of nums) {
-    if (element % 2 === 1) {
-      arrOfOdds.push(element);
-    }
-  }
-  return arrOfOdds;
+	let arrOfOdds = [];
+	for (const element of nums) {
+		if (element % 2 === 1) {
+			arrOfOdds.push(element);
+		}
+	}
+	return arrOfOdds;
 };
 
 /**
@@ -97,13 +97,13 @@ const oddArray = (nums) => {
  */
 //function evenArray() {}
 const evenArray = (nums) => {
-  let arrOfEvens = [];
-  for (const element of nums) {
-    if (element % 2 === 0) {
-      arrOfEvens.push(element);
-    }
-  }
-  return arrOfEvens;
+	let arrOfEvens = [];
+	for (const element of nums) {
+		if (element % 2 === 0) {
+			arrOfEvens.push(element);
+		}
+	}
+	return arrOfEvens;
 };
 
 /**
@@ -113,13 +113,13 @@ const evenArray = (nums) => {
  */
 //function findSmallest() {}
 const findSmallest = (nums) => {
-  let smallest = nums[0];
-  for (const element of nums) {
-    if (element <= smallest) {
-      smallest = element;
-    }
-  }
-  return smallest;
+	let smallest = nums[0];
+	for (let element of nums) {
+		if (element <= smallest) {
+			smallest = element;
+		}
+	}
+	return smallest;
 };
 
 /**
@@ -130,18 +130,18 @@ const findSmallest = (nums) => {
  */
 //function findSecondSmallest() {}
 const findSecondSmallest = (nums) => {
-  let smallest = (nums[0] < nums[1]) ? nums[0] : nums[1];
-  let secondSmallest = (nums[0] < nums[1]) ? nums[1] : nums[0];
-  for (let i = 2; i < nums.length; i++) {
-    if (nums[i] < smallest) {
-      secondSmallest = smallest;
-      smallest = nums[i];
-    } else if (nums[i] < secondSmallest) {
-      secondSmallest = nums[i];
-    }
-  }
-  return secondSmallest;
-}
+	let smallest = Infinity; //(nums[0] < nums[1]) ? nums[0] : nums[1];
+	let secondSmallest = Infinity; //(nums[0] < nums[1]) ? nums[1] : nums[0];
+	for (let i = 2; i < nums.length; i++) {
+		if (nums[i] < smallest) {
+			secondSmallest = smallest;
+			smallest = nums[i];
+		} else if (nums[i] < secondSmallest) {
+			secondSmallest = nums[i];
+		}
+	}
+	return secondSmallest;
+};
 //   let smallest = -Infinity;
 //   let secondSmallest = -Infinity;
 //   for (let i = 0; i < nums.length; i++) {
@@ -177,30 +177,30 @@ const findSecondSmallest = (nums) => {
 
 //function findSecondLargest(nums) {}
 const findSecondLargest = (nums) => {
-  let largest = (nums[0] > nums[1]) ? nums[0] : nums[1];
-  let secondLargest = (nums[0] > nums[1]) ? nums[1] : nums[0];
-  for (let i = 2; i < nums.length; i++) {
-    if (nums[i] > largest) {
-      secondLargest = largest;
-      largest = nums[i];
-    } else if (nums[i] > secondLargest) {
-      secondLargest = nums[i];
-    }
-  }
-  return secondLargest;
+	let largest = nums[0] > nums[1] ? nums[0] : nums[1];
+	let secondLargest = nums[0] > nums[1] ? nums[1] : nums[0];
+	for (let i = 2; i < nums.length; i++) {
+		if (nums[i] > largest) {
+			secondLargest = largest;
+			largest = nums[i];
+		} else if (nums[i] > secondLargest) {
+			secondLargest = nums[i];
+		}
+	}
+	return secondLargest;
 };
-  // let largest = Infinity;
-  // let secondLargest = Infinity;
-  // for (let i = 0; i < nums.length; i++) {
-  //   //const num = nums[i];
-  //   if (nums[i] > largest) {
-  //     secondLargest = largest;
-  //     largest = nums[i];
-  //   } else if (nums[i] > secondLargest) {
-  //     secondLargest = nums[i];
-  //   }
-  // }
-  // return secondLargest;
+// let largest = Infinity;
+// let secondLargest = Infinity;
+// for (let i = 0; i < nums.length; i++) {
+//   //const num = nums[i];
+//   if (nums[i] > largest) {
+//     secondLargest = largest;
+//     largest = nums[i];
+//   } else if (nums[i] > secondLargest) {
+//     secondLargest = nums[i];
+//   }
+// }
+// return secondLargest;
 // };
 
 /**
@@ -212,26 +212,26 @@ const findSecondLargest = (nums) => {
 // Hint: Look into the `.includes` method.
 //function removeDups(nums) {}
 const removeDups = (nums) => {
-  let arrNoDupes = [];
-  let num;
-  for (i = 0; i <= nums.length - 1; i++) {
-    num = nums[i];
-    if (!arrNoDupes.includes(num)) {
-      arrNoDupes.push(num);
-    }
-  }
-  return arrNoDupes;
+	let arrNoDupes = [];
+	let num;
+	for (i = 0; i <= nums.length - 1; i++) {
+		num = nums[i];
+		if (!arrNoDupes.includes(num)) {
+			arrNoDupes.push(num);
+		}
+	}
+	return arrNoDupes;
 };
 
 module.exports = {
-  shoutForLoop,
-  shoutWhileLoop,
-  shoutForOfLoop,
-  sumArray,
-  oddArray,
-  evenArray,
-  findSmallest,
-  findSecondSmallest,
-  findSecondLargest,
-  removeDups,
+	shoutForLoop,
+	shoutWhileLoop,
+	shoutForOfLoop,
+	sumArray,
+	oddArray,
+	evenArray,
+	findSmallest,
+	findSecondSmallest,
+	findSecondLargest,
+	removeDups,
 };
