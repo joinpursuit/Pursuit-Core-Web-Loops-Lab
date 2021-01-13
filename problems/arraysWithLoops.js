@@ -125,7 +125,7 @@ const findSecondSmallest = (nums) => {
 
 const findSecondLargest = (nums) => {
 let secondLargest = Math.max.apply(null, nums);
-nums.indexOf(secondLargest), 1
+nums.indexOf(secondLargest), 5
 return secondLargest -1;
 }
 /**
