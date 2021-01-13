@@ -130,8 +130,8 @@ const findSmallest = (nums) => {
  */
 //function findSecondSmallest() {}
 const findSecondSmallest = (nums) => {
-	let smallest = Infinity; //(nums[0] < nums[1]) ? nums[0] : nums[1];
-	let secondSmallest = Infinity; //(nums[0] < nums[1]) ? nums[1] : nums[0];
+	let smallest = nums[0] < nums[1] ? nums[0] : nums[1]; //-Infinity;
+	let secondSmallest = nums[0] < nums[1] ? nums[1] : nums[0]; //-Infinity;
 	for (let i = 2; i < nums.length; i++) {
 		if (nums[i] < smallest) {
 			secondSmallest = smallest;
