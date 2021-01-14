@@ -184,8 +184,6 @@ const removeDups = (nums) => {
       newArray.push( nums[i])
     }
   }
-
-
   return newArray;
 };
 

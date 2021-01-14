@@ -7,10 +7,10 @@
 const oneTillDoneWhileLoop = (number) =>{
 let newArray = []     
 let i = 1 
-while ( i <= number ){     
-  newArray.push( i )     
-  i++                    
-}
+  while ( i <= number ){     
+    newArray.push( i )     
+    i++                    
+  }
 return newArray
 }
 
@@ -23,9 +23,9 @@ return newArray
  */
 const oneTillDoneForLoop = (number) => {
 let newArray = []
-for( let i = 1; i <= number ; i++ ){
-  newArray.push( i )     
-}
+  for( let i = 1; i <= number ; i++ ){
+    newArray.push( i )     
+  }
 return newArray
 }
 
@@ -38,10 +38,10 @@ return newArray
 const doneToZeroWhileLoop = ( number) => {
   let newArray = []           
   let i = 0;                
-  while( number > i){            
-    newArray.push( number )  
-    number--                
-  }
+    while( number > i){            
+      newArray.push( number )  
+      number--                
+    }
   return newArray
 }
 
@@ -53,9 +53,9 @@ const doneToZeroWhileLoop = ( number) => {
  */
 const doneToZeroForLoop = (number) => {
   let newArray = []
-  for (i = number; i > 0; i--){
-    newArray.push(i)  
-  }
+    for (i = number; i > 0; i--){
+      newArray.push(i)  
+    }
   return newArray
 }
 
@@ -78,11 +78,9 @@ const doneToZeroForLoop = (number) => {
           }else {
             newArray.push(i + " is odd") 
           i++
-          }
-          
-        } 
-
-          return newArray
+          }  
+        }
+        return newArray
     }   
 
 /**
