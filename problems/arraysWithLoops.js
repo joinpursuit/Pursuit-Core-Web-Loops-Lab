@@ -123,6 +123,7 @@ const findSecondSmallest = (nums) => {
   let secondSmallest = Infinity;
   for (let i = 0; i < nums.length; i++){
     if (smallest > nums[i]){
+        secondSmallest = smallest
         smallest = nums[i];
       } else if (secondSmallest > nums[i]){
         secondSmallest = nums[i];
@@ -130,7 +131,7 @@ const findSecondSmallest = (nums) => {
   }
   return secondSmallest;
 }
-console.log(findSecondSmallest([1, 5, 3]))
+console.log(findSecondSmallest([5, 4, 3, 2, 1]))
 
 
 /**
@@ -143,15 +144,16 @@ const findSecondLargest = (nums) => {
   let largest = -Infinity;
   let secondLargest = -Infinity;
   for (let i = 0; i < nums.length; i++){
-    if (largest < nums[i]){
-        largest = nums[i];
-    } else if(secondLargest < nums[i]){
+    if (nums[i] > largest){
+      secondLargest = largest
+      largest = nums[i];
+    } else if(nums[i] > secondLargest){
       secondLargest = nums[i];
     }
   }
   return secondLargest;
 }
-console.log(findSecondLargest([1, 5, 3]))
+// console.log(findSecondLargest([1, 5, 3]))
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
