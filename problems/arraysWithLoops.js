@@ -42,7 +42,11 @@ function shoutWhileLoop(Array) {
  */
 
 function shoutForOfLoop(Array) {
-
+  let arr=[]
+  for(let element of Array){
+   arr.push(element + "!")
+  }
+  return arr 
 }
 
 /**
@@ -99,14 +103,17 @@ function evenArray(nums) {
  */
 
 function findSmallest(nums) {
-  let smallestValue= num[i]
+  let smallestValue = Infinity
   for(let i=0 ; i < nums.length; i+=1){
-    if (num[i+1] > smallestValue){
+    if (nums[i] < smallestValue ){
+      smallestValue=nums[i]
+      //console.log("i="+i+" smallestValue="+smallestValue)
     }
+    
   }
-  return smallestValue
+   return smallestValue
   }
-  
+  //console.log(findSmallest([2,4,6,3,1]))
   
 
 
@@ -118,8 +125,19 @@ function findSmallest(nums) {
  */
 
 function findSecondSmallest(nums) {
-
+  let smallestNum = Infinity
+  let secondSmallest = Infinity
+  for (let i = 0; i < nums.length; i+= 1){
+    if (nums[i] < smallestNum ){
+      secondSmallest = smallestNum
+      smallestNum = nums[i]
+      } else if (nums[i]< secondSmallest) {
+        secondSmallest = nums[i]
+      }
+    } return secondSmallest 
 }
+
+
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -128,8 +146,30 @@ function findSecondSmallest(nums) {
  */
 
 function findSecondLargest(nums) {
+  // let largestNum = -Infinity;
+  //   let secondLargest =  -Infinity;
+  
+  //   for (let i = 0; i < nums.length; i++) {
+  //     if (nums[i] >= largestNum) {
+  //       largestNum = nums[i];
+  //       secondLargest = nums[i] - 1;
+  //     }
+  //   }
+  //   return secondLargest;
+  //  }
+  let largestNum = -Infinity
+  let secondLargest = -Infinity
+  for (let i = 0; i < nums.length; i+= 1){
+    if (nums[i] > largestNum){
+      secondLargest = largestNum  // when reassigning the verbal that if first is the one that we are changing 
+      largestNum = nums[i]
+    }else if (nums[i] > secondLargest){
+      secondLargest = nums[i]
+    }
+     }
+    return secondLargest
+  }
 
-}
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -139,9 +179,14 @@ function findSecondLargest(nums) {
  */
 // Hint: Look into the `.includes` method.
 function removeDups(nums) {
-
+let arr= []
+for (let i = 0 ; i <nums.length ; i +=1){
+if (!arr.includes(nums[i]))
+arr.push(nums[i])
 }
-
+return arr
+}
+//console.log(removeDups([4,2,6,2,2,6,4,9,2,1]))
 module.exports = {
   shoutForLoop,
   shoutWhileLoop,

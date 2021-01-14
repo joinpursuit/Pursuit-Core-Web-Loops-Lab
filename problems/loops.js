@@ -399,15 +399,14 @@ function lastIndexFound(elements, target) {
  * @returns {number[]}
  */
 function timesIndex(elements) {
-  let i=0
   let arr=[]
-  while (elements.length * i){
-    i+=1
-    arr.push(i) 
+  for (let i=0; i < elements.length; i+=1){
+    arr.push(elements[i]*i) 
+
   }
   return arr
 }
-
+console.log(timesIndex([2, 2, 2]))
 
 
 /**
@@ -419,7 +418,17 @@ function timesIndex(elements) {
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum() {}
+function cumulativeSum(elements) {
+  let sum = 0
+  let arr =[]
+  for (let i = 0; i <elements.length; i+=1){
+    (sum = sum + elements[i])
+    arr.push(sum)
+    }
+    //sum += elements[i]
+    return arr
+  }
+
 
 module.exports = {
   oneTillDoneWhileLoop,
