@@ -5,19 +5,6 @@
  * @returns {number[]}
  */
 function oneTillDoneWhileLoop(n) {
-<<<<<<< HEAD
-  let i = 1;
-  let num = [];
-  while (i <= n) {
-    num.push(i);
-    i++;
-  }
-  {
-    return num;
-  }
-}
-
-=======
 let i = 1
     let num = []
     while (i <= n) {
@@ -27,7 +14,6 @@ let i = 1
   return num
   }
   
->>>>>>> 75438c0a51c3a4f5f9e186608c8b5262d35f32a9
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
  * Must be written with a for loop
@@ -35,14 +21,6 @@ let i = 1
  * @returns {number[]}
  */
 function oneTillDoneForLoop(n) {
-<<<<<<< HEAD
-  let num = [];
-  for (let i = 1; i <= n; i++) {
-    num.push(i);
-  }
-  return num;
-}
-=======
   
     let num = []
     for (let i = 1;i <= n; i ++) {
@@ -52,7 +30,6 @@ function oneTillDoneForLoop(n) {
     return num
   }
 
->>>>>>> 75438c0a51c3a4f5f9e186608c8b5262d35f32a9
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -61,16 +38,6 @@ function oneTillDoneForLoop(n) {
  * @returns {number[]}
  */
 function doneToZeroWhileLoop(n) {
-<<<<<<< HEAD
-  let i = n;
-  let num = [];
-  while (i > 0) {
-    num.push(i);
-    i--;
-  }
-  return num;
-}
-=======
   let i = n
   let num = []
   while(i > 0) {
@@ -80,7 +47,6 @@ function doneToZeroWhileLoop(n) {
   return num
 }
 
->>>>>>> 75438c0a51c3a4f5f9e186608c8b5262d35f32a9
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
@@ -89,16 +55,6 @@ function doneToZeroWhileLoop(n) {
  * @returns {number[]}
  */
 function doneToZeroForLoop(n) {
-<<<<<<< HEAD
-  let num = [];
-
-  for (let i = n; i > 0; i--) {
-    num.push(i);
-  }
-
-  return num;
-}
-=======
   let num = []
   
   for (let i = n ; i > 0 ; i-- ) {
@@ -108,7 +64,6 @@ function doneToZeroForLoop(n) {
   return num 
   }
 
->>>>>>> 75438c0a51c3a4f5f9e186608c8b5262d35f32a9
 
 /**
  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
