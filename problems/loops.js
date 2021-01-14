@@ -420,7 +420,6 @@ while (i > 3) {
    return newArray
  }
 
-
 /**
  * Takes in an array.
  * Returns a new array where each element is the cumulative sum so far.
