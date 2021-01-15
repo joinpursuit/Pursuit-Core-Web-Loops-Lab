@@ -344,11 +344,16 @@ const containsForLoop = (elements, target) => {
   for (let i = 0; i < elements.length; i++) {
     if (elements[i] === target) {
       return true;
-    } else {
-      return false;
     }
   }
+  return false;
 };
+
+// expect(containsForLoop([5, 2, 3, 5, 9], 3)).toBe(true);
+//     expect(containsForLoop(["cat", "dog", "bird"], "cat")).toBe(true);
+//   test("returns false for not found elements", () => {
+//     expect(containsForLoop([5, 2, 3, 5, 9], 6)).toBe(false);
+//     expect(containsForLoop(["cat", "dog", "bird"], "whale")).toBe(false);
 
 /**
  * Takes in an array and a target.
