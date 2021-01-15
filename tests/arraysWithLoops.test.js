@@ -112,7 +112,7 @@ describe("findSecondSmallest", () => {
 });
 
 describe("findSecondLargest", () => {
-  test("returns the smallest element in an array", () => {
+  test("returns the second largest element in an array", () => {
     expect(findSecondLargest([1, 2, 3, 4])).toBe(3);
     expect(findSecondLargest([5, 4, 3, 2])).toBe(4);
     expect(findSecondLargest([-1, -2, -3])).toBe(-2);
