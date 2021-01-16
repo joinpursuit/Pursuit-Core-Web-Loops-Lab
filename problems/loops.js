@@ -6,12 +6,12 @@
  */
  
  function oneTillDoneWhileLoop(n) {
-  let arr = []
-  let tracker = 1
+  let arr = [];
+  let tracker = 1;
 
   while (arr.length < n) {
-    arr.push(tracker)
-    tracker += 1
+    arr.push(tracker);
+    tracker += 1;
   }
   return arr
  }
@@ -23,10 +23,13 @@
  * @param {number}
  * @returns {number[]}
  */
-function oneTillDoneForLoop(n) {
-  for (let s = 1; s < n; s += 1) {
-    return arr
+function oneTillDoneForLoop(number) {
+  let array = [];
+
+  for (let i = 1; i <= number; i++){
+    array.push(number[i])
   }
+  return array
 }
 
 /**
@@ -35,7 +38,15 @@ function oneTillDoneForLoop(n) {
  * @param {number}
  * @returns {number[]}
  */
-function doneToZeroWhileLoop() {}
+function doneToZeroWhileLoop(number) {
+  let arr = [];
+  let i = 1;
+  while (i < number) {
+    arr.push(number[i])
+    i--
+  }
+  return arr
+}
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)

@@ -6,7 +6,14 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop(array) {}
+function shoutForLoop(array) {
+  let newArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    newArray.push([array[i]] + '!');
+  }
+  return newArray
+}
 
 /**
  * Takes in an array and returns a new array with element
@@ -16,7 +23,15 @@ function shoutForLoop(array) {}
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
+function shoutWhileLoop(array) {
+  let newArray = [];
+  let i = 0;
+
+  while (i < array.length) {
+    newArray.push(array[i++] + '!')
+  }
+  return newArray
+}
 
 /**
  * Takes in an array and returns a new array with element
@@ -26,7 +41,15 @@ function shoutWhileLoop() {}
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForOfLoop() {}
+function shoutForOfLoop(array) {
+  let newArray = [];
+  let i = 0
+
+   for (let element of array) {
+     newArray.push([array[i++]] + '!')
+   }
+   return newArray
+}
 
 /**
  * Takes in an array and returns the sum of all values
@@ -34,7 +57,14 @@ function shoutForOfLoop() {}
  * @returns {number} sum
  */
 
-function sumArray() {}
+function sumArray(nums) {
+  let sum = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    sum += nums[i]
+  }
+  return sum
+}
 
 /**
  * Takes in an array and returns an array of all the odd valued elements
@@ -42,7 +72,18 @@ function sumArray() {}
  * @returns {array} odds
  */
 
-function oddArray() {}
+function oddArray(nums) {
+  let newArr = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+
+    } else {
+      newArr.push(nums[i])
+    } 
+  }
+  return newArr
+}
 
 /**
  * Takes in an array and returns an array of all the even valued elements
@@ -50,7 +91,16 @@ function oddArray() {}
  * @returns {array} evens
  */
 
-function evenArray() {}
+function evenArray(nums) {
+  let newArr = [];
+
+  for (let i =0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0){
+     newArr.push(nums[i])
+    }
+  }
+  return newArr
+}
 
 /**
  * Takes in array and returns the smallest number in the array
@@ -58,7 +108,16 @@ function evenArray() {}
  * @returns {number} smallest value
  */
 
-function findSmallest() {}
+function findSmallest(nums) {
+  let smallNumber = Infinity;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] < smallNumber) {
+      smallNumber = nums[i]
+    }
+  }
+  return smallNumber
+}
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -67,7 +126,20 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+  let smallestNumber = Infinity;
+  let secondSmallestNumber = Infinity;
+  
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] < smallestNumber) {
+      secondSmallestNumber = smallestNumber
+      smallestNumber = nums[i]
+    } else if (nums[i] < secondSmallestNumber) {
+      secondSmallestNumber = nums[i]
+    }
+  }
+  return secondSmallestNumber
+}
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -75,7 +147,21 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+  let largestNumber = -Infinity;
+  let secondLargestNumber = -Infinity;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > largestNumber) {
+       secondLargestNumber = largestNumber;
+       largestNumber = nums[i]
+    } else if (nums[i] > secondLargestNumber) {
+      secondLargestNumber = nums[i]
+    }
+  }
+  return secondLargestNumber
+}
+
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -84,7 +170,14 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+  let newArr = []
+
+  for (let i = 0; i < nums.length; i++) {
+    
+  }
+  return newArr
+}
 
 module.exports = {
   shoutForLoop,
