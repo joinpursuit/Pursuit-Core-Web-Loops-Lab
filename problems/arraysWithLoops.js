@@ -13,7 +13,7 @@ function shoutForLoop(arr) {
 }
  return newArr
 }
- shoutForLoop([1,2,3])
+ shoutForLoop([])
 
 /**
  * Takes in an array and returns a new array with element
@@ -105,7 +105,11 @@ function evenArray(nums) {
  */
 
 function findSmallest(nums) {
-  smallest =  
+  let smallest = []
+for (i = 0; i <= nums.length; i++){
+  nums.sort()
+}
+return (nums[0])
 }
 
 
@@ -116,7 +120,21 @@ function findSmallest(nums) {
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+let smallest = Infinity
+let secondSmallest = Infinity
+for (let i = 0; i < nums.length; i++) {
+  const num = nums[i] ;
+  if(num < smallest) {
+    secondSmallest = smallest
+    smallest = num
+  } else if( num < secondSmallest) {
+secondSmallest = num
+  } 
+}
+return secondSmallest
+}
+
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -124,7 +142,12 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+  largest = Math.max(...nums)
+  index = nums.indexOf(largest)
+  nums.splice(index,1)
+  return Math.max(...nums)
+}
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -133,7 +156,18 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+let newArray= [] 
+for ( let i=0 ; i < nums.length; i++) {
+if (newArray.indexOf(nums[i])=== -1) {
+  newArray.push(nums[i]);
+}
+}
+return newArray
+}
+
+
+
 
 module.exports = {
   shoutForLoop,
