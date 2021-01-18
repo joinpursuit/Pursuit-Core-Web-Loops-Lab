@@ -438,7 +438,7 @@ return arr
  * @param {number[]} elements
  * @returns {number[]}
  */
-function cumulativeSum(lelments) {
+function cumulativeSum(elements) {
   let arr = []
   let i = 0
   let e = 0
