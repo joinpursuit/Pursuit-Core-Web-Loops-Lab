@@ -6,7 +6,15 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+function shoutForLoop(arr) {
+  let newArr = []
+  for (let i = 0 ; i < arr.length; i++){
+     newArr.push(arr[i] + "!")  
+}
+ return newArr
+}
+ shoutForLoop([])
+
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -15,8 +23,16 @@ function shoutForLoop() {}
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
-
+function shoutWhileLoop(arr) {
+  let newArr = []
+  let i = 0
+  while (i < arr.length) {
+   newArr.push(arr[i] + "!")
+   i++
+  }
+  return newArr 
+}
+shoutWhileLoop [(1,2,3)]
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -25,7 +41,14 @@ function shoutWhileLoop() {}
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForOfLoop() {}
+function shoutForOfLoop(arr) {
+  let array1 = []
+  for (let i of arr) {
+     array1.push(i + "!")
+  }
+  return array1
+}
+shoutForOfLoop[(1,2,3,4)]
 
 /**
  * Takes in an array and returns the sum of all values
@@ -33,7 +56,14 @@ function shoutForOfLoop() {}
  * @returns {number} sum
  */
 
-function sumArray() {}
+function sumArray(nums) {
+  let sum = 0;
+  for (let i = 0 ; i < nums.length; i++) {
+    sum += nums[i];
+  }
+  return sum 
+}
+sumArray[(1,2,3)]
 
 /**
  * Takes in an array and returns an array of all the odd valued elements
@@ -41,7 +71,16 @@ function sumArray() {}
  * @returns {array} odds
  */
 
-function oddArray() {}
+function oddArray(nums) {
+  let newArray = []
+  for (let i = 0 ; i < nums.length; i++) {
+    if (nums[i] % 2 !== 0) {
+      newArray.push(nums[i])
+    }   
+  }
+  return newArray
+}
+oddArray[(1,2,3)]
 
 /**
  * Takes in an array and returns an array of all the even valued elements
@@ -49,7 +88,15 @@ function oddArray() {}
  * @returns {array} evens
  */
 
-function evenArray() {}
+function evenArray(nums) {
+  let newArray = []
+  for (let i = 0 ; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      newArray.push(nums[i])
+    }
+  }
+  return newArray
+}
 
 /**
  * Takes in array and returns the smallest number in the array
@@ -57,7 +104,14 @@ function evenArray() {}
  * @returns {number} smallest value
  */
 
-function findSmallest() {}
+function findSmallest(nums) {
+  let smallest = []
+for (i = 0; i <= nums.length; i++){
+  nums.sort()
+}
+return (nums[0])
+}
+
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -66,7 +120,21 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest(nums) {
+let smallest = Infinity
+let secondSmallest = Infinity
+for (let i = 0; i < nums.length; i++) {
+  const num = nums[i] ;
+  if(num < smallest) {
+    secondSmallest = smallest
+    smallest = num
+  } else if( num < secondSmallest) {
+secondSmallest = num
+  } 
+}
+return secondSmallest
+}
+
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -74,7 +142,12 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+  largest = Math.max(...nums)
+  index = nums.indexOf(largest)
+  nums.splice(index,1)
+  return Math.max(...nums)
+}
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -83,7 +156,18 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+function removeDups(nums) {
+let newArray= [] 
+for ( let i=0 ; i < nums.length; i++) {
+if (newArray.indexOf(nums[i])=== -1) {
+  newArray.push(nums[i]);
+}
+}
+return newArray
+}
+
+
+
 
 module.exports = {
   shoutForLoop,
