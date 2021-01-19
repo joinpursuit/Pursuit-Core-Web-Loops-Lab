@@ -6,7 +6,13 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop() {}
+const shoutForLoop = (arr) => {
+  let newArray = []
+  for(i = 0; i < arr.length; i++) {
+    newArray.push(arr[i] + "!")
+  }
+return newArray;
+}
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -15,8 +21,16 @@ function shoutForLoop() {}
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutWhileLoop() {}
-
+const shoutWhileLoop = (arr) => {
+  let newArr =[];
+  let i = 0;
+  while (i < arr.length){
+    newArr.push(arr[i] + "!")
+    i++;
+  }
+  return newArr;
+  }
+  
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -25,7 +39,14 @@ function shoutWhileLoop() {}
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForOfLoop() {}
+const shoutForOfLoop = (arr) => {
+  let newArray = []
+  for(let element of arr){
+    newArray.push(element + "!");
+  }
+return newArray;
+}
+  
 
 /**
  * Takes in an array and returns the sum of all values
@@ -33,7 +54,13 @@ function shoutForOfLoop() {}
  * @returns {number} sum
  */
 
-function sumArray() {}
+const sumArray = (nums) => {
+  let sum = 0; 
+        for(let i = 0; i < nums.length; i++ ) {
+            sum += nums[i];
+        }    
+    return sum;
+}
 
 /**
  * Takes in an array and returns an array of all the odd valued elements
@@ -41,7 +68,15 @@ function sumArray() {}
  * @returns {array} odds
  */
 
-function oddArray() {}
+const oddArray = (nums) => {
+  let odds = []
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 !== 0){
+    odds.push(nums[i]);
+  }
+}
+  return odds
+}
 
 /**
  * Takes in an array and returns an array of all the even valued elements
@@ -49,15 +84,32 @@ function oddArray() {}
  * @returns {array} evens
  */
 
-function evenArray() {}
-
+const evenArray = (nums)=> {
+  let evens = []
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0){
+    evens.push(nums[i]);
+  }
+}
+  return evens
+}
 /**
  * Takes in array and returns the smallest number in the array
  * @param {number[]} nums
  * @returns {number} smallest value
  */
 
-function findSmallest() {}
+const findSmallest = (nums) => {
+  let smallest = nums[0]
+  for (let i = 0; i < nums.length; i++){
+    if (nums[i]<smallest){
+      smallest = nums[i];
+    }
+  }
+  return smallest;
+}
+
+
 
 /**
  * Takes in array and returns the second smallest number in the array
@@ -66,7 +118,21 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+const findSecondSmallest = (nums) => {
+  let smallest = Infinity;
+  let secondSmallest = Infinity;
+  for (let i = 0; i < nums.length; i++){
+    if (smallest > nums[i]){
+        secondSmallest = smallest
+        smallest = nums[i];
+      } else if (secondSmallest > nums[i]){
+        secondSmallest = nums[i];
+      }
+  }
+  return secondSmallest;
+}
+console.log(findSecondSmallest([5, 4, 3, 2, 1]))
+
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -74,7 +140,20 @@ function findSecondSmallest() {}
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+const findSecondLargest = (nums) => {
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+  for (let i = 0; i < nums.length; i++){
+    if (nums[i] > largest){
+      secondLargest = largest
+      largest = nums[i];
+    } else if(nums[i] > secondLargest){
+      secondLargest = nums[i];
+    }
+  }
+  return secondLargest;
+}
+// console.log(findSecondLargest([1, 5, 3]))
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -83,7 +162,14 @@ function findSecondLargest() {}
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-function removeDups() {}
+const removeDups = (nums) => {
+  let array = [... new Set(nums)];{
+    return array;
+  }
+
+
+
+}
 
 module.exports = {
   shoutForLoop,
