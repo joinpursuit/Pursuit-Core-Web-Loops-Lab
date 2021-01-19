@@ -5,8 +5,15 @@
  * @param {Array} - ["I", "am", "a", "happy", "array"]
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
-
+//let happy = ["I", "am", "a", "happy", "array"]
 function shoutForLoop() {}
+ //for (let i = 0; i < arr.length ; i++) {
+ //arr[i] = arr[i].length
+// }
+//return arr
+
+//console.log(shoutForLoop(happy))*/
+
 /**
  * Takes in an array and returns a new array with element
  * getting a ! added to the end.
@@ -32,8 +39,11 @@ function shoutForOfLoop() {}
  * @param {number[]} nums
  * @returns {number} sum
  */
-
-function sumArray() {}
+//let arr = []
+function sumArray() {
+  //sum = arr + arr.length
+  //return sum
+}
 
 /**
  * Takes in an array and returns an array of all the odd valued elements
@@ -66,7 +76,8 @@ function findSmallest() {}
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest() {}
+function findSecondSmallest() {
+}
 
 /**
  * Takes in array and returns the second largest number in the array
