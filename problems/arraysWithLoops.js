@@ -6,12 +6,11 @@
  * @returns {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-function shoutForLoop(Array) {
-  let arr = [];
-  for (let i = 0; i < Array.length; i++) {
-    arr[i] = Array[i] + "!";
+function shoutForLoop(array) {
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i] + "!"
   }
-  return arr;
+  return array;
 }
 // ["I", "am", "happy"]
 /**
@@ -101,9 +100,13 @@ function evenArray(nums) {
  */
 
 function findSmallest(nums) {
+  let smallest = Infinity;
   for(let i = 0; i < nums.length; i++){
-    return Math.min(...nums)
+    if(nums[i] < smallest){
+      smallest = nums[i]
+    }
   }
+    return smallest
 }
 
 /**
@@ -114,11 +117,17 @@ function findSmallest(nums) {
  */
 
 function findSecondSmallest(nums) {
-  let secondSmallest = nums[0];
-  for(let i = 0; i <= nums.length; i++){
-    if (nums[i] < secondSmallest) secondSmallest = nums[i];
-  }
-  return secondSmallest + 1
+  let smallest = Infinity;
+    let secondSmallestNum = Infinity;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i]< smallest){
+            secondSmallestNum = smallest
+            smallest = nums[i]
+        }else if (nums[i]< secondSmallestNum){
+            secondSmallestNum = nums[i]
+        }
+    }
+    return secondSmallestNum; 
 }
   
 /**
