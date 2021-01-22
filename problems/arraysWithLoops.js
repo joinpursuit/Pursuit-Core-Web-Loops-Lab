@@ -161,7 +161,7 @@ function findSecondLargest(nums) {
   }
   return secondLargestNumber
 }
-
+ 
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -171,12 +171,16 @@ function findSecondLargest(nums) {
  */
 // Hint: Look into the `.includes` method.
 function removeDups(nums) {
-  let newArr = []
-
-  for (let i = 0; i < nums.length; i++) {
-    
+  let array = []
+  for (let i = 0; i < nums.length; i++){
+    if ([nums[i]].includes(i)){
+      array.slice([i])
+    }
+    else {
+      array.push(nums[i])
+    }
   }
-  return newArr
+  return array
 }
 
 module.exports = {
