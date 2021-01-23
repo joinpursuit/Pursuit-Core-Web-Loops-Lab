@@ -124,13 +124,12 @@ function findSecondSmallest(nums) {
     if(nums[i] < smallest){
       sSmallest =  smallest
       smallest = nums[i]
-    } else {
-      if(nums[i] < sSmallest && nums[i] > smallest){
+    } else if (nums[i] < sSmallest && nums[i] > smallest){
         sSmallest = nums[i]
       }
-    } 
-} return sSmallest
-}
+    } return sSmallest
+} 
+
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -138,7 +137,18 @@ function findSecondSmallest(nums) {
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {}
+function findSecondLargest(nums) {
+  let largest = -Infinity
+  let sLargest = -Infinity
+  for(let i = 0; i < nums.length; i++){
+    if(nums[i] > largest){
+      sLargest = largest
+      largest = nums[i]
+    } else if(nums[i] > sLargest && nums[i] < largest){
+      sLargest = nums[i]
+    }
+  } return sLargest
+}
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -148,9 +158,13 @@ function findSecondLargest() {}
  */
 // Hint: Look into the `.includes` method.
 function removeDups(nums) {
-  let duplicates = []
-  let nonDuplicates = []
-  
+ let newArr = []
+
+ for(let i = 0; i < nums.length; i++) {
+   if(!newArr.includes(nums[i])){
+     newArr.push(nums[i])
+   } 
+ } return newArr
 }
 
 module.exports = {
