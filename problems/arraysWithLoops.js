@@ -76,7 +76,7 @@
 
 // let numns = [ 1, 2, 3, 4, 5 ]
 
-const oddArray = (nums) =>{
+const oddArray = (nums) => { 
   let newArray = [] // newarray= [ 1,3  ] 
   let i = 0;
   while ( i < nums.length ){
@@ -97,8 +97,8 @@ const oddArray = (nums) =>{
 const evenArray = (nums) => {
   let newArray = [];
   for(i = 0; i < nums.length; i++){
-    if(nums [ i ] % 2 === 0  ){
-      newArray.push ( nums [ i ] )  
+    if(nums[i] % 2 === 0){
+      newArray.push(nums[i])  
     }
   }
   return newArray;
@@ -109,20 +109,18 @@ const evenArray = (nums) => {
  * @param {number[]} nums
  * @returns {number} smallest value
  */
-
-const findSmallest = (number) =>{
-  let num = 0;
-  for(i = 0; i < number.length; i++){
-    if( number[i]   < number[i+1]   ){
-      num = number[i];
-      continue
-    }else if( num > number[i]) {
-      num = num
-      }
+// [1 2 3 4]
+const findSmallest = (number) =>{  
+  let smallest = Infinity// infinity is used because its the biggest so anyother number would be smaller
+  for (let i = 0 ; i < number.length ; i++){
+    let num = number[i]
+    if (num <= smallest){ 
+      smallest = num 
   }
-  return num; 
+    
+  }
+  return smallest
 }
-
 /**
  * Takes in array and returns the second smallest number in the array
  * You may NOT use sort
@@ -130,11 +128,23 @@ const findSmallest = (number) =>{
  * @returns {number} second smallest value
  */
 
-const findSecondSmallest = (numbs) =>{
-  let number = 0;
-  numbs.sort(function(a, b));
+  const findSecondSmallest = (nums) => {
+    let smallest = Infinity
+    let secondSmallest = Infinity
+    for (i = 0; i < nums.length; i++) {
+      let num = nums[i]
+      if (num < smallest){
+      secondSmallest = smallest;
+      smallest = num 
+      } else if (num < secondSmallest){
+        secondSmallest = num;
+      }
+      
+    }
+    return secondSmallest;
+  }  
 
-}
+
 
 /**
  * Takes in array and returns the second largest number in the array
@@ -142,9 +152,22 @@ const findSecondSmallest = (numbs) =>{
  * @returns {number} second largest value
  */
 
-function findSecondLargest() {
-  points.sort(function(a, b){return b-a});
-}
+const findSecondLargest = (nums) => {
+  let largest = -Infinity
+  let secondLargest = -Infinity 
+  for(let i = 0; i < nums.length; i++){
+    let num = nums[i]
+    if(num > largest){
+      secondLargest = largest
+      largest = num
+    }else if (num > secondLargest){
+      secondLargest = num 
+      
+    }
+  }
+  return secondLargest
+} 
+// 
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -154,10 +177,15 @@ function findSecondLargest() {
  */
 // Hint: Look into the `.includes` method.
 const removeDups = (nums) => {
-  let newArray = [];
-   
-  return newArray;
-}
+  let output = []
+  for (i = 0; i < nums.length; i++){
+    const num = nums[i]
+    if (!output.includes(num)){
+      output.push(num)
+  }
+  }
+    return output 
+  }
 
 module.exports = {
   shoutForLoop,
