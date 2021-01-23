@@ -159,15 +159,7 @@ function tillXTimes9ForLoop(x) {
 
  */
 function endsWithFiveWhileLoop() {
-  let newArray= []
-  let i = 1
-  while (i <= 100){
-    if (i / 5 && i % 2 !==0){
-      newArray.push(i)
-      i++
-    }
-  }
-  return newArray
+
 }
 
 

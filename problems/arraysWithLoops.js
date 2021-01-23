@@ -118,7 +118,18 @@ function findSmallest(nums) {
  */
 
 function findSecondSmallest(nums) {
-
+  let sSmallest = Infinity
+  let smallest = Infinity
+  for(let i = 0; i < nums.length; i++){
+    if(nums[i] < smallest){
+      sSmallest =  smallest
+      smallest = nums[i]
+    } else {
+      if(nums[i] < sSmallest && nums[i] > smallest){
+        sSmallest = nums[i]
+      }
+    } 
+} return sSmallest
 }
 
 /**
