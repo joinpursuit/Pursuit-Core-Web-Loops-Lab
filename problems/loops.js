@@ -1,18 +1,18 @@
 /**
  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
  * Must be written with a while loop
- * @param {number}
+ * @param {number} num
  * @returns {number[]}
  */
 
-const oneTillDoneWhileLoop = (number) => {
-  let num = 0;
-  let myArray = [];
-  while (num < number) {
-    num += 1;
-    myArray.push(num);
+const oneTillDoneWhileLoop = (num) => {
+  const newArr = [];
+  let counter = 1;
+  while (counter <= num) {
+    newArr.push(counter);
+    counter++;
   }
-  return myArray;
+  return newArr;
 };
 
 /**
@@ -21,42 +21,42 @@ const oneTillDoneWhileLoop = (number) => {
  * @param {number}
  * @returns {number[]}
  */
-const oneTillDoneForLoop = (number) => {
-  let myArray = [];
-  for (let i = 1; i <= number; i++) {
-    myArray.push(i);
+const oneTillDoneForLoop = (num) => {
+  const newArr = [];
+  for (let i = 1; i <= num; i++) {
+    newArr.push(i);
   }
-  return myArray;
+  return newArr;
 };
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be a while loop
- * @param {number}
+ * @param {number} num
  * @returns {number[]}
  */
-const doneToZeroWhileLoop = (number) => {
-  let num = number;
-  let myArray = [];
-  while (num > 0) {
-    myArray.push(num);
-    num -= 1;
+const doneToZeroWhileLoop = (num) => {
+  const newArr = [];
+  let counter = num;
+  while (counter > 0) {
+    newArr.push(counter);
+    counter--;
   }
-  return myArray;
+  return newArr;
 };
 
 /**
  * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be written with a for loop
- * @param {number}
+ * @param {number} num
  * @returns {number[]}
  */
-const doneToZeroForLoop = (number) => {
-  let myArray = [];
-  for (let i = number; i > 0; i--) {
-    myArray.push(i);
+const doneToZeroForLoop = (num) => {
+  const newArr = [];
+  for (let i = num; i > 0; i--) {
+    newArr.push(i);
   }
-  return myArray;
+  return newArr;
 };
 
 /**
@@ -69,17 +69,17 @@ const doneToZeroForLoop = (number) => {
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
 const evenAndOddWhileLoop = (max) => {
-  let num = -1;
-  let myArray = [];
-  while (num < max) {
-    num += 1;
-    if (num % 2 === 0) {
-      myArray.push(`${num} is even`);
+  const newArr = [];
+  let counter = 0;
+  while (counter <= max) {
+    if (counter % 2 === 0) {
+      newArr.push(`${counter} is even`);
     } else {
-      myArray.push(`${num} is odd`);
+      newArr.push(`${counter} is odd`);
     }
+    counter++;
   }
-  return myArray;
+  return newArr;
 };
 
 /**
@@ -92,15 +92,15 @@ const evenAndOddWhileLoop = (max) => {
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
 const evenAndOddForLoop = (max) => {
-  let myArray = [];
-  for (i = 0; i <= max; i++) {
+  const newArr = [];
+  for (let i = 0; i <= max; i++) {
     if (i % 2 === 0) {
-      myArray.push(`${i} is even`);
+      newArr.push(`${i} is even`);
     } else {
-      myArray.push(`${i} is odd`);
+      newArr.push(`${i} is odd`);
     }
   }
-  return myArray;
+  return newArr;
 };
 
 /**
@@ -118,14 +118,13 @@ const evenAndOddForLoop = (max) => {
 * 5 * 9 = 45
  */
 function tillXTimes9WhileLoop(x) {
-  let num = -1;
-  let myArray = [];
-  while (num < x) {
-    num += 1;
-    myArray.push(num * 9);
+  const newArr = [];
+  let counter = 0;
+  while (counter <= x) {
+    newArr.push(counter * 9);
+    counter++;
   }
-
-  return myArray;
+  return newArr;
 }
 
 /**
@@ -143,11 +142,11 @@ function tillXTimes9WhileLoop(x) {
 * 5 * 9 = 45
  */
 function tillXTimes9ForLoop(x) {
-  let myArray = [];
-  for (i = 0; i <= x; i++) {
-    myArray.push(i * 9);
+  const newArr = [];
+  for (let i = 0; i <= x; i++) {
+    newArr.push(i * 9);
   }
-  return myArray;
+  return newArr;
 }
 
 /**
@@ -157,15 +156,15 @@ function tillXTimes9ForLoop(x) {
 
  */
 function endsWithFiveWhileLoop() {
-  let num = 0;
-  let numFiveArray = [];
-  while (num < 100) {
-    num += 5;
-    if (num % 10 === 5) {
-      numFiveArray.push(num);
+  const newArr = [];
+  let counter = 1;
+  while (counter <= 100) {
+    if (counter % 10 === 5) {
+      newArr.push(counter);
     }
+    counter++;
   }
-  return numFiveArray;
+  return newArr;
 }
 
 /**
@@ -175,59 +174,47 @@ function endsWithFiveWhileLoop() {
 
  */
 function endsWithFiveForLoop() {
-  let myArray = [];
-  for (let i = 0; i < 100; i += 5) {
+  const newArr = [];
+  for (let i = 1; i <= 100; i++) {
     if (i % 10 === 5) {
-      myArray.push(i);
+      newArr.push(i);
     }
   }
-  return myArray;
+  return newArr;
 } /**
+ Without running/executing your code, how many times will the loop below run?
+  Explain why.
+ */ /*
+let i = 5;
+
+while (i > 3) {
+    i += 1
+}
+*/
+/**
+ * // Write your explanation here!
+ *
+ */ /**
  * Returns an array with all the numbers from all the numbers from 1 to 100.
  * For numbers divisible by 3, add "Fizz" instead of the number into the array.
  * For numbers divisible by 5 (and not 3), add "Buzz" instead of the number into the array.
 
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
- */ // // ITS GOING TO BE AN INFINITE LOOP BECAUSE THE CONDITION WILL ALWAYS BE TRUE.
-/**
- * // Write your explanation here!
- *
- */ // Try refactoring the code above to increment your i by 10 and starting at 5.
-
-// function endsWithTenForLoop() {
-
-//   let myArray = [];
-//   for (let i = 5; i < 100; i += 10) {
-//     if (i % 10 === 5) {
-//       myArray.push(i);
-//     }
-//   }
-//   return myArray
-// }
-
-/**
- Without running/executing your code, how many times will the loop below run?
-  Explain why.
- */
-/*
-let i = 5;
-
-while (i > 3) {
-    i += 1
-}
-*/ function fizzBuzzPart1() {
-  let num = 0;
-  let myArray = [];
-  while (num < 100) {
-    num += 1;
-    if (num % 3 === 0) {
-      myArray.push("Fizz");
-    } else if (num % 5 === 0 && num % 3 !== 0) {
-      myArray.push("Buzz");
-    } else myArray.push(num);
+ */ function fizzBuzzPart1() {
+  const newArr = [];
+  let counter = 1;
+  while (counter <= 100) {
+    if (counter % 5 === 0 && counter % 3 !== 0) {
+      newArr.push("Buzz");
+    } else if (counter % 3 === 0) {
+      newArr.push("Fizz");
+    } else {
+      newArr.push(counter);
+    }
+    counter++;
   }
-  return myArray;
+  return newArr;
 }
 
 /**
@@ -240,19 +227,21 @@ while (i > 3) {
 
  */
 function fizzBuzzPart2() {
-  let num = 0;
-  let myArray = [];
-  while (num < 100) {
-    num += 1;
-    if (num % 5 === 0 && num % 3 === 0) {
-      myArray.push("FizzBuzz");
-    } else if (num % 5 === 0 && num % 3 !== 0) {
-      myArray.push("Buzz");
-    } else if (num % 3 === 0) {
-      myArray.push("Fizz");
-    } else myArray.push(num);
+  const newArr = [];
+  let counter = 1;
+  while (counter <= 100) {
+    if (counter % 3 === 0 && counter % 5 === 0) {
+      newArr.push("FizzBuzz");
+    } else if (counter % 5 === 0 && counter % 3 !== 0) {
+      newArr.push("Buzz");
+    } else if (counter % 3 === 0) {
+      newArr.push("Fizz");
+    } else {
+      newArr.push(counter);
+    }
+    counter++;
   }
-  return myArray;
+  return newArr;
 }
 
 /**
@@ -264,9 +253,10 @@ function fizzBuzzPart2() {
  */
 const rangeSum = (min, max) => {
   let sum = 0;
-  for (let i = min; i <= max; i++) {
-    sum += i;
-    console.log(i);
+  let counter = min;
+  while (counter <= max) {
+    sum += counter;
+    counter++;
   }
   return sum;
 };
@@ -280,15 +270,15 @@ const rangeSum = (min, max) => {
  * @returns {number[]} all odd numbers in range decreasing
  */
 const rangeOdd = (min, max) => {
-  let myArray = [];
-  while (max >= min) {
-    if (max % 2 === 1) {
-      myArray.push(max);
+  const newArr = [];
+  let counter = max;
+  while (counter >= min) {
+    if (counter % 2 === 1) {
+      newArr.push(counter);
     }
-
-    max -= 1;
+    counter--;
   }
-  return myArray;
+  return newArr;
 };
 
 /**
@@ -298,11 +288,13 @@ const rangeOdd = (min, max) => {
  * @returns {number[]} includes every other element
  */
 const rangeEveryOther = (min, max) => {
-  let myArray = [];
-  for (let i = min; i <= max; i += 2) {
-    myArray.push(i);
+  const newArr = [];
+  let counter = min;
+  while (counter <= max) {
+    newArr.push(counter);
+    counter += 2;
   }
-  return myArray;
+  return newArr;
 };
 
 /**
@@ -310,17 +302,17 @@ const rangeEveryOther = (min, max) => {
  * Determines whether or not that target exists in the array
  * Must be written with a while loop
  * Must NOT contain built in includes method.
- * @param {Array} elements
+ * @param {Array} arr
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-const containsWhileLoop = (elements, target) => {
-  let i = 0;
-  while (i < elements.length) {
-    if (elements[i] === target) {
-      return true;
+const containsWhileLoop = (arr, target) => { // *** revisit *** // 
+  let counter = 0;
+  while (arr.length >= counter) {
+    if (arr[counter] === target) {
+      return true
     }
-    i++;
+    counter++
   }
   return false;
 };
@@ -330,13 +322,14 @@ const containsWhileLoop = (elements, target) => {
  * Determines whether or not that target exists in the array
  * Must be written with a for loop
  * Must NOT contain built in includes method.
- * @param {Array} elements
+ * @param {Array} arr
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-const containsForLoop = (elements, target) => {
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i] === target) {
+
+const containsForLoop = (arr, target) => { // *** revisit *** // 
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
       return true;
     }
   }
@@ -346,31 +339,32 @@ const containsForLoop = (elements, target) => {
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
- * @param {Array} elements
+ * @param {Array} arr
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-const targetCount = (elements, target) => {
-  count = 0
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i] === target) {
-      count++;
+const targetCount = (arr, target) => {
+  let occurances = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      occurances++;
     }
   }
-  return count;
+  return occurances;
 };
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
  * If the target is not found it should return -1
  * NOT allowed to use built in method indexOf
- * @param {Array} elements
+ * @param {Array} arr
  * @param {number|string} target
  * @returns {number} first index found.
  */
-const firstIndexFound = (elements, target) => {
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i] === target) {
+const firstIndexFound = (arr, target) => {
+  // *** revisit *** //
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
       return i;
     }
   }
@@ -382,13 +376,14 @@ const firstIndexFound = (elements, target) => {
  * Determines the last index that the target is found at.
  * If the target is not found it should return -1
  * NOT allowed to use built in method lastIndexOf
- * @param {Array} elements
+ * @param {Array} arr
  * @param {number|string} target
  * @returns {number} last index found.
  */
-const lastIndexFound = (elements, target) => {
-  for (let i = elements.length - 1; i > 0; i--) {
-    if (elements[i] === target) {
+
+const lastIndexFound = (arr, target) => { // *** revisit *** // 
+  for (let i = arr.length; i >= 0; i--) {
+    if (arr[i] === target) {
       return i;
     }
   }
@@ -399,17 +394,25 @@ const lastIndexFound = (elements, target) => {
  * Takes in an array.
  * Returns a new array where each element has been multiplied by its index.
  * Exp: Input [2, 2, 2] Output: [0, 2, 4] because 0 * 2, 1 * 2, and 2 * 2
- * @param {number[]} elements
+ * @param {number[]} arr
  * @returns {number[]}
  */
-function timesIndex(elements) {
-  let myArray = [];
-  for (let i = 0; i < elements.length; i++) {
-    console.log(i);
-    myArray.push(elements[i] * i);
-  }
-  return myArray;
-}
+
+const timesIndex = arr => arr.map((el, i) => el * i);
+
+// function timesIndex(arr) {
+//   return arr.map((el, i) => {
+//     return el * i;
+//   });
+// }
+
+// function timesIndex(arr) {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr.push(arr[i] * i)
+//   }
+//   return newArr
+// }
 
 /**
  * Takes in an array.
@@ -417,18 +420,18 @@ function timesIndex(elements) {
  * Exp: Input [5, 2, 9] Output: [5, 7, 16] . 5 is the first element so added to 0.
  *  7 because 5 + 2 is 7
  * 16 because 7 + 9 is 16
- * @param {number[]} elements
+ * @param {number[]} arr
  * @returns {number[]}
  */
 
-const cumulativeSum = (elements) => {
-  let myArray = [];
+const cumulativeSum = (arr) => {
+  // can an array method be used here? if yes, how? or which one?
+  const newArr = [];
   let sum = 0;
-  for (let i = 0; i < elements.length; i++) {
-    sum += elements[i];
-    myArray.push(sum);
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push((sum += arr[i]));
   }
-  return myArray;
+  return newArr;
 };
 
 module.exports = {

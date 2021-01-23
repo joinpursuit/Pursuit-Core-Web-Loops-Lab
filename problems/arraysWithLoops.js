@@ -128,20 +128,35 @@ function findSmallest(nums) {
  * @returns {number} second smallest value
  */
 
-function findSecondSmallest(nums) {
+// function findSecondSmallest(nums) { 
+//   let smallNum = Infinity;
+//   let secondSmall = Infinity;
+
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] < smallNum) {
+//       smallNum = nums[i];
+//     }
+//     for (let i = 0; i < nums.length; i++)
+//       if (nums[i] > smallNum && nums[i] < secondSmall) secondSmall = nums[i];
+//   }
+//   return secondSmall;
+// }
+
+
+function findSecondSmallest(nums) { //Corey's review
   let smallNum = Infinity;
   let secondSmall = Infinity;
 
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] < smallNum) {
+      secondSmall = smallNum
       smallNum = nums[i];
+    } else if(nums[i] < secondSmall) {
+      secondSmall = nums[i]
     }
-    for (let i = 0; i < nums.length; i++)
-      if (nums[i] > smallNum && nums[i] < secondSmall) secondSmall = nums[i];
   }
-  return secondSmall;
+  return secondSmall
 }
-
 /**
  * Takes in array and returns the second largest number in the array
  * @param {number[]} nums
