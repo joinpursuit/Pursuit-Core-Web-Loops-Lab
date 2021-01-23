@@ -153,7 +153,7 @@ function findSecondLargest(nums) {
       largest = num;
     } else if (num > secondLargest) {
       secondLargest = num;
-   console.log('elseblock:' + secondLargest);
+  //  console.log('elseblock:' + secondLargest);
     }
   }
 
