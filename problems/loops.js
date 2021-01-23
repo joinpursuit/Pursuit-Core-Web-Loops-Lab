@@ -159,7 +159,12 @@ function tillXTimes9ForLoop(x) {
 
  */
 function endsWithFiveWhileLoop() {
-
+  let i = 5
+  let newArr = []
+  while(i < 100){
+    newArr.push(i)
+    i += 10
+  } return newArr
 }
 
 
@@ -170,9 +175,14 @@ function endsWithFiveWhileLoop() {
  * @returns {number[]} [5, 15, 25, ..., 95]
 
  */
-function endsWithFiveForLoop() {}
+function endsWithFiveForLoop() {
+  let newArr = []
+  for(let i = 5; i < 100; i+= 10){
+    newArr.push(i)
+  }
+  return newArr
+}
 // Try refactoring the code above to increment your i by 10 and starting at 5.
-
 
 
 /**
