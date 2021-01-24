@@ -210,7 +210,18 @@ while (i > 3) {
  * @returns {Array} [1, 2, "Fizz", 4, "Buzz"... 98, "Fizz", "Buzz"]
 
  */
-function fizzBuzzPart1() {}
+function fizzBuzzPart1() {
+  let newArr = []
+  for(let i = 1; i <= 100; i++){
+    if(i % 3 === 0) {
+      newArr.push("Fizz")
+    } else if (i % 5 === 0){
+      newArr.push("Buzz")
+    } else {
+      newArr.push(i)
+    } 
+  } return newArr
+}
 
 
  /**
@@ -222,7 +233,20 @@ function fizzBuzzPart1() {}
  * @returns {Array}
 
  */
-function fizzBuzzPart2() {}
+function fizzBuzzPart2() {
+  let newArr = []
+  for(let i = 1; i <= 100; i++) {
+    if( i % 3 === 0 && i % 5 === 0) {
+      newArr.push("FizzBuzz")
+    } else if(i % 3 === 0){
+      newArr.push("Fizz")
+    } else if(i % 5 === 0){
+      newArr.push("Buzz")
+    } else{
+      newArr.push(i)
+    }
+  } return newArr
+}
 
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
