@@ -103,11 +103,11 @@ const evenArray = (nums) => {
 const findSmallest = (nums) => {
   let smallestNum = nums[0];
   for (let i = 0; i < nums.length; i++) {
-    if( nums[i]< smallestNum) {
-      smallestNum = nums[i]
+    if (nums[i] < smallestNum) {
+      smallestNum = nums[i];
     }
   }
-  return smallestNum
+  return smallestNum;
 };
 /**
  * Takes in array and returns the second smallest number in the array
@@ -117,18 +117,18 @@ const findSmallest = (nums) => {
  */
 
 const findSecondSmallest = (nums) => {
-  let smallestNum = Infinity
-  let secondSmallestNum = Infinity
+  let smallestNum = Infinity;
+  let secondSmallestNum = Infinity;
   for (let i = 0; i < nums.length; i++) {
-    if(nums[i] < smallestNum) {
+    if (nums[i] < smallestNum) {
       secondSmallestNum = smallestNum;
-      smallestNum = nums [i]
-    } else if(nums [i] < secondSmallestNum) {
-      secondSmallestNum = nums[i]
+      smallestNum = nums[i];
+    } else if (nums[i] < secondSmallestNum) {
+      secondSmallestNum = nums[i];
     }
-  } 
-  return secondSmallestNum
-      }
+  }
+  return secondSmallestNum;
+};
 //     }
 // }
 /**
@@ -138,19 +138,19 @@ const findSecondSmallest = (nums) => {
  */
 
 const findSecondLargest = (nums) => {
-  let largestNum = -Infinity
-  let secondLargestNum = -Infinity
+  let largestNum = -Infinity;
+  let secondLargestNum = -Infinity;
   for (let i = 0; i < nums.length; i++) {
-    const num = nums[i]
-    if(num > largestNum) {
-      secondLargestNum = largestNum
-      largestNum = num
-    } else if(num > secondLargestNum) {
-      secondLargestNum = num
+    const num = nums[i];
+    if (num > largestNum) {
+      secondLargestNum = largestNum;
+      largestNum = num;
+    } else if (num > secondLargestNum) {
+      secondLargestNum = num;
     }
   }
-  return secondLargestNum
-}
+  return secondLargestNum;
+};
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -159,18 +159,18 @@ const findSecondLargest = (nums) => {
  * @returns {array} nums without the duplicates
  */
 // Hint: Look into the `.includes` method.
-const removeDups = nums => {
-  let newArray = []
+const removeDups = (nums) => {
+  let newArray = [];
   for (let i = 0; i < nums.length; i++) {
-    const num = nums [i]
-    if(newArray.includes(num)) {
-      continue
+    const num = nums[i];
+    if (newArray.includes(num)) {
+      continue;
     } else {
-      newArray.push(num)
+      newArray.push(num);
+    }
   }
-}
-  return newArray
-}
+  return newArray;
+};
 
 module.exports = {
   shoutForLoop,
