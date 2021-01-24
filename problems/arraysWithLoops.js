@@ -73,14 +73,14 @@ const sumArray = (nums) => {
  */
 
 const oddArray = (nums) => {
-  let newArray = nums.slice(0)
+  let newArray = []
   for(let i = 0; i < nums.length; i++) {
-    if(i % 2 ===1) {
+    if(nums[i] % 2 === 1) {
       newArray.push(nums[i])
     }
-    return newArray
   }
   
+  return newArray
 }
 
 /**
@@ -90,13 +90,13 @@ const oddArray = (nums) => {
  */
 
 function evenArray(nums) {
-  let evenNums = []
-  for (let i of nums) {
-    if (i % 2 === 0) {
-      evenNums.push(i)
+  let arr = []
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      arr.push(nums[i]);
     }
-    return evenNums
   }
+  return arr
 }
 
 /**
@@ -106,13 +106,12 @@ function evenArray(nums) {
  */
 
 function findSmallest(nums) {
-  let i = nums[0]
-  for (let num of num) {
-    if (num < i ) {
-      i = num
-    }
-    return i
+  let smallest = Infinity;
+  for(let i = 0; i < nums.length; i++) {
+    if(nums[i] < smallest)
+    smallest = nums[i]
   }
+  return smallest;
 }
 
 /**
@@ -123,18 +122,18 @@ function findSmallest(nums) {
  */
 
 function findSecondSmallest(nums) {
-  let smallestNum = nums[0]
-  let secondSmallest = nums[1]
-  for (let i=1; i < nums.length; i+= 1) {
-    if (nums[i] < smallestNum) {
-      secondSmallest = smallestNum
-      smallestNum = nums[i]
-    } else if (num[i] < secondSmallest) {
+  let smallest = Infinity
+  let secondSmallest = Infinity
+  for (let i = 0; i < nums.length; i+= 1) {
+    if (nums[i] < smallest) {
+      secondSmallest = smallest
+      smallest = nums[i]
+    } else if (nums[i] < secondSmallest) {
       secondSmallest = nums[i]
 
     }
-    return secondSmallest
   }
+  return secondSmallest
 }
 
 /**
@@ -144,16 +143,17 @@ function findSecondSmallest(nums) {
  */
 
 function findSecondLargest(nums) {
-  let largestNum = nums[0]
-  let secondLargest = nums[0]
-  for(let i = 1; i < nums.length; i+= 1) {
-    if(nums[i] > largestNum) {
-      secondLargest = largestNumlargestNum = nums[i]
+  let largest = - Infinity
+  let secondLargest = - Infinity
+  for(let i = 0; i < nums.length; i+= 1) {
+    if(nums[i] > largest) {
+      secondLargest = largest 
+      largest = nums[i]
     } else if (nums[i] > secondLargest) {
       secondLargest = nums[i]
     }
-    return secondLargest
   }
+  return secondLargest
 }
 
 /**
@@ -165,11 +165,12 @@ function findSecondLargest(nums) {
 // Hint: Look into the `.includes` method.
 function removeDups(nums) {
   let array = []
-  for (let num of nums0) {
-    if(array.includes(num) === false) {
-      array.push(num)
+  for (let i = 0; i < nums.length; i++) {
+    if(!array.includes(nums[i])) {
+      array.push(nums[i])
     }
   }
+  return array;
 }
 
 module.exports = {
