@@ -255,7 +255,13 @@ function fizzBuzzPart2() {
  * @param {number} max number
  * @returns {number} sum all all numbers from min to max
  */
-function rangeSum() {}
+function rangeSum(min, max) {
+  let sum = 0
+  for(let i = min; i <= max; i++){
+    sum += i
+  }
+  return sum
+}
 
 /**
  * Takes in range (inclusive) and returns an array in decreasing order of all odd numbers
@@ -265,7 +271,15 @@ function rangeSum() {}
  * @param {number} max number
  * @returns {number[]} all odd numbers in range decreasing
  */
-function rangeOdd() {}
+function rangeOdd(min, max) {
+  let oNums = []
+  for(let i = max; i >= min; i--){
+    if(i % 2 !== 0) {
+      oNums.push(i)
+    }
+  }
+  return oNums
+}
 
 /**
  * Takes in range (inclusive) and returns an array in increasing order of every other element.
@@ -275,7 +289,13 @@ function rangeOdd() {}
  * @param {number} max number
  * @returns {number[]} includes every other element
  */
-function rangeEveryOther() {}
+function rangeEveryOther(min, max) {
+  let newArr = []
+  for(let i = min; i <= max; i += 2){
+    newArr.push(i)
+  }
+  return newArr
+}
 
 /**
  * Takes in an array and a target.
