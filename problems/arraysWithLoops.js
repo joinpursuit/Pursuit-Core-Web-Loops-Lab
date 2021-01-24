@@ -21,7 +21,7 @@
  * @return {Array} - ["I!", "am!", "a!", "happy!", "array!"]
  */
 
-  const  shoutWhileLoop = array =>  {
+  const shoutWhileLoop = array =>  {
     let newArray = [];
     let idx = 0 
     while (idx < array.length) {

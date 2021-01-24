@@ -5,16 +5,16 @@
 //  * @returns {number[]}
 //  */
 const oneTillDoneWhileLoop = (number) =>{
-let newArray = []     
-let i = 1 
-while ( i <= number ){     
-  newArray.push( i )     
+let newArray = []   
+let i = 1  
+while (i <= number){    
+  newArray.push(i)     
   i++                    
 }
 return newArray
 }
 
-
+// 
 // /**
 //  * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
 //  * Must be written with a for loop
@@ -24,7 +24,7 @@ return newArray
 const oneTillDoneForLoop = (number) => {
 let newArray = []
 for( let i = 1; i <= number ; i++ ){
-  newArray.push( i )     
+  newArray.push(i)     
 }
 return newArray
 }
@@ -38,8 +38,8 @@ return newArray
 const doneToZeroWhileLoop = ( number) => {
   let newArray = []           
   let i = 0;                
-  while( number > i){            
-    newArray.push( number )  
+  while( number >= i){            
+    newArray.push(number)  
     number--                
   }
   return newArray
@@ -52,11 +52,11 @@ const doneToZeroWhileLoop = ( number) => {
 //  * @returns {number[]}
 //  */
 const doneToZeroForLoop = (number) => {
-  let newArray = []
-  for (i = number; i > 0; i--){
-    newArray.push(i)  
-  }
-  return newArray
+//   let newArray = []
+//   for (i = number; i > 0; i--){
+//     newArray.push(i)  
+//   }
+//   return newArray
 }
 
 // /**
@@ -69,21 +69,21 @@ const doneToZeroForLoop = (number) => {
 //  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
 //  */
     const evenAndOddWhileLoop = (max) => {
-        let newArray = []
-        let i = 0
-        while (i <= max){
-          if (i % 2 === 0){
-            newArray.push (i + " is even" ) 
-          i++
-          }else {
-            newArray.push(i + " is odd") 
-          i++
-          }
+//         let newArray = []
+//         let i = 0
+//         while (i <= max){
+//           if (i % 2 === 0){
+//             newArray.push (i + " is even" ) 
+//           i++
+//           }else {
+//             newArray.push(i + " is odd") 
+//           i++
+//           }
           
-        } 
-      }
-//           return newArray
-//     }   
+//         } 
+//       }
+// //           return newArray
+    }   
 
 // /**
 //  * Takes in the variable "max", and iterates over all numbers from 0 to "max".
@@ -95,15 +95,15 @@ const doneToZeroForLoop = (number) => {
 //  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
 //  */
     const evenAndOddForLoop= (max) => {
-      let newArray = []
-      for ( let i = 0; i <= max; i++){
-        if (i % 2 === 0){
-          newArray.push(i + " is even")
-        }else{
-          newArray.push(i + " is odd")
-        }
-      }
-      return newArray
+    //   let newArray = []
+    //   for ( let i = 0; i <= max; i++){
+    //     if (i % 2 === 0){
+    //       newArray.push(i + " is even")
+    //     }else{
+    //       newArray.push(i + " is odd")
+    //     }
+    //   }
+    //   return newArray
     }
 
 /**
@@ -121,13 +121,13 @@ const doneToZeroForLoop = (number) => {
 // * 5 * 9 = 45
 //  */
  const tillXTimes9WhileLoop = (x) =>  {
-   let newArray = []
-   let i = 0
-    while (i <= x){
-     newArray.push(i * 9)
-     i++
-   } 
-   return newArray
+//    let newArray = []
+//    let i = 0
+//     while (i <= x){
+//      newArray.push(i * 9)
+//      i++
+//    } 
+//    return newArray
  }
 
 // /**
@@ -145,11 +145,11 @@ const doneToZeroForLoop = (number) => {
 // * 5 * 9 = 45
 //  */
 const tillXTimes9ForLoop = (x) => {
-  let newArray = []
-  for (let i = 0 ; i <= x ; i++) {
-    newArray.push(i * 9)
-  }
-  return newArray
+//   let newArray = []
+//   for (let i = 0 ; i <= x ; i++) {
+//     newArray.push(i * 9)
+//   }
+//   return newArray
 }
 
 
@@ -160,13 +160,13 @@ const tillXTimes9ForLoop = (x) => {
 
 //  */
   const endsWithFiveWhileLoop = () => {
-    let newArray = []
-    let i = 5
-    while (i <= 100){
-     newArray.push(i)
-      i+= 10
-    }
-    return newArray
+  //   let newArray = []
+  //   let i = 5
+  //   while (i <= 100){
+  //    newArray.push(i)
+  //     i+= 10
+  //   }
+  //   return newArray
   }
 
 
@@ -178,11 +178,11 @@ const tillXTimes9ForLoop = (x) => {
 
 //  */
   const endsWithFiveForLoop = () => {
-  let newArray = []
-  for (i = 5; i <= 100 ; i+= 10){
-    newArray.push(i)
-  }
-  return newArray
+//   let newArray = []
+//   for (i = 5; i <= 100 ; i+= 10){
+//     newArray.push(i)
+//   }
+//   return newArray
 }
 // Try refactoring the code above to increment your i by 10 and starting at 5.
 
@@ -214,19 +214,19 @@ const tillXTimes9ForLoop = (x) => {
 
 //  */
   const fizzBuzzPart1 = () => {
-    let newArray = []
-    let i = 1
-    while (i <= 100){
-      if (i % 3 === 0){
-      newArray.push("Fizz") 
-      }else if (i % 5 === 0) {
-        newArray.push("Buzz")
-        }else{
-          newArray.push(i)
-        }
-        i++
-      }
-    return newArray
+  //   let newArray = []
+  //   let i = 1
+  //   while (i <= 100){
+  //     if (i % 3 === 0){
+  //     newArray.push("Fizz") 
+  //     }else if (i % 5 === 0) {
+  //       newArray.push("Buzz")
+  //       }else{
+  //         newArray.push(i)
+  //       }
+  //       i++
+  //     }
+  //   return newArray
   }
 
 
@@ -240,21 +240,21 @@ const tillXTimes9ForLoop = (x) => {
 
 //  */
  const  fizzBuzzPart2 = () => {
-   let newArray = []
-   let i = 1
-   while (i <= 100){
-    if (i % 3 === 0 && i % 5 === 0){
-      newArray.push("FizzBuzz")
-      }else if (i % 3 === 0) {
-        newArray.push("Fizz")
-      }else if  ( i % 5 === 0) {
-        newArray.push("Buzz")
-      }else {
-        newArray.push(i)
-      }
-      i++ 
-   }
-    return newArray
+//    let newArray = []
+//    let i = 1
+//    while (i <= 100){
+//     if (i % 3 === 0 && i % 5 === 0){
+//       newArray.push("FizzBuzz")
+//       }else if (i % 3 === 0) {
+//         newArray.push("Fizz")
+//       }else if  ( i % 5 === 0) {
+//         newArray.push("Buzz")
+//       }else {
+//         newArray.push(i)
+//       }
+//       i++ 
+//    }
+//     return newArray
  }
 
 // /**
@@ -265,11 +265,11 @@ const tillXTimes9ForLoop = (x) => {
 //  * @returns {number} sum all all numbers from min to max
 //  */
  const rangeSum = (min, max) => {
-   let sum = 0;
-   for (i = min; i <= max; i++) {
-    sum +=i 
-   }
-    return sum 
+//    let sum = 0;
+//    for (i = min; i <= max; i++) {
+//     sum +=i 
+//    }
+//     return sum 
  }
 
 // /**
@@ -281,13 +281,13 @@ const tillXTimes9ForLoop = (x) => {
 //  * @returns {number[]} all odd numbers in range decreasing
 //  */
  const rangeOdd = (min, max) => {
-    let newArray = []
-    let i = max
-    for (i = max; i >= min; i--)
-    if (i % 2 === 1 ) {
-      newArray.push(i)
-    }  
-    return newArray
+//     let newArray = []
+//     let i = max
+//     for (i = max; i >= min; i--)
+//     if (i % 2 === 1 ) {
+//       newArray.push(i)
+//     }  
+//     return newArray
  } 
 
 // /**
@@ -299,11 +299,11 @@ const tillXTimes9ForLoop = (x) => {
 // //  * @returns {number[]} includes every other element
 //  */
  const rangeEveryOther= (min, max) => {
-  let newArray = []
-  for  (let i =min; i <= max; i+=2 ){
-  newArray.push(i) 
- }
- return newArray
+//   let newArray = []
+//   for  (let i =min; i <= max; i+=2 ){
+//   newArray.push(i) 
+//  }
+//  return newArray
  }
 
 
@@ -318,15 +318,15 @@ const tillXTimes9ForLoop = (x) => {
 //  * @returns {boolean} true if the array contains our target, otherwise false
 //  */
  const containsWhileLoop = (elements, target) => {
-  let i = 0
-  while (i < elements.length) {
-    if (elements[i] === target){ 
-      i++
-      return true
-    }
+//   let i = 0
+//   while (i < elements.length) {
+//     if (elements[i] === target){ 
+//       i++
+//       return true
+//     }
      
-  }
-  return false 
+//   }
+//   return false 
 }
 
 // /**
@@ -339,12 +339,12 @@ const tillXTimes9ForLoop = (x) => {
 //  * @returns {boolean} true if the array contains our target, otherwise false
 //  */
  const containsForLoop = (elements, target) => {
-  for ( i = 0; i < elements.length; i++){ 
-    if (elements[i] === target){ 
-      return true
-    }
-  return false
-}
+//   for ( i = 0; i < elements.length; i++){ 
+//     if (elements[i] === target){ 
+//       return true
+//     }
+//   return false
+// }
  }
 // /**
 //  * Takes in an array and a target.
@@ -354,13 +354,13 @@ const tillXTimes9ForLoop = (x) => {
 //  * @returns {number} number of occurances
 //  */
   const targetCount = (elements, target) => {
-    let counter = 0 
-    for (i = 0; i < elements.length; i++ ){ //i is index and counter is used to run through array it is the   starting point i++ increments to the next element in the array 
-      if (elements[i] === target){ 
-        counter++  //counter only increments with the target is found 
-      }
-      }
-      return counter  
+  //   let counter = 0 
+  //   for (i = 0; i < elements.length; i++ ){ //i is index and counter is used to run through array it is the   starting point i++ increments to the next element in the array 
+  //     if (elements[i] === target){ 
+  //       counter++  //counter only increments with the target is found 
+  //     }
+  //     }
+  //     return counter  
     }
    
 
@@ -376,12 +376,12 @@ const tillXTimes9ForLoop = (x) => {
 //  * @returns {number} first index found.
 //  */
  const firstIndexFound = (elements, target) => { 
-   for (i = 0; i < elements.length; i++){
-     if (elements[i] === target){
-      return i 
-     }
-   }
-   return -1 
+//    for (i = 0; i < elements.length; i++){
+//      if (elements[i] === target){
+//       return i 
+//      }
+//    }
+//    return -1 
  }
 // /**
 //  * Takes in an array and a target.
@@ -393,14 +393,14 @@ const tillXTimes9ForLoop = (x) => {
 //  * @returns {number} last index found.
 //  */
  const lastIndexFound = (elements, target) => {
-   let counter = 0
-   for (i = 0; i < elements.length; i++){
-     if (elements[i] === target){
-       counter = i // returning the idex number the target is located at. Counter = i and i represents the index number 
-     }
-     return counter
-   }
-   return -1 
+//    let counter = 0
+//    for (i = 0; i < elements.length; i++){
+//      if (elements[i] === target){
+//        counter = i // returning the idex number the target is located at. Counter = i and i represents the index number 
+//      }
+//      return counter
+//    }
+//    return -1 
  }
 
 // /**
@@ -411,11 +411,11 @@ const tillXTimes9ForLoop = (x) => {
 //  * @returns {number[]}
 //  */
  const timesIndex = (elements) => {
-   let newArray = []
-   for ( i =0; i < elements.length; i++){
-     newArray.push(elements[i]*i)
-   }
-   return newArray
+//    let newArray = []
+//    for ( i =0; i < elements.length; i++){
+//      newArray.push(elements[i]*i)
+//    }
+//    return newArray
  }
 
 
@@ -429,12 +429,12 @@ const tillXTimes9ForLoop = (x) => {
 //  * @returns {number[]}
 // //  */
  const cumulativeSum = (elements) => {  
-   let newArray = []
-   let sum = 0 
-   for (i =0; i < elements.length; i++){
-      newArray.push(sum += elements[i])
-   }
-   return newArray
+//    let newArray = []
+//    let sum = 0 
+//    for (i =0; i < elements.length; i++){
+//       newArray.push(sum += elements[i])
+//    }
+//    return newArray
  }
 
 
