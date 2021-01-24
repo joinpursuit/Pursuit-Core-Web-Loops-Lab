@@ -228,20 +228,22 @@ const fizzBuzzPart1 = () => {
  * @returns {Array}
 
  */
-const fizzBuzzPart2 = () => {
-  let newArray = [];
+function fizzBuzzPart2() {
+  let arr = []
   for (let i = 1; i <= 100; i++) {
-    if (i % 3 === 0) {
-      newArray.push("Fizz");
+    if (i % 3 === 0 && i % 5 === 0) {
+      arr.push("FizzBuzz")
+    } else if (i % 3 === 0) {
+      arr.push("Fizz")
     } else if (i % 5 === 0) {
-      newArray.push("Buzz");
-    } else if (i % 3 === 0 && i % 5 === 0) {
-      newArray.push("FizBuzz");
+      arr.push("Buzz")
     } else {
-      newArray.push(i);
+      arr.push(i)
     }
   }
+  return arr
 };
+
 /**
  * Takes in range (inclusive) and returns the sum of all numbers in that range.
 
@@ -252,8 +254,9 @@ const fizzBuzzPart2 = () => {
 const rangeSum = (min, max) => {
   let sum = 0;
   for (let i = min; i <= max; i++) {
-    return (sum += i);
+    sum += i;
   }
+  return sum;
 };
 
 /**
@@ -265,11 +268,13 @@ const rangeSum = (min, max) => {
  * @returns {number[]} all odd numbers in range decreasing
  */
 const rangeOdd = (min, max) => {
+  let arr = [];
   for (let i = max; i >= min; i--) {
-    if (i % 2) {
-      return i;
+    if (i % 2 === 1) {
+     arr.push(i)
     }
   }
+  return arr;
 };
 
 /**
@@ -281,9 +286,11 @@ const rangeOdd = (min, max) => {
  * @returns {number[]} includes every other element
  */
 const rangeEveryOther = (min, max) => {
+  let arr = [];
   for (let i = min; i <= max; i += 2) {
-    return i;
+    arr.push(i);
   }
+  return arr;
 };
 
 /**
@@ -298,13 +305,12 @@ const rangeEveryOther = (min, max) => {
 const containsWhileLoop = (elements, target) => {
   let i = 0;
   while (i <= elements.length - 1) {
-    if (i === target) {
+    if (elements[i] === target) {
       return true;
-    } else {
-      return false;
     }
     i++;
   }
+  return false;
 };
 
 /**
@@ -318,12 +324,11 @@ const containsWhileLoop = (elements, target) => {
  */
 const containsForLoop = (elements, target) => {
   for (let i = 0; i <= elements.length - 1; i++) {
-    if (i === target) {
+    if (elements[i] === target) {
       return true;
-    } else {
-      return false;
     }
   }
+  return false;
 };
 /**
  * Takes in an array and a target.
@@ -333,11 +338,13 @@ const containsForLoop = (elements, target) => {
  * @returns {number} number of occurances
  */
 const targetCount = (elements, target) => {
-  for (let i = 0; i <= elements.length - 1; i++) {
-    if (i === target) {
-      return i++;
+  let counter = 0
+  for (let i = 0; i <= elements.length; i++) {
+    if (elements[i] === target) {
+      counter +=1;
     }
   }
+  return counter;
 };
 /**
  * Takes in an array and a target.
@@ -349,13 +356,12 @@ const targetCount = (elements, target) => {
  * @returns {number} first index found.
  */
 const firstIndexFound = (elements, target) => {
-  for (let i = 0; i <= elements.length - 1; i++) {
-    if (i === target) {
-      return elements[i];
-    } else {
-      return -1;
+  for (let i = 0; i <= elements.length; i++) {
+    if (elements[i] === target) {
+      return i;
     }
   }
+  return -1;
 };
 /**
  * Takes in an array and a target.
@@ -367,11 +373,12 @@ const firstIndexFound = (elements, target) => {
  * @returns {number} last index found.
  */
 const lastIndexFound = (elements, target) => {
-  for (let i = 0; i <= elements.length - 1; i++) {
-    if (i === target) {
-      return elements[elements.length - 1];
+  for (let i = elements.length - 1; i >= 0; i--) {
+    if (elements[i] === target) {
+      return i;
     }
   }
+  return - 1;
 };
 
 /**
@@ -382,9 +389,11 @@ const lastIndexFound = (elements, target) => {
  * @returns {number[]}
  */
 const timesIndex = (elements) => {
-  for (i = 0; i <= elements.length - 1; i++) {
-    return i * elements[i];
+  let arr = [];
+  for (i = 0; i < elements.length; i++) {
+    arr.push (i * elements[i]);
   }
+  return arr;
 };
 
 /**
@@ -397,12 +406,13 @@ const timesIndex = (elements) => {
  * @returns {number[]}
  */
 const cumulativeSum = (elements) => {
-  let newElements = [];
+  let arr = [];
   let sum = 0;
-  for (let i = 0; i <= elements.length - 1; i++) {
-    newElements.push((sum += i));
+  for (let i = 0; i < elements.length; i++) {
+    sum += elements[i];
+    arr.push(sum);
   }
-  return newElements;
+  return arr;
 };
 
 module.exports = {
