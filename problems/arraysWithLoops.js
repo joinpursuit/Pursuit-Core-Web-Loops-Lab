@@ -153,7 +153,13 @@ function findSecondLargest(nums) {
  */
 // Hint: Look into the `.includes` method.
 function removeDups(nums) {
-  
+  let noDups = [];
+  nums.forEach((num) => {
+    if (!noDups.includes(num)) {
+      noDups.push(num);
+    }
+  });
+  return noDups;
 }
 
 module.exports = {
