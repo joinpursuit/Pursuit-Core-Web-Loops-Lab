@@ -276,7 +276,8 @@ function rangeSum(min, max) {
 function rangeOdd(min, max) {
   let arr = [];
   for (let i = max; i >= min; i--) {
-    if (i % 2 === 1) arr.push(i);
+    if (i % 2 === 1)
+     arr.push(i);
   }
   return arr;
 }
