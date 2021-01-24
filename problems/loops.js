@@ -306,7 +306,17 @@ function rangeEveryOther(min, max) {
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsWhileLoop() {}
+function containsWhileLoop(elements, target) {
+  let i = 0
+  while(i < elements.length){
+    if(elements[i] === target){
+     return true
+    } else{
+      i++
+    }
+  }
+  return false
+}
 
 /**
  * Takes in an array and a target.
@@ -317,7 +327,13 @@ function containsWhileLoop() {}
  * @param {number|string} target
  * @returns {boolean} true if the array contains our target, otherwise false
  */
-function containsForLoop() {}
+function containsForLoop(elements, target) {
+  for(let i = 0; i < elements.length; i++){
+    if(elements[i] === target){
+      return true
+    }
+  } return false
+}
 /**
  * Takes in an array and a target.
  * Determines how many times the target exists in the array
@@ -325,7 +341,15 @@ function containsForLoop() {}
  * @param {number|string} target
  * @returns {number} number of occurances
  */
-function targetCount() {}
+function targetCount(elements, target) {
+  let count = 0
+  for(let i = 0; i < elements.length; i++){
+    if(elements[i]===target){
+      count += 1
+    }
+  }
+  return count
+}
 /**
  * Takes in an array and a target.
  * Determines the first index that the target is found at.
