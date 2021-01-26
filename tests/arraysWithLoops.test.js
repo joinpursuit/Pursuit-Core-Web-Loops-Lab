@@ -94,7 +94,7 @@ describe("evenArray", () => {
   });
 });
 
-describe.only("findSmallest", () => {
+describe("findSmallest", () => {
   test("returns the smallest element in an array", () => {
     expect(findSmallest([1, 2, 3, 4])).toBe(1);
     expect(findSmallest([5, 4, 3, 2])).toBe(2);
