@@ -73,7 +73,6 @@ const evenAndOddWhileLoop = (max) => {
   while (i <= max) {
     if (i % 2 === 0) {
       arr.push(i + " is even");
-      i++;
     } else {
       arr.push(i + " is odd");
       i++;

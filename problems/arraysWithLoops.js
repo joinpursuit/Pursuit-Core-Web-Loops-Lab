@@ -42,9 +42,6 @@ function shoutWhileLoop(array) {
 
 const shoutForOfLoop = (array) => {
   let newArray = [];
-  // for(let i = 0; i < array.length; i++) {
-  // newArray.push(array[i] + '!');
-  //}
   for (let odd of array) {
     newArray.push(odd + "!");
   }
@@ -104,7 +101,6 @@ function evenArray(nums) {
  */
 
 function findSmallest(nums) {
-  let i = 0;
   let smallestNumber = nums[i];
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] < smallestNumber) {
@@ -169,13 +165,13 @@ function findSecondLargest(nums) {
 // Hint: Look into the `.includes` method.
 function removeDups(nums) {
   let newArray = []
-  
-  nums.forEach((el) => {
+   nums.forEach((el) => {
     if(!newArray.includes(el)){
       newArray.push(el);
     }
     return newArray;
 });
+}
 
 module.exports = {
   shoutForLoop,
