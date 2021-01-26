@@ -5,13 +5,7 @@
  * @returns {number[]}
  */
 const oneTillDoneWhileLoop = (number) => {
-  let i = 1;
-  let array = [];
-  while (i <= number) {
-    array.push(i);
-    i++;
-  }
-  return array;
+  
 };
 
 /**
@@ -21,11 +15,7 @@ const oneTillDoneWhileLoop = (number) => {
  * @returns {number[]}
  */
 const oneTillDoneForLoop = (number) => {
-  let array = [];
-  for (i = 1; i <= number; i++) {
-    array.push(i);
-  }
-  return array;
+ 
 };
 
 /**
@@ -35,13 +25,7 @@ const oneTillDoneForLoop = (number) => {
  * @returns {number[]}
  */
 const doneToZeroWhileLoop = (number) => {
-  let i = number;
-  let array = [];
-  while (i > 0) {
-    array.push(i);
-    i--;
-  }
-  return array;
+  
 };
 
 /**
@@ -51,11 +35,7 @@ const doneToZeroWhileLoop = (number) => {
  * @returns {number[]}
  */
 const doneToZeroForLoop = (number) => {
-  let array = [];
-  for (let i = number; i > 0; i--) {
-    array.push(i);
-  }
-  return array;
+  
 };
 
 /**
@@ -68,18 +48,7 @@ const doneToZeroForLoop = (number) => {
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
 const evenAndOddWhileLoop = (max) => {
-  let num = 0;
-  let string = [];
-  while (num <= max) {
-    if (num % 2 === 0) {
-      string.push(num + " is even");
-      num++;
-    } else if (num % 2 === 1) {
-      string.push(num + " is odd");
-      num++;
-    }
-  }
-  return string;
+  
 };
 
 /**
@@ -92,15 +61,7 @@ const evenAndOddWhileLoop = (max) => {
  * @returns {string[]} ["0 is even", "1 is odd", "2 is even", "3 is odd"] if max was 3
  */
 const evenAndOddForLoop = (max) => {
-  let string = [];
-  for (let num = 0; num <= max; num++) {
-    if (num % 2 === 0) {
-      string.push(num + " is even");
-    } else if (num % 2 === 1) {
-      string.push(num + " is odd");
-    }
-  }
-  return string;
+  
 };
 
 /**
@@ -118,14 +79,7 @@ const evenAndOddForLoop = (max) => {
 * 5 * 9 = 45
  */
 const tillXTimes9WhileLoop = (x) => {
-  let i = 0;
-  let num = 9;
-  let number = [];
-  while (i <= x) {
-    number.push(i * num);
-    i++;
-  }
-  return number;
+  
 };
 
 /**
@@ -143,12 +97,7 @@ const tillXTimes9WhileLoop = (x) => {
 * 5 * 9 = 45
  */
 const tillXTimes9ForLoop = (x) => {
-  let num = 9;
-  let number = [];
-  for (let i = 0; i <= x; i++) {
-    number.push(i * num);
-  }
-  return number;
+  
 };
 
 /**
@@ -158,15 +107,7 @@ const tillXTimes9ForLoop = (x) => {
 
  */
 const endsWithFiveWhileLoop = () => {
-  let i = 1;
-  let number = [];
-  while (i <= 100) {
-    if (i % 10 === 5) {
-      number.push(i);
-    }
-    i++;
-  }
-  return number;
+  
 };
 
 /**
@@ -176,13 +117,7 @@ const endsWithFiveWhileLoop = () => {
 
  */
 const endsWithFiveForLoop = () => {
-  let number = [];
-  for (let i = 1; i <= 100; i++) {
-    if (i % 10 === 5) {
-      number.push(i);
-    }
-  }
-  return number;
+  
 };
 
 // Try refactoring the code above to increment your i by 10 and starting at 5.
@@ -223,17 +158,7 @@ while (i > 3) {
 
  */
 const fizzBuzzPart1 = () => {
-  let array = [];
-  for (let i = 1; i <= 100; i++) {
-    if (i % 3 === 0) {
-      array.push("Fizz");
-    } else if (i % 5 === 0) {
-      array.push("Buzz");
-    } else {
-      array.push(i);
-    }
-  }
-  return array;
+  
 };
 
 /**
@@ -246,19 +171,7 @@ const fizzBuzzPart1 = () => {
 
  */
 const fizzBuzzPart2 = () => {
-  let array = [];
-  for (let i = 1; i <= 100; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      array.push("FizzBuzz");
-    } else if (i % 3 === 0) {
-      array.push("Fizz");
-    } else if (i % 5 === 0) {
-      array.push("Buzz");
-    } else {
-      array.push(i);
-    }
-  }
-  return array;
+  
 };
 
 /**
@@ -269,11 +182,7 @@ const fizzBuzzPart2 = () => {
  * @returns {number} sum all all numbers from min to max
  */
 const rangeSum = (min, max) => {
-  let number = [];
-  for (let i = min; i <= max; i++) {
-    number.push(i);
-  }
-  return number.reduce((a, b) => a + b);
+  
 };
 
 /**
@@ -285,13 +194,7 @@ const rangeSum = (min, max) => {
  * @returns {number[]} all odd numbers in range decreasing
  */
 const rangeOdd = (min, max) => {
-  let number = [];
-  for (let i = min; i <= max; i++) {
-    if (i % 2 === 1) {
-      number.push(i);
-    }
-  }
-  return number.reverse();
+  
 };
 
 /**
@@ -303,11 +206,7 @@ const rangeOdd = (min, max) => {
  * @returns {number[]} includes every other element
  */
 const rangeEveryOther = (min, max) => {
-  let number = [];
-  for (let i = min; i <= max; i += 2) {
-    number.push(i);
-  }
-  return number;
+  
 };
 
 /**
@@ -321,14 +220,7 @@ const rangeEveryOther = (min, max) => {
  */
 
 function containsWhileLoop(elements, target) {
-  let i = 0;
-  while (i <= elements.length - 1) {
-    if (elements[i] === target) {
-      return true;
-    }
-    i++;
-  }
-  return false;
+  
 }
 
 /**
@@ -341,12 +233,7 @@ function containsWhileLoop(elements, target) {
  * @returns {boolean} true if the array contains our target, otherwise false
  */
 const containsForLoop = (elements, target) => {
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i] === target) {
-      return true;
-    }
-  }
-  return false;
+  
 };
 
 // expect(containsForLoop([5, 2, 3, 5, 9], 3)).toBe(true);
@@ -364,13 +251,7 @@ const containsForLoop = (elements, target) => {
  */
 
 const targetCount = (elements, target) => {
-  let counter = 0;
-  for (let i = 0; i <= elements.length - 1; i++) {
-    if (target === elements[i]) {
-      counter += 1;
-    }
-  }
-  return counter;
+  
 };
 
 /**
@@ -383,12 +264,7 @@ const targetCount = (elements, target) => {
  * @returns {number} first index found.
  */
 const firstIndexFound = (elements, target) => {
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i] === target) {
-      return i
-    } 
-  }
-  return -1
+  
 };
 
 
@@ -402,12 +278,7 @@ const firstIndexFound = (elements, target) => {
  * @returns {number} last index found.
  */
 const lastIndexFound = (elements, target) => {
-  for (let i = elements.length - 1; i >= 0 ; i--) {
-    if (elements[i] === target) {
-      return i
-    } 
-    }
-    return -1
+  
   };
 
 
@@ -419,9 +290,7 @@ const lastIndexFound = (elements, target) => {
  * @returns {number[]}
  */
 const timesIndex = (elements) => {
-  return elements.map((el, i) => {
-    return el * i
-  })
+  
 }
 
 /**
@@ -434,10 +303,7 @@ const timesIndex = (elements) => {
  * @returns {number[]}
  */
 const cumulativeSum = (elements) => {
-  for (let i = 1; i < elements.length; i ++ ) {
-    elements[i] = elements[i] + elements[i-1]
-  }
-  return elements
+  
 };
 
 
