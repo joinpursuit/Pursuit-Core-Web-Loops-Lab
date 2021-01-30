@@ -171,16 +171,14 @@ function findSecondLargest(nums) {
  */
 // Hint: Look into the `.includes` method.
 function removeDups(nums) {
-  let array = []
+  let arr = [];
   for (let i = 0; i < nums.length; i++){
-    if ([nums[i]].includes(i)){
-      array.slice([i])
-    }
+    if (arr.includes(nums[i])){}
     else {
-      array.push(nums[i])
+      arr.push(nums[i])
     }
   }
-  return array
+  return arr;
 }
 
 module.exports = {
