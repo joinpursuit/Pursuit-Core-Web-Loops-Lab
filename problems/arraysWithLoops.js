@@ -99,8 +99,7 @@ function evenArray(nums) {
       array.push(nums[i]); //add them using the push method
     }
   }
-
-  return array;
+ 
 }
 
 /**
@@ -113,6 +112,7 @@ function findSmallest(nums) {
 
   return Math.min(nums);
 
+  //should't math.nums return smallest number in array - I though this was one of those "don't overthink questions"
 
 }
 
@@ -143,8 +143,24 @@ function findSecondSmallest(nums) {
  */
 
 function findSecondLargest(nums) {
-}
+  
+  //first find smallest - i will be an index of array
+  let smallest = nums[0]
+  for (let i = 0; i <= nums.length; i++) {
+  if (nums[i] < smallest) {
+  smallest = nums [i]
+  }
 
+ 
+  secondSmallest = nums[i]
+  for (let i =0; i < nums.length; i++) {
+    if (secondSmallest > smallest) {
+      secondSmallest = nums[i]
+    }
+  }
+}
+return secondSmallest
+  }
 
 /**
  * Takes in array and returns an array with all the values but with no duplicates.
@@ -155,7 +171,7 @@ function findSecondLargest(nums) {
 // Hint: Look into the `.includes` method.
 function removeDups(nums) {
   let array = [];
-  for (i = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     let num = nums[i];
     if (!array.includes(num)) {
       array.push(num);
