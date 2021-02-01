@@ -18,7 +18,31 @@ Take one down, pass it around, No more bottle of beer on the wall.
  * @return {string[]}
  */
 
-function ninetyNineBottlesOfBeerOnTheWall() {}
+function ninetyNineBottlesOfBeerOnTheWall() {
+  let beerArr = [];
+  let beerCount = 99;
+  while (beerCount > 0) {
+    if (beerCount > 2) {
+      beerArr.push(
+        `${beerCount} bottles of beer on the wall, ${beerCount} bottles of beer. Take one down, pass it around, ${
+          beerCount - 1
+        } bottles of beer on the wall.`
+      );
+    } else if (beerCount === 2) {
+      beerArr.push(
+        `${beerCount} bottles of beer on the wall, ${beerCount} bottles of beer. Take one down, pass it around, ${
+          beerCount - 1
+        } bottle of beer on the wall.`
+      );
+    } else if (beerCount === 1) {
+      beerArr.push(
+        `${beerCount} bottle of beer on the wall, ${beerCount} bottle of beer. Take one down, pass it around, No more bottle of beer on the wall.`
+      );
+    }
+    beerCount--;
+  }
+  return beerArr;
+}
 
 /**
   * Given an integer N draw a square of N x N asterisks. Look at the examples.
@@ -41,15 +65,32 @@ Output:
     ***
 ]
   */
-function drawSquare() {}
+function drawSquare(N) {
+  let arr = [];
+  let stars = ""
+  for (let i = 1; i <= N; i++) {
+    stars += "*"
+  } for (let j = 1; j <= N; j++) {
+    arr.push(stars)
+  }
+  return arr;
+}
 /**
-  * If we list all the natural numbers below 10 that are multiples of 3 or 5,
-  *  we get 3, 5, 6 and 9. The sum of these multiples is 23.
-  * Find the sum of all the multiples of 3 or 5 below 1000.
-  *  @returns {number}
-  */
+ * If we list all the natural numbers below 10 that are multiples of 3 or 5,
+ *  we get 3, 5, 6 and 9. The sum of these multiples is 23.
+ * Find the sum of all the multiples of 3 or 5 below 1000.
+ *  @returns {number}
+ */
 
-function multiplesOf3And5Sum() {}
+function multiplesOf3And5Sum() {
+  let sum = 0;
+  for (let i = 0; i < 1000; i++) {
+    if(i % 3 === 0 || i % 5 === 0) {
+      sum += i
+    }
+  }
+  return sum
+}
 
 module.exports = {
   ninetyNineBottlesOfBeerOnTheWall,
